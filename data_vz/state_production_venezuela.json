@@ -1,0 +1,3730 @@
+{
+  "portfolio": "venezuela",
+  "bankroll": 1794.02,
+  "peak_capital": 1794.02,
+  "mdd_floor": 0.4,
+  "last_processed_date": "2026-10-15",
+  "last_processed_index": {},
+  "streaks": {
+    "Lotto Activo": 5,
+    "La Granjita": 22,
+    "Ruleta Royal": 0,
+    "Guacharo Activo": 10,
+    "Selva Plus": 5
+  },
+  "signals_history": {
+    "Lotto Activo": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "La Granjita": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "Ruleta Royal": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true
+    ],
+    "Guacharo Activo": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false
+    ],
+    "Selva Plus": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "historial_jugadas": [
+    {
+      "fecha": "2026-09-14",
+      "hora": "5:00 PM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[ 8] RATÓN",
+        "[ 7] PERICO"
+      ],
+      "animales_seleccionados_str": "[ 8] RATÓN, [ 7] PERICO",
+      "candidatos_codigos": [
+        "8",
+        "7"
+      ],
+      "resultado_sorteo": "[18] BURRO",
+      "resultado_num": "18",
+      "resultado_animal": "BURRO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 10.8,
+      "costo_total": 21.6,
+      "cobrado": 0.0,
+      "pnl": -21.6,
+      "balance_cierre": 978.4,
+      "drawdown_pct": 2.16
+    },
+    {
+      "fecha": "2026-09-15",
+      "hora": "8:00 AM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[ 0] DELFÍN",
+        "[63] CANGREJO",
+        "[68] JAGUAR"
+      ],
+      "animales_seleccionados_str": "[ 0] DELFÍN, [63] CANGREJO, [68] JAGUAR",
+      "candidatos_codigos": [
+        "0",
+        "63",
+        "68"
+      ],
+      "resultado_sorteo": "[23] CEBRA",
+      "resultado_num": "23",
+      "resultado_animal": "CEBRA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 6.29,
+      "costo_total": 18.87,
+      "cobrado": 0.0,
+      "pnl": -18.87,
+      "balance_cierre": 959.53,
+      "drawdown_pct": 4.05
+    },
+    {
+      "fecha": "2026-09-15",
+      "hora": "10:00 AM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[22] CAMELLO",
+        "[18] BURRO"
+      ],
+      "animales_seleccionados_str": "[22] CAMELLO, [18] BURRO",
+      "candidatos_codigos": [
+        "22",
+        "18"
+      ],
+      "resultado_sorteo": "[ 4] ALACRÁN",
+      "resultado_num": "4",
+      "resultado_animal": "ALACRÁN",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.46,
+      "costo_total": 2.92,
+      "cobrado": 0.0,
+      "pnl": -2.92,
+      "balance_cierre": 956.61,
+      "drawdown_pct": 4.34
+    },
+    {
+      "fecha": "2026-09-15",
+      "hora": "11:00 AM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[49] PEREZA",
+        "[57] PATO",
+        "[53] CARACOL",
+        "[14] PALOMA",
+        "[63] CANGREJO"
+      ],
+      "animales_seleccionados_str": "[49] PEREZA, [57] PATO, [53] CARACOL, [14] PALOMA, [63] CANGREJO",
+      "candidatos_codigos": [
+        "49",
+        "57",
+        "53",
+        "14",
+        "63"
+      ],
+      "resultado_sorteo": "[ 7] PERICO",
+      "resultado_num": "7",
+      "resultado_animal": "PERICO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.8,
+      "costo_total": 29.0,
+      "cobrado": 0.0,
+      "pnl": -29.0,
+      "balance_cierre": 927.61,
+      "drawdown_pct": 7.24
+    },
+    {
+      "fecha": "2026-09-15",
+      "hora": "2:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[ 8] RATÓN"
+      ],
+      "animales_seleccionados_str": "[ 8] RATÓN",
+      "candidatos_codigos": [
+        "8"
+      ],
+      "resultado_sorteo": "[21] GALLO",
+      "resultado_num": "21",
+      "resultado_animal": "GALLO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.29,
+      "costo_total": 1.29,
+      "cobrado": 0.0,
+      "pnl": -1.29,
+      "balance_cierre": 926.32,
+      "drawdown_pct": 7.37
+    },
+    {
+      "fecha": "2026-09-15",
+      "hora": "5:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[53] CARACOL",
+        "[49] PEREZA",
+        "[65] ARAÑA"
+      ],
+      "animales_seleccionados_str": "[53] CARACOL, [49] PEREZA, [65] ARAÑA",
+      "candidatos_codigos": [
+        "53",
+        "49",
+        "65"
+      ],
+      "resultado_sorteo": "[35] JIRAFA",
+      "resultado_num": "35",
+      "resultado_animal": "JIRAFA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 3.6,
+      "costo_total": 10.8,
+      "cobrado": 0.0,
+      "pnl": -10.8,
+      "balance_cierre": 915.52,
+      "drawdown_pct": 8.45
+    },
+    {
+      "fecha": "2026-09-16",
+      "hora": "8:15 AM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[53] CARACOL",
+        "[45] GARZA",
+        "[56] TIBURÓN"
+      ],
+      "animales_seleccionados_str": "[53] CARACOL, [45] GARZA, [56] TIBURÓN",
+      "candidatos_codigos": [
+        "53",
+        "45",
+        "56"
+      ],
+      "resultado_sorteo": "[79] CALAMAR",
+      "resultado_num": "79",
+      "resultado_animal": "CALAMAR",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.24,
+      "costo_total": 3.72,
+      "cobrado": 0.0,
+      "pnl": -3.72,
+      "balance_cierre": 911.8,
+      "drawdown_pct": 8.82
+    },
+    {
+      "fecha": "2026-09-16",
+      "hora": "1:30 PM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[15] ZORRO",
+        "[13] MONO",
+        "[26] VACA"
+      ],
+      "animales_seleccionados_str": "[15] ZORRO, [13] MONO, [26] VACA",
+      "candidatos_codigos": [
+        "15",
+        "13",
+        "26"
+      ],
+      "resultado_sorteo": "[25] GALLINA",
+      "resultado_num": "25",
+      "resultado_animal": "GALLINA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.87,
+      "costo_total": 17.61,
+      "cobrado": 0.0,
+      "pnl": -17.61,
+      "balance_cierre": 894.19,
+      "drawdown_pct": 10.58
+    },
+    {
+      "fecha": "2026-09-16",
+      "hora": "7:15 PM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[95] ESCARABAJO",
+        "[78] ANTÍLOPE",
+        "[52] PULPO"
+      ],
+      "animales_seleccionados_str": "[95] ESCARABAJO, [78] ANTÍLOPE, [52] PULPO",
+      "candidatos_codigos": [
+        "95",
+        "78",
+        "52"
+      ],
+      "resultado_sorteo": "[99] HALCÓN",
+      "resultado_num": "99",
+      "resultado_animal": "HALCÓN",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.13,
+      "costo_total": 3.39,
+      "cobrado": 0.0,
+      "pnl": -3.39,
+      "balance_cierre": 890.8,
+      "drawdown_pct": 10.92
+    },
+    {
+      "fecha": "2026-09-17",
+      "hora": "8:30 AM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[36] CULEBRA",
+        "[29] ELEFANTE"
+      ],
+      "animales_seleccionados_str": "[36] CULEBRA, [29] ELEFANTE",
+      "candidatos_codigos": [
+        "36",
+        "29"
+      ],
+      "resultado_sorteo": "[29] ELEFANTE",
+      "resultado_num": "29",
+      "resultado_animal": "ELEFANTE",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 5.35,
+      "costo_total": 10.7,
+      "cobrado": 160.5,
+      "pnl": 149.8,
+      "balance_cierre": 1040.6,
+      "drawdown_pct": 0.0
+    },
+    {
+      "fecha": "2026-09-17",
+      "hora": "10:30 AM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[22] CAMELLO",
+        "[10] TIGRE",
+        "[32] ARDILLA"
+      ],
+      "animales_seleccionados_str": "[22] CAMELLO, [10] TIGRE, [32] ARDILLA",
+      "candidatos_codigos": [
+        "22",
+        "10",
+        "32"
+      ],
+      "resultado_sorteo": "[25] GALLINA",
+      "resultado_num": "25",
+      "resultado_animal": "GALLINA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 8.6,
+      "costo_total": 25.8,
+      "cobrado": 0.0,
+      "pnl": -25.8,
+      "balance_cierre": 1014.8,
+      "drawdown_pct": 2.48
+    },
+    {
+      "fecha": "2026-09-17",
+      "hora": "1:30 PM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[32] ARDILLA",
+        "[10] TIGRE",
+        "[ 5] LEÓN"
+      ],
+      "animales_seleccionados_str": "[32] ARDILLA, [10] TIGRE, [ 5] LEÓN",
+      "candidatos_codigos": [
+        "32",
+        "10",
+        "5"
+      ],
+      "resultado_sorteo": "[ 3] CIEMPIÉS",
+      "resultado_num": "3",
+      "resultado_animal": "CIEMPIÉS",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 7.86,
+      "costo_total": 23.58,
+      "cobrado": 0.0,
+      "pnl": -23.58,
+      "balance_cierre": 991.22,
+      "drawdown_pct": 4.75
+    },
+    {
+      "fecha": "2026-09-17",
+      "hora": "2:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[31] LAPA"
+      ],
+      "animales_seleccionados_str": "[31] LAPA",
+      "candidatos_codigos": [
+        "31"
+      ],
+      "resultado_sorteo": "[24] IGUANA",
+      "resultado_num": "24",
+      "resultado_animal": "IGUANA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.48,
+      "costo_total": 1.48,
+      "cobrado": 0.0,
+      "pnl": -1.48,
+      "balance_cierre": 989.74,
+      "drawdown_pct": 4.89
+    },
+    {
+      "fecha": "2026-09-17",
+      "hora": "3:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[30] CAIMÁN",
+        "[39] LECHUZA",
+        "[23] CEBRA",
+        "[51] PELICANO",
+        "[38] BÚFALO"
+      ],
+      "animales_seleccionados_str": "[30] CAIMÁN, [39] LECHUZA, [23] CEBRA, [51] PELICANO, [38] BÚFALO",
+      "candidatos_codigos": [
+        "30",
+        "39",
+        "23",
+        "51",
+        "38"
+      ],
+      "resultado_sorteo": "[ 8] RATÓN",
+      "resultado_num": "8",
+      "resultado_animal": "RATÓN",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 4.14,
+      "costo_total": 20.7,
+      "cobrado": 0.0,
+      "pnl": -20.7,
+      "balance_cierre": 969.04,
+      "drawdown_pct": 6.88
+    },
+    {
+      "fecha": "2026-09-17",
+      "hora": "8:30 PM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[30] CAIMÁN",
+        "[36] CULEBRA",
+        "[27] PERRO"
+      ],
+      "animales_seleccionados_str": "[30] CAIMÁN, [36] CULEBRA, [27] PERRO",
+      "candidatos_codigos": [
+        "30",
+        "36",
+        "27"
+      ],
+      "resultado_sorteo": "[21] GALLO",
+      "resultado_num": "21",
+      "resultado_animal": "GALLO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 6.63,
+      "costo_total": 19.89,
+      "cobrado": 0.0,
+      "pnl": -19.89,
+      "balance_cierre": 949.15,
+      "drawdown_pct": 8.79
+    },
+    {
+      "fecha": "2026-09-18",
+      "hora": "9:15 AM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[21] GALLO",
+        "[43] MARIPOSA",
+        "[66] LOBO"
+      ],
+      "animales_seleccionados_str": "[21] GALLO, [43] MARIPOSA, [66] LOBO",
+      "candidatos_codigos": [
+        "21",
+        "43",
+        "66"
+      ],
+      "resultado_sorteo": "[18] BURRO",
+      "resultado_num": "18",
+      "resultado_animal": "BURRO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.28,
+      "costo_total": 3.84,
+      "cobrado": 0.0,
+      "pnl": -3.84,
+      "balance_cierre": 945.31,
+      "drawdown_pct": 9.16
+    },
+    {
+      "fecha": "2026-09-18",
+      "hora": "12:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[ 3] CIEMPIÉS",
+        "[33] PESCADO"
+      ],
+      "animales_seleccionados_str": "[ 3] CIEMPIÉS, [33] PESCADO",
+      "candidatos_codigos": [
+        "3",
+        "33"
+      ],
+      "resultado_sorteo": "[ 0] DELFÍN",
+      "resultado_num": "0",
+      "resultado_animal": "DELFÍN",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.23,
+      "costo_total": 2.46,
+      "cobrado": 0.0,
+      "pnl": -2.46,
+      "balance_cierre": 942.85,
+      "drawdown_pct": 9.39
+    },
+    {
+      "fecha": "2026-09-18",
+      "hora": "3:30 PM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[ 2] TORO",
+        "[32] ARDILLA"
+      ],
+      "animales_seleccionados_str": "[ 2] TORO, [32] ARDILLA",
+      "candidatos_codigos": [
+        "2",
+        "32"
+      ],
+      "resultado_sorteo": "[13] MONO",
+      "resultado_num": "13",
+      "resultado_animal": "MONO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.96,
+      "costo_total": 11.92,
+      "cobrado": 0.0,
+      "pnl": -11.92,
+      "balance_cierre": 930.93,
+      "drawdown_pct": 10.54
+    },
+    {
+      "fecha": "2026-09-18",
+      "hora": "5:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[24] IGUANA"
+      ],
+      "animales_seleccionados_str": "[24] IGUANA",
+      "candidatos_codigos": [
+        "24"
+      ],
+      "resultado_sorteo": "[16] OSO",
+      "resultado_num": "16",
+      "resultado_animal": "OSO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.16,
+      "costo_total": 1.16,
+      "cobrado": 0.0,
+      "pnl": -1.16,
+      "balance_cierre": 929.77,
+      "drawdown_pct": 10.65
+    },
+    {
+      "fecha": "2026-09-18",
+      "hora": "7:00 PM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[36] CULEBRA"
+      ],
+      "animales_seleccionados_str": "[36] CULEBRA",
+      "candidatos_codigos": [
+        "36"
+      ],
+      "resultado_sorteo": "[18] BURRO",
+      "resultado_num": "18",
+      "resultado_animal": "BURRO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 7.37,
+      "costo_total": 7.37,
+      "cobrado": 0.0,
+      "pnl": -7.37,
+      "balance_cierre": 922.4,
+      "drawdown_pct": 11.36
+    },
+    {
+      "fecha": "2026-09-19",
+      "hora": "11:00 AM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[53] CARACOL",
+        "[52] PULPO",
+        "[42] TUCÁN",
+        "[35] JIRAFA"
+      ],
+      "animales_seleccionados_str": "[53] CARACOL, [52] PULPO, [42] TUCÁN, [35] JIRAFA",
+      "candidatos_codigos": [
+        "53",
+        "52",
+        "42",
+        "35"
+      ],
+      "resultado_sorteo": "[30] CAIMÁN",
+      "resultado_num": "30",
+      "resultado_animal": "CAIMÁN",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 3.14,
+      "costo_total": 12.56,
+      "cobrado": 0.0,
+      "pnl": -12.56,
+      "balance_cierre": 909.84,
+      "drawdown_pct": 12.57
+    },
+    {
+      "fecha": "2026-09-19",
+      "hora": "2:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[23] CEBRA"
+      ],
+      "animales_seleccionados_str": "[23] CEBRA",
+      "candidatos_codigos": [
+        "23"
+      ],
+      "resultado_sorteo": "[00] BALLENA",
+      "resultado_num": "00",
+      "resultado_animal": "BALLENA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.06,
+      "costo_total": 1.06,
+      "cobrado": 0.0,
+      "pnl": -1.06,
+      "balance_cierre": 908.78,
+      "drawdown_pct": 12.67
+    },
+    {
+      "fecha": "2026-09-19",
+      "hora": "3:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[10] TIGRE",
+        "[27] PERRO",
+        "[52] PULPO",
+        "[66] LOBO"
+      ],
+      "animales_seleccionados_str": "[10] TIGRE, [27] PERRO, [52] PULPO, [66] LOBO",
+      "candidatos_codigos": [
+        "10",
+        "27",
+        "52",
+        "66"
+      ],
+      "resultado_sorteo": "[45] GARZA",
+      "resultado_num": "45",
+      "resultado_animal": "GARZA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 2.96,
+      "costo_total": 11.84,
+      "cobrado": 0.0,
+      "pnl": -11.84,
+      "balance_cierre": 896.94,
+      "drawdown_pct": 13.81
+    },
+    {
+      "fecha": "2026-09-20",
+      "hora": "8:00 AM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[ 5] LEÓN",
+        "[ 0] DELFÍN"
+      ],
+      "animales_seleccionados_str": "[ 5] LEÓN, [ 0] DELFÍN",
+      "candidatos_codigos": [
+        "5",
+        "0"
+      ],
+      "resultado_sorteo": "[35] JIRAFA",
+      "resultado_num": "35",
+      "resultado_animal": "JIRAFA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 6.34,
+      "costo_total": 12.68,
+      "cobrado": 0.0,
+      "pnl": -12.68,
+      "balance_cierre": 884.26,
+      "drawdown_pct": 15.02
+    },
+    {
+      "fecha": "2026-09-20",
+      "hora": "11:00 AM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[13] MONO",
+        "[ 0] DELFÍN",
+        "[12] CABALLO",
+        "[67] AVESTRUZ",
+        "[45] GARZA"
+      ],
+      "animales_seleccionados_str": "[13] MONO, [ 0] DELFÍN, [12] CABALLO, [67] AVESTRUZ, [45] GARZA",
+      "candidatos_codigos": [
+        "13",
+        "0",
+        "12",
+        "67",
+        "45"
+      ],
+      "resultado_sorteo": "[67] AVESTRUZ",
+      "resultado_num": "67",
+      "resultado_animal": "AVESTRUZ",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 2.63,
+      "costo_total": 13.15,
+      "cobrado": 157.8,
+      "pnl": 144.65,
+      "balance_cierre": 1028.91,
+      "drawdown_pct": 1.12
+    },
+    {
+      "fecha": "2026-09-20",
+      "hora": "1:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[60] CAMALEÓN",
+        "[64] GAVILÁN",
+        "[66] LOBO"
+      ],
+      "animales_seleccionados_str": "[60] CAMALEÓN, [64] GAVILÁN, [66] LOBO",
+      "candidatos_codigos": [
+        "60",
+        "64",
+        "66"
+      ],
+      "resultado_sorteo": "[ 1] CARNERO",
+      "resultado_num": "1",
+      "resultado_animal": "CARNERO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 6.8,
+      "costo_total": 20.4,
+      "cobrado": 0.0,
+      "pnl": -20.4,
+      "balance_cierre": 1008.51,
+      "drawdown_pct": 3.08
+    },
+    {
+      "fecha": "2026-09-20",
+      "hora": "5:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[13] MONO",
+        "[22] CAMELLO",
+        "[45] GARZA",
+        "[75] GUACHARO",
+        "[64] GAVILÁN"
+      ],
+      "animales_seleccionados_str": "[13] MONO, [22] CAMELLO, [45] GARZA, [75] GUACHARO, [64] GAVILÁN",
+      "candidatos_codigos": [
+        "13",
+        "22",
+        "45",
+        "75",
+        "64"
+      ],
+      "resultado_sorteo": "[35] JIRAFA",
+      "resultado_num": "35",
+      "resultado_animal": "JIRAFA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 6.33,
+      "costo_total": 31.65,
+      "cobrado": 0.0,
+      "pnl": -31.65,
+      "balance_cierre": 976.86,
+      "drawdown_pct": 6.13
+    },
+    {
+      "fecha": "2026-09-20",
+      "hora": "6:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[00] BALLENA"
+      ],
+      "animales_seleccionados_str": "[00] BALLENA",
+      "candidatos_codigos": [
+        "00"
+      ],
+      "resultado_sorteo": "[15] ZORRO",
+      "resultado_num": "15",
+      "resultado_animal": "ZORRO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.4,
+      "costo_total": 1.4,
+      "cobrado": 0.0,
+      "pnl": -1.4,
+      "balance_cierre": 975.46,
+      "drawdown_pct": 6.26
+    },
+    {
+      "fecha": "2026-09-21",
+      "hora": "10:00 AM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[10] TIGRE",
+        "[35] JIRAFA"
+      ],
+      "animales_seleccionados_str": "[10] TIGRE, [35] JIRAFA",
+      "candidatos_codigos": [
+        "10",
+        "35"
+      ],
+      "resultado_sorteo": "[12] CABALLO",
+      "resultado_num": "12",
+      "resultado_animal": "CABALLO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 8.89,
+      "costo_total": 17.78,
+      "cobrado": 0.0,
+      "pnl": -17.78,
+      "balance_cierre": 957.68,
+      "drawdown_pct": 7.97
+    },
+    {
+      "fecha": "2026-09-21",
+      "hora": "2:00 PM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[ 8] RATÓN",
+        "[27] PERRO",
+        "[35] JIRAFA"
+      ],
+      "animales_seleccionados_str": "[ 8] RATÓN, [27] PERRO, [35] JIRAFA",
+      "candidatos_codigos": [
+        "8",
+        "27",
+        "35"
+      ],
+      "resultado_sorteo": "[19] CHIVO",
+      "resultado_num": "19",
+      "resultado_animal": "CHIVO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 6.9,
+      "costo_total": 20.7,
+      "cobrado": 0.0,
+      "pnl": -20.7,
+      "balance_cierre": 936.98,
+      "drawdown_pct": 9.96
+    },
+    {
+      "fecha": "2026-09-21",
+      "hora": "6:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[31] LAPA",
+        "[ 7] PERICO"
+      ],
+      "animales_seleccionados_str": "[31] LAPA, [ 7] PERICO",
+      "candidatos_codigos": [
+        "31",
+        "7"
+      ],
+      "resultado_sorteo": "[33] PESCADO",
+      "resultado_num": "33",
+      "resultado_animal": "PESCADO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.19,
+      "costo_total": 2.38,
+      "cobrado": 0.0,
+      "pnl": -2.38,
+      "balance_cierre": 934.6,
+      "drawdown_pct": 10.19
+    },
+    {
+      "fecha": "2026-09-22",
+      "hora": "12:15 PM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[40] AVISPA",
+        "[41] CANGURO"
+      ],
+      "animales_seleccionados_str": "[40] AVISPA, [41] CANGURO",
+      "candidatos_codigos": [
+        "40",
+        "41"
+      ],
+      "resultado_sorteo": "[79] CALAMAR",
+      "resultado_num": "79",
+      "resultado_animal": "CALAMAR",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.2,
+      "costo_total": 2.4,
+      "cobrado": 0.0,
+      "pnl": -2.4,
+      "balance_cierre": 932.2,
+      "drawdown_pct": 10.42
+    },
+    {
+      "fecha": "2026-09-22",
+      "hora": "1:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[ 0] DELFÍN"
+      ],
+      "animales_seleccionados_str": "[ 0] DELFÍN",
+      "candidatos_codigos": [
+        "0"
+      ],
+      "resultado_sorteo": "[ 8] RATÓN",
+      "resultado_num": "8",
+      "resultado_animal": "RATÓN",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.17,
+      "costo_total": 1.17,
+      "cobrado": 0.0,
+      "pnl": -1.17,
+      "balance_cierre": 931.03,
+      "drawdown_pct": 10.53
+    },
+    {
+      "fecha": "2026-09-22",
+      "hora": "1:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[ 4] ALACRÁN",
+        "[46] PUMA",
+        "[ 6] RANA",
+        "[28] ZAMURO",
+        "[63] CANGREJO"
+      ],
+      "animales_seleccionados_str": "[ 4] ALACRÁN, [46] PUMA, [ 6] RANA, [28] ZAMURO, [63] CANGREJO",
+      "candidatos_codigos": [
+        "4",
+        "46",
+        "6",
+        "28",
+        "63"
+      ],
+      "resultado_sorteo": "[16] OSO",
+      "resultado_num": "16",
+      "resultado_animal": "OSO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 3.27,
+      "costo_total": 16.35,
+      "cobrado": 0.0,
+      "pnl": -16.35,
+      "balance_cierre": 914.68,
+      "drawdown_pct": 12.1
+    },
+    {
+      "fecha": "2026-09-23",
+      "hora": "3:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[35] JIRAFA",
+        "[16] OSO"
+      ],
+      "animales_seleccionados_str": "[35] JIRAFA, [16] OSO",
+      "candidatos_codigos": [
+        "35",
+        "16"
+      ],
+      "resultado_sorteo": "[35] JIRAFA",
+      "resultado_num": "35",
+      "resultado_animal": "JIRAFA",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 1.08,
+      "costo_total": 2.16,
+      "cobrado": 32.4,
+      "pnl": 30.24,
+      "balance_cierre": 944.92,
+      "drawdown_pct": 9.19
+    },
+    {
+      "fecha": "2026-09-23",
+      "hora": "5:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[34] VENADO"
+      ],
+      "animales_seleccionados_str": "[34] VENADO",
+      "candidatos_codigos": [
+        "34"
+      ],
+      "resultado_sorteo": "[ 2] TORO",
+      "resultado_num": "2",
+      "resultado_animal": "TORO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.23,
+      "costo_total": 1.23,
+      "cobrado": 0.0,
+      "pnl": -1.23,
+      "balance_cierre": 943.69,
+      "drawdown_pct": 9.31
+    },
+    {
+      "fecha": "2026-09-24",
+      "hora": "8:30 AM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[29] ELEFANTE"
+      ],
+      "animales_seleccionados_str": "[29] ELEFANTE",
+      "candidatos_codigos": [
+        "29"
+      ],
+      "resultado_sorteo": "[ 5] LEÓN",
+      "resultado_num": "5",
+      "resultado_animal": "LEÓN",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.98,
+      "costo_total": 5.98,
+      "cobrado": 0.0,
+      "pnl": -5.98,
+      "balance_cierre": 937.71,
+      "drawdown_pct": 9.89
+    },
+    {
+      "fecha": "2026-09-24",
+      "hora": "11:00 AM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[30] CAIMÁN",
+        "[ 3] CIEMPIÉS"
+      ],
+      "animales_seleccionados_str": "[30] CAIMÁN, [ 3] CIEMPIÉS",
+      "candidatos_codigos": [
+        "30",
+        "3"
+      ],
+      "resultado_sorteo": "[35] JIRAFA",
+      "resultado_num": "35",
+      "resultado_animal": "JIRAFA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.2,
+      "costo_total": 2.4,
+      "cobrado": 0.0,
+      "pnl": -2.4,
+      "balance_cierre": 935.31,
+      "drawdown_pct": 10.12
+    },
+    {
+      "fecha": "2026-09-24",
+      "hora": "12:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[15] ZORRO",
+        "[70] BISONTE",
+        "[56] TIBURÓN",
+        "[ 7] PERICO"
+      ],
+      "animales_seleccionados_str": "[15] ZORRO, [70] BISONTE, [56] TIBURÓN, [ 7] PERICO",
+      "candidatos_codigos": [
+        "15",
+        "70",
+        "56",
+        "7"
+      ],
+      "resultado_sorteo": "[26] VACA",
+      "resultado_num": "26",
+      "resultado_animal": "VACA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 3.33,
+      "costo_total": 13.32,
+      "cobrado": 0.0,
+      "pnl": -13.32,
+      "balance_cierre": 921.99,
+      "drawdown_pct": 11.4
+    },
+    {
+      "fecha": "2026-09-24",
+      "hora": "1:00 PM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[ 0] DELFÍN"
+      ],
+      "animales_seleccionados_str": "[ 0] DELFÍN",
+      "candidatos_codigos": [
+        "0"
+      ],
+      "resultado_sorteo": "[12] CABALLO",
+      "resultado_num": "12",
+      "resultado_animal": "CABALLO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.93,
+      "costo_total": 5.93,
+      "cobrado": 0.0,
+      "pnl": -5.93,
+      "balance_cierre": 916.06,
+      "drawdown_pct": 11.97
+    },
+    {
+      "fecha": "2026-09-25",
+      "hora": "5:15 PM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[89] ANGUILA",
+        "[78] ANTÍLOPE",
+        "[84] CAMARÓN"
+      ],
+      "animales_seleccionados_str": "[89] ANGUILA, [78] ANTÍLOPE, [84] CAMARÓN",
+      "candidatos_codigos": [
+        "89",
+        "78",
+        "84"
+      ],
+      "resultado_sorteo": "[75] GUACHARO",
+      "resultado_num": "75",
+      "resultado_animal": "GUACHARO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.11,
+      "costo_total": 3.33,
+      "cobrado": 0.0,
+      "pnl": -3.33,
+      "balance_cierre": 912.73,
+      "drawdown_pct": 12.29
+    },
+    {
+      "fecha": "2026-09-25",
+      "hora": "6:00 PM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[10] TIGRE",
+        "[13] MONO",
+        "[20] COCHINO"
+      ],
+      "animales_seleccionados_str": "[10] TIGRE, [13] MONO, [20] COCHINO",
+      "candidatos_codigos": [
+        "10",
+        "13",
+        "20"
+      ],
+      "resultado_sorteo": "[33] PESCADO",
+      "resultado_num": "33",
+      "resultado_animal": "PESCADO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 3.98,
+      "costo_total": 11.94,
+      "cobrado": 0.0,
+      "pnl": -11.94,
+      "balance_cierre": 900.79,
+      "drawdown_pct": 13.44
+    },
+    {
+      "fecha": "2026-09-26",
+      "hora": "11:30 AM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[18] BURRO",
+        "[ 6] RANA",
+        "[ 7] PERICO"
+      ],
+      "animales_seleccionados_str": "[18] BURRO, [ 6] RANA, [ 7] PERICO",
+      "candidatos_codigos": [
+        "18",
+        "6",
+        "7"
+      ],
+      "resultado_sorteo": "[30] CAIMÁN",
+      "resultado_num": "30",
+      "resultado_animal": "CAIMÁN",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 4.94,
+      "costo_total": 14.82,
+      "cobrado": 0.0,
+      "pnl": -14.82,
+      "balance_cierre": 885.97,
+      "drawdown_pct": 14.86
+    },
+    {
+      "fecha": "2026-09-26",
+      "hora": "12:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[12] CABALLO"
+      ],
+      "animales_seleccionados_str": "[12] CABALLO",
+      "candidatos_codigos": [
+        "12"
+      ],
+      "resultado_sorteo": "[17] PAVO",
+      "resultado_num": "17",
+      "resultado_animal": "PAVO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.94,
+      "costo_total": 0.94,
+      "cobrado": 0.0,
+      "pnl": -0.94,
+      "balance_cierre": 885.03,
+      "drawdown_pct": 14.95
+    },
+    {
+      "fecha": "2026-09-27",
+      "hora": "8:00 AM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[31] LAPA"
+      ],
+      "animales_seleccionados_str": "[31] LAPA",
+      "candidatos_codigos": [
+        "31"
+      ],
+      "resultado_sorteo": "[25] GALLINA",
+      "resultado_num": "25",
+      "resultado_animal": "GALLINA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 3.49,
+      "costo_total": 3.49,
+      "cobrado": 0.0,
+      "pnl": -3.49,
+      "balance_cierre": 881.54,
+      "drawdown_pct": 15.29
+    },
+    {
+      "fecha": "2026-09-27",
+      "hora": "11:15 AM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[17] PAVO",
+        "[47] PAVO REAL",
+        "[44] CHIGÜIRE"
+      ],
+      "animales_seleccionados_str": "[17] PAVO, [47] PAVO REAL, [44] CHIGÜIRE",
+      "candidatos_codigos": [
+        "17",
+        "47",
+        "44"
+      ],
+      "resultado_sorteo": "[26] VACA",
+      "resultado_num": "26",
+      "resultado_animal": "VACA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.94,
+      "costo_total": 2.82,
+      "cobrado": 0.0,
+      "pnl": -2.82,
+      "balance_cierre": 878.72,
+      "drawdown_pct": 15.56
+    },
+    {
+      "fecha": "2026-09-27",
+      "hora": "3:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[ 8] RATÓN",
+        "[57] PATO",
+        "[ 4] ALACRÁN",
+        "[53] CARACOL",
+        "[63] CANGREJO"
+      ],
+      "animales_seleccionados_str": "[ 8] RATÓN, [57] PATO, [ 4] ALACRÁN, [53] CARACOL, [63] CANGREJO",
+      "candidatos_codigos": [
+        "8",
+        "57",
+        "4",
+        "53",
+        "63"
+      ],
+      "resultado_sorteo": "[68] JAGUAR",
+      "resultado_num": "68",
+      "resultado_animal": "JAGUAR",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 2.56,
+      "costo_total": 12.8,
+      "cobrado": 0.0,
+      "pnl": -12.8,
+      "balance_cierre": 865.92,
+      "drawdown_pct": 16.79
+    },
+    {
+      "fecha": "2026-09-28",
+      "hora": "1:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[ 0] DELFÍN"
+      ],
+      "animales_seleccionados_str": "[ 0] DELFÍN",
+      "candidatos_codigos": [
+        "0"
+      ],
+      "resultado_sorteo": "[10] TIGRE",
+      "resultado_num": "10",
+      "resultado_animal": "TIGRE",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.85,
+      "costo_total": 0.85,
+      "cobrado": 0.0,
+      "pnl": -0.85,
+      "balance_cierre": 865.07,
+      "drawdown_pct": 16.87
+    },
+    {
+      "fecha": "2026-09-28",
+      "hora": "1:15 PM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[ 2] TORO",
+        "[25] GALLINA",
+        "[75] GUACHARO"
+      ],
+      "animales_seleccionados_str": "[ 2] TORO, [25] GALLINA, [75] GUACHARO",
+      "candidatos_codigos": [
+        "2",
+        "25",
+        "75"
+      ],
+      "resultado_sorteo": "[43] MARIPOSA",
+      "resultado_num": "43",
+      "resultado_animal": "MARIPOSA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.86,
+      "costo_total": 2.58,
+      "cobrado": 0.0,
+      "pnl": -2.58,
+      "balance_cierre": 862.49,
+      "drawdown_pct": 17.12
+    },
+    {
+      "fecha": "2026-09-28",
+      "hora": "3:30 PM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[34] VENADO",
+        "[19] CHIVO"
+      ],
+      "animales_seleccionados_str": "[34] VENADO, [19] CHIVO",
+      "candidatos_codigos": [
+        "34",
+        "19"
+      ],
+      "resultado_sorteo": "[18] BURRO",
+      "resultado_num": "18",
+      "resultado_animal": "BURRO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 4.08,
+      "costo_total": 8.16,
+      "cobrado": 0.0,
+      "pnl": -8.16,
+      "balance_cierre": 854.33,
+      "drawdown_pct": 17.9
+    },
+    {
+      "fecha": "2026-09-28",
+      "hora": "7:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[ 8] RATÓN",
+        "[59] PANTERA",
+        "[70] BISONTE"
+      ],
+      "animales_seleccionados_str": "[ 8] RATÓN, [59] PANTERA, [70] BISONTE",
+      "candidatos_codigos": [
+        "8",
+        "59",
+        "70"
+      ],
+      "resultado_sorteo": "[70] BISONTE",
+      "resultado_num": "70",
+      "resultado_animal": "BISONTE",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 2.25,
+      "costo_total": 6.75,
+      "cobrado": 135.0,
+      "pnl": 128.25,
+      "balance_cierre": 982.58,
+      "drawdown_pct": 5.58
+    },
+    {
+      "fecha": "2026-09-29",
+      "hora": "9:00 AM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[75] GUACHARO",
+        "[ 3] CIEMPIÉS",
+        "[56] TIBURÓN",
+        "[52] PULPO"
+      ],
+      "animales_seleccionados_str": "[75] GUACHARO, [ 3] CIEMPIÉS, [56] TIBURÓN, [52] PULPO",
+      "candidatos_codigos": [
+        "75",
+        "3",
+        "56",
+        "52"
+      ],
+      "resultado_sorteo": "[44] CHUGÜIRE",
+      "resultado_num": "44",
+      "resultado_animal": "CHUGÜIRE",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.75,
+      "costo_total": 23.0,
+      "cobrado": 0.0,
+      "pnl": -23.0,
+      "balance_cierre": 959.58,
+      "drawdown_pct": 7.79
+    },
+    {
+      "fecha": "2026-09-29",
+      "hora": "11:00 AM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[ 5] LEÓN",
+        "[ 0] DELFÍN",
+        "[14] PALOMA"
+      ],
+      "animales_seleccionados_str": "[ 5] LEÓN, [ 0] DELFÍN, [14] PALOMA",
+      "candidatos_codigos": [
+        "5",
+        "0",
+        "14"
+      ],
+      "resultado_sorteo": "[25] GALLINA",
+      "resultado_num": "25",
+      "resultado_animal": "GALLINA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 4.87,
+      "costo_total": 14.61,
+      "cobrado": 0.0,
+      "pnl": -14.61,
+      "balance_cierre": 944.97,
+      "drawdown_pct": 9.19
+    },
+    {
+      "fecha": "2026-09-29",
+      "hora": "2:00 PM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[23] CEBRA",
+        "[30] CAIMÁN"
+      ],
+      "animales_seleccionados_str": "[23] CEBRA, [30] CAIMÁN",
+      "candidatos_codigos": [
+        "23",
+        "30"
+      ],
+      "resultado_sorteo": "[13] MONO",
+      "resultado_num": "13",
+      "resultado_animal": "MONO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 4.59,
+      "costo_total": 9.18,
+      "cobrado": 0.0,
+      "pnl": -9.18,
+      "balance_cierre": 935.79,
+      "drawdown_pct": 10.07
+    },
+    {
+      "fecha": "2026-09-29",
+      "hora": "6:30 PM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[32] ARDILLA",
+        "[18] BURRO",
+        "[26] VACA"
+      ],
+      "animales_seleccionados_str": "[32] ARDILLA, [18] BURRO, [26] VACA",
+      "candidatos_codigos": [
+        "32",
+        "18",
+        "26"
+      ],
+      "resultado_sorteo": "[11] GATO",
+      "resultado_num": "11",
+      "resultado_animal": "GATO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.78,
+      "costo_total": 17.34,
+      "cobrado": 0.0,
+      "pnl": -17.34,
+      "balance_cierre": 918.45,
+      "drawdown_pct": 11.74
+    },
+    {
+      "fecha": "2026-09-29",
+      "hora": "7:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[25] GALLINA"
+      ],
+      "animales_seleccionados_str": "[25] GALLINA",
+      "candidatos_codigos": [
+        "25"
+      ],
+      "resultado_sorteo": "[25] GALLINA",
+      "resultado_num": "25",
+      "resultado_animal": "GALLINA",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 1.1,
+      "costo_total": 1.1,
+      "cobrado": 33.0,
+      "pnl": 31.9,
+      "balance_cierre": 950.35,
+      "drawdown_pct": 8.67
+    },
+    {
+      "fecha": "2026-09-30",
+      "hora": "9:00 AM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[12] CABALLO",
+        "[14] PALOMA"
+      ],
+      "animales_seleccionados_str": "[12] CABALLO, [14] PALOMA",
+      "candidatos_codigos": [
+        "12",
+        "14"
+      ],
+      "resultado_sorteo": "[00] BALLENA",
+      "resultado_num": "00",
+      "resultado_animal": "BALLENA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 3.6,
+      "costo_total": 7.2,
+      "cobrado": 0.0,
+      "pnl": -7.2,
+      "balance_cierre": 943.15,
+      "drawdown_pct": 9.36
+    },
+    {
+      "fecha": "2026-09-30",
+      "hora": "10:15 AM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[55] OSO HORMIGUERO",
+        "[42] TUCÁN",
+        "[86] BUEY"
+      ],
+      "animales_seleccionados_str": "[55] OSO HORMIGUERO, [42] TUCÁN, [86] BUEY",
+      "candidatos_codigos": [
+        "55",
+        "42",
+        "86"
+      ],
+      "resultado_sorteo": "[86] BUEY",
+      "resultado_num": "86",
+      "resultado_animal": "BUEY",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 1.24,
+      "costo_total": 3.72,
+      "cobrado": 99.2,
+      "pnl": 95.48,
+      "balance_cierre": 1038.63,
+      "drawdown_pct": 0.19
+    },
+    {
+      "fecha": "2026-09-30",
+      "hora": "11:30 AM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[ 5] LEÓN",
+        "[15] ZORRO",
+        "[20] COCHINO"
+      ],
+      "animales_seleccionados_str": "[ 5] LEÓN, [15] ZORRO, [20] COCHINO",
+      "candidatos_codigos": [
+        "5",
+        "15",
+        "20"
+      ],
+      "resultado_sorteo": "[26] VACA",
+      "resultado_num": "26",
+      "resultado_animal": "VACA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 8.54,
+      "costo_total": 25.62,
+      "cobrado": 0.0,
+      "pnl": -25.62,
+      "balance_cierre": 1013.01,
+      "drawdown_pct": 2.65
+    },
+    {
+      "fecha": "2026-09-30",
+      "hora": "12:15 PM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[50] CANARIO",
+        "[ 3] CIEMPIÉS",
+        "[71] GUACAMAYA"
+      ],
+      "animales_seleccionados_str": "[50] CANARIO, [ 3] CIEMPIÉS, [71] GUACAMAYA",
+      "candidatos_codigos": [
+        "50",
+        "3",
+        "71"
+      ],
+      "resultado_sorteo": "[33] PESCADO",
+      "resultado_num": "33",
+      "resultado_animal": "PESCADO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.58,
+      "costo_total": 16.74,
+      "cobrado": 0.0,
+      "pnl": -16.74,
+      "balance_cierre": 996.27,
+      "drawdown_pct": 4.26
+    },
+    {
+      "fecha": "2026-09-30",
+      "hora": "2:00 PM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[36] CULEBRA",
+        "[ 7] PERICO"
+      ],
+      "animales_seleccionados_str": "[36] CULEBRA, [ 7] PERICO",
+      "candidatos_codigos": [
+        "36",
+        "7"
+      ],
+      "resultado_sorteo": "[00] BALLENA",
+      "resultado_num": "00",
+      "resultado_animal": "BALLENA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.61,
+      "costo_total": 11.22,
+      "cobrado": 0.0,
+      "pnl": -11.22,
+      "balance_cierre": 985.05,
+      "drawdown_pct": 5.34
+    },
+    {
+      "fecha": "2026-09-30",
+      "hora": "2:30 PM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[15] ZORRO",
+        "[33] PESCADO"
+      ],
+      "animales_seleccionados_str": "[15] ZORRO, [33] PESCADO",
+      "candidatos_codigos": [
+        "15",
+        "33"
+      ],
+      "resultado_sorteo": "[29] ELEFANTE",
+      "resultado_num": "29",
+      "resultado_animal": "ELEFANTE",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 7.05,
+      "costo_total": 14.1,
+      "cobrado": 0.0,
+      "pnl": -14.1,
+      "balance_cierre": 970.95,
+      "drawdown_pct": 6.69
+    },
+    {
+      "fecha": "2026-09-30",
+      "hora": "6:30 PM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[ 1] CARNERO",
+        "[10] TIGRE",
+        "[ 9] ÁGUILA"
+      ],
+      "animales_seleccionados_str": "[ 1] CARNERO, [10] TIGRE, [ 9] ÁGUILA",
+      "candidatos_codigos": [
+        "1",
+        "10",
+        "9"
+      ],
+      "resultado_sorteo": "[17] PAVO",
+      "resultado_num": "17",
+      "resultado_animal": "PAVO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 4.67,
+      "costo_total": 14.01,
+      "cobrado": 0.0,
+      "pnl": -14.01,
+      "balance_cierre": 956.94,
+      "drawdown_pct": 8.04
+    },
+    {
+      "fecha": "2026-09-30",
+      "hora": "7:00 PM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[25] GALLINA",
+        "[16] OSO",
+        "[26] VACA"
+      ],
+      "animales_seleccionados_str": "[25] GALLINA, [16] OSO, [26] VACA",
+      "candidatos_codigos": [
+        "25",
+        "16",
+        "26"
+      ],
+      "resultado_sorteo": "[21] GALLO",
+      "resultado_num": "21",
+      "resultado_animal": "GALLO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 4.82,
+      "costo_total": 14.46,
+      "cobrado": 0.0,
+      "pnl": -14.46,
+      "balance_cierre": 942.48,
+      "drawdown_pct": 9.43
+    },
+    {
+      "fecha": "2026-10-01",
+      "hora": "3:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[60] CAMALEÓN",
+        "[67] AVESTRUZ",
+        "[52] PULPO",
+        "[55] HORMIGUERO",
+        "[16] OSO"
+      ],
+      "animales_seleccionados_str": "[60] CAMALEÓN, [67] AVESTRUZ, [52] PULPO, [55] HORMIGUERO, [16] OSO",
+      "candidatos_codigos": [
+        "60",
+        "67",
+        "52",
+        "55",
+        "16"
+      ],
+      "resultado_sorteo": "[32] ARDILLA",
+      "resultado_num": "32",
+      "resultado_animal": "ARDILLA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 4.9,
+      "costo_total": 24.5,
+      "cobrado": 0.0,
+      "pnl": -24.5,
+      "balance_cierre": 917.98,
+      "drawdown_pct": 11.78
+    },
+    {
+      "fecha": "2026-10-01",
+      "hora": "4:15 PM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[50] CANARIO",
+        "[39] LECHUZA",
+        "[61] PANDA"
+      ],
+      "animales_seleccionados_str": "[50] CANARIO, [39] LECHUZA, [61] PANDA",
+      "candidatos_codigos": [
+        "50",
+        "39",
+        "61"
+      ],
+      "resultado_sorteo": "[96] CABALLITO DE MAR",
+      "resultado_num": "96",
+      "resultado_animal": "CABALLITO DE MAR",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 3.82,
+      "costo_total": 11.46,
+      "cobrado": 0.0,
+      "pnl": -11.46,
+      "balance_cierre": 906.52,
+      "drawdown_pct": 12.88
+    },
+    {
+      "fecha": "2026-10-01",
+      "hora": "7:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[25] GALLINA",
+        "[19] CHIVO",
+        "[63] CANGREJO",
+        "[ 6] RANA"
+      ],
+      "animales_seleccionados_str": "[25] GALLINA, [19] CHIVO, [63] CANGREJO, [ 6] RANA",
+      "candidatos_codigos": [
+        "25",
+        "19",
+        "63",
+        "6"
+      ],
+      "resultado_sorteo": "[63] CANGREJO",
+      "resultado_num": "63",
+      "resultado_animal": "CANGREJO",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 4.18,
+      "costo_total": 16.72,
+      "cobrado": 250.8,
+      "pnl": 234.08,
+      "balance_cierre": 1140.6,
+      "drawdown_pct": 0.0
+    },
+    {
+      "fecha": "2026-10-02",
+      "hora": "9:00 AM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[60] CAMALEÓN",
+        "[36] CULEBRA",
+        "[21] GALLO",
+        "[ 2] TORO",
+        "[55] HORMIGUERO"
+      ],
+      "animales_seleccionados_str": "[60] CAMALEÓN, [36] CULEBRA, [21] GALLO, [ 2] TORO, [55] HORMIGUERO",
+      "candidatos_codigos": [
+        "60",
+        "36",
+        "21",
+        "2",
+        "55"
+      ],
+      "resultado_sorteo": "[65] ARAÑA",
+      "resultado_num": "65",
+      "resultado_animal": "ARAÑA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 7.76,
+      "costo_total": 38.8,
+      "cobrado": 0.0,
+      "pnl": -38.8,
+      "balance_cierre": 1101.8,
+      "drawdown_pct": 3.4
+    },
+    {
+      "fecha": "2026-10-02",
+      "hora": "11:00 AM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[11] GATO",
+        "[23] CEBRA",
+        "[ 7] PERICO"
+      ],
+      "animales_seleccionados_str": "[11] GATO, [23] CEBRA, [ 7] PERICO",
+      "candidatos_codigos": [
+        "11",
+        "23",
+        "7"
+      ],
+      "resultado_sorteo": "[ 8] RATÓN",
+      "resultado_num": "8",
+      "resultado_animal": "RATÓN",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 6.35,
+      "costo_total": 19.05,
+      "cobrado": 0.0,
+      "pnl": -19.05,
+      "balance_cierre": 1082.75,
+      "drawdown_pct": 5.07
+    },
+    {
+      "fecha": "2026-10-02",
+      "hora": "11:00 AM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[21] GALLO",
+        "[19] CHIVO"
+      ],
+      "animales_seleccionados_str": "[21] GALLO, [19] CHIVO",
+      "candidatos_codigos": [
+        "21",
+        "19"
+      ],
+      "resultado_sorteo": "[14] PALOMA",
+      "resultado_num": "14",
+      "resultado_animal": "PALOMA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 4.58,
+      "costo_total": 9.16,
+      "cobrado": 0.0,
+      "pnl": -9.16,
+      "balance_cierre": 1073.59,
+      "drawdown_pct": 5.87
+    },
+    {
+      "fecha": "2026-10-02",
+      "hora": "6:00 PM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[17] PAVO",
+        "[14] PALOMA",
+        "[16] OSO"
+      ],
+      "animales_seleccionados_str": "[17] PAVO, [14] PALOMA, [16] OSO",
+      "candidatos_codigos": [
+        "17",
+        "14",
+        "16"
+      ],
+      "resultado_sorteo": "[33] PESCADO",
+      "resultado_num": "33",
+      "resultado_animal": "PESCADO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.77,
+      "costo_total": 17.31,
+      "cobrado": 0.0,
+      "pnl": -17.31,
+      "balance_cierre": 1056.28,
+      "drawdown_pct": 7.39
+    },
+    {
+      "fecha": "2026-10-02",
+      "hora": "6:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[ 2] TORO",
+        "[23] CEBRA",
+        "[00] BALLENA",
+        "[ 6] RANA"
+      ],
+      "animales_seleccionados_str": "[ 2] TORO, [23] CEBRA, [00] BALLENA, [ 6] RANA",
+      "candidatos_codigos": [
+        "2",
+        "23",
+        "00",
+        "6"
+      ],
+      "resultado_sorteo": "[38] BÚFALO",
+      "resultado_num": "38",
+      "resultado_animal": "BÚFALO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.86,
+      "costo_total": 23.44,
+      "cobrado": 0.0,
+      "pnl": -23.44,
+      "balance_cierre": 1032.84,
+      "drawdown_pct": 9.45
+    },
+    {
+      "fecha": "2026-10-03",
+      "hora": "11:15 AM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[ 6] RANA",
+        "[68] JAGUAR"
+      ],
+      "animales_seleccionados_str": "[ 6] RANA, [68] JAGUAR",
+      "candidatos_codigos": [
+        "6",
+        "68"
+      ],
+      "resultado_sorteo": "[14] PALOMA",
+      "resultado_num": "14",
+      "resultado_animal": "PALOMA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 4.66,
+      "costo_total": 9.32,
+      "cobrado": 0.0,
+      "pnl": -9.32,
+      "balance_cierre": 1023.52,
+      "drawdown_pct": 10.26
+    },
+    {
+      "fecha": "2026-10-03",
+      "hora": "12:00 PM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[34] VENADO"
+      ],
+      "animales_seleccionados_str": "[34] VENADO",
+      "candidatos_codigos": [
+        "34"
+      ],
+      "resultado_sorteo": "[28] ZAMURO",
+      "resultado_num": "28",
+      "resultado_animal": "ZAMURO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 4.79,
+      "costo_total": 4.79,
+      "cobrado": 0.0,
+      "pnl": -4.79,
+      "balance_cierre": 1018.73,
+      "drawdown_pct": 10.68
+    },
+    {
+      "fecha": "2026-10-03",
+      "hora": "4:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[ 8] RATÓN",
+        "[32] ARDILLA",
+        "[00] BALLENA",
+        "[23] CEBRA",
+        "[ 7] PERICO"
+      ],
+      "animales_seleccionados_str": "[ 8] RATÓN, [32] ARDILLA, [00] BALLENA, [23] CEBRA, [ 7] PERICO",
+      "candidatos_codigos": [
+        "8",
+        "32",
+        "00",
+        "23",
+        "7"
+      ],
+      "resultado_sorteo": "[47] PAVO REAL",
+      "resultado_num": "47",
+      "resultado_animal": "PAVO REAL",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.08,
+      "costo_total": 25.4,
+      "cobrado": 0.0,
+      "pnl": -25.4,
+      "balance_cierre": 993.33,
+      "drawdown_pct": 12.91
+    },
+    {
+      "fecha": "2026-10-03",
+      "hora": "5:00 PM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[ 8] RATÓN",
+        "[21] GALLO"
+      ],
+      "animales_seleccionados_str": "[ 8] RATÓN, [21] GALLO",
+      "candidatos_codigos": [
+        "8",
+        "21"
+      ],
+      "resultado_sorteo": "[ 8] RATÓN",
+      "resultado_num": "8",
+      "resultado_animal": "RATÓN",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 4.24,
+      "costo_total": 8.48,
+      "cobrado": 127.2,
+      "pnl": 118.72,
+      "balance_cierre": 1112.05,
+      "drawdown_pct": 2.5
+    },
+    {
+      "fecha": "2026-10-03",
+      "hora": "7:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[ 5] LEÓN"
+      ],
+      "animales_seleccionados_str": "[ 5] LEÓN",
+      "candidatos_codigos": [
+        "5"
+      ],
+      "resultado_sorteo": "[24] IGUANA",
+      "resultado_num": "24",
+      "resultado_animal": "IGUANA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.05,
+      "costo_total": 5.05,
+      "cobrado": 0.0,
+      "pnl": -5.05,
+      "balance_cierre": 1107.0,
+      "drawdown_pct": 2.95
+    },
+    {
+      "fecha": "2026-10-04",
+      "hora": "1:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[30] CAIMÁN",
+        "[49] PEREZA",
+        "[55] HORMIGUERO",
+        "[14] PALOMA",
+        "[16] OSO"
+      ],
+      "animales_seleccionados_str": "[30] CAIMÁN, [49] PEREZA, [55] HORMIGUERO, [14] PALOMA, [16] OSO",
+      "candidatos_codigos": [
+        "30",
+        "49",
+        "55",
+        "14",
+        "16"
+      ],
+      "resultado_sorteo": "[49] PEREZA",
+      "resultado_num": "49",
+      "resultado_animal": "PEREZA",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 6.97,
+      "costo_total": 34.85,
+      "cobrado": 418.2,
+      "pnl": 383.35,
+      "balance_cierre": 1490.35,
+      "drawdown_pct": 0.0
+    },
+    {
+      "fecha": "2026-10-04",
+      "hora": "1:15 PM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[60] CAMALEÓN",
+        "[88] ERIZO DE MAR",
+        "[96] CABALLITO DE MAR"
+      ],
+      "animales_seleccionados_str": "[60] CAMALEÓN, [88] ERIZO DE MAR, [96] CABALLITO DE MAR",
+      "candidatos_codigos": [
+        "60",
+        "88",
+        "96"
+      ],
+      "resultado_sorteo": "[86] BUEY",
+      "resultado_num": "86",
+      "resultado_animal": "BUEY",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 8.8,
+      "costo_total": 26.4,
+      "cobrado": 0.0,
+      "pnl": -26.4,
+      "balance_cierre": 1463.95,
+      "drawdown_pct": 1.77
+    },
+    {
+      "fecha": "2026-10-04",
+      "hora": "3:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[ 8] RATÓN",
+        "[47] PAVO REAL",
+        "[21] GALLO",
+        "[46] PUMA"
+      ],
+      "animales_seleccionados_str": "[ 8] RATÓN, [47] PAVO REAL, [21] GALLO, [46] PUMA",
+      "candidatos_codigos": [
+        "8",
+        "47",
+        "21",
+        "46"
+      ],
+      "resultado_sorteo": "[13] MONO",
+      "resultado_num": "13",
+      "resultado_animal": "MONO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 11.42,
+      "costo_total": 45.68,
+      "cobrado": 0.0,
+      "pnl": -45.68,
+      "balance_cierre": 1418.27,
+      "drawdown_pct": 4.84
+    },
+    {
+      "fecha": "2026-10-04",
+      "hora": "4:00 PM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[11] GATO",
+        "[25] GALLINA"
+      ],
+      "animales_seleccionados_str": "[11] GATO, [25] GALLINA",
+      "candidatos_codigos": [
+        "11",
+        "25"
+      ],
+      "resultado_sorteo": "[ 3] CIEMPIÉS",
+      "resultado_num": "3",
+      "resultado_animal": "CIEMPIÉS",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 7.85,
+      "costo_total": 15.7,
+      "cobrado": 0.0,
+      "pnl": -15.7,
+      "balance_cierre": 1402.57,
+      "drawdown_pct": 5.89
+    },
+    {
+      "fecha": "2026-10-04",
+      "hora": "5:30 PM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[ 7] PERICO"
+      ],
+      "animales_seleccionados_str": "[ 7] PERICO",
+      "candidatos_codigos": [
+        "7"
+      ],
+      "resultado_sorteo": "[ 5] LEÓN",
+      "resultado_num": "5",
+      "resultado_animal": "LEÓN",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 6.92,
+      "costo_total": 6.92,
+      "cobrado": 0.0,
+      "pnl": -6.92,
+      "balance_cierre": 1395.65,
+      "drawdown_pct": 6.35
+    },
+    {
+      "fecha": "2026-10-04",
+      "hora": "7:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[55] HORMIGUERO",
+        "[38] BÚFALO",
+        "[14] PALOMA",
+        "[46] PUMA"
+      ],
+      "animales_seleccionados_str": "[55] HORMIGUERO, [38] BÚFALO, [14] PALOMA, [46] PUMA",
+      "candidatos_codigos": [
+        "55",
+        "38",
+        "14",
+        "46"
+      ],
+      "resultado_sorteo": "[69] CONEJO",
+      "resultado_num": "69",
+      "resultado_animal": "CONEJO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 9.58,
+      "costo_total": 38.32,
+      "cobrado": 0.0,
+      "pnl": -38.32,
+      "balance_cierre": 1357.33,
+      "drawdown_pct": 8.93
+    },
+    {
+      "fecha": "2026-10-05",
+      "hora": "10:15 AM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[37] TORTUGA",
+        "[39] LECHUZA",
+        "[84] CAMARÓN"
+      ],
+      "animales_seleccionados_str": "[37] TORTUGA, [39] LECHUZA, [84] CAMARÓN",
+      "candidatos_codigos": [
+        "37",
+        "39",
+        "84"
+      ],
+      "resultado_sorteo": "[38] BÚFALO",
+      "resultado_num": "38",
+      "resultado_animal": "BÚFALO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 6.23,
+      "costo_total": 18.69,
+      "cobrado": 0.0,
+      "pnl": -18.69,
+      "balance_cierre": 1338.64,
+      "drawdown_pct": 10.18
+    },
+    {
+      "fecha": "2026-10-05",
+      "hora": "10:30 AM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[17] PAVO",
+        "[35] PANTERA"
+      ],
+      "animales_seleccionados_str": "[17] PAVO, [35] PANTERA",
+      "candidatos_codigos": [
+        "17",
+        "35"
+      ],
+      "resultado_sorteo": "[ 1] CARNERO",
+      "resultado_num": "1",
+      "resultado_animal": "CARNERO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.77,
+      "costo_total": 11.54,
+      "cobrado": 0.0,
+      "pnl": -11.54,
+      "balance_cierre": 1327.1,
+      "drawdown_pct": 10.95
+    },
+    {
+      "fecha": "2026-10-05",
+      "hora": "2:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[ 0] DELFÍN",
+        "[25] GALLINA"
+      ],
+      "animales_seleccionados_str": "[ 0] DELFÍN, [25] GALLINA",
+      "candidatos_codigos": [
+        "0",
+        "25"
+      ],
+      "resultado_sorteo": "[24] IGUANA",
+      "resultado_num": "24",
+      "resultado_animal": "IGUANA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 4.66,
+      "costo_total": 9.32,
+      "cobrado": 0.0,
+      "pnl": -9.32,
+      "balance_cierre": 1317.78,
+      "drawdown_pct": 11.58
+    },
+    {
+      "fecha": "2026-10-05",
+      "hora": "5:30 PM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[34] VENADO",
+        "[21] GALLO",
+        "[ 4] ALACRÁN"
+      ],
+      "animales_seleccionados_str": "[34] VENADO, [21] GALLO, [ 4] ALACRÁN",
+      "candidatos_codigos": [
+        "34",
+        "21",
+        "4"
+      ],
+      "resultado_sorteo": "[31] LAPA",
+      "resultado_num": "31",
+      "resultado_animal": "LAPA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.41,
+      "costo_total": 16.23,
+      "cobrado": 0.0,
+      "pnl": -16.23,
+      "balance_cierre": 1301.55,
+      "drawdown_pct": 12.67
+    },
+    {
+      "fecha": "2026-10-05",
+      "hora": "6:00 PM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[30] CAIMÁN",
+        "[ 3] CIEMPIÉS",
+        "[28] ZAMURO"
+      ],
+      "animales_seleccionados_str": "[30] CAIMÁN, [ 3] CIEMPIÉS, [28] ZAMURO",
+      "candidatos_codigos": [
+        "30",
+        "3",
+        "28"
+      ],
+      "resultado_sorteo": "[34] VENADO",
+      "resultado_num": "34",
+      "resultado_animal": "VENADO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.6,
+      "costo_total": 16.8,
+      "cobrado": 0.0,
+      "pnl": -16.8,
+      "balance_cierre": 1284.75,
+      "drawdown_pct": 13.8
+    },
+    {
+      "fecha": "2026-10-05",
+      "hora": "8:30 PM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[ 5] LEÓN",
+        "[ 3] CIEMPIÉS",
+        "[ 4] ALACRÁN"
+      ],
+      "animales_seleccionados_str": "[ 5] LEÓN, [ 3] CIEMPIÉS, [ 4] ALACRÁN",
+      "candidatos_codigos": [
+        "5",
+        "3",
+        "4"
+      ],
+      "resultado_sorteo": "[29] ELEFANTE",
+      "resultado_num": "29",
+      "resultado_animal": "ELEFANTE",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 4.87,
+      "costo_total": 14.61,
+      "cobrado": 0.0,
+      "pnl": -14.61,
+      "balance_cierre": 1270.14,
+      "drawdown_pct": 14.78
+    },
+    {
+      "fecha": "2026-10-06",
+      "hora": "2:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[ 9] ÁGUILA"
+      ],
+      "animales_seleccionados_str": "[ 9] ÁGUILA",
+      "candidatos_codigos": [
+        "9"
+      ],
+      "resultado_sorteo": "[ 4] ALACRÁN",
+      "resultado_num": "4",
+      "resultado_animal": "ALACRÁN",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 3.88,
+      "costo_total": 3.88,
+      "cobrado": 0.0,
+      "pnl": -3.88,
+      "balance_cierre": 1266.26,
+      "drawdown_pct": 15.04
+    },
+    {
+      "fecha": "2026-10-06",
+      "hora": "2:15 PM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[50] CANARIO",
+        "[37] TORTUGA",
+        "[83] BUHO"
+      ],
+      "animales_seleccionados_str": "[50] CANARIO, [37] TORTUGA, [83] BUHO",
+      "candidatos_codigos": [
+        "50",
+        "37",
+        "83"
+      ],
+      "resultado_sorteo": "[98] COCODRILO",
+      "resultado_num": "98",
+      "resultado_animal": "COCODRILO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 4.67,
+      "costo_total": 14.01,
+      "cobrado": 0.0,
+      "pnl": -14.01,
+      "balance_cierre": 1252.25,
+      "drawdown_pct": 15.98
+    },
+    {
+      "fecha": "2026-10-06",
+      "hora": "6:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[30] CAIMÁN",
+        "[35] JIRAFA",
+        "[50] CANARIO",
+        "[70] BISONTE",
+        "[72] GORILA"
+      ],
+      "animales_seleccionados_str": "[30] CAIMÁN, [35] JIRAFA, [50] CANARIO, [70] BISONTE, [72] GORILA",
+      "candidatos_codigos": [
+        "30",
+        "35",
+        "50",
+        "70",
+        "72"
+      ],
+      "resultado_sorteo": "[48] PUERCOESPÍN",
+      "resultado_num": "48",
+      "resultado_animal": "PUERCOESPÍN",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 6.14,
+      "costo_total": 30.7,
+      "cobrado": 0.0,
+      "pnl": -30.7,
+      "balance_cierre": 1221.55,
+      "drawdown_pct": 18.04
+    },
+    {
+      "fecha": "2026-10-06",
+      "hora": "7:30 PM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[14] PALOMA",
+        "[ 4] ALACRÁN"
+      ],
+      "animales_seleccionados_str": "[14] PALOMA, [ 4] ALACRÁN",
+      "candidatos_codigos": [
+        "14",
+        "4"
+      ],
+      "resultado_sorteo": "[18] BURRO",
+      "resultado_num": "18",
+      "resultado_animal": "BURRO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 3.88,
+      "costo_total": 7.76,
+      "cobrado": 0.0,
+      "pnl": -7.76,
+      "balance_cierre": 1213.79,
+      "drawdown_pct": 18.56
+    },
+    {
+      "fecha": "2026-10-07",
+      "hora": "9:00 AM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[14] PALOMA",
+        "[20] COCHINO"
+      ],
+      "animales_seleccionados_str": "[14] PALOMA, [20] COCHINO",
+      "candidatos_codigos": [
+        "14",
+        "20"
+      ],
+      "resultado_sorteo": "[20] COCHINO",
+      "resultado_num": "20",
+      "resultado_animal": "COCHINO",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 4.1,
+      "costo_total": 8.2,
+      "cobrado": 123.0,
+      "pnl": 114.8,
+      "balance_cierre": 1328.59,
+      "drawdown_pct": 10.85
+    },
+    {
+      "fecha": "2026-10-07",
+      "hora": "11:00 AM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[25] GALLINA"
+      ],
+      "animales_seleccionados_str": "[25] GALLINA",
+      "candidatos_codigos": [
+        "25"
+      ],
+      "resultado_sorteo": "[ 4] ALACRÁN",
+      "resultado_num": "4",
+      "resultado_animal": "ALACRÁN",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 6.1,
+      "costo_total": 6.1,
+      "cobrado": 0.0,
+      "pnl": -6.1,
+      "balance_cierre": 1322.49,
+      "drawdown_pct": 11.26
+    },
+    {
+      "fecha": "2026-10-07",
+      "hora": "1:15 PM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[72] GORILA",
+        "[91] MORROCOY",
+        "[80] MURCIÉLAGO"
+      ],
+      "animales_seleccionados_str": "[72] GORILA, [91] MORROCOY, [80] MURCIÉLAGO",
+      "candidatos_codigos": [
+        "72",
+        "91",
+        "80"
+      ],
+      "resultado_sorteo": "[62] CACHICAMO",
+      "resultado_num": "62",
+      "resultado_animal": "CACHICAMO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.61,
+      "costo_total": 16.83,
+      "cobrado": 0.0,
+      "pnl": -16.83,
+      "balance_cierre": 1305.66,
+      "drawdown_pct": 12.39
+    },
+    {
+      "fecha": "2026-10-07",
+      "hora": "5:30 PM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[ 0] TIBURÓN",
+        "[36] CULEBRA",
+        "[ 4] ALACRÁN"
+      ],
+      "animales_seleccionados_str": "[ 0] TIBURÓN, [36] CULEBRA, [ 4] ALACRÁN",
+      "candidatos_codigos": [
+        "0",
+        "36",
+        "4"
+      ],
+      "resultado_sorteo": "[14] PALOMA",
+      "resultado_num": "14",
+      "resultado_animal": "PALOMA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.21,
+      "costo_total": 15.63,
+      "cobrado": 0.0,
+      "pnl": -15.63,
+      "balance_cierre": 1290.03,
+      "drawdown_pct": 13.44
+    },
+    {
+      "fecha": "2026-10-08",
+      "hora": "12:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[ 3] CIEMPIÉS",
+        "[20] COCHINO"
+      ],
+      "animales_seleccionados_str": "[ 3] CIEMPIÉS, [20] COCHINO",
+      "candidatos_codigos": [
+        "3",
+        "20"
+      ],
+      "resultado_sorteo": "[32] ARDILLA",
+      "resultado_num": "32",
+      "resultado_animal": "ARDILLA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 4.15,
+      "costo_total": 8.3,
+      "cobrado": 0.0,
+      "pnl": -8.3,
+      "balance_cierre": 1281.73,
+      "drawdown_pct": 14.0
+    },
+    {
+      "fecha": "2026-10-08",
+      "hora": "2:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[55] HORMIGUERO",
+        "[24] IGUANA",
+        "[19] CHIVO",
+        "[10] TIGRE"
+      ],
+      "animales_seleccionados_str": "[55] HORMIGUERO, [24] IGUANA, [19] CHIVO, [10] TIGRE",
+      "candidatos_codigos": [
+        "55",
+        "24",
+        "19",
+        "10"
+      ],
+      "resultado_sorteo": "[34] VENADO",
+      "resultado_num": "34",
+      "resultado_animal": "VENADO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 6.8,
+      "costo_total": 27.2,
+      "cobrado": 0.0,
+      "pnl": -27.2,
+      "balance_cierre": 1254.53,
+      "drawdown_pct": 15.82
+    },
+    {
+      "fecha": "2026-10-10",
+      "hora": "8:00 AM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[22] CAMELLO"
+      ],
+      "animales_seleccionados_str": "[22] CAMELLO",
+      "candidatos_codigos": [
+        "22"
+      ],
+      "resultado_sorteo": "[12] CABALLO",
+      "resultado_num": "12",
+      "resultado_animal": "CABALLO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 4.78,
+      "costo_total": 4.78,
+      "cobrado": 0.0,
+      "pnl": -4.78,
+      "balance_cierre": 1249.75,
+      "drawdown_pct": 16.14
+    },
+    {
+      "fecha": "2026-10-10",
+      "hora": "5:00 PM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[14] PALOMA"
+      ],
+      "animales_seleccionados_str": "[14] PALOMA",
+      "candidatos_codigos": [
+        "14"
+      ],
+      "resultado_sorteo": "[ 9] ÁGUILA",
+      "resultado_num": "9",
+      "resultado_animal": "ÁGUILA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 4.7,
+      "costo_total": 4.7,
+      "cobrado": 0.0,
+      "pnl": -4.7,
+      "balance_cierre": 1245.05,
+      "drawdown_pct": 16.46
+    },
+    {
+      "fecha": "2026-10-10",
+      "hora": "6:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[12] CABALLO",
+        "[00] BALLENA",
+        "[71] GUACAMAYA"
+      ],
+      "animales_seleccionados_str": "[12] CABALLO, [00] BALLENA, [71] GUACAMAYA",
+      "candidatos_codigos": [
+        "12",
+        "00",
+        "71"
+      ],
+      "resultado_sorteo": "[51] PELICANO",
+      "resultado_num": "51",
+      "resultado_animal": "PELICANO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.98,
+      "costo_total": 17.94,
+      "cobrado": 0.0,
+      "pnl": -17.94,
+      "balance_cierre": 1227.11,
+      "drawdown_pct": 17.66
+    },
+    {
+      "fecha": "2026-10-11",
+      "hora": "9:30 AM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[ 2] TORO",
+        "[ 0] TIBURÓN",
+        "[34] VENADO"
+      ],
+      "animales_seleccionados_str": "[ 2] TORO, [ 0] TIBURÓN, [34] VENADO",
+      "candidatos_codigos": [
+        "2",
+        "0",
+        "34"
+      ],
+      "resultado_sorteo": "[10] TIGRE",
+      "resultado_num": "10",
+      "resultado_animal": "TIGRE",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 3.96,
+      "costo_total": 11.88,
+      "cobrado": 0.0,
+      "pnl": -11.88,
+      "balance_cierre": 1215.23,
+      "drawdown_pct": 18.46
+    },
+    {
+      "fecha": "2026-10-11",
+      "hora": "1:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[ 0] DELFÍN",
+        "[12] CABALLO",
+        "[34] VENADO",
+        "[25] GALLINA",
+        "[38] BÚFALO"
+      ],
+      "animales_seleccionados_str": "[ 0] DELFÍN, [12] CABALLO, [34] VENADO, [25] GALLINA, [38] BÚFALO",
+      "candidatos_codigos": [
+        "0",
+        "12",
+        "34",
+        "25",
+        "38"
+      ],
+      "resultado_sorteo": "[25] GALLINA",
+      "resultado_num": "25",
+      "resultado_animal": "GALLINA",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 5.34,
+      "costo_total": 26.7,
+      "cobrado": 320.4,
+      "pnl": 293.7,
+      "balance_cierre": 1508.93,
+      "drawdown_pct": 0.0
+    },
+    {
+      "fecha": "2026-10-11",
+      "hora": "3:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[35] JIRAFA",
+        "[32] ARDILLA",
+        "[54] GRILLO",
+        "[36] CULEBRA",
+        "[14] PALOMA"
+      ],
+      "animales_seleccionados_str": "[35] JIRAFA, [32] ARDILLA, [54] GRILLO, [36] CULEBRA, [14] PALOMA",
+      "candidatos_codigos": [
+        "35",
+        "32",
+        "54",
+        "36",
+        "14"
+      ],
+      "resultado_sorteo": "[53] CARACOL",
+      "resultado_num": "53",
+      "resultado_animal": "CARACOL",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 12.31,
+      "costo_total": 61.55,
+      "cobrado": 0.0,
+      "pnl": -61.55,
+      "balance_cierre": 1447.38,
+      "drawdown_pct": 4.08
+    },
+    {
+      "fecha": "2026-10-11",
+      "hora": "6:15 PM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[11] GATO",
+        "[28] ZAMURO",
+        "[ 6] RANA"
+      ],
+      "animales_seleccionados_str": "[11] GATO, [28] ZAMURO, [ 6] RANA",
+      "candidatos_codigos": [
+        "11",
+        "28",
+        "6"
+      ],
+      "resultado_sorteo": "[74] TURPIAL",
+      "resultado_num": "74",
+      "resultado_animal": "TURPIAL",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 7.67,
+      "costo_total": 23.01,
+      "cobrado": 0.0,
+      "pnl": -23.01,
+      "balance_cierre": 1424.37,
+      "drawdown_pct": 5.6
+    },
+    {
+      "fecha": "2026-10-12",
+      "hora": "8:15 AM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[34] VENADO",
+        "[25] GALLINA",
+        "[68] JAGUAR"
+      ],
+      "animales_seleccionados_str": "[34] VENADO, [25] GALLINA, [68] JAGUAR",
+      "candidatos_codigos": [
+        "34",
+        "25",
+        "68"
+      ],
+      "resultado_sorteo": "[97] LORO",
+      "resultado_num": "97",
+      "resultado_animal": "LORO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 7.23,
+      "costo_total": 21.69,
+      "cobrado": 0.0,
+      "pnl": -21.69,
+      "balance_cierre": 1402.68,
+      "drawdown_pct": 7.04
+    },
+    {
+      "fecha": "2026-10-12",
+      "hora": "8:30 AM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[ 2] TORO",
+        "[15] ZORRO",
+        "[14] PALOMA"
+      ],
+      "animales_seleccionados_str": "[ 2] TORO, [15] ZORRO, [14] PALOMA",
+      "candidatos_codigos": [
+        "2",
+        "15",
+        "14"
+      ],
+      "resultado_sorteo": "[29] ELEFANTE",
+      "resultado_num": "29",
+      "resultado_animal": "ELEFANTE",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 3.34,
+      "costo_total": 10.02,
+      "cobrado": 0.0,
+      "pnl": -10.02,
+      "balance_cierre": 1392.66,
+      "drawdown_pct": 7.71
+    },
+    {
+      "fecha": "2026-10-12",
+      "hora": "11:15 AM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[89] ANGUILA",
+        "[91] MORROCOY",
+        "[66] LOBO"
+      ],
+      "animales_seleccionados_str": "[89] ANGUILA, [91] MORROCOY, [66] LOBO",
+      "candidatos_codigos": [
+        "89",
+        "91",
+        "66"
+      ],
+      "resultado_sorteo": "[39] LECHUZA",
+      "resultado_num": "39",
+      "resultado_animal": "LECHUZA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 6.64,
+      "costo_total": 19.92,
+      "cobrado": 0.0,
+      "pnl": -19.92,
+      "balance_cierre": 1372.74,
+      "drawdown_pct": 9.03
+    },
+    {
+      "fecha": "2026-10-12",
+      "hora": "12:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[ 1] CARNERO"
+      ],
+      "animales_seleccionados_str": "[ 1] CARNERO",
+      "candidatos_codigos": [
+        "1"
+      ],
+      "resultado_sorteo": "[22] CAMELLO",
+      "resultado_num": "22",
+      "resultado_animal": "CAMELLO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.14,
+      "costo_total": 5.14,
+      "cobrado": 0.0,
+      "pnl": -5.14,
+      "balance_cierre": 1367.6,
+      "drawdown_pct": 9.37
+    },
+    {
+      "fecha": "2026-10-13",
+      "hora": "8:00 AM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[54] GRILLO",
+        "[ 0] DELFÍN",
+        "[36] CULEBRA",
+        "[72] GORILA",
+        "[26] VACA"
+      ],
+      "animales_seleccionados_str": "[54] GRILLO, [ 0] DELFÍN, [36] CULEBRA, [72] GORILA, [26] VACA",
+      "candidatos_codigos": [
+        "54",
+        "0",
+        "36",
+        "72",
+        "26"
+      ],
+      "resultado_sorteo": "[00] BALLENA",
+      "resultado_num": "00",
+      "resultado_animal": "BALLENA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 8.55,
+      "costo_total": 42.75,
+      "cobrado": 0.0,
+      "pnl": -42.75,
+      "balance_cierre": 1324.85,
+      "drawdown_pct": 12.2
+    },
+    {
+      "fecha": "2026-10-13",
+      "hora": "12:30 PM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[21] GALLO",
+        "[ 6] RANA"
+      ],
+      "animales_seleccionados_str": "[21] GALLO, [ 6] RANA",
+      "candidatos_codigos": [
+        "21",
+        "6"
+      ],
+      "resultado_sorteo": "[18] BURRO",
+      "resultado_num": "18",
+      "resultado_animal": "BURRO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 2.66,
+      "costo_total": 5.32,
+      "cobrado": 0.0,
+      "pnl": -5.32,
+      "balance_cierre": 1319.53,
+      "drawdown_pct": 12.55
+    },
+    {
+      "fecha": "2026-10-13",
+      "hora": "2:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[54] GRILLO",
+        "[25] GALLINA",
+        "[ 7] PERICO",
+        "[26] VACA"
+      ],
+      "animales_seleccionados_str": "[54] GRILLO, [25] GALLINA, [ 7] PERICO, [26] VACA",
+      "candidatos_codigos": [
+        "54",
+        "25",
+        "7",
+        "26"
+      ],
+      "resultado_sorteo": "[45] GARZA",
+      "resultado_num": "45",
+      "resultado_animal": "GARZA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 7.39,
+      "costo_total": 29.56,
+      "cobrado": 0.0,
+      "pnl": -29.56,
+      "balance_cierre": 1289.97,
+      "drawdown_pct": 14.51
+    },
+    {
+      "fecha": "2026-10-13",
+      "hora": "4:00 PM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[27] PERRO"
+      ],
+      "animales_seleccionados_str": "[27] PERRO",
+      "candidatos_codigos": [
+        "27"
+      ],
+      "resultado_sorteo": "[ 9] ÁGUILA",
+      "resultado_num": "9",
+      "resultado_animal": "ÁGUILA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 5.18,
+      "costo_total": 5.18,
+      "cobrado": 0.0,
+      "pnl": -5.18,
+      "balance_cierre": 1284.79,
+      "drawdown_pct": 14.85
+    },
+    {
+      "fecha": "2026-10-13",
+      "hora": "7:00 PM",
+      "ruleta": "🐸 La Granjita",
+      "animales_seleccionados": [
+        "[26] VACA"
+      ],
+      "animales_seleccionados_str": "[26] VACA",
+      "candidatos_codigos": [
+        "26"
+      ],
+      "resultado_sorteo": "[21] GALLO",
+      "resultado_num": "21",
+      "resultado_animal": "GALLO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 3.91,
+      "costo_total": 3.91,
+      "cobrado": 0.0,
+      "pnl": -3.91,
+      "balance_cierre": 1280.88,
+      "drawdown_pct": 15.11
+    },
+    {
+      "fecha": "2026-10-13",
+      "hora": "8:30 PM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[ 3] CIEMPIÉS",
+        "[ 9] ÁGUILA",
+        "[35] PANTERA"
+      ],
+      "animales_seleccionados_str": "[ 3] CIEMPIÉS, [ 9] ÁGUILA, [35] PANTERA",
+      "candidatos_codigos": [
+        "3",
+        "9",
+        "35"
+      ],
+      "resultado_sorteo": "[ 1] CARNERO",
+      "resultado_num": "1",
+      "resultado_animal": "CARNERO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 2.3,
+      "costo_total": 6.9,
+      "cobrado": 0.0,
+      "pnl": -6.9,
+      "balance_cierre": 1273.98,
+      "drawdown_pct": 15.57
+    },
+    {
+      "fecha": "2026-10-14",
+      "hora": "3:30 PM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[18] BURRO",
+        "[15] ZORRO",
+        "[ 4] ALACRÁN"
+      ],
+      "animales_seleccionados_str": "[18] BURRO, [15] ZORRO, [ 4] ALACRÁN",
+      "candidatos_codigos": [
+        "18",
+        "15",
+        "4"
+      ],
+      "resultado_sorteo": "[15] ZORRO",
+      "resultado_num": "15",
+      "resultado_animal": "ZORRO",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 2.25,
+      "costo_total": 6.75,
+      "cobrado": 67.5,
+      "pnl": 60.75,
+      "balance_cierre": 1334.73,
+      "drawdown_pct": 11.54
+    },
+    {
+      "fecha": "2026-10-14",
+      "hora": "4:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[ 8] RATÓN",
+        "[60] CAMALEÓN",
+        "[39] LECHUZA",
+        "[44] CHUGÜIRE",
+        "[ 7] PERICO"
+      ],
+      "animales_seleccionados_str": "[ 8] RATÓN, [60] CAMALEÓN, [39] LECHUZA, [44] CHUGÜIRE, [ 7] PERICO",
+      "candidatos_codigos": [
+        "8",
+        "60",
+        "39",
+        "44",
+        "7"
+      ],
+      "resultado_sorteo": "[ 7] PERICO",
+      "resultado_num": "7",
+      "resultado_animal": "PERICO",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 7.75,
+      "costo_total": 38.75,
+      "cobrado": 465.0,
+      "pnl": 426.25,
+      "balance_cierre": 1760.98,
+      "drawdown_pct": 0.0
+    },
+    {
+      "fecha": "2026-10-14",
+      "hora": "5:30 PM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[ 8] RATÓN",
+        "[10] TIGRE",
+        "[31] LAPA"
+      ],
+      "animales_seleccionados_str": "[ 8] RATÓN, [10] TIGRE, [31] LAPA",
+      "candidatos_codigos": [
+        "8",
+        "10",
+        "31"
+      ],
+      "resultado_sorteo": "[ 4] ALACRÁN",
+      "resultado_num": "4",
+      "resultado_animal": "ALACRÁN",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 10.18,
+      "costo_total": 30.54,
+      "cobrado": 0.0,
+      "pnl": -30.54,
+      "balance_cierre": 1730.44,
+      "drawdown_pct": 1.73
+    },
+    {
+      "fecha": "2026-10-14",
+      "hora": "7:00 PM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[19] CHIVO",
+        "[16] OSO"
+      ],
+      "animales_seleccionados_str": "[19] CHIVO, [16] OSO",
+      "candidatos_codigos": [
+        "19",
+        "16"
+      ],
+      "resultado_sorteo": "[ 7] PERICO",
+      "resultado_num": "7",
+      "resultado_animal": "PERICO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 10.43,
+      "costo_total": 20.86,
+      "cobrado": 0.0,
+      "pnl": -20.86,
+      "balance_cierre": 1709.58,
+      "drawdown_pct": 2.92
+    },
+    {
+      "fecha": "2026-10-14",
+      "hora": "7:00 PM",
+      "ruleta": "🦇 Guacharo Activo",
+      "animales_seleccionados": [
+        "[48] PUERCOESPÍN",
+        "[40] AVISPA",
+        "[25] GALLINA",
+        "[14] PALOMA",
+        "[26] VACA"
+      ],
+      "animales_seleccionados_str": "[48] PUERCOESPÍN, [40] AVISPA, [25] GALLINA, [14] PALOMA, [26] VACA",
+      "candidatos_codigos": [
+        "48",
+        "40",
+        "25",
+        "14",
+        "26"
+      ],
+      "resultado_sorteo": "[71] GUACAMAYA",
+      "resultado_num": "71",
+      "resultado_animal": "GUACAMAYA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 12.93,
+      "costo_total": 64.65,
+      "cobrado": 0.0,
+      "pnl": -64.65,
+      "balance_cierre": 1644.93,
+      "drawdown_pct": 6.59
+    },
+    {
+      "fecha": "2026-10-15",
+      "hora": "11:15 AM",
+      "ruleta": "🌿 Selva Plus",
+      "animales_seleccionados": [
+        "[30] CAIMÁN",
+        "[82] CUCARACHA",
+        "[44] CHIGÜIRE"
+      ],
+      "animales_seleccionados_str": "[30] CAIMÁN, [82] CUCARACHA, [44] CHIGÜIRE",
+      "candidatos_codigos": [
+        "30",
+        "82",
+        "44"
+      ],
+      "resultado_sorteo": "[67] AVESTRUZ",
+      "resultado_num": "67",
+      "resultado_animal": "AVESTRUZ",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 8.11,
+      "costo_total": 24.33,
+      "cobrado": 0.0,
+      "pnl": -24.33,
+      "balance_cierre": 1620.6,
+      "drawdown_pct": 7.97
+    },
+    {
+      "fecha": "2026-10-15",
+      "hora": "12:00 PM",
+      "ruleta": "🦁 Lotto Activo",
+      "animales_seleccionados": [
+        "[21] GALLO",
+        "[ 9] ÁGUILA",
+        "[ 4] ALACRÁN"
+      ],
+      "animales_seleccionados_str": "[21] GALLO, [ 9] ÁGUILA, [ 4] ALACRÁN",
+      "candidatos_codigos": [
+        "21",
+        "9",
+        "4"
+      ],
+      "resultado_sorteo": "[33] PESCADO",
+      "resultado_num": "33",
+      "resultado_animal": "PESCADO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 8.18,
+      "costo_total": 24.54,
+      "cobrado": 0.0,
+      "pnl": -24.54,
+      "balance_cierre": 1596.06,
+      "drawdown_pct": 9.37
+    },
+    {
+      "fecha": "2026-10-15",
+      "hora": "2:30 PM",
+      "ruleta": "👑 Ruleta Royal",
+      "animales_seleccionados": [
+        "[25] GALLINA",
+        "[15] ZORRO"
+      ],
+      "animales_seleccionados_str": "[25] GALLINA, [15] ZORRO",
+      "candidatos_codigos": [
+        "25",
+        "15"
+      ],
+      "resultado_sorteo": "[25] GALLINA",
+      "resultado_num": "25",
+      "resultado_animal": "GALLINA",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 7.07,
+      "costo_total": 14.14,
+      "cobrado": 212.1,
+      "pnl": 197.96,
+      "balance_cierre": 1794.02,
+      "drawdown_pct": 0.0
+    }
+  ]
+}

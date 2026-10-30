@@ -1,0 +1,2109 @@
+{
+  "portfolio": "brasil",
+  "bankroll": 154.65,
+  "peak_capital": 216.8,
+  "losses_streak": 21,
+  "last_processed_date": "2026-10-15",
+  "last_updated": "2026-10-15 03:25 PM",
+  "total_jugadas": 75,
+  "total_aciertos": 6,
+  "historial_jugadas": [
+    {
+      "fecha": "2026-09-14",
+      "hora": "8:00 AM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[28] ABUTRE",
+        "[13] MACACO"
+      ],
+      "animales_seleccionados_str": "[28] ABUTRE, [13] MACACO",
+      "candidatos_codigos": [
+        "28",
+        "13"
+      ],
+      "resultado_sorteo": "[28] ABUTRE",
+      "resultado_num": "28",
+      "resultado_animal": "ABUTRE",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 0.48,
+      "costo_total": 0.96,
+      "cobrado": 17.76,
+      "pnl": 16.8,
+      "balance_cierre": 216.8,
+      "drawdown_pct": 0.0
+    },
+    {
+      "fecha": "2026-09-14",
+      "hora": "9:00 AM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[22] CAMELO",
+        "[30] JACARÉ",
+        "[21] GALO",
+        "[31] CAPIVARA"
+      ],
+      "animales_seleccionados_str": "[22] CAMELO, [30] JACARÉ, [21] GALO, [31] CAPIVARA",
+      "candidatos_codigos": [
+        "22",
+        "30",
+        "21",
+        "31"
+      ],
+      "resultado_sorteo": "[36] COBRA",
+      "resultado_num": "36",
+      "resultado_animal": "COBRA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.48,
+      "costo_total": 5.92,
+      "cobrado": 0.0,
+      "pnl": -5.92,
+      "balance_cierre": 210.88,
+      "drawdown_pct": 2.73
+    },
+    {
+      "fecha": "2026-09-14",
+      "hora": "10:00 AM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[01] FLAMENCO",
+        "[09] CORUJA",
+        "[36] COBRA",
+        "[22] CAMELO"
+      ],
+      "animales_seleccionados_str": "[01] FLAMENCO, [09] CORUJA, [36] COBRA, [22] CAMELO",
+      "candidatos_codigos": [
+        "01",
+        "09",
+        "36",
+        "22"
+      ],
+      "resultado_sorteo": "[06] SAPO",
+      "resultado_num": "06",
+      "resultado_animal": "SAPO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.68,
+      "costo_total": 2.72,
+      "cobrado": 0.0,
+      "pnl": -2.72,
+      "balance_cierre": 208.16,
+      "drawdown_pct": 3.99
+    },
+    {
+      "fecha": "2026-09-14",
+      "hora": "4:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[17] PERU",
+        "[32] ESQUILO",
+        "[19] CABRA",
+        "[20] PORCO"
+      ],
+      "animales_seleccionados_str": "[17] PERU, [32] ESQUILO, [19] CABRA, [20] PORCO",
+      "candidatos_codigos": [
+        "17",
+        "32",
+        "19",
+        "20"
+      ],
+      "resultado_sorteo": "[11] GATO",
+      "resultado_num": "11",
+      "resultado_animal": "GATO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.28,
+      "costo_total": 5.12,
+      "cobrado": 0.0,
+      "pnl": -5.12,
+      "balance_cierre": 203.04,
+      "drawdown_pct": 6.35
+    },
+    {
+      "fecha": "2026-09-15",
+      "hora": "5:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[27] CACHORRO",
+        "[19] CABRA",
+        "[25] GALINHA",
+        "[16] URSO"
+      ],
+      "animales_seleccionados_str": "[27] CACHORRO, [19] CABRA, [25] GALINHA, [16] URSO",
+      "candidatos_codigos": [
+        "27",
+        "19",
+        "25",
+        "16"
+      ],
+      "resultado_sorteo": "[05] LEÃO",
+      "resultado_num": "05",
+      "resultado_animal": "LEÃO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.59,
+      "costo_total": 2.36,
+      "cobrado": 0.0,
+      "pnl": -2.36,
+      "balance_cierre": 200.68,
+      "drawdown_pct": 7.44
+    },
+    {
+      "fecha": "2026-09-16",
+      "hora": "1:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[12] CAVALO",
+        "[21] GALO",
+        "[20] PORCO"
+      ],
+      "animales_seleccionados_str": "[12] CAVALO, [21] GALO, [20] PORCO",
+      "candidatos_codigos": [
+        "12",
+        "21",
+        "20"
+      ],
+      "resultado_sorteo": "[36] COBRA",
+      "resultado_num": "36",
+      "resultado_animal": "COBRA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.57,
+      "costo_total": 1.71,
+      "cobrado": 0.0,
+      "pnl": -1.71,
+      "balance_cierre": 198.97,
+      "drawdown_pct": 8.22
+    },
+    {
+      "fecha": "2026-09-17",
+      "hora": "9:00 AM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[27] CACHORRO",
+        "[15] RAPOSA",
+        "[16] URSO",
+        "[18] BURRO"
+      ],
+      "animales_seleccionados_str": "[27] CACHORRO, [15] RAPOSA, [16] URSO, [18] BURRO",
+      "candidatos_codigos": [
+        "27",
+        "15",
+        "16",
+        "18"
+      ],
+      "resultado_sorteo": "[ 0] GOLFINHO",
+      "resultado_num": "0",
+      "resultado_animal": "GOLFINHO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.55,
+      "costo_total": 2.2,
+      "cobrado": 0.0,
+      "pnl": -2.2,
+      "balance_cierre": 196.77,
+      "drawdown_pct": 9.24
+    },
+    {
+      "fecha": "2026-09-17",
+      "hora": "12:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[25] GALINHA",
+        "[30] JACARÉ",
+        "[20] PORCO"
+      ],
+      "animales_seleccionados_str": "[25] GALINHA, [30] JACARÉ, [20] PORCO",
+      "candidatos_codigos": [
+        "25",
+        "30",
+        "20"
+      ],
+      "resultado_sorteo": "[36] COBRA",
+      "resultado_num": "36",
+      "resultado_animal": "COBRA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.03,
+      "costo_total": 3.09,
+      "cobrado": 0.0,
+      "pnl": -3.09,
+      "balance_cierre": 193.68,
+      "drawdown_pct": 10.66
+    },
+    {
+      "fecha": "2026-09-18",
+      "hora": "8:00 AM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[25] GALINHA",
+        "[33] PEIXE",
+        "[15] RAPOSA",
+        "[24] IGUANA"
+      ],
+      "animales_seleccionados_str": "[25] GALINHA, [33] PEIXE, [15] RAPOSA, [24] IGUANA",
+      "candidatos_codigos": [
+        "25",
+        "33",
+        "15",
+        "24"
+      ],
+      "resultado_sorteo": "[10] TIGRE",
+      "resultado_num": "10",
+      "resultado_animal": "TIGRE",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.49,
+      "costo_total": 1.96,
+      "cobrado": 0.0,
+      "pnl": -1.96,
+      "balance_cierre": 191.72,
+      "drawdown_pct": 11.57
+    },
+    {
+      "fecha": "2026-09-18",
+      "hora": "4:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[17] PERU",
+        "[16] URSO",
+        "[29] ELEFANTE"
+      ],
+      "animales_seleccionados_str": "[17] PERU, [16] URSO, [29] ELEFANTE",
+      "candidatos_codigos": [
+        "17",
+        "16",
+        "29"
+      ],
+      "resultado_sorteo": "[13] MACACO",
+      "resultado_num": "13",
+      "resultado_animal": "MACACO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.47,
+      "costo_total": 1.41,
+      "cobrado": 0.0,
+      "pnl": -1.41,
+      "balance_cierre": 190.31,
+      "drawdown_pct": 12.22
+    },
+    {
+      "fecha": "2026-09-18",
+      "hora": "5:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[05] LEÃO",
+        "[23] ZEBRA",
+        "[06] SAPO",
+        "[22] CAMELO"
+      ],
+      "animales_seleccionados_str": "[05] LEÃO, [23] ZEBRA, [06] SAPO, [22] CAMELO",
+      "candidatos_codigos": [
+        "05",
+        "23",
+        "06",
+        "22"
+      ],
+      "resultado_sorteo": "[34] VEADO",
+      "resultado_num": "34",
+      "resultado_animal": "VEADO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.9,
+      "costo_total": 3.6,
+      "cobrado": 0.0,
+      "pnl": -3.6,
+      "balance_cierre": 186.71,
+      "drawdown_pct": 13.88
+    },
+    {
+      "fecha": "2026-09-19",
+      "hora": "8:00 AM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[32] ESQUILO",
+        "[19] CABRA",
+        "[31] CAPIVARA",
+        "[08] RATO"
+      ],
+      "animales_seleccionados_str": "[32] ESQUILO, [19] CABRA, [31] CAPIVARA, [08] RATO",
+      "candidatos_codigos": [
+        "32",
+        "19",
+        "31",
+        "08"
+      ],
+      "resultado_sorteo": "[34] VEADO",
+      "resultado_num": "34",
+      "resultado_animal": "VEADO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.83,
+      "costo_total": 3.32,
+      "cobrado": 0.0,
+      "pnl": -3.32,
+      "balance_cierre": 183.39,
+      "drawdown_pct": 15.41
+    },
+    {
+      "fecha": "2026-09-19",
+      "hora": "11:00 AM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[01] FLAMENCO",
+        "[30] JACARÉ",
+        "[00] BALEIA",
+        "[31] CAPIVARA"
+      ],
+      "animales_seleccionados_str": "[01] FLAMENCO, [30] JACARÉ, [00] BALEIA, [31] CAPIVARA",
+      "candidatos_codigos": [
+        "01",
+        "30",
+        "00",
+        "31"
+      ],
+      "resultado_sorteo": "[34] VEADO",
+      "resultado_num": "34",
+      "resultado_animal": "VEADO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.39,
+      "costo_total": 1.56,
+      "cobrado": 0.0,
+      "pnl": -1.56,
+      "balance_cierre": 181.83,
+      "drawdown_pct": 16.13
+    },
+    {
+      "fecha": "2026-09-19",
+      "hora": "12:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[22] CAMELO",
+        "[27] CACHORRO",
+        "[21] GALO",
+        "[18] BURRO"
+      ],
+      "animales_seleccionados_str": "[22] CAMELO, [27] CACHORRO, [21] GALO, [18] BURRO",
+      "candidatos_codigos": [
+        "22",
+        "27",
+        "21",
+        "18"
+      ],
+      "resultado_sorteo": "[25] GALINHA",
+      "resultado_num": "25",
+      "resultado_animal": "GALINHA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.74,
+      "costo_total": 2.96,
+      "cobrado": 0.0,
+      "pnl": -2.96,
+      "balance_cierre": 178.87,
+      "drawdown_pct": 17.5
+    },
+    {
+      "fecha": "2026-09-19",
+      "hora": "6:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[12] CAVALO",
+        "[21] GALO",
+        "[02] TOURO",
+        "[03] LACRAIA"
+      ],
+      "animales_seleccionados_str": "[12] CAVALO, [21] GALO, [02] TOURO, [03] LACRAIA",
+      "candidatos_codigos": [
+        "12",
+        "21",
+        "02",
+        "03"
+      ],
+      "resultado_sorteo": "[12] CAVALO",
+      "resultado_num": "12",
+      "resultado_animal": "CAVALO",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 0.35,
+      "costo_total": 1.4,
+      "cobrado": 12.95,
+      "pnl": 11.55,
+      "balance_cierre": 190.42,
+      "drawdown_pct": 12.17
+    },
+    {
+      "fecha": "2026-09-20",
+      "hora": "8:00 AM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[05] LEÃO",
+        "[10] TIGRE",
+        "[22] CAMELO",
+        "[20] PORCO"
+      ],
+      "animales_seleccionados_str": "[05] LEÃO, [10] TIGRE, [22] CAMELO, [20] PORCO",
+      "candidatos_codigos": [
+        "05",
+        "10",
+        "22",
+        "20"
+      ],
+      "resultado_sorteo": "[31] CAPIVARA",
+      "resultado_num": "31",
+      "resultado_animal": "CAPIVARA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.55,
+      "costo_total": 2.2,
+      "cobrado": 0.0,
+      "pnl": -2.2,
+      "balance_cierre": 188.22,
+      "drawdown_pct": 13.18
+    },
+    {
+      "fecha": "2026-09-20",
+      "hora": "11:00 AM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[34] VEADO",
+        "[10] TIGRE",
+        "[30] JACARÉ"
+      ],
+      "animales_seleccionados_str": "[34] VEADO, [10] TIGRE, [30] JACARÉ",
+      "candidatos_codigos": [
+        "34",
+        "10",
+        "30"
+      ],
+      "resultado_sorteo": "[36] COBRA",
+      "resultado_num": "36",
+      "resultado_animal": "COBRA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.52,
+      "costo_total": 1.56,
+      "cobrado": 0.0,
+      "pnl": -1.56,
+      "balance_cierre": 186.66,
+      "drawdown_pct": 13.9
+    },
+    {
+      "fecha": "2026-09-20",
+      "hora": "11:00 AM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[17] PERU",
+        "[25] GALINHA",
+        "[30] JACARÉ",
+        "[26] VACA"
+      ],
+      "animales_seleccionados_str": "[17] PERU, [25] GALINHA, [30] JACARÉ, [26] VACA",
+      "candidatos_codigos": [
+        "17",
+        "25",
+        "30",
+        "26"
+      ],
+      "resultado_sorteo": "[26] VACA",
+      "resultado_num": "26",
+      "resultado_animal": "VACA",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 0.83,
+      "costo_total": 3.32,
+      "cobrado": 29.05,
+      "pnl": 25.73,
+      "balance_cierre": 212.39,
+      "drawdown_pct": 2.03
+    },
+    {
+      "fecha": "2026-09-20",
+      "hora": "1:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[25] GALINHA",
+        "[03] LACRAIA",
+        "[27] CACHORRO",
+        "[18] BURRO"
+      ],
+      "animales_seleccionados_str": "[25] GALINHA, [03] LACRAIA, [27] CACHORRO, [18] BURRO",
+      "candidatos_codigos": [
+        "25",
+        "03",
+        "27",
+        "18"
+      ],
+      "resultado_sorteo": "[07] PERIQUITO",
+      "resultado_num": "07",
+      "resultado_animal": "PERIQUITO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.38,
+      "costo_total": 5.52,
+      "cobrado": 0.0,
+      "pnl": -5.52,
+      "balance_cierre": 206.87,
+      "drawdown_pct": 4.58
+    },
+    {
+      "fecha": "2026-09-20",
+      "hora": "2:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[11] GATO",
+        "[07] PERIQUITO",
+        "[33] PEIXE",
+        "[18] BURRO"
+      ],
+      "animales_seleccionados_str": "[11] GATO, [07] PERIQUITO, [33] PEIXE, [18] BURRO",
+      "candidatos_codigos": [
+        "11",
+        "07",
+        "33",
+        "18"
+      ],
+      "resultado_sorteo": "[30] JACARÉ",
+      "resultado_num": "30",
+      "resultado_animal": "JACARÉ",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.76,
+      "costo_total": 3.04,
+      "cobrado": 0.0,
+      "pnl": -3.04,
+      "balance_cierre": 203.83,
+      "drawdown_pct": 5.98
+    },
+    {
+      "fecha": "2026-09-20",
+      "hora": "6:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[12] CAVALO",
+        "[15] RAPOSA",
+        "[02] TOURO",
+        "[03] LACRAIA"
+      ],
+      "animales_seleccionados_str": "[12] CAVALO, [15] RAPOSA, [02] TOURO, [03] LACRAIA",
+      "candidatos_codigos": [
+        "12",
+        "15",
+        "02",
+        "03"
+      ],
+      "resultado_sorteo": "[11] GATO",
+      "resultado_num": "11",
+      "resultado_animal": "GATO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.72,
+      "costo_total": 2.88,
+      "cobrado": 0.0,
+      "pnl": -2.88,
+      "balance_cierre": 200.95,
+      "drawdown_pct": 7.31
+    },
+    {
+      "fecha": "2026-09-21",
+      "hora": "9:00 AM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[34] VEADO",
+        "[36] COBRA",
+        "[04] ESCORPIÃO",
+        "[19] CABRA"
+      ],
+      "animales_seleccionados_str": "[34] VEADO, [36] COBRA, [04] ESCORPIÃO, [19] CABRA",
+      "candidatos_codigos": [
+        "34",
+        "36",
+        "04",
+        "19"
+      ],
+      "resultado_sorteo": "[28] ABUTRE",
+      "resultado_num": "28",
+      "resultado_animal": "ABUTRE",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 1.12,
+      "costo_total": 4.48,
+      "cobrado": 0.0,
+      "pnl": -4.48,
+      "balance_cierre": 196.47,
+      "drawdown_pct": 9.38
+    },
+    {
+      "fecha": "2026-09-21",
+      "hora": "10:00 AM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[20] PORCO",
+        "[29] ELEFANTE"
+      ],
+      "animales_seleccionados_str": "[20] PORCO, [29] ELEFANTE",
+      "candidatos_codigos": [
+        "20",
+        "29"
+      ],
+      "resultado_sorteo": "[22] CAMELO",
+      "resultado_num": "22",
+      "resultado_animal": "CAMELO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.62,
+      "costo_total": 1.24,
+      "cobrado": 0.0,
+      "pnl": -1.24,
+      "balance_cierre": 195.23,
+      "drawdown_pct": 9.95
+    },
+    {
+      "fecha": "2026-09-21",
+      "hora": "1:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[34] VEADO",
+        "[07] PERIQUITO",
+        "[35] GIRAFA"
+      ],
+      "animales_seleccionados_str": "[34] VEADO, [07] PERIQUITO, [35] GIRAFA",
+      "candidatos_codigos": [
+        "34",
+        "07",
+        "35"
+      ],
+      "resultado_sorteo": "[02] TOURO",
+      "resultado_num": "02",
+      "resultado_animal": "TOURO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.61,
+      "costo_total": 1.83,
+      "cobrado": 0.0,
+      "pnl": -1.83,
+      "balance_cierre": 193.4,
+      "drawdown_pct": 10.79
+    },
+    {
+      "fecha": "2026-09-22",
+      "hora": "5:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[09] ARARA",
+        "[13] MACACO",
+        "[03] LACRAIA"
+      ],
+      "animales_seleccionados_str": "[09] ARARA, [13] MACACO, [03] LACRAIA",
+      "candidatos_codigos": [
+        "09",
+        "13",
+        "03"
+      ],
+      "resultado_sorteo": "[27] CACHORRO",
+      "resultado_num": "27",
+      "resultado_animal": "CACHORRO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.96,
+      "costo_total": 2.88,
+      "cobrado": 0.0,
+      "pnl": -2.88,
+      "balance_cierre": 190.52,
+      "drawdown_pct": 12.12
+    },
+    {
+      "fecha": "2026-09-23",
+      "hora": "1:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[25] GALINHA",
+        "[21] GALO",
+        "[26] VACA"
+      ],
+      "animales_seleccionados_str": "[25] GALINHA, [21] GALO, [26] VACA",
+      "candidatos_codigos": [
+        "25",
+        "21",
+        "26"
+      ],
+      "resultado_sorteo": "[14] POMBA",
+      "resultado_num": "14",
+      "resultado_animal": "POMBA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.91,
+      "costo_total": 2.73,
+      "cobrado": 0.0,
+      "pnl": -2.73,
+      "balance_cierre": 187.79,
+      "drawdown_pct": 13.38
+    },
+    {
+      "fecha": "2026-09-24",
+      "hora": "10:00 AM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[22] CAMELO",
+        "[23] ZEBRA",
+        "[19] CABRA"
+      ],
+      "animales_seleccionados_str": "[22] CAMELO, [23] ZEBRA, [19] CABRA",
+      "candidatos_codigos": [
+        "22",
+        "23",
+        "19"
+      ],
+      "resultado_sorteo": "[03] LACRAIA",
+      "resultado_num": "03",
+      "resultado_animal": "LACRAIA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.85,
+      "costo_total": 2.55,
+      "cobrado": 0.0,
+      "pnl": -2.55,
+      "balance_cierre": 185.24,
+      "drawdown_pct": 14.56
+    },
+    {
+      "fecha": "2026-09-24",
+      "hora": "12:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[05] LEÃO",
+        "[10] TIGRE",
+        "[34] VEADO"
+      ],
+      "animales_seleccionados_str": "[05] LEÃO, [10] TIGRE, [34] VEADO",
+      "candidatos_codigos": [
+        "05",
+        "10",
+        "34"
+      ],
+      "resultado_sorteo": "[31] CAPIVARA",
+      "resultado_num": "31",
+      "resultado_animal": "CAPIVARA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.49,
+      "costo_total": 1.47,
+      "cobrado": 0.0,
+      "pnl": -1.47,
+      "balance_cierre": 183.77,
+      "drawdown_pct": 15.24
+    },
+    {
+      "fecha": "2026-09-25",
+      "hora": "10:00 AM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[23] ZEBRA",
+        "[24] IGUANA",
+        "[25] GALINHA",
+        "[03] LACRAIA"
+      ],
+      "animales_seleccionados_str": "[23] ZEBRA, [24] IGUANA, [25] GALINHA, [03] LACRAIA",
+      "candidatos_codigos": [
+        "23",
+        "24",
+        "25",
+        "03"
+      ],
+      "resultado_sorteo": "[33] PEIXE",
+      "resultado_num": "33",
+      "resultado_animal": "PEIXE",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.65,
+      "costo_total": 2.6,
+      "cobrado": 0.0,
+      "pnl": -2.6,
+      "balance_cierre": 181.17,
+      "drawdown_pct": 16.43
+    },
+    {
+      "fecha": "2026-09-25",
+      "hora": "6:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[26] VACA",
+        "[14] POMBA",
+        "[20] PORCO"
+      ],
+      "animales_seleccionados_str": "[26] VACA, [14] POMBA, [20] PORCO",
+      "candidatos_codigos": [
+        "26",
+        "14",
+        "20"
+      ],
+      "resultado_sorteo": "[24] IGUANA",
+      "resultado_num": "24",
+      "resultado_animal": "IGUANA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.37,
+      "costo_total": 1.11,
+      "cobrado": 0.0,
+      "pnl": -1.11,
+      "balance_cierre": 180.06,
+      "drawdown_pct": 16.95
+    },
+    {
+      "fecha": "2026-09-26",
+      "hora": "11:00 AM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[34] VEADO",
+        "[25] GALINHA",
+        "[33] PEIXE",
+        "[03] LACRAIA"
+      ],
+      "animales_seleccionados_str": "[34] VEADO, [25] GALINHA, [33] PEIXE, [03] LACRAIA",
+      "candidatos_codigos": [
+        "34",
+        "25",
+        "33",
+        "03"
+      ],
+      "resultado_sorteo": "[12] CAVALO",
+      "resultado_num": "12",
+      "resultado_animal": "CAVALO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.59,
+      "costo_total": 2.36,
+      "cobrado": 0.0,
+      "pnl": -2.36,
+      "balance_cierre": 177.7,
+      "drawdown_pct": 18.04
+    },
+    {
+      "fecha": "2026-09-26",
+      "hora": "4:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[17] PERU",
+        "[31] CAPIVARA"
+      ],
+      "animales_seleccionados_str": "[17] PERU, [31] CAPIVARA",
+      "candidatos_codigos": [
+        "17",
+        "31"
+      ],
+      "resultado_sorteo": "[02] TOURO",
+      "resultado_num": "02",
+      "resultado_animal": "TOURO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.56,
+      "costo_total": 1.12,
+      "cobrado": 0.0,
+      "pnl": -1.12,
+      "balance_cierre": 176.58,
+      "drawdown_pct": 18.55
+    },
+    {
+      "fecha": "2026-09-27",
+      "hora": "9:00 AM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[06] SAPO",
+        "[26] VACA",
+        "[04] ESCORPIÃO",
+        "[03] LACRAIA"
+      ],
+      "animales_seleccionados_str": "[06] SAPO, [26] VACA, [04] ESCORPIÃO, [03] LACRAIA",
+      "candidatos_codigos": [
+        "06",
+        "26",
+        "04",
+        "03"
+      ],
+      "resultado_sorteo": "[26] VACA",
+      "resultado_num": "26",
+      "resultado_animal": "VACA",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 0.33,
+      "costo_total": 1.32,
+      "cobrado": 12.21,
+      "pnl": 10.89,
+      "balance_cierre": 187.47,
+      "drawdown_pct": 13.53
+    },
+    {
+      "fecha": "2026-09-27",
+      "hora": "10:00 AM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[11] GATO",
+        "[27] CACHORRO",
+        "[17] PERU"
+      ],
+      "animales_seleccionados_str": "[11] GATO, [27] CACHORRO, [17] PERU",
+      "candidatos_codigos": [
+        "11",
+        "27",
+        "17"
+      ],
+      "resultado_sorteo": "[34] VEADO",
+      "resultado_num": "34",
+      "resultado_animal": "VEADO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.71,
+      "costo_total": 2.13,
+      "cobrado": 0.0,
+      "pnl": -2.13,
+      "balance_cierre": 185.34,
+      "drawdown_pct": 14.51
+    },
+    {
+      "fecha": "2026-09-27",
+      "hora": "12:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[11] GATO",
+        "[10] TIGRE",
+        "[07] PERIQUITO"
+      ],
+      "animales_seleccionados_str": "[11] GATO, [10] TIGRE, [07] PERIQUITO",
+      "candidatos_codigos": [
+        "11",
+        "10",
+        "07"
+      ],
+      "resultado_sorteo": "[18] BURRO",
+      "resultado_num": "18",
+      "resultado_animal": "BURRO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.49,
+      "costo_total": 1.47,
+      "cobrado": 0.0,
+      "pnl": -1.47,
+      "balance_cierre": 183.87,
+      "drawdown_pct": 15.19
+    },
+    {
+      "fecha": "2026-09-27",
+      "hora": "1:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[05] LEÃO",
+        "[29] ELEFANTE"
+      ],
+      "animales_seleccionados_str": "[05] LEÃO, [29] ELEFANTE",
+      "candidatos_codigos": [
+        "05",
+        "29"
+      ],
+      "resultado_sorteo": "[20] PORCO",
+      "resultado_num": "20",
+      "resultado_animal": "PORCO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.65,
+      "costo_total": 1.3,
+      "cobrado": 0.0,
+      "pnl": -1.3,
+      "balance_cierre": 182.57,
+      "drawdown_pct": 15.79
+    },
+    {
+      "fecha": "2026-09-27",
+      "hora": "4:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[21] GALO",
+        "[19] CABRA"
+      ],
+      "animales_seleccionados_str": "[21] GALO, [19] CABRA",
+      "candidatos_codigos": [
+        "21",
+        "19"
+      ],
+      "resultado_sorteo": "[ 0] GOLFINHO",
+      "resultado_num": "0",
+      "resultado_animal": "GOLFINHO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.46,
+      "costo_total": 0.92,
+      "cobrado": 0.0,
+      "pnl": -0.92,
+      "balance_cierre": 181.65,
+      "drawdown_pct": 16.21
+    },
+    {
+      "fecha": "2026-09-28",
+      "hora": "8:00 AM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[29] ELEFANTE",
+        "[26] VACA",
+        "[18] BURRO"
+      ],
+      "animales_seleccionados_str": "[29] ELEFANTE, [26] VACA, [18] BURRO",
+      "candidatos_codigos": [
+        "29",
+        "26",
+        "18"
+      ],
+      "resultado_sorteo": "[07] PERIQUITO",
+      "resultado_num": "07",
+      "resultado_animal": "PERIQUITO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.61,
+      "costo_total": 1.83,
+      "cobrado": 0.0,
+      "pnl": -1.83,
+      "balance_cierre": 179.82,
+      "drawdown_pct": 17.06
+    },
+    {
+      "fecha": "2026-09-29",
+      "hora": "4:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[ 0] GOLFINHO",
+        "[00] BALEIA",
+        "[13] MACACO"
+      ],
+      "animales_seleccionados_str": "[ 0] GOLFINHO, [00] BALEIA, [13] MACACO",
+      "candidatos_codigos": [
+        "0",
+        "00",
+        "13"
+      ],
+      "resultado_sorteo": "[14] POMBA",
+      "resultado_num": "14",
+      "resultado_animal": "POMBA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.43,
+      "costo_total": 1.29,
+      "cobrado": 0.0,
+      "pnl": -1.29,
+      "balance_cierre": 178.53,
+      "drawdown_pct": 17.65
+    },
+    {
+      "fecha": "2026-09-30",
+      "hora": "11:00 AM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[28] ABUTRE",
+        "[26] VACA",
+        "[14] POMBA",
+        "[20] PORCO"
+      ],
+      "animales_seleccionados_str": "[28] ABUTRE, [26] VACA, [14] POMBA, [20] PORCO",
+      "candidatos_codigos": [
+        "28",
+        "26",
+        "14",
+        "20"
+      ],
+      "resultado_sorteo": "[16] URSO",
+      "resultado_num": "16",
+      "resultado_animal": "URSO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.41,
+      "costo_total": 1.64,
+      "cobrado": 0.0,
+      "pnl": -1.64,
+      "balance_cierre": 176.89,
+      "drawdown_pct": 18.41
+    },
+    {
+      "fecha": "2026-09-30",
+      "hora": "2:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[10] TIGRE",
+        "[36] COBRA",
+        "[15] RAPOSA"
+      ],
+      "animales_seleccionados_str": "[10] TIGRE, [36] COBRA, [15] RAPOSA",
+      "candidatos_codigos": [
+        "10",
+        "36",
+        "15"
+      ],
+      "resultado_sorteo": "[10] TIGRE",
+      "resultado_num": "10",
+      "resultado_animal": "TIGRE",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 0.54,
+      "costo_total": 1.62,
+      "cobrado": 18.9,
+      "pnl": 17.28,
+      "balance_cierre": 194.17,
+      "drawdown_pct": 10.44
+    },
+    {
+      "fecha": "2026-09-30",
+      "hora": "4:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[12] CAVALO",
+        "[14] POMBA",
+        "[35] GIRAFA",
+        "[23] ZEBRA"
+      ],
+      "animales_seleccionados_str": "[12] CAVALO, [14] POMBA, [35] GIRAFA, [23] ZEBRA",
+      "candidatos_codigos": [
+        "12",
+        "14",
+        "35",
+        "23"
+      ],
+      "resultado_sorteo": "[33] PEIXE",
+      "resultado_num": "33",
+      "resultado_animal": "PEIXE",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.98,
+      "costo_total": 3.92,
+      "cobrado": 0.0,
+      "pnl": -3.92,
+      "balance_cierre": 190.25,
+      "drawdown_pct": 12.25
+    },
+    {
+      "fecha": "2026-09-30",
+      "hora": "6:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[32] ESQUILO",
+        "[17] PERU",
+        "[04] ESCORPIÃO",
+        "[29] ELEFANTE"
+      ],
+      "animales_seleccionados_str": "[32] ESQUILO, [17] PERU, [04] ESCORPIÃO, [29] ELEFANTE",
+      "candidatos_codigos": [
+        "32",
+        "17",
+        "04",
+        "29"
+      ],
+      "resultado_sorteo": "[31] CAPIVARA",
+      "resultado_num": "31",
+      "resultado_animal": "CAPIVARA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.55,
+      "costo_total": 2.2,
+      "cobrado": 0.0,
+      "pnl": -2.2,
+      "balance_cierre": 188.05,
+      "drawdown_pct": 13.26
+    },
+    {
+      "fecha": "2026-10-01",
+      "hora": "9:00 AM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[30] JACARÉ",
+        "[25] GALINHA",
+        "[19] CABRA",
+        "[29] ELEFANTE"
+      ],
+      "animales_seleccionados_str": "[30] JACARÉ, [25] GALINHA, [19] CABRA, [29] ELEFANTE",
+      "candidatos_codigos": [
+        "30",
+        "25",
+        "19",
+        "29"
+      ],
+      "resultado_sorteo": "[ 0] GOLFINHO",
+      "resultado_num": "0",
+      "resultado_animal": "GOLFINHO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.52,
+      "costo_total": 2.08,
+      "cobrado": 0.0,
+      "pnl": -2.08,
+      "balance_cierre": 185.97,
+      "drawdown_pct": 14.22
+    },
+    {
+      "fecha": "2026-10-01",
+      "hora": "10:00 AM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[34] VEADO",
+        "[24] IGUANA",
+        "[04] ESCORPIÃO"
+      ],
+      "animales_seleccionados_str": "[34] VEADO, [24] IGUANA, [04] ESCORPIÃO",
+      "candidatos_codigos": [
+        "34",
+        "24",
+        "04"
+      ],
+      "resultado_sorteo": "[01] FLAMENCO",
+      "resultado_num": "01",
+      "resultado_animal": "FLAMENCO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.82,
+      "costo_total": 2.46,
+      "cobrado": 0.0,
+      "pnl": -2.46,
+      "balance_cierre": 183.51,
+      "drawdown_pct": 15.36
+    },
+    {
+      "fecha": "2026-10-01",
+      "hora": "2:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[34] VEADO",
+        "[09] CORUJA",
+        "[36] COBRA",
+        "[35] GIRAFA"
+      ],
+      "animales_seleccionados_str": "[34] VEADO, [09] CORUJA, [36] COBRA, [35] GIRAFA",
+      "candidatos_codigos": [
+        "34",
+        "09",
+        "36",
+        "35"
+      ],
+      "resultado_sorteo": "[31] CAPIVARA",
+      "resultado_num": "31",
+      "resultado_animal": "CAPIVARA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.47,
+      "costo_total": 1.88,
+      "cobrado": 0.0,
+      "pnl": -1.88,
+      "balance_cierre": 181.63,
+      "drawdown_pct": 16.22
+    },
+    {
+      "fecha": "2026-10-01",
+      "hora": "4:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[11] GATO",
+        "[23] ZEBRA",
+        "[33] PEIXE"
+      ],
+      "animales_seleccionados_str": "[11] GATO, [23] ZEBRA, [33] PEIXE",
+      "candidatos_codigos": [
+        "11",
+        "23",
+        "33"
+      ],
+      "resultado_sorteo": "[13] MACACO",
+      "resultado_num": "13",
+      "resultado_animal": "MACACO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.74,
+      "costo_total": 2.22,
+      "cobrado": 0.0,
+      "pnl": -2.22,
+      "balance_cierre": 179.41,
+      "drawdown_pct": 17.25
+    },
+    {
+      "fecha": "2026-10-01",
+      "hora": "7:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[17] PERU",
+        "[14] POMBA"
+      ],
+      "animales_seleccionados_str": "[17] PERU, [14] POMBA",
+      "candidatos_codigos": [
+        "17",
+        "14"
+      ],
+      "resultado_sorteo": "[33] PEIXE",
+      "resultado_num": "33",
+      "resultado_animal": "PEIXE",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.7,
+      "costo_total": 1.4,
+      "cobrado": 0.0,
+      "pnl": -1.4,
+      "balance_cierre": 178.01,
+      "drawdown_pct": 17.89
+    },
+    {
+      "fecha": "2026-10-02",
+      "hora": "12:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[19] CABRA",
+        "[16] URSO"
+      ],
+      "animales_seleccionados_str": "[19] CABRA, [16] URSO",
+      "candidatos_codigos": [
+        "19",
+        "16"
+      ],
+      "resultado_sorteo": "[26] VACA",
+      "resultado_num": "26",
+      "resultado_animal": "VACA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.41,
+      "costo_total": 0.82,
+      "cobrado": 0.0,
+      "pnl": -0.82,
+      "balance_cierre": 177.19,
+      "drawdown_pct": 18.27
+    },
+    {
+      "fecha": "2026-10-02",
+      "hora": "12:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[05] LEÃO",
+        "[21] GALO",
+        "[15] RAPOSA",
+        "[04] ESCORPIÃO"
+      ],
+      "animales_seleccionados_str": "[05] LEÃO, [21] GALO, [15] RAPOSA, [04] ESCORPIÃO",
+      "candidatos_codigos": [
+        "05",
+        "21",
+        "15",
+        "04"
+      ],
+      "resultado_sorteo": "[32] ESQUILO",
+      "resultado_num": "32",
+      "resultado_animal": "ESQUILO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.66,
+      "costo_total": 2.64,
+      "cobrado": 0.0,
+      "pnl": -2.64,
+      "balance_cierre": 174.55,
+      "drawdown_pct": 19.49
+    },
+    {
+      "fecha": "2026-10-03",
+      "hora": "8:00 AM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[22] CAMELO",
+        "[32] ESQUILO",
+        "[05] LEÃO",
+        "[01] FLAMENCO"
+      ],
+      "animales_seleccionados_str": "[22] CAMELO, [32] ESQUILO, [05] LEÃO, [01] FLAMENCO",
+      "candidatos_codigos": [
+        "22",
+        "32",
+        "05",
+        "01"
+      ],
+      "resultado_sorteo": "[35] GIRAFA",
+      "resultado_num": "35",
+      "resultado_animal": "GIRAFA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.37,
+      "costo_total": 1.48,
+      "cobrado": 0.0,
+      "pnl": -1.48,
+      "balance_cierre": 173.07,
+      "drawdown_pct": 20.17
+    },
+    {
+      "fecha": "2026-10-04",
+      "hora": "8:00 AM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[07] PERIQUITO",
+        "[03] LACRAIA",
+        "[33] PEIXE",
+        "[20] PORCO"
+      ],
+      "animales_seleccionados_str": "[07] PERIQUITO, [03] LACRAIA, [33] PEIXE, [20] PORCO",
+      "candidatos_codigos": [
+        "07",
+        "03",
+        "33",
+        "20"
+      ],
+      "resultado_sorteo": "[ 0] GOLFINHO",
+      "resultado_num": "0",
+      "resultado_animal": "GOLFINHO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.59,
+      "costo_total": 2.36,
+      "cobrado": 0.0,
+      "pnl": -2.36,
+      "balance_cierre": 170.71,
+      "drawdown_pct": 21.26
+    },
+    {
+      "fecha": "2026-10-04",
+      "hora": "12:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[05] LEÃO",
+        "[21] GALO",
+        "[31] CAPIVARA",
+        "[16] URSO"
+      ],
+      "animales_seleccionados_str": "[05] LEÃO, [21] GALO, [31] CAPIVARA, [16] URSO",
+      "candidatos_codigos": [
+        "05",
+        "21",
+        "31",
+        "16"
+      ],
+      "resultado_sorteo": "[30] JACARÉ",
+      "resultado_num": "30",
+      "resultado_animal": "JACARÉ",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.55,
+      "costo_total": 2.2,
+      "cobrado": 0.0,
+      "pnl": -2.2,
+      "balance_cierre": 168.51,
+      "drawdown_pct": 22.27
+    },
+    {
+      "fecha": "2026-10-04",
+      "hora": "4:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[ 0] GOLFINHO",
+        "[00] BALEIA",
+        "[10] TIGRE",
+        "[09] CORUJA"
+      ],
+      "animales_seleccionados_str": "[ 0] GOLFINHO, [00] BALEIA, [10] TIGRE, [09] CORUJA",
+      "candidatos_codigos": [
+        "0",
+        "00",
+        "10",
+        "09"
+      ],
+      "resultado_sorteo": "[ 0] GOLFINHO",
+      "resultado_num": "0",
+      "resultado_animal": "GOLFINHO",
+      "acierto": 1,
+      "condicion": "🟢 GANADA",
+      "apuesta_unitaria": 0.31,
+      "costo_total": 1.24,
+      "cobrado": 11.47,
+      "pnl": 10.23,
+      "balance_cierre": 178.74,
+      "drawdown_pct": 17.56
+    },
+    {
+      "fecha": "2026-10-04",
+      "hora": "6:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[17] PERU",
+        "[27] CACHORRO",
+        "[13] MACACO",
+        "[31] CAPIVARA"
+      ],
+      "animales_seleccionados_str": "[17] PERU, [27] CACHORRO, [13] MACACO, [31] CAPIVARA",
+      "candidatos_codigos": [
+        "17",
+        "27",
+        "13",
+        "31"
+      ],
+      "resultado_sorteo": "[15] RAPOSA",
+      "resultado_num": "15",
+      "resultado_animal": "RAPOSA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.42,
+      "costo_total": 1.68,
+      "cobrado": 0.0,
+      "pnl": -1.68,
+      "balance_cierre": 177.06,
+      "drawdown_pct": 18.33
+    },
+    {
+      "fecha": "2026-10-05",
+      "hora": "11:00 AM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[25] GALINHA",
+        "[24] IGUANA",
+        "[04] ESCORPIÃO"
+      ],
+      "animales_seleccionados_str": "[25] GALINHA, [24] IGUANA, [04] ESCORPIÃO",
+      "candidatos_codigos": [
+        "25",
+        "24",
+        "04"
+      ],
+      "resultado_sorteo": "[02] TOURO",
+      "resultado_num": "02",
+      "resultado_animal": "TOURO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.4,
+      "costo_total": 1.2,
+      "cobrado": 0.0,
+      "pnl": -1.2,
+      "balance_cierre": 175.86,
+      "drawdown_pct": 18.88
+    },
+    {
+      "fecha": "2026-10-06",
+      "hora": "11:00 AM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[02] TOURO",
+        "[04] ESCORPIÃO",
+        "[03] LACRAIA"
+      ],
+      "animales_seleccionados_str": "[02] TOURO, [04] ESCORPIÃO, [03] LACRAIA",
+      "candidatos_codigos": [
+        "02",
+        "04",
+        "03"
+      ],
+      "resultado_sorteo": "[24] IGUANA",
+      "resultado_num": "24",
+      "resultado_animal": "IGUANA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.39,
+      "costo_total": 1.17,
+      "cobrado": 0.0,
+      "pnl": -1.17,
+      "balance_cierre": 174.69,
+      "drawdown_pct": 19.42
+    },
+    {
+      "fecha": "2026-10-06",
+      "hora": "11:00 AM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[01] FLAMENCO",
+        "[28] ABUTRE",
+        "[07] PERIQUITO"
+      ],
+      "animales_seleccionados_str": "[01] FLAMENCO, [28] ABUTRE, [07] PERIQUITO",
+      "candidatos_codigos": [
+        "01",
+        "28",
+        "07"
+      ],
+      "resultado_sorteo": "[21] GALO",
+      "resultado_num": "21",
+      "resultado_animal": "GALO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.61,
+      "costo_total": 1.83,
+      "cobrado": 0.0,
+      "pnl": -1.83,
+      "balance_cierre": 172.86,
+      "drawdown_pct": 20.27
+    },
+    {
+      "fecha": "2026-10-06",
+      "hora": "5:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[01] FLAMENCO",
+        "[12] CAVALO",
+        "[ 0] GOLFINHO"
+      ],
+      "animales_seleccionados_str": "[01] FLAMENCO, [12] CAVALO, [ 0] GOLFINHO",
+      "candidatos_codigos": [
+        "01",
+        "12",
+        "0"
+      ],
+      "resultado_sorteo": "[25] GALINHA",
+      "resultado_num": "25",
+      "resultado_animal": "GALINHA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.35,
+      "costo_total": 1.05,
+      "cobrado": 0.0,
+      "pnl": -1.05,
+      "balance_cierre": 171.81,
+      "drawdown_pct": 20.75
+    },
+    {
+      "fecha": "2026-10-07",
+      "hora": "10:00 AM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[11] GATO",
+        "[30] JACARÉ",
+        "[27] CACHORRO"
+      ],
+      "animales_seleccionados_str": "[11] GATO, [30] JACARÉ, [27] CACHORRO",
+      "candidatos_codigos": [
+        "11",
+        "30",
+        "27"
+      ],
+      "resultado_sorteo": "[35] GIRAFA",
+      "resultado_num": "35",
+      "resultado_animal": "GIRAFA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.56,
+      "costo_total": 1.68,
+      "cobrado": 0.0,
+      "pnl": -1.68,
+      "balance_cierre": 170.13,
+      "drawdown_pct": 21.53
+    },
+    {
+      "fecha": "2026-10-10",
+      "hora": "8:00 AM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[24] IGUANA",
+        "[15] RAPOSA",
+        "[19] CABRA",
+        "[03] LACRAIA"
+      ],
+      "animales_seleccionados_str": "[24] IGUANA, [15] RAPOSA, [19] CABRA, [03] LACRAIA",
+      "candidatos_codigos": [
+        "24",
+        "15",
+        "19",
+        "03"
+      ],
+      "resultado_sorteo": "[09] CORUJA",
+      "resultado_num": "09",
+      "resultado_animal": "CORUJA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.33,
+      "costo_total": 1.32,
+      "cobrado": 0.0,
+      "pnl": -1.32,
+      "balance_cierre": 168.81,
+      "drawdown_pct": 22.14
+    },
+    {
+      "fecha": "2026-10-10",
+      "hora": "3:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[11] GATO",
+        "[09] ARARA",
+        "[12] CAVALO",
+        "[ 0] GOLFINHO"
+      ],
+      "animales_seleccionados_str": "[11] GATO, [09] ARARA, [12] CAVALO, [ 0] GOLFINHO",
+      "candidatos_codigos": [
+        "11",
+        "09",
+        "12",
+        "0"
+      ],
+      "resultado_sorteo": "[17] PERU",
+      "resultado_num": "17",
+      "resultado_animal": "PERU",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.43,
+      "costo_total": 1.72,
+      "cobrado": 0.0,
+      "pnl": -1.72,
+      "balance_cierre": 167.09,
+      "drawdown_pct": 22.93
+    },
+    {
+      "fecha": "2026-10-10",
+      "hora": "7:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[30] JACARÉ",
+        "[21] GALO",
+        "[14] POMBA",
+        "[18] BURRO"
+      ],
+      "animales_seleccionados_str": "[30] JACARÉ, [21] GALO, [14] POMBA, [18] BURRO",
+      "candidatos_codigos": [
+        "30",
+        "21",
+        "14",
+        "18"
+      ],
+      "resultado_sorteo": "[24] IGUANA",
+      "resultado_num": "24",
+      "resultado_animal": "IGUANA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.41,
+      "costo_total": 1.64,
+      "cobrado": 0.0,
+      "pnl": -1.64,
+      "balance_cierre": 165.45,
+      "drawdown_pct": 23.69
+    },
+    {
+      "fecha": "2026-10-11",
+      "hora": "12:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[25] GALINHA",
+        "[36] COBRA",
+        "[04] ESCORPIÃO",
+        "[26] VACA"
+      ],
+      "animales_seleccionados_str": "[25] GALINHA, [36] COBRA, [04] ESCORPIÃO, [26] VACA",
+      "candidatos_codigos": [
+        "25",
+        "36",
+        "04",
+        "26"
+      ],
+      "resultado_sorteo": "[01] FLAMENCO",
+      "resultado_num": "01",
+      "resultado_animal": "FLAMENCO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.38,
+      "costo_total": 1.52,
+      "cobrado": 0.0,
+      "pnl": -1.52,
+      "balance_cierre": 163.93,
+      "drawdown_pct": 24.39
+    },
+    {
+      "fecha": "2026-10-11",
+      "hora": "4:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[17] PERU",
+        "[09] ARARA",
+        "[31] CAPIVARA"
+      ],
+      "animales_seleccionados_str": "[17] PERU, [09] ARARA, [31] CAPIVARA",
+      "candidatos_codigos": [
+        "17",
+        "09",
+        "31"
+      ],
+      "resultado_sorteo": "[13] MACACO",
+      "resultado_num": "13",
+      "resultado_animal": "MACACO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.36,
+      "costo_total": 1.08,
+      "cobrado": 0.0,
+      "pnl": -1.08,
+      "balance_cierre": 162.85,
+      "drawdown_pct": 24.88
+    },
+    {
+      "fecha": "2026-10-12",
+      "hora": "2:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[ 0] GOLFINHO",
+        "[36] COBRA",
+        "[33] PEIXE",
+        "[16] URSO"
+      ],
+      "animales_seleccionados_str": "[ 0] GOLFINHO, [36] COBRA, [33] PEIXE, [16] URSO",
+      "candidatos_codigos": [
+        "0",
+        "36",
+        "33",
+        "16"
+      ],
+      "resultado_sorteo": "[04] ESCORPIÃO",
+      "resultado_num": "04",
+      "resultado_animal": "ESCORPIÃO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.25,
+      "costo_total": 1.0,
+      "cobrado": 0.0,
+      "pnl": -1.0,
+      "balance_cierre": 161.85,
+      "drawdown_pct": 25.35
+    },
+    {
+      "fecha": "2026-10-12",
+      "hora": "4:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[10] TIGRE",
+        "[15] RAPOSA",
+        "[14] POMBA",
+        "[29] ELEFANTE"
+      ],
+      "animales_seleccionados_str": "[10] TIGRE, [15] RAPOSA, [14] POMBA, [29] ELEFANTE",
+      "candidatos_codigos": [
+        "10",
+        "15",
+        "14",
+        "29"
+      ],
+      "resultado_sorteo": "[31] CAPIVARA",
+      "resultado_num": "31",
+      "resultado_animal": "CAPIVARA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.25,
+      "costo_total": 1.0,
+      "cobrado": 0.0,
+      "pnl": -1.0,
+      "balance_cierre": 160.85,
+      "drawdown_pct": 25.81
+    },
+    {
+      "fecha": "2026-10-12",
+      "hora": "5:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[17] PERU",
+        "[19] CABRA",
+        "[13] MACACO",
+        "[31] CAPIVARA"
+      ],
+      "animales_seleccionados_str": "[17] PERU, [19] CABRA, [13] MACACO, [31] CAPIVARA",
+      "candidatos_codigos": [
+        "17",
+        "19",
+        "13",
+        "31"
+      ],
+      "resultado_sorteo": "[01] FLAMENCO",
+      "resultado_num": "01",
+      "resultado_animal": "FLAMENCO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.23,
+      "costo_total": 0.92,
+      "cobrado": 0.0,
+      "pnl": -0.92,
+      "balance_cierre": 159.93,
+      "drawdown_pct": 26.23
+    },
+    {
+      "fecha": "2026-10-13",
+      "hora": "9:00 AM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[28] ABUTRE",
+        "[24] IGUANA",
+        "[14] POMBA",
+        "[08] RATO"
+      ],
+      "animales_seleccionados_str": "[28] ABUTRE, [24] IGUANA, [14] POMBA, [08] RATO",
+      "candidatos_codigos": [
+        "28",
+        "24",
+        "14",
+        "08"
+      ],
+      "resultado_sorteo": "[32] ESQUILO",
+      "resultado_num": "32",
+      "resultado_animal": "ESQUILO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.22,
+      "costo_total": 0.88,
+      "cobrado": 0.0,
+      "pnl": -0.88,
+      "balance_cierre": 159.05,
+      "drawdown_pct": 26.64
+    },
+    {
+      "fecha": "2026-10-13",
+      "hora": "2:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[01] FLAMENCO",
+        "[ 0] GOLFINHO",
+        "[04] ESCORPIÃO",
+        "[35] GIRAFA"
+      ],
+      "animales_seleccionados_str": "[01] FLAMENCO, [ 0] GOLFINHO, [04] ESCORPIÃO, [35] GIRAFA",
+      "candidatos_codigos": [
+        "01",
+        "0",
+        "04",
+        "35"
+      ],
+      "resultado_sorteo": "[33] PEIXE",
+      "resultado_num": "33",
+      "resultado_animal": "PEIXE",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.21,
+      "costo_total": 0.84,
+      "cobrado": 0.0,
+      "pnl": -0.84,
+      "balance_cierre": 158.21,
+      "drawdown_pct": 27.02
+    },
+    {
+      "fecha": "2026-10-13",
+      "hora": "5:00 PM",
+      "ruleta": "🐆 Lotto Bicho",
+      "animales_seleccionados": [
+        "[01] FLAMENCO",
+        "[12] CAVALO",
+        "[00] BALEIA",
+        "[13] MACACO"
+      ],
+      "animales_seleccionados_str": "[01] FLAMENCO, [12] CAVALO, [00] BALEIA, [13] MACACO",
+      "candidatos_codigos": [
+        "01",
+        "12",
+        "00",
+        "13"
+      ],
+      "resultado_sorteo": "[03] LACRAIA",
+      "resultado_num": "03",
+      "resultado_animal": "LACRAIA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.2,
+      "costo_total": 0.8,
+      "cobrado": 0.0,
+      "pnl": -0.8,
+      "balance_cierre": 157.41,
+      "drawdown_pct": 27.39
+    },
+    {
+      "fecha": "2026-10-13",
+      "hora": "6:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[32] ESQUILO",
+        "[14] POMBA",
+        "[20] PORCO"
+      ],
+      "animales_seleccionados_str": "[32] ESQUILO, [14] POMBA, [20] PORCO",
+      "candidatos_codigos": [
+        "32",
+        "14",
+        "20"
+      ],
+      "resultado_sorteo": "[12] CAVALO",
+      "resultado_num": "12",
+      "resultado_animal": "CAVALO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.21,
+      "costo_total": 0.63,
+      "cobrado": 0.0,
+      "pnl": -0.63,
+      "balance_cierre": 156.78,
+      "drawdown_pct": 27.68
+    },
+    {
+      "fecha": "2026-10-14",
+      "hora": "1:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[23] ZEBRA",
+        "[24] IGUANA",
+        "[27] CACHORRO",
+        "[26] VACA"
+      ],
+      "animales_seleccionados_str": "[23] ZEBRA, [24] IGUANA, [27] CACHORRO, [26] VACA",
+      "candidatos_codigos": [
+        "23",
+        "24",
+        "27",
+        "26"
+      ],
+      "resultado_sorteo": "[02] TOURO",
+      "resultado_num": "02",
+      "resultado_animal": "TOURO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.2,
+      "costo_total": 0.8,
+      "cobrado": 0.0,
+      "pnl": -0.8,
+      "balance_cierre": 155.98,
+      "drawdown_pct": 28.05
+    },
+    {
+      "fecha": "2026-10-15",
+      "hora": "10:00 AM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[17] PERU",
+        "[32] ESQUILO",
+        "[16] URSO"
+      ],
+      "animales_seleccionados_str": "[17] PERU, [32] ESQUILO, [16] URSO",
+      "candidatos_codigos": [
+        "17",
+        "32",
+        "16"
+      ],
+      "resultado_sorteo": "[26] VACA",
+      "resultado_num": "26",
+      "resultado_animal": "VACA",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.19,
+      "costo_total": 0.57,
+      "cobrado": 0.0,
+      "pnl": -0.57,
+      "balance_cierre": 155.41,
+      "drawdown_pct": 28.32
+    },
+    {
+      "fecha": "2026-10-15",
+      "hora": "3:00 PM",
+      "ruleta": "🇧🇷 Lotto Brasil",
+      "animales_seleccionados": [
+        "[11] GATO",
+        "[10] TIGRE",
+        "[25] GALINHA",
+        "[28] ABUTRE"
+      ],
+      "animales_seleccionados_str": "[11] GATO, [10] TIGRE, [25] GALINHA, [28] ABUTRE",
+      "candidatos_codigos": [
+        "11",
+        "10",
+        "25",
+        "28"
+      ],
+      "resultado_sorteo": "[07] PERIQUITO",
+      "resultado_num": "07",
+      "resultado_animal": "PERIQUITO",
+      "acierto": 0,
+      "condicion": "🔴 PERDIDA",
+      "apuesta_unitaria": 0.19,
+      "costo_total": 0.76,
+      "cobrado": 0.0,
+      "pnl": -0.76,
+      "balance_cierre": 154.65,
+      "drawdown_pct": 28.67
+    }
+  ]
+}

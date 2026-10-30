@@ -1,0 +1,20 @@
+# ==============================================================================
+# REPOSITORIO: NUEVAS RULETAS - SECURITY SHIELD
+# ==============================================================================
+
+# Variables de entorno y credenciales
+.env
+.env.*
+*.env
+
+# Datos operativos y logs
+*.log
+*.sqlite
+*.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/

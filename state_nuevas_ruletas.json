@@ -1,0 +1,60 @@
+{
+  "bankroll": 239.0,
+  "initial_bankroll": 200.0,
+  "total_withdrawn": 734.0,
+  "peak_bankroll": 240.0,
+  "mdd_floor": 0.4,
+  "min_bet": 0.1,
+  "sizing_model": "fixed_stake_with_weekly_withdrawals",
+  "created_at": "2026-09-30T00:00:00",
+  "last_updated": "2026-10-30T14:27:00.672512",
+  "cycle_start_time": "2026-10-28T00:00:00",
+  "cycle_start_bankroll": 200.0,
+  "cycle_number": 5,
+  "cycle_pnl": 40.0,
+  "weekly_fixed_stakes": {
+    "Lotto Activo": 1.0,
+    "La Granjita": 1.0,
+    "Ruleta Royal": 1.0,
+    "Guacharo Activo": 1.0,
+    "Gatazo": 1.0,
+    "Mega Animal 40": 1.0,
+    "Monje Millonario": 1.0
+  },
+  "total_invested": 637.0,
+  "total_collected": 1410.0,
+  "total_pnl": 773.0,
+  "wins": 36,
+  "losses": 343,
+  "streaks": {
+    "Lotto Activo": 18,
+    "La Granjita": 8,
+    "Ruleta Royal": 2,
+    "Guacharo Activo": 4,
+    "Gatazo": 40,
+    "Mega Animal 40": 2,
+    "Monje Millonario": 77
+  },
+  "trigger_misses": {
+    "Lotto Activo": 4,
+    "La Granjita": 14,
+    "Ruleta Royal": 3,
+    "Guacharo Activo": 7,
+    "Gatazo": 4,
+    "Mega Animal 40": 1,
+    "Monje Millonario": 18
+  },
+  "last_processed_draw": {
+    "Lotto Activo": "2026-10-30 2:00 PM",
+    "La Granjita": "2026-10-30 2:00 PM",
+    "Ruleta Royal": "2026-10-30 1:30 PM",
+    "Guacharo Activo": "2026-10-30 2:00 PM",
+    "Gatazo": "2026-10-30 1:40 PM",
+    "Mega Animal 40": "2026-10-30 2:00 PM",
+    "Monje Millonario": "2026-10-30 2:05 PM"
+  },
+  "pending_bets": {},
+  "effective_kelly": 0.3594,
+  "damping": 0.4792,
+  "cycle_elapsed_days": 2.602039753159722
+}

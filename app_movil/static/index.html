@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Sniper Ruletas | Cartera Táctica</title>
+  
+  <!-- PWA Meta Tags -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#10b981">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Sniper Ruletas">
+  <link rel="icon" type="image/png" href="/icon-192.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#070b14',
+              card: '#0f172a',
+              cardLight: '#1e293b',
+              accent: '#10b981',
+              accentHover: '#059669',
+              markov: '#06b6d4',
+              warning: '#f59e0b',
+              danger: '#ef4444'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Estilos Nativos Móviles */
+    body {
+      background-color: #070b14;
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      touch-action: manipulation;
+    }
+    .safe-top { padding-top: env(safe-area-inset-top, 16px); }
+    .safe-bottom { padding-bottom: env(safe-area-inset-bottom, 20px); }
+    
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.4); border-color: rgba(16, 185, 129, 0.8); }
+      50% { box-shadow: 0 0 35px rgba(16, 185, 129, 0.8); border-color: rgba(52, 211, 153, 1); }
+    }
+    .animate-pulse-glow {
+      animation: pulseGlow 2s infinite ease-in-out;
+    }
+    @keyframes spinSync {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .sync-spin {
+      animation: spinSync 0.8s linear infinite;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Header Táctico Fijo -->
+  <header class="sticky top-0 z-50 bg-brand-dark/95 backdrop-blur-md border-b border-slate-800 safe-top px-4 py-3">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 rounded-full bg-emerald-500/20 border border-emerald-500 flex items-center justify-center text-emerald-400">
+          <i data-lucide="crosshair" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <h1 class="text-sm font-bold tracking-tight text-white flex items-center gap-1.5">
+            SNIPER RULETAS
+            <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-mono font-semibold">LIVE</span>
+          </h1>
+          <p id="header-time" class="text-[11px] text-slate-400 font-mono">Conectando...</p>
+        </div>
+      </div>
+
+      <!-- Botón de Sincronización Inmediata -->
+      <button id="btn-sync" onclick="syncTuAzar()" class="flex items-center space-x-1.5 bg-brand-cardLight active:bg-emerald-600 text-slate-200 active:text-white px-3 py-1.5 rounded-lg border border-slate-700 text-xs font-semibold shadow-sm transition-all">
+        <i id="sync-icon" data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+        <span id="sync-text">Sincronizar</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Banner de Instalación PWA (Aparece si la app no está instalada aún) -->
+  <div id="pwa-install-banner" class="hidden bg-emerald-950/90 border-b border-emerald-600 px-4 py-2.5 flex items-center justify-between text-xs text-emerald-200">
+    <div class="flex items-center space-x-2">
+      <i data-lucide="download" class="w-4 h-4 text-emerald-400"></i>
+      <span>Instala esta app en tu pantalla de inicio</span>
+    </div>
+    <button onclick="installPWA()" class="bg-emerald-500 text-slate-950 font-bold px-2.5 py-1 rounded shadow">Instalar</button>
+  </div>
+
+  <!-- Contenedor Principal con Scroll -->
+  <main class="flex-1 px-4 py-3 space-y-4 max-w-md mx-auto w-full">
+
+    <!-- Billetera Táctica (Balance de Capital) -->
+    <section class="bg-gradient-to-br from-slate-900 via-brand-card to-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl">
+      <div class="flex items-center justify-between border-b border-slate-800/80 pb-2.5 mb-3">
+        <span class="text-xs uppercase font-semibold tracking-wider text-slate-400 flex items-center gap-1.5">
+          <i data-lucide="wallet" class="w-3.5 h-3.5 text-emerald-400"></i> Billetera Táctica
+        </span>
+        <span id="cycle-badge" class="text-[11px] font-mono font-medium px-2 py-0.5 rounded-full bg-slate-800 text-slate-300">
+          Ciclo 5 (Día 3/7)
+        </span>
+      </div>
+
+      <!-- Grilla de Saldos -->
+      <div class="grid grid-cols-2 gap-3 mb-3">
+        <!-- Saldo en Mesa -->
+        <div class="bg-slate-950/60 rounded-xl p-3 border border-slate-800/60">
+          <p class="text-[11px] text-slate-400">Saldo en Mesa</p>
+          <p id="val-mesa" class="text-xl font-black text-white font-mono tracking-tight">$0.00</p>
+          <p class="text-[10px] text-emerald-400 font-medium">Base semanal: $200.00</p>
+        </div>
+
+        <!-- Ganancias Retiradas -->
+        <div class="bg-slate-950/60 rounded-xl p-3 border border-slate-800/60">
+          <p class="text-[11px] text-slate-400">Ganancias Retiradas</p>
+          <p id="val-retiradas" class="text-xl font-black text-emerald-400 font-mono tracking-tight">$0.00</p>
+          <p class="text-[10px] text-slate-400">Cobrado a cartera</p>
+        </div>
+      </div>
+
+      <!-- Total Patrimonio Consolidado -->
+      <div class="bg-emerald-950/30 border border-emerald-500/30 rounded-xl p-3 flex items-center justify-between">
+        <div>
+          <p class="text-[11px] text-emerald-300 font-medium">Patrimonio Total (Mesa + Mano)</p>
+          <p id="val-patrimonio" class="text-2xl font-black text-white font-mono">$0.00</p>
+        </div>
+        <div class="text-right">
+          <span id="val-pnl-semanal" class="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/10 px-2 py-1 rounded-md border border-emerald-500/20">
+            +$0.00 (+0%)
+          </span>
+          <p class="text-[10px] text-slate-400 mt-1">Semana en curso</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Señales Activas Inminentes -->
+    <section id="section-active-signals" class="space-y-3">
+      <!-- Se inyecta dinámicamente con JS -->
+    </section>
+
+    <!-- Radar Táctico de las 7 Ruletas -->
+    <section class="space-y-2.5">
+      <div class="flex items-center justify-between px-1">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+          <i data-lucide="radar" class="w-3.5 h-3.5 text-cyan-400"></i> Radar de las 7 Ruletas
+        </h2>
+        <span class="text-[10px] text-slate-500 font-mono">Apuesta: $1.00 USD fijo</span>
+      </div>
+
+      <div id="radar-list" class="space-y-2">
+        <!-- Tarjetas del radar inyectadas con JS -->
+      </div>
+    </section>
+
+    <!-- Botón para ver Reporte Táctico Horario Completo -->
+    <button onclick="toggleReportModal()" class="w-full bg-slate-900 hover:bg-slate-800 active:bg-slate-950 border border-slate-800 text-slate-300 font-semibold py-3 px-4 rounded-xl text-xs flex items-center justify-center space-x-2 transition shadow">
+      <i data-lucide="file-text" class="w-4 h-4 text-emerald-400"></i>
+      <span>Ver Reporte Táctico Horario Completo</span>
+    </button>
+
+    <!-- Resumen de Hoy y Últimas Jugadas -->
+    <section class="bg-brand-card border border-slate-800 rounded-2xl p-4 shadow">
+      <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
+        <h3 class="text-xs font-bold text-slate-300 flex items-center gap-1.5">
+          <i data-lucide="history" class="w-3.5 h-3.5 text-slate-400"></i> Historial Reciente de Hoy
+        </h3>
+        <span id="stat-today" class="text-[11px] font-mono text-emerald-400 font-semibold">
+          PnL: +$0.00
+        </span>
+      </div>
+
+      <div id="recent-ops-list" class="divide-y divide-slate-800/80 text-xs">
+        <!-- Filas de operaciones inyectadas con JS -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal de Reporte Táctico Horario -->
+  <div id="report-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm p-4 flex items-center justify-center">
+    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-lg w-full max-h-[85vh] flex flex-col shadow-2xl">
+      <div class="flex items-center justify-between p-4 border-b border-slate-800">
+        <h3 class="font-bold text-sm text-white flex items-center gap-2">
+          <i data-lucide="file-text" class="w-4 h-4 text-emerald-400"></i> Reporte Táctico
+        </h3>
+        <button onclick="toggleReportModal()" class="text-slate-400 hover:text-white p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-4 overflow-y-auto font-mono text-xs text-slate-300 space-y-2 leading-relaxed" id="report-modal-content">
+        Cargando reporte...
+      </div>
+    </div>
+  </div>
+
+  <!-- Navegación Inferior Móvil -->
+  <nav class="sticky bottom-0 z-40 bg-brand-dark/95 backdrop-blur-md border-t border-slate-800 safe-bottom px-6 py-2">
+    <div class="flex items-center justify-around text-[10px] text-slate-400">
+      <button onclick="loadTacticalStatus()" class="flex flex-col items-center space-y-1 text-emerald-400">
+        <i data-lucide="home" class="w-4 h-4"></i>
+        <span>Inicio</span>
+      </button>
+      <button onclick="syncTuAzar()" class="flex flex-col items-center space-y-1 hover:text-white">
+        <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+        <span>Sincronizar</span>
+      </button>
+      <button onclick="toggleReportModal()" class="flex flex-col items-center space-y-1 hover:text-white">
+        <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
+        <span>Reporte</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Script Lógica Frontend -->
+  <script>
+    let deferredPrompt = null;
+
+    // Registro del Service Worker para funcionamiento como App PWA
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').catch(err => {
+          console.log('SW registration failed:', err);
+        });
+      });
+    }
+
+    // Captura del evento de instalación PWA en Android
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const banner = document.getElementById('pwa-install-banner');
+      if (banner) banner.classList.remove('hidden');
+    });
+
+    function installPWA() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            document.getElementById('pwa-install-banner').classList.add('hidden');
+          }
+          deferredPrompt = null;
+        });
+      }
+    }
+
+    // Cargar estado táctico en vivo
+    async function loadTacticalStatus() {
+      try {
+        const res = await fetch('/api/status');
+        const data = await res.json();
+        if (data.status !== 'ok') return;
+
+        // 1. Header y Wallet
+        document.getElementById('header-time').textContent = `${data.hora} | ${data.timestamp.split(' ')[0]}`;
+        document.getElementById('val-mesa').textContent = `$${data.wallet.bankroll.toFixed(2)}`;
+        document.getElementById('val-retiradas').textContent = `$${data.wallet.withdrawn.toFixed(2)}`;
+        document.getElementById('val-patrimonio').textContent = `$${data.wallet.patrimonio.toFixed(2)}`;
+        document.getElementById('val-pnl-semanal').textContent = `${data.wallet.cycle_pnl >= 0 ? '+' : ''}$${data.wallet.cycle_pnl.toFixed(2)} (${data.wallet.cycle_pct >= 0 ? '+' : ''}${data.wallet.cycle_pct}%)`;
+        document.getElementById('cycle-badge').textContent = `Ciclo ${data.wallet.cycle_num} (Semana 5)`;
+        document.getElementById('stat-today').textContent = `Hoy: ${data.wallet.pnl_today >= 0 ? '+' : ''}$${data.wallet.pnl_today.toFixed(2)} (${data.wallet.wins_today}/${data.wallet.ops_today})`;
+
+        // 2. Señales Activas Inminentes (Hero Card de Compra)
+        const signalsContainer = document.getElementById('section-active-signals');
+        signalsContainer.innerHTML = '';
+
+        if (data.active_signals && data.active_signals.length > 0) {
+          data.active_signals.forEach(sig => {
+            const card = document.createElement('div');
+            card.className = "bg-gradient-to-r from-emerald-950 via-slate-900 to-emerald-950 border-2 border-emerald-500 rounded-2xl p-4 shadow-2xl animate-pulse-glow relative overflow-hidden";
+            card.innerHTML = `
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-black uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
+                  <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                  🚨 ¡COMPRA INMINENTE ACTIVADA!
+                </span>
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                  ${sig.tipo}
+                </span>
+              </div>
+
+              <div class="flex items-center space-x-3 my-3">
+                <span class="text-3xl">${sig.emoji}</span>
+                <div>
+                  <h3 class="text-base font-black text-white">${sig.ruleta}</h3>
+                  <p class="text-xs text-slate-400">Último Salido: <span class="text-slate-200 font-semibold">${sig.ultimo_salido}</span></p>
+                </div>
+              </div>
+
+              <div class="bg-slate-950/80 rounded-xl p-3 border border-emerald-500/30 mb-3">
+                <p class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Animales a Comprar ($1.00 USD c/u):</p>
+                <p class="text-lg font-black text-emerald-300 font-mono tracking-wide">${sig.candidatos_str}</p>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2 text-center text-xs">
+                <div class="bg-slate-900/80 rounded-lg p-2 border border-slate-800">
+                  <span class="text-slate-400 text-[10px]">Total a Comprar</span>
+                  <p class="font-bold text-white font-mono text-sm">💰 $${sig.costo.toFixed(2)} USD</p>
+                </div>
+                <div class="bg-slate-900/80 rounded-lg p-2 border border-slate-800">
+                  <span class="text-slate-400 text-[10px]">Premio Potencial</span>
+                  <p class="font-bold text-emerald-400 font-mono text-sm">🏆 $${sig.premio_potencial.toFixed(2)} USD</p>
+                </div>
+              </div>
+            `;
+            signalsContainer.appendChild(card);
+          });
+        } else {
+          signalsContainer.innerHTML = `
+            <div class="bg-brand-card border border-slate-800 rounded-2xl p-4 text-center">
+              <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mx-auto mb-2 text-slate-400">
+                <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400"></i>
+              </div>
+              <h3 class="text-xs font-bold text-slate-300 uppercase">Sin Compras para Esta Ronda</h3>
+              <p class="text-[11px] text-slate-400 mt-1">Las 7 ruletas están en estado de espera disciplinada sin arriesgar capital.</p>
+            </div>
+          `;
+        }
+
+        // 3. Radar de las 7 Ruletas
+        const radarContainer = document.getElementById('radar-list');
+        radarContainer.innerHTML = '';
+
+        data.radar_items.forEach(item => {
+          const itemDiv = document.createElement('div');
+          const isTarget = item.urgencia === 1;
+          const bgClass = isTarget ? 'bg-emerald-950/20 border-emerald-500/40' : 'bg-brand-card border-slate-800/80';
+          const badgeColor = isTarget ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' : (item.urgencia === 2 ? 'bg-amber-500/20 text-amber-300 border-amber-500/30' : 'bg-slate-800 text-slate-400 border-slate-700');
+
+          itemDiv.className = `border rounded-xl p-3 flex items-center justify-between ${bgClass}`;
+          itemDiv.innerHTML = `
+            <div class="flex items-center space-x-2.5">
+              <span class="text-2xl">${item.emoji}</span>
+              <div>
+                <div class="flex items-center space-x-1.5">
+                  <h4 class="text-xs font-bold text-white">${item.ruleta}</h4>
+                  <span class="text-[9px] font-mono px-1 py-0.2 rounded border ${badgeColor}">
+                    ${item.badge}
+                  </span>
+                </div>
+                <p class="text-[11px] text-slate-400">${item.conteo_str}</p>
+                <p class="text-[10px] text-slate-500 font-mono">Último: ${item.ultimo_salido}</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="text-[11px] font-mono font-bold text-slate-300">${item.payout}x</span>
+            </div>
+          `;
+          radarContainer.appendChild(itemDiv);
+        });
+
+        // 4. Historial Reciente de Operaciones
+        const opsContainer = document.getElementById('recent-ops-list');
+        opsContainer.innerHTML = '';
+        if (data.recent_ledger && data.recent_ledger.length > 0) {
+          data.recent_ledger.slice().reverse().forEach(op => {
+            const isWin = parseFloat(op.pnl) > 0;
+            const row = document.createElement('div');
+            row.className = "py-2 flex items-center justify-between";
+            row.innerHTML = `
+              <div>
+                <div class="flex items-center space-x-1.5">
+                  <span class="font-bold text-white">${op.ruleta}</span>
+                  <span class="text-[10px] text-slate-400 font-mono">${op.hora}</span>
+                </div>
+                <p class="text-[10px] text-slate-400">Salido: <span class="text-slate-200 font-medium">${op.resultado}</span></p>
+              </div>
+              <div class="text-right font-mono">
+                <span class="font-bold ${isWin ? 'text-emerald-400' : 'text-rose-400'}">
+                  ${isWin ? '+' : ''}$${parseFloat(op.pnl).toFixed(2)}
+                </span>
+                <p class="text-[10px] text-slate-500">$${parseFloat(op.saldo).toFixed(2)}</p>
+              </div>
+            `;
+            opsContainer.appendChild(row);
+          });
+        } else {
+          opsContainer.innerHTML = '<p class="text-[11px] text-slate-500 py-2">Sin operaciones registradas hoy aún.</p>';
+        }
+
+        lucide.createIcons();
+      } catch (err) {
+        console.error('Error cargando estado táctico:', err);
+      }
+    }
+
+    // Sincronizar en vivo con TuAzar
+    async function syncTuAzar() {
+      const btn = document.getElementById('btn-sync');
+      const icon = document.getElementById('sync-icon');
+      const txt = document.getElementById('sync-text');
+
+      icon.classList.add('sync-spin');
+      txt.textContent = 'Consultando...';
+      btn.disabled = true;
+
+      // Vibración háptica en celulares compatibles
+      if (navigator.vibrate) navigator.vibrate(30);
+
+      try {
+        const res = await fetch('/api/sync', { method: 'POST' });
+        const data = await res.json();
+        await loadTacticalStatus();
+      } catch (err) {
+        alert('Error conectando con el servidor: ' + err);
+      } finally {
+        icon.classList.remove('sync-spin');
+        txt.textContent = 'Sincronizar';
+        btn.disabled = false;
+      }
+    }
+
+    // Alternar Modal de Reporte Táctico
+    async function toggleReportModal() {
+      const modal = document.getElementById('report-modal');
+      const isHidden = modal.classList.contains('hidden');
+      if (isHidden) {
+        modal.classList.remove('hidden');
+        const content = document.getElementById('report-modal-content');
+        content.innerHTML = '<p class="text-slate-400 animate-pulse">Generando reporte táctico horario...</p>';
+        try {
+          const res = await fetch('/api/reporte');
+          const data = await res.json();
+          // Renderizar markdown básico a HTML
+          content.innerHTML = data.reporte.replace(/\n/g, '<br>').replace(/#{1,3} /g, '<strong>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        } catch (e) {
+          content.innerHTML = 'Error cargando reporte: ' + e;
+        }
+      } else {
+        modal.classList.add('hidden');
+      }
+    }
+
+    // Carga inicial
+    document.addEventListener('DOMContentLoaded', () => {
+      loadTacticalStatus();
+      lucide.createIcons();
+      // Auto-refrescar cada 60 segundos
+      setInterval(loadTacticalStatus, 60000);
+    });
+  </script>
+</body>
+</html>

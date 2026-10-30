@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: sniper-ruletas
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app_movil/server.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
