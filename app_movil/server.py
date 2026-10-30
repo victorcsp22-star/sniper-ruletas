@@ -17,7 +17,7 @@ import datetime
 from typing import Dict, List
 from flask import Flask, jsonify, request, send_from_directory
 
-ROOT_DIR = r"C:\Users\victo\nuevas_ruletas"
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(ROOT_DIR)
 
 from config import (

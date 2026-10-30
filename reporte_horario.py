@@ -21,7 +21,7 @@ import pandas as pd
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
-ROOT_DIR = r"C:\Users\victo\nuevas_ruletas"
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(ROOT_DIR)
 
 from config import (
