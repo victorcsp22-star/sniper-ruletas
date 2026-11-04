@@ -152,5 +152,16 @@
     "cobrado": 0.0,
     "pnl": -4.0,
     "saldo": 23252.0
+  },
+  {
+    "hora": "4:00 PM",
+    "ruleta": "Guacharo Activo",
+    "candidatos": "#11 GATO [P:9/10], #19 CHIVO [P:9/10], #22 CAMELLO [P:9/10], #29 ELEFANTE [P:9/10], #37 TORTUGA [P:9/10], #66 LOBO [P:9/10]",
+    "resultado": "[0] DELFÍN",
+    "condicion": "🔴 PERDIDA",
+    "total_bet": 6.0,
+    "cobrado": 0.0,
+    "pnl": -6.0,
+    "saldo": 23246.0
   }
 ]
