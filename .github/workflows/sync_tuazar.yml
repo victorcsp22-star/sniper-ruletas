@@ -1,0 +1,42 @@
+name: Sincronizacion TuAzar 24/7
+
+on:
+  schedule:
+    # Se ejecuta cada 10 minutos automáticamente
+    - cron: '*/10 * * * *'
+  workflow_dispatch: # Permite ejecutar manualmente si se desea
+
+jobs:
+  scrape-and-sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias minimas
+        run: |
+          pip install requests
+
+      - name: Ejecutar scraping y evaluacion cuantitativa
+        run: |
+          python github_actions_sync.py
+
+      - name: Guardar cambios y subir a GitHub
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "Sin sorteos nuevos, no se requiere commit."
+          else
+            git commit -m "Auto-sync sorteos TuAzar [skip ci]"
+            git push
+          fi
