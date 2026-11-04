@@ -2,9 +2,11 @@ name: Sincronizacion TuAzar 24/7
 
 on:
   schedule:
-    # Se ejecuta cada 10 minutos automáticamente
-    - cron: '*/10 * * * *'
-  workflow_dispatch: # Permite ejecutar manualmente si se desea
+    - cron: '*/5 * * * *'
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   scrape-and-sync:
