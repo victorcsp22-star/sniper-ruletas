@@ -89,33 +89,41 @@
       1,
       3
     ],
-    "racha": 24,
-    "misses": 4,
+    "racha": 2,
+    "misses": 7,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "2",
-        "animal": "TORO"
+        "numero": "22",
+        "animal": "CAMELLO"
       },
       {
-        "numero": "4",
-        "animal": "ALACRÁN"
+        "numero": "3",
+        "animal": "CIEMPIÉS"
       },
       {
-        "numero": "50",
-        "animal": "CANARIO"
+        "numero": "30",
+        "animal": "CAIMÁN"
       },
       {
-        "numero": "59",
-        "animal": "PANTERA"
+        "numero": "41",
+        "animal": "CANGURO"
       },
       {
-        "numero": "6",
-        "animal": "RANA"
+        "numero": "61",
+        "animal": "PANDA"
       },
       {
-        "numero": "69",
-        "animal": "CONEJO"
+        "numero": "62",
+        "animal": "CACHICAMO"
+      },
+      {
+        "numero": "63",
+        "animal": "CANGREJO"
+      },
+      {
+        "numero": "72",
+        "animal": "GORILA"
       }
     ],
     "ultimo_str": "#0 DELFÍN (4:00 PM)"
@@ -127,11 +135,32 @@
     "target_streaks": [
       1
     ],
-    "racha": 0,
-    "misses": 6,
+    "racha": 2,
+    "misses": 7,
     "is_active": false,
-    "candidatos": [],
-    "ultimo_str": "#15 ZORRO (4:30 PM)"
+    "candidatos": [
+      {
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "numero": "34",
+        "animal": "VENADO"
+      }
+    ],
+    "ultimo_str": "#9 ÁGUILA (3:30 PM)"
   },
   "Gatazo": {
     "title": "Gatazo",
@@ -179,37 +208,25 @@
       1,
       2
     ],
-    "racha": 0,
-    "misses": 4,
-    "is_active": false,
+    "racha": 1,
+    "misses": 2,
+    "is_active": true,
     "candidatos": [
       {
-        "numero": "16",
-        "animal": "OSO"
+        "numero": "13",
+        "animal": "MONO"
       },
       {
-        "numero": "21",
-        "animal": "GALLO"
+        "numero": "20",
+        "animal": "COCHINO"
       },
       {
-        "numero": "22",
-        "animal": "CAMELLO"
+        "numero": "25",
+        "animal": "GALLINA"
       },
       {
-        "numero": "36",
-        "animal": "CULEBRA"
-      },
-      {
-        "numero": "5",
-        "animal": "LEÓN"
-      },
-      {
-        "numero": "6",
-        "animal": "RANA"
-      },
-      {
-        "numero": "7",
-        "animal": "PERICO"
+        "numero": "4",
+        "animal": "ALACRÁN"
       }
     ],
     "ultimo_str": "#31 LAPA (4:00 PM)"
@@ -259,6 +276,6 @@
         "animal": "CONEJO"
       }
     ],
-    "ultimo_str": "#8 RATON (4:05 PM)"
+    "ultimo_str": "#8 RATÓN (4:05 PM)"
   }
 }

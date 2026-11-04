@@ -1,4 +1,4 @@
-﻿fecha,dia,hora,numero,animal,loteria
+fecha,dia,hora,numero,animal,loteria
 2026-09-07,Lunes,8:15 AM,1,CARNERO,Selva Plus
 2026-09-07,Lunes,9:15 AM,26,VACA,Selva Plus
 2026-09-07,Lunes,10:15 AM,2,TORO,Selva Plus
@@ -142,7 +142,7 @@
 2026-09-17,Jueves,8:15 PM,86,BUEY,Selva Plus
 2026-09-18,Viernes,8:15 AM,60,CAMALEÓN,Selva Plus
 2026-09-18,Viernes,9:15 AM,18,BURRO,Selva Plus
-2026-09-18,Viernes,10:15 AM,00,BALLENA,Selva Plus
+2026-09-18,Viernes,10:15 AM,0,BALLENA,Selva Plus
 2026-09-18,Viernes,11:15 AM,3,CIEMPIÉS,Selva Plus
 2026-09-18,Viernes,12:15 PM,25,GALLINA,Selva Plus
 2026-09-18,Viernes,1:15 PM,66,LOBO,Selva Plus
@@ -407,7 +407,7 @@
 2026-10-08,Jueves,2:15 PM,48,PUERCOESPIN,Selva Plus
 2026-10-08,Jueves,3:15 PM,50,CANARIO,Selva Plus
 2026-10-08,Jueves,4:15 PM,70,BISONTE,Selva Plus
-2026-10-08,Jueves,5:15 PM,00,BALLENA,Selva Plus
+2026-10-08,Jueves,5:15 PM,0,BALLENA,Selva Plus
 2026-10-08,Jueves,6:15 PM,93,GAVIOTA,Selva Plus
 2026-10-08,Jueves,7:15 PM,47,PAVO REAL,Selva Plus
 2026-10-08,Jueves,8:15 PM,28,ZAMURO,Selva Plus
@@ -437,7 +437,7 @@
 2026-10-10,Sábado,7:15 PM,89,ANGUILA,Selva Plus
 2026-10-10,Sábado,8:15 PM,65,ARAÑA,Selva Plus
 2026-10-11,Domingo,8:15 AM,88,ERIZO DE MAR,Selva Plus
-2026-10-11,Domingo,9:15 AM,00,BALLENA,Selva Plus
+2026-10-11,Domingo,9:15 AM,0,BALLENA,Selva Plus
 2026-10-11,Domingo,10:15 AM,87,CABRA,Selva Plus
 2026-10-11,Domingo,11:15 AM,91,MORROCOY,Selva Plus
 2026-10-11,Domingo,12:15 PM,59,PANTERA,Selva Plus
@@ -495,3 +495,81 @@
 2026-10-15,Jueves,12:15 PM,54,GRILLO,Selva Plus
 2026-10-15,Jueves,1:15 PM,63,CANGREJO,Selva Plus
 2026-10-15,Jueves,2:15 PM,40,AVISPA,Selva Plus
+2026-10-26,Lunes,8:15 AM,59,PANTERA,Selva Plus
+2026-10-26,Lunes,9:15 AM,51,PELICANO,Selva Plus
+2026-10-26,Lunes,10:15 AM,7,PERICO,Selva Plus
+2026-10-26,Lunes,11:15 AM,29,ELEFANTE,Selva Plus
+2026-10-26,Lunes,12:15 PM,80,MURCIÉLAGO,Selva Plus
+2026-10-26,Lunes,1:15 PM,49,PEREZA,Selva Plus
+2026-10-26,Lunes,2:15 PM,98,COCODRILO,Selva Plus
+2026-10-26,Lunes,3:15 PM,73,HIPOPÓTAMO,Selva Plus
+2026-10-26,Lunes,4:15 PM,56,TIBURÓN,Selva Plus
+2026-10-26,Lunes,5:15 PM,78,ANTÍLOPE,Selva Plus
+2026-10-26,Lunes,6:15 PM,15,ZORRO,Selva Plus
+2026-10-26,Lunes,7:15 PM,42,TUCÁN,Selva Plus
+2026-10-26,Lunes,8:15 PM,8,RATÓN,Selva Plus
+2026-10-27,Martes,8:15 AM,32,ARDILLA,Selva Plus
+2026-10-27,Martes,9:15 AM,72,GORILA,Selva Plus
+2026-10-27,Martes,10:15 AM,40,AVISPA,Selva Plus
+2026-10-27,Martes,11:15 AM,20,COCHINO,Selva Plus
+2026-10-27,Martes,12:15 PM,8,RATÓN,Selva Plus
+2026-10-27,Martes,1:15 PM,41,CANGURO,Selva Plus
+2026-10-27,Martes,2:15 PM,86,BUEY,Selva Plus
+2026-10-27,Martes,3:15 PM,1,CARNERO,Selva Plus
+2026-10-27,Martes,4:15 PM,97,LORO,Selva Plus
+2026-10-27,Martes,5:15 PM,33,PESCADO,Selva Plus
+2026-10-27,Martes,6:15 PM,82,CUCARACHA,Selva Plus
+2026-10-27,Martes,7:15 PM,21,GALLO,Selva Plus
+2026-10-27,Martes,8:15 PM,77,PINGUINO,Selva Plus
+2026-10-28,Miércoles,8:15 AM,39,LECHUZA,Selva Plus
+2026-10-28,Miércoles,9:15 AM,78,ANTÍLOPE,Selva Plus
+2026-10-28,Miércoles,10:15 AM,56,TIBURÓN,Selva Plus
+2026-10-28,Miércoles,11:15 AM,93,GAVIOTA,Selva Plus
+2026-10-28,Miércoles,12:15 PM,27,PERRO,Selva Plus
+2026-10-28,Miércoles,1:15 PM,19,CHIVO,Selva Plus
+2026-10-28,Miércoles,2:15 PM,81,CUERVO,Selva Plus
+2026-10-28,Miércoles,3:15 PM,53,CARACOL,Selva Plus
+2026-10-28,Miércoles,4:15 PM,94,PAUJIL,Selva Plus
+2026-10-28,Miércoles,5:15 PM,13,MONO,Selva Plus
+2026-10-28,Miércoles,6:15 PM,66,LOBO,Selva Plus
+2026-10-28,Miércoles,7:15 PM,95,ESCARABAJO,Selva Plus
+2026-10-28,Miércoles,8:15 PM,12,CABALLO,Selva Plus
+2026-10-29,Jueves,8:15 AM,25,GALLINA,Selva Plus
+2026-10-29,Jueves,9:15 AM,14,PALOMA,Selva Plus
+2026-10-29,Jueves,10:15 AM,70,BISONTE,Selva Plus
+2026-10-29,Jueves,11:15 AM,38,BÚFALO,Selva Plus
+2026-10-29,Jueves,12:15 PM,63,CANGREJO,Selva Plus
+2026-10-29,Jueves,1:15 PM,67,AVESTRUZ,Selva Plus
+2026-10-29,Jueves,2:15 PM,16,OSO,Selva Plus
+2026-10-29,Jueves,3:15 PM,18,BURRO,Selva Plus
+2026-10-29,Jueves,4:15 PM,74,TURPIAL,Selva Plus
+2026-10-29,Jueves,5:15 PM,47,PAVO REAL,Selva Plus
+2026-10-29,Jueves,6:15 PM,85,HAMSTER,Selva Plus
+2026-10-29,Jueves,7:15 PM,55,OSO HORMIGUERO,Selva Plus
+2026-10-29,Jueves,8:15 PM,87,CABRA,Selva Plus
+2026-10-30,Viernes,8:15 AM,80,MURCIÉLAGO,Selva Plus
+2026-10-30,Viernes,9:15 AM,91,MORROCOY,Selva Plus
+2026-10-30,Viernes,10:15 AM,44,CHIGUIRE,Selva Plus
+2026-10-30,Viernes,11:15 AM,5,LEÓN,Selva Plus
+2026-10-30,Viernes,12:15 PM,52,PULPO,Selva Plus
+2026-10-30,Viernes,1:15 PM,16,OSO,Selva Plus
+2026-10-30,Viernes,2:15 PM,99,HALCÓN,Selva Plus
+2026-10-30,Viernes,3:15 PM,95,ESCARABAJO,Selva Plus
+2026-10-30,Viernes,4:15 PM,61,PANDA,Selva Plus
+2026-10-30,Viernes,5:15 PM,36,CULEBRA,Selva Plus
+2026-10-30,Viernes,6:15 PM,77,PINGUINO,Selva Plus
+2026-10-30,Viernes,7:15 PM,97,LORO,Selva Plus
+2026-10-30,Viernes,8:15 PM,42,TUCÁN,Selva Plus
+2026-10-31,Sábado,8:15 AM,37,TORTUGA,Selva Plus
+2026-10-31,Sábado,9:15 AM,45,GARZA,Selva Plus
+2026-10-31,Sábado,10:15 AM,83,BUHO,Selva Plus
+2026-10-31,Sábado,11:15 AM,31,LAPA,Selva Plus
+2026-10-31,Sábado,12:15 PM,90,HURÓN,Selva Plus
+2026-10-31,Sábado,1:15 PM,10,TIGRE,Selva Plus
+2026-10-31,Sábado,2:15 PM,47,PAVO REAL,Selva Plus
+2026-10-31,Sábado,3:15 PM,0,DELFÍN,Selva Plus
+2026-10-31,Sábado,4:15 PM,53,CARACOL,Selva Plus
+2026-10-31,Sábado,5:15 PM,65,ARAÑA,Selva Plus
+2026-10-31,Sábado,6:15 PM,39,LECHUZA,Selva Plus
+2026-10-31,Sábado,7:15 PM,94,PAUJIL,Selva Plus
+2026-10-31,Sábado,8:15 PM,41,CANGURO,Selva Plus
