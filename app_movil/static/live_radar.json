@@ -7,36 +7,36 @@
       1,
       2
     ],
-    "racha": 7,
+    "racha": 8,
     "misses": 2,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "1",
-        "animal": "CARNERO"
+        "numero": "0",
+        "animal": "BALLENA"
       },
       {
-        "numero": "14",
-        "animal": "PALOMA"
+        "numero": "17",
+        "animal": "PAVO"
       },
       {
         "numero": "18",
         "animal": "BURRO"
       },
       {
-        "numero": "19",
-        "animal": "CHIVO"
-      },
-      {
         "numero": "22",
         "animal": "CAMELLO"
+      },
+      {
+        "numero": "3",
+        "animal": "CIENPIES"
       },
       {
         "numero": "8",
         "animal": "RATÓN"
       }
     ],
-    "ultimo_str": "#15 ZORRO (3:10 PM)"
+    "ultimo_str": "#11 GATO (4:10 PM)"
   },
   "Loto Chaima": {
     "title": "Loto Chaima",
@@ -208,36 +208,28 @@
       1,
       2
     ],
-    "racha": 0,
+    "racha": 1,
     "misses": 2,
-    "is_active": false,
+    "is_active": true,
     "candidatos": [
       {
-        "numero": "18",
-        "animal": "BURRO"
+        "numero": "13",
+        "animal": "MONO"
       },
       {
-        "numero": "23",
-        "animal": "CEBRA"
+        "numero": "20",
+        "animal": "COCHINO"
       },
       {
-        "numero": "29",
-        "animal": "ELEFANTE"
+        "numero": "25",
+        "animal": "GALLINA"
       },
       {
-        "numero": "32",
-        "animal": "ARDILLA"
-      },
-      {
-        "numero": "35",
-        "animal": "JIRAFA"
-      },
-      {
-        "numero": "6",
-        "animal": "RANA"
+        "numero": "4",
+        "animal": "ALACRÁN"
       }
     ],
-    "ultimo_str": "#30 CAIMÁN (3:00 PM)"
+    "ultimo_str": "#31 LAPA (4:00 PM)"
   },
   "Monje Millonario": {
     "title": "Monje Millonario",
@@ -247,39 +239,43 @@
       0,
       1
     ],
-    "racha": 2,
+    "racha": 3,
     "misses": 2,
     "is_active": false,
     "candidatos": [
+      {
+        "numero": "0",
+        "animal": "BALLENA"
+      },
       {
         "numero": "12",
         "animal": "CABALLO"
       },
       {
-        "numero": "26",
-        "animal": "VACA"
+        "numero": "23",
+        "animal": "CEBRA"
       },
       {
-        "numero": "3",
-        "animal": "CIEMPIÉS"
+        "numero": "27",
+        "animal": "PERRO"
       },
       {
-        "numero": "33",
-        "animal": "PESCADO"
+        "numero": "34",
+        "animal": "VENADO"
       },
       {
-        "numero": "39",
-        "animal": "LECHUZA"
+        "numero": "44",
+        "animal": "CHIGUIRE"
       },
       {
-        "numero": "49",
-        "animal": "PEREZA"
+        "numero": "6",
+        "animal": "RANA"
       },
       {
-        "numero": "58",
-        "animal": "HORMIGA"
+        "numero": "69",
+        "animal": "CONEJO"
       }
     ],
-    "ultimo_str": "#62 CACHICAMO (3:05 PM)"
+    "ultimo_str": "#8 RATÓN (4:05 PM)"
   }
 }
