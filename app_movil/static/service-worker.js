@@ -1,42 +1,39 @@
-const CACHE_NAME = 'sniper-ruletas-v1';
+const CACHE_NAME = 'sniper-pwa-v11';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
-  '/manifest.json'
+  '/manifest.json',
+  '/icon-192.png',
+  '/icon-512.png'
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(ASSETS_TO_CACHE);
-    })
+    }).then(() => self.skipWaiting())
   );
-  self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((keyList) => {
+    caches.keys().then((keys) => {
       return Promise.all(
-        keyList.map((key) => {
-          if (key !== CACHE_NAME) {
-            return caches.delete(key);
+        keys.map((k) => {
+          if (k !== CACHE_NAME) {
+            return caches.delete(k);
           }
         })
       );
-    })
+    }).then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
 self.addEventListener('fetch', (event) => {
-  // Para llamadas a /api/, ir siempre a la red
-  if (event.request.url.includes('/api/')) {
-    event.respondWith(fetch(event.request));
-    return;
-  }
-  // Para estáticos, probar red y si falla recurrir a caché
+  // Network first, falling back to cache
   event.respondWith(
-    fetch(event.request).catch(() => caches.match(event.request))
+    fetch(event.request).catch(() => {
+      return caches.match(event.request);
+    })
   );
 });

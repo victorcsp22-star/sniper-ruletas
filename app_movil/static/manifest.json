@@ -1,8 +1,9 @@
 {
-  "name": "Sniper Ruletas Táctico",
-  "short_name": "Sniper Ruletas",
-  "description": "Sistema Cuantitativo Multi-Ruleta para Loterías de Animalitos",
-  "start_url": "/",
+  "name": "Sniper Ruletas V10",
+  "short_name": "Sniper V10",
+  "description": "Sistema Cuantitativo Aut\u00f3nomo Multi-Ruleta",
+  "start_url": "/index.html",
+  "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#0b0f19",

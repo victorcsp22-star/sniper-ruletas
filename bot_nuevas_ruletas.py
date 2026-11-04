@@ -221,6 +221,46 @@ def manage_weekly_cycle(state: Dict) -> Dict:
     return state
 
 
+def calcular_peso_agente(r_name: str, streak: int, trigger_miss: int) -> Tuple[int, str]:
+    """
+    Agente evaluador por ruleta: devuelve (peso_1_10, label_corto).
+    3 dimensiones: posición en racha, factor de pago, momento de rebote trigger.
+    Basado en WR condicional empírico del ledger histórico.
+    """
+    cfg = RULETAS_CONFIG.get(r_name, {})
+    payout = cfg.get("payout", 30)
+    wr_optimos: list = cfg.get("wr_optimos", [1])
+
+    # Dim 1 — Posición en racha (0-4 pts)
+    if streak in wr_optimos:
+        s_racha = 4
+    elif streak <= 1:
+        s_racha = 3
+    elif streak <= 5:
+        s_racha = 2
+    elif streak <= 20:
+        s_racha = 1
+    else:
+        s_racha = 0
+
+    # Dim 2 — Factor de pago (1-3 pts)
+    s_pago = 3 if payout >= 60 else 2
+
+    # Dim 3 — Momento de rebote por trigger misses (0-3 pts)
+    if 1 <= trigger_miss <= 3:
+        s_trigger = 3
+    elif trigger_miss == 0:
+        s_trigger = 1
+    elif trigger_miss <= 8:
+        s_trigger = 2
+    else:
+        s_trigger = 0
+
+    peso = max(1, min(10, s_racha + s_pago + s_trigger))
+    label = f"P:{peso}/10"
+    return peso, label
+
+
 def get_rebound_momentum_multiplier(trigger_misses: int) -> Tuple[float, str]:
     """Determina el multiplicador de inversión inteligente según la condición óptima del patrón."""
     if not SMART_INVESTMENT_ENABLED:
@@ -267,6 +307,14 @@ def save_state(state: Dict):
                 pass
         # Reemplazo atómico POSIX/Windows
         os.replace(tmp_file, STATE_FILE)
+        # Espejo automático hacia app_movil/static para sincronización móvil instantánea
+        try:
+            static_dir = os.path.join(ROOT_DIR, "app_movil", "static")
+            if os.path.exists(static_dir):
+                import shutil
+                shutil.copy2(STATE_FILE, os.path.join(static_dir, "state_nuevas_ruletas.json"))
+        except Exception:
+            pass
     except Exception as e:
         print(f"⚠️ Error en escritura atómica de estado: {e}")
         # Fallback de emergencia
@@ -420,6 +468,13 @@ def fetch_live_results() -> Dict[str, List[Dict]]:
     """Combina los resultados históricos de la semana y los sorteos en tiempo real del día."""
     data_week = fetch_tuazar_week_results()
     data_today = fetch_tuazar_today_results()
+    # Guardar en static para sincronización directa de la PWA móvil
+    try:
+        static_json = os.path.join(BASE_DIR, "app_movil", "static", "tuazar_today.json")
+        with open(static_json, "w", encoding="utf-8") as _f_json:
+            json.dump(data_today, _f_json, ensure_ascii=False, indent=2)
+    except Exception as _e_json:
+        pass
     combined = {k: [] for k in RULETAS_CONFIG.keys()}
     for k in combined.keys():
         combined[k].extend(data_week.get(k, []))
@@ -431,6 +486,8 @@ def update_local_csvs(live_data: Dict[str, List[Dict]]) -> Dict[str, int]:
     """Sincroniza los nuevos sorteos en los CSV locales para mantener la continuidad temporal."""
     new_counts = {}
     for r_name, items in live_data.items():
+        if r_name not in RULETAS_CONFIG or not RULETAS_CONFIG[r_name].get("active", False):
+            continue
         if not items:
             new_counts[r_name] = 0
             continue
@@ -457,6 +514,34 @@ def update_local_csvs(live_data: Dict[str, List[Dict]]) -> Dict[str, int]:
         new_counts[r_name] = max(0, diff)
         os.makedirs(os.path.dirname(os.path.abspath(fpath)), exist_ok=True)
         combined.to_csv(fpath, index=False, encoding="utf-8")
+
+        # Exportar live_radar.json para la PWA móvil en cada pasada de actualización
+    try:
+        from app_movil.server_zero_dep import get_current_streaks, RULETAS
+        live_radar = {}
+        for r_name in RULETAS:
+            st, miss, info = get_current_streaks(r_name)
+            cfg = RULETAS[r_name]
+            target = cfg.get('target_streaks', [1])
+            is_act = (st in target) and not info.get('is_anti_blocked', False) and len(info.get('cands', [])) > 0
+            live_radar[r_name] = {
+                'title': cfg['title'],
+                'emoji': cfg['emoji'],
+                'payout': cfg['payout'],
+                'target_streaks': target,
+                'racha': st,
+                'misses': miss,
+                'is_active': is_act,
+                'candidatos': info.get('cands', []),
+                'ultimo_str': info.get('last_str', '')
+            }
+        radar_path = os.path.join(BASE_DIR, 'app_movil', 'static', 'live_radar.json')
+        with open(radar_path, 'w', encoding='utf-8') as _rf:
+            json.dump(live_radar, _rf, ensure_ascii=False, indent=2)
+
+        sync_today_ledger_json()
+    except Exception as _e_rad:
+        pass
 
     return new_counts
 
@@ -562,6 +647,11 @@ def generate_upcoming_candidates(r_name: str) -> Dict:
     markov_target = markov_snipers.get(last_num)
     is_markov_active = bool(markov_target is not None and markov_target not in rec_set and markov_target not in blacklist)
 
+    # Comprobar Canal C (Hiper-Espejo Táctico)
+    mirror_pairs = cfg.get("mirror_pairs", {})
+    mirror_target = mirror_pairs.get(last_num)
+    is_mirror_active = bool(mirror_target is not None and mirror_target not in rec_set and mirror_target not in blacklist)
+
     # Mapeo a nombre de animalito
     num_to_animal = {}
     for _, row in df.iterrows():
@@ -570,6 +660,9 @@ def generate_upcoming_candidates(r_name: str) -> Dict:
     if is_markov_active:
         cands = [markov_target]
         channel_type = "MARKOV_SNIPER"
+    elif is_mirror_active and not cands_lag:
+        cands = [mirror_target]
+        channel_type = "ESPEJO_SNIPER"
     else:
         cands = cands_lag if not is_anti_cluster_blocked else []
         channel_type = "LAG_SNIPER"
@@ -603,6 +696,32 @@ def generate_upcoming_candidates(r_name: str) -> Dict:
     }
 
 
+def sync_today_ledger_json():
+    try:
+        if os.path.exists(LEDGER_FILE):
+            _df_led = pd.read_csv(LEDGER_FILE)
+            _today_str = datetime.date.today().strftime('%Y-%m-%d')
+            _df_tod = _df_led[_df_led['fecha'] == _today_str]
+            _ledger_ops = []
+            for _, _row in _df_tod.iterrows():
+                _ledger_ops.append({
+                    'hora': _row.get('hora', ''),
+                    'ruleta': _row.get('ruleta', ''),
+                    'candidatos': str(_row.get('candidatos', '')),
+                    'resultado': str(_row.get('resultado', '')),
+                    'condicion': str(_row.get('condicion', '')),
+                    'total_bet': float(_row.get('total_bet', 0)),
+                    'cobrado': float(_row.get('cobrado', 0)),
+                    'pnl': float(_row.get('pnl', 0)),
+                    'saldo': float(_row.get('saldo', 0))
+                })
+            _led_path = os.path.join(BASE_DIR, 'app_movil', 'static', 'today_ledger.json')
+            with open(_led_path, 'w', encoding='utf-8') as _lf:
+                json.dump(_ledger_ops, _lf, ensure_ascii=False, indent=2)
+    except Exception as _e_led:
+        pass
+
+
 def record_to_ledger(event: Dict):
     cols = [
         "fecha", "hora", "ruleta", "candidatos", "cands_count", "zona_patron",
@@ -613,6 +732,15 @@ def record_to_ledger(event: Dict):
     file_exists = os.path.exists(LEDGER_FILE) and os.path.getsize(LEDGER_FILE) > 0
     df_row = pd.DataFrame([row], columns=cols)
     df_row.to_csv(LEDGER_FILE, mode="a", header=not file_exists, index=False, encoding="utf-8")
+    # Espejo automático hacia app_movil/static para sincronización móvil instantánea
+    try:
+        static_dir = os.path.join(ROOT_DIR, "app_movil", "static")
+        if os.path.exists(static_dir):
+            import shutil
+            shutil.copy2(LEDGER_FILE, os.path.join(static_dir, "ledger_nuevas_ruletas.csv"))
+    except Exception:
+        pass
+    sync_today_ledger_json()
 
 
 def append_to_markdown_journal(event: Dict, state: Dict):
@@ -756,7 +884,8 @@ def check_and_update(verbose: bool = True) -> Dict:
                     if c_list:
                         num_to_anim = {str(row["numero"]): row["animal"] for _, row in df.iloc[:d_idx].iterrows()}
                         cands = c_list
-                        cands_str = ", ".join([f"#{c} {num_to_anim.get(c, '')}" for c in c_list])
+                        p_agente, p_label = calcular_peso_agente(r_name, r_streak, r_misses)
+                        cands_str = ", ".join([f"#{c} {num_to_anim.get(c, '')} [{p_label}]" for c in c_list])
                         cands_count = len(c_list)
                         if SIZING_MODEL == "fixed_stake_with_weekly_withdrawals":
                             stake_unit = FIXED_STAKE_UNIT
@@ -886,7 +1015,12 @@ def check_and_update(verbose: bool = True) -> Dict:
         total_stake = round(cost_fichas * stake_unit, 2)
         posible_premio = round(stake_unit * cfg["payout"], 2)
 
-        cands_formatted = ", ".join([f"#{c['numero']} {c['animal']}" for c in cands_info["candidates"]])
+        # Calcular peso del agente evaluador para esta ruleta en este momento
+        peso_agente, peso_label = calcular_peso_agente(r_name, streak, trigger_misses)
+        peso_stars = "★" * min(peso_agente, 5) + "☆" * (5 - min(peso_agente, 5))
+        cands_formatted = ", ".join(
+            [f"#{c['numero']} {c['animal']} [{peso_label}]" for c in cands_info["candidates"]]
+        )
 
         # Verificación de Cuarentena Preventiva (Rachas Frías Prolongadas)
         is_quarantined = bool(QUARANTINE_MISSES > 0 and trigger_misses >= QUARANTINE_MISSES)
@@ -938,6 +1072,9 @@ def check_and_update(verbose: bool = True) -> Dict:
             "posible_premio": posible_premio,
             "f_unit": f_unit,
             "gz_mult": damping,
+            "peso_agente": peso_agente,
+            "peso_label": peso_label,
+            "peso_stars": peso_stars,
             "last_salido_str": cands_info.get("last_salido_str", "---"),
             "last_draw": cands_info.get("last_draw", "")
         }
@@ -952,18 +1089,23 @@ def check_and_update(verbose: bool = True) -> Dict:
         r_card["drift_info"] = drift_info
 
         is_markov_op = cands_info.get("is_markov_active", False)
-        if (streak in target_streaks) or is_markov_op:
+        is_mirror_op = (cands_info.get("channel_type") == "ESPEJO_SNIPER")
+        if (streak in target_streaks) or is_markov_op or is_mirror_op:
             if is_markov_op:
                 r_card["badge"] = "⚡ Markov Sniper"
                 r_card["conteo_str"] = "🚨 ¡DISPARAR MARKOV! (1)"
                 r_card["urgencia"] = 1
+            elif is_mirror_op:
+                r_card["badge"] = "🪞 Espejo Sniper"
+                r_card["conteo_str"] = "🚨 ¡DISPARAR ESPEJO! (1)"
+                r_card["urgencia"] = 1
             if circuit_breaker_active:
                 r_card["badge"] = "⚠️ Circuit Breaker"
                 r_card["conteo_str"] = "⚠️ Pausado por Límite Semanal"
-            elif is_quarantined and not is_markov_op:
+            elif is_quarantined and not is_markov_op and not is_mirror_op:
                 r_card["badge"] = f"🧊 Cuarentena ({trigger_misses} fallos)"
                 r_card["conteo_str"] = "🧊 Omitido por Racha Fría"
-            elif cands_info.get("is_anti_cluster_blocked", False) and not is_markov_op:
+            elif cands_info.get("is_anti_cluster_blocked", False) and not is_markov_op and not is_mirror_op:
                 r_card["badge"] = "🛡️ AntiCluster Activo"
                 r_card["conteo_str"] = "🛡️ Bloqueado por Repetición"
             else:
