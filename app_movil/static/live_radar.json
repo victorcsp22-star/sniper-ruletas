@@ -135,32 +135,11 @@
     "target_streaks": [
       1
     ],
-    "racha": 2,
+    "racha": 3,
     "misses": 7,
     "is_active": false,
-    "candidatos": [
-      {
-        "numero": "2",
-        "animal": "TORO"
-      },
-      {
-        "numero": "22",
-        "animal": "CAMELLO"
-      },
-      {
-        "numero": "26",
-        "animal": "VACA"
-      },
-      {
-        "numero": "33",
-        "animal": "PESCADO"
-      },
-      {
-        "numero": "34",
-        "animal": "VENADO"
-      }
-    ],
-    "ultimo_str": "#9 ÁGUILA (3:30 PM)"
+    "candidatos": [],
+    "ultimo_str": "#15 ZORRO (4:30 PM)"
   },
   "Gatazo": {
     "title": "Gatazo",
@@ -169,25 +148,33 @@
     "target_streaks": [
       1
     ],
-    "racha": 3,
+    "racha": 4,
     "misses": 1,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "15",
-        "animal": "ZORRO"
+        "numero": "1",
+        "animal": "CARNERO"
       },
       {
-        "numero": "20",
-        "animal": "COCHINO"
+        "numero": "16",
+        "animal": "OSO"
       },
       {
-        "numero": "25",
-        "animal": "GALLINA"
+        "numero": "3",
+        "animal": "CIENPIES"
       },
       {
-        "numero": "41",
-        "animal": "CANGURO"
+        "numero": "51",
+        "animal": "PELICANO"
+      },
+      {
+        "numero": "71",
+        "animal": "GUACAMAYA"
+      },
+      {
+        "numero": "73",
+        "animal": "HIPOPÓTAMO"
       },
       {
         "numero": "74",
@@ -198,7 +185,7 @@
         "animal": "RATÓN"
       }
     ],
-    "ultimo_str": "#55 OSOHRMIGUERO (3:40 PM)"
+    "ultimo_str": "#27 PERRO (4:40 PM)"
   },
   "Lotto Activo": {
     "title": "Lotto Activo",
@@ -276,6 +263,6 @@
         "animal": "CONEJO"
       }
     ],
-    "ultimo_str": "#8 RATÓN (4:05 PM)"
+    "ultimo_str": "#8 RATON (4:05 PM)"
   }
 }
