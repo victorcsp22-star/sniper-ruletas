@@ -378,3 +378,4 @@ fecha,hora,ruleta,candidatos,cands_count,zona_patron,smart_mult,stake_unit,total
 2026-10-30,12:00 PM,Mega Animal 40,23,1,Canal_A_Lag ($1.00 fijo),1.0,1.0,1.0,#23 CEBRA,🟢 GANADA,30.0,29.0,243.0,243.0,0.0
 2026-10-30,1:30 PM,Ruleta Royal,"0, 5, 7",3,Canal_A_Lag ($1.00 fijo),1.0,1.0,3.0,#21 GALLO,🔴 PERDIDA,0.0,-3.0,240.0,240.0,0.0
 2026-10-30,2:00 PM,Mega Animal 40,#32 ARDILLA,1,🛡️ Zona Fatigada (0.85x Kelly) | ⚡ MARKOV (1.30x),1.0,1.0,1.0,[0] DELFÍN,🔴 PERDIDA,0.0,-1.0,239.0,240.0,0.42
+2026-11-04,5:00 PM,Lotto Activo,"#13 MONO [P:7/10], #20 COCHINO [P:7/10], #25 GALLINA [P:7/10], #4 ALACRÁN [P:7/10]",4,🎯 Canasta Rezagados [P:7/10],1.0,100.0,400.0,[11] GATO,🔴 PERDIDA,0.0,-400.0,-161.0,240.0,167.08
