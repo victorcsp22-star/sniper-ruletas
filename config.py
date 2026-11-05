@@ -32,95 +32,95 @@ DIAS_MAP = {
 
 VZ_DIR = os.path.join(BASE_DIR, "data_vz")
 
-# CARTERA ÉLITE OFICIAL (9 RULETAS SELECCIONADAS)
+# CARTERA ÉLITE OFICIAL CERTIFICADA (OPTIMIZADA)
 RULETAS_CONFIG = {
-    # 1. Lotto Gato (Máxima rentabilidad del portafolio)
-    "Lotto Gato": {
-        "file": os.path.join(BASE_DIR, "lotto_gato.csv"),
-        "card_title": "Lotto Gato",
-        "lags": [18, 38, 14, 25, 30, 35, 40, 45],
+    # 1. Mega Animal 40 (Super-Rebote Armónico Optimizado: Calmar 19.55, ROI +38.1%)
+    "Mega Animal 40": {
+        "file": os.path.join(BASE_DIR, "mega_animal_40.csv"),
+        "card_title": "Mega Animal 40",
+        "lags": [18, 21, 20, 22, 19, 46],
+        "target_streaks": [0, 1],
+        "wr_optimos": [0, 1],
+        "rec_w": 8,
+        "anti_clustering": False,
+        "k_cap": 5,
+        "blacklist": ["4"],
+        "markov_snipers": {
+            "30": "0",   # CAIMÁN -> DELFÍN (Lift 5.90x)
+            "11": "0",   # GATO -> DELFÍN (Lift 5.82x)
+            "32": "35"   # ARDILLA -> JIRAFA (Lift 5.00x)
+        },
+        "mirror_pairs": {
+            "11": "00", "12": "21", "13": "31", "23": "32"
+        },
+        "payout": 30.0,
+        "emoji": "🦏",
+        "active": True,
+        "f_unit": 0.00800,
+        "be_rate": 3.33,
+        "grade": "AAA (Super-Rebote Armónico Optimizado - Calmar 19.55)"
+    },
+
+    # 2. Gatazo (Captura de Cuotas 60x - ROI +47.8% / Calmar 4.64)
+    "Gatazo": {
+        "file": os.path.join(BASE_DIR, "gatazo.csv"),
+        "card_title": "Gatazo",
+        "lags": [35, 22, 17, 9],
         "target_streaks": [1, 2],
         "wr_optimos": [1, 2],
         "rec_w": 6,
         "anti_clustering": False,
-        "blacklist": [],
+        "k_cap": 4,
+        "blacklist": ["11"],
         "markov_snipers": {
-            "14": "0",   # PALOMA -> DELFÍN (Lift 8.54x)
-            "27": "15",  # PERRO -> ZORRO (Lift 7.72x)
-            "3": "7"     # CIEMPIÉS -> PERICO (Lift 7.61x)
+            "30": "63",  # CAIMÁN -> CANGREJO (Lift 10.42x)
+            "48": "21",  # PUERCOESPÍN -> GALLO (Lift 8.52x)
+            "23": "42"   # CEBRA -> TUCÁN (Lift 8.15x)
         },
         "mirror_pairs": {
-            "0": "00", "1": "10", "2": "20", "3": "30", "4": "40"
+            "12": "21", "13": "31", "24": "42", "34": "43"
         },
         "payout": 60.0,
-        "emoji": "🐱",
+        "emoji": "🐯",
         "active": True,
         "f_unit": 0.00900,
         "be_rate": 1.67,
-        "grade": "AAA (Suprema - ROI +159% & Markov 60x)"
+        "grade": "AAA (Asimétrica 60x - Lags [35, 22, 20])"
     },
 
-    # 2. Loto Chaima (Pilar de volumen 60x en 9,000 sorteos)
-    "Loto Chaima": {
-        "file": os.path.join(BASE_DIR, "loto_chaima.csv"),
-        "card_title": "Loto Chaima",
-        "lags": [49, 41, 35, 56, 61, 66, 71, 76],
+    # 3. Monje Millonario (Compresión Top-5 a Cuota 60x - ROI +60.1% / Calmar 38.17)
+    "Monje Millonario": {
+        "file": os.path.join(BASE_DIR, "monje_millonario.csv"),
+        "card_title": "Monje Millonario",
+        "lags": [24, 42, 52, 48, 51],
         "target_streaks": [0, 1],
         "wr_optimos": [0, 1],
         "rec_w": 6,
         "anti_clustering": False,
-        "blacklist": [],
-        "markov_snipers": {
-            "48": "0",   # PUERCOESPÍN -> DELFÍN (Lift 5.92x)
-            "55": "0",   # ZORRO/ANIMAL -> DELFÍN (Lift 5.31x)
-            "12": "0"    # CABALLO -> DELFÍN (Lift 4.78x)
-        },
-        "mirror_pairs": {
-            "0": "00", "5": "50", "6": "60", "7": "70"
-        },
-        "payout": 60.0,
-        "emoji": "🏹",
-        "active": True,
-        "f_unit": 0.00850,
-        "be_rate": 1.67,
-        "grade": "AAA (Sólida - 9,000 sorteos & Atractor Delfín)"
-    },
-
-    # 3. Guacharo Activo (Pilar histórico de 9,000 sorteos)
-    "Guacharo Activo": {
-        "file": os.path.join(VZ_DIR, "guacharo_activo_2anios.csv"),
-        "card_title": "Guacharo",
-        "lags": [31, 54, 41, 38, 43, 48, 53, 58],
-        "target_streaks": [1, 3],
-        "wr_optimos": [1, 3, 6],
-        "rec_w": 8,
-        "anti_clustering": False,
+        "k_cap": 5,
         "blacklist": ["75"],
-        "markov_snipers": {
-            "21": "0",   # GALLO -> DELFÍN (Lift 4.69x)
-            "8": "67",   # RATÓN -> AVESTRUZ (Lift 4.61x)
-            "29": "2"    # ELEFANTE -> TORO (Lift 4.57x)
-        },
+        "markov_snipers": {},
         "mirror_pairs": {
-            "12": "21", "13": "31", "14": "41", "23": "32"
+            "24": "42"
         },
         "payout": 60.0,
-        "emoji": "🦇",
+        "emoji": "🧘‍♂️",
         "active": True,
-        "f_unit": 0.00750,
+        "f_unit": 0.00700,
         "be_rate": 1.67,
-        "grade": "AAA (Histórica - Purga Rec8 & Markov 60x)"
+        "grade": "AAA (Podado Top-2 - Cuota 60x - ROI +140%)"
     },
 
-    # 4. Lotto Activo (Clásica de alta estabilidad y volumen)
+    # 4. Lotto Activo (Núcleo Tradicional Optimizado - PnL +$1,389 USD)
     "Lotto Activo": {
         "file": os.path.join(VZ_DIR, "lotto_activo_2anios.csv"),
         "card_title": "Lotto Activo",
-        "lags": [20, 18, 15, 27, 32, 37, 42, 47],
+        "lags": [20, 18, 19, 14, 15, 55],
         "target_streaks": [1, 2],
-        "wr_optimos": [0, 1, 2],
+        "wr_optimos": [1, 2],
         "rec_w": 6,
         "anti_clustering": True,
+        "k_cap": 5,
         "blacklist": [],
         "markov_snipers": {
             "14": "0",   # PALOMA -> DELFÍN (Lift 2.99x)
@@ -138,15 +138,16 @@ RULETAS_CONFIG = {
         "grade": "AA+ (Núcleo Tradicional - Anti-Clustering Activo)"
     },
 
-    # 5. Ruleta Royal (Excelente win rate y consistencia)
+    # 5. Ruleta Royal (Lags [16, 19, 31, 23] - PnL +$862 USD / Calmar 2.74)
     "Ruleta Royal": {
         "file": os.path.join(VZ_DIR, "ruleta_royal_2anios.csv"),
         "card_title": "Ruleta Royal",
-        "lags": [19, 16, 31, 26, 31, 36, 41, 46],
-        "target_streaks": [1],
-        "wr_optimos": [0, 1, 6],
+        "lags": [16, 19, 31, 23],
+        "target_streaks": [1, 2],
+        "wr_optimos": [1, 2],
         "rec_w": 6,
         "anti_clustering": True,
+        "k_cap": 4,
         "blacklist": [],
         "markov_snipers": {
             "25": "22",  # GALLINA -> CAMELLO (Lift 2.56x)
@@ -163,89 +164,72 @@ RULETAS_CONFIG = {
         "grade": "AA+ (Consistencia - Anti-Clustering & Markov)"
     },
 
-    # 6. Mega Animal 40 (Menor volatilidad y drawdown mínimo del sistema)
-    "Mega Animal 40": {
-        "file": os.path.join(BASE_DIR, "mega_animal_40.csv"),
-        "card_title": "Mega Animal 40",
-        "lags": [18, 20, 43],
-        "target_streaks": [1, 2, 3],
-        "wr_optimos": [0, 1, 2, 3],
-        "rec_w": 8,
-        "anti_clustering": False,
-        "blacklist": ["4"],
-        "markov_snipers": {
-            "30": "0",   # CAIMÁN -> DELFÍN (Lift 5.90x)
-            "11": "0",   # GATO -> DELFÍN (Lift 5.82x)
-            "32": "35"   # ARDILLA -> JIRAFA (Lift 5.00x)
-        },
-        "mirror_pairs": {
-            "11": "00", "12": "21", "13": "31", "23": "32"
-        },
-        "payout": 30.0,
-        "emoji": "🦏",
-        "active": True,
-        "f_unit": 0.00800,
-        "be_rate": 3.33,
-        "grade": "AAA (Ancla Defensiva - Drawdown mínimo $46)"
-    },
-
-    # 7. Gatazo (Captura de cuotas 60x y anomalías Markov extremas)
-    "Gatazo": {
-        "file": os.path.join(BASE_DIR, "gatazo.csv"),
-        "card_title": "Gatazo",
-        "lags": [35, 9, 20, 42, 47, 52, 57, 62],
-        "target_streaks": [1],
-        "wr_optimos": [1, 11, 12],
-        "rec_w": 6,
-        "anti_clustering": False,
-        "blacklist": ["11"],
-        "markov_snipers": {
-            "30": "63",  # CAIMÁN -> CANGREJO (Lift 10.42x)
-            "48": "21",  # PUERCOESPÍN -> GALLO (Lift 8.52x)
-            "23": "42"   # CEBRA -> TUCÁN (Lift 8.15x)
-        },
-        "mirror_pairs": {
-            "12": "21", "13": "31", "24": "42", "34": "43"
-        },
-        "payout": 60.0,
-        "emoji": "🐯",
-        "active": True,
-        "f_unit": 0.00900,
-        "be_rate": 1.67,
-        "grade": "AA+ (Asimétrica - Hiper-Markov 10.4x)"
-    },
-
-    # 8. Monje Millonario (Francotirador de Racha 0 a 60x)
-    "Monje Millonario": {
-        "file": os.path.join(BASE_DIR, "monje_millonario.csv"),
-        "card_title": "Monje Millonario",
-        "lags": [24, 42, 48, 31, 36, 41, 46, 51],
-        "target_streaks": [0, 1],
-        "wr_optimos": [0, 1],
-        "rec_w": 6,
-        "anti_clustering": False,
-        "blacklist": ["75"],
-        "markov_snipers": {},
-        "mirror_pairs": {
-            "24": "42"
-        },
-        "payout": 60.0,
-        "emoji": "🧘‍♂️",
-        "active": True,
-        "f_unit": 0.00700,
-        "be_rate": 1.67,
-        "grade": "A (Francotirador Cuota 60x - Racha 0-1)"
-    },
-
-    # 9. Granja Millonaria - Granjazo (Alta asimetría de cuota 60x)
-    "Granja Millonaria - Granjazo": {
-        "file": os.path.join(BASE_DIR, "granja_millonaria_granjazo.csv"),
-        "card_title": "Granjazo",
-        "lags": [45, 26, 15],
+    # 6. Guacharo Activo (6 Reyes [41, 54, 31, 52, 42, 25] - Calmar 3.44)
+    "Guacharo Activo": {
+        "file": os.path.join(VZ_DIR, "guacharo_activo_2anios.csv"),
+        "card_title": "Guacharo",
+        "lags": [41, 54, 31, 52, 42, 25],
         "target_streaks": [1, 3],
         "wr_optimos": [1, 3],
+        "rec_w": 8,
+        "anti_clustering": False,
+        "k_cap": 5,
+        "blacklist": ["75"],
+        "markov_snipers": {
+            "21": "0",   # GALLO -> DELFÍN (Lift 4.69x)
+            "8": "67",   # RATÓN -> AVESTRUZ (Lift 4.61x)
+            "29": "2",   # ELEFANTE -> TORO (Lift 4.57x)
+            "72": "66",  # GORILA -> LOBO (Lift 5.12x)
+            "30": "63"   # CAIMÁN -> CANGREJO (Lift 4.88x)
+        },
+        "mirror_pairs": {
+            "12": "21", "13": "31", "14": "41", "23": "32"
+        },
+        "payout": 60.0,
+        "emoji": "🦇",
+        "active": True,
+        "f_unit": 0.00750,
+        "be_rate": 1.67,
+        "grade": "AAA (Histórica - Purga Rec8 - ROI +47.9%)"
+    },
+
+    # 7. Lotto Gato (Lags [18, 26, 14, 38] - Anti-Clustering Activo)
+    "Lotto Gato": {
+        "file": os.path.join(BASE_DIR, "lotto_gato.csv"),
+        "card_title": "Lotto Gato",
+        "lags": [18, 26, 14, 38],
+        "target_streaks": [1, 2],
+        "wr_optimos": [1, 2],
+        "rec_w": 8,
+        "anti_clustering": True,
+        "k_cap": 4,
+        "blacklist": [],
+        "markov_snipers": {
+            "14": "0",   # PALOMA -> DELFÍN (Lift 8.54x)
+            "27": "15",  # PERRO -> ZORRO (Lift 7.72x)
+            "3": "7"     # CIEMPIÉS -> PERICO (Lift 7.61x)
+        },
+        "mirror_pairs": {
+            "0": "00", "1": "10", "2": "20", "3": "30", "4": "40"
+        },
+        "payout": 30.0,
+        "emoji": "🐱",
+        "active": True,
+        "f_unit": 0.00900,
+        "be_rate": 3.33,
+        "grade": "AA+ (Lags [18, 38, 16] - Anti-Clustering)"
+    },
+
+    # 8. Granja Millonaria - Granjazo (ROI +215.8% / Calmar 83.39)
+    "Granja Millonaria - Granjazo": {
+        "file": os.path.join(BASE_DIR, "granja_millonaria_granjazo.csv"),
+        "card_title": "Granja Millonaria - Granjazo",
+        "lags": [15, 48, 45, 26],
+        "target_streaks": [1],
+        "wr_optimos": [1],
         "rec_w": 6,
         "anti_clustering": False,
+        "k_cap": 4,
         "blacklist": [],
         "markov_snipers": {},
         "mirror_pairs": {
@@ -260,15 +244,26 @@ RULETAS_CONFIG = {
     },
 
     # Ruletas en Reserva (Desactivadas de la Cartera Oficial)
+    "Loto Chaima": {
+        "file": os.path.join(BASE_DIR, "loto_chaima.csv"),
+        "card_title": "Loto Chaima",
+        "lags": [35, 41, 49],
+        "target_streaks": [1],
+        "payout": 60.0,
+        "emoji": "🏹",
+        "active": False,  # Descartada institucionalmente por -EV persistente
+        "grade": "RESERVA (-EV)"
+    },
     "La Granjita": {
         "file": os.path.join(VZ_DIR, "la_granjita_2anios.csv"),
         "card_title": "La Granjita",
-        "lags": [15, 40, 41],
-        "target_streaks": [2, 3],
+        "lags": [15, 17],
+        "target_streaks": [1],
+        "rec_w": 9,
         "payout": 30.0,
         "emoji": "🐸",
-        "active": False,  # Expulsada: -EV en Racha 1 (-8.88% ROI y DD -$331)
-        "grade": "RESERVA (Condicionada a Racha 2-3)"
+        "active": False,  # Reserva
+        "grade": "RESERVA (Condicionada a rec9)"
     },
     "Lotto Activo RD Int": {
         "file": os.path.join(BASE_DIR, "lotto_activo_rd_lotoven_completo.csv"),
@@ -280,7 +275,6 @@ RULETAS_CONFIG = {
         "grade": "RESERVA"
     }
 }
-
 STATE_FILE = os.path.join(BASE_DIR, "state_nuevas_ruletas.json")
 LEDGER_FILE = os.path.join(BASE_DIR, "ledger_nuevas_ruletas.csv")
 DIARIO_FILE = os.path.join(BASE_DIR, "diario_nuevas_ruletas.md")

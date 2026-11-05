@@ -60,11 +60,12 @@ RULETAS = {
     "Mega Animal 40": {
         "file": os.path.join(ROOT_DIR, "mega_animal_40.csv"),
         "title": "Mega Animal 40",
-        "lags": [18, 21, 22, 20, 43, 46],
-        "target_streaks": [1, 2, 3],
-        "wr_optimos": [1, 2, 3],
+        "lags": [18, 21, 20, 22, 19, 46],
+        "target_streaks": [0, 1],
+        "wr_optimos": [0, 1],
         "rec_w": 8,
         "anti_clustering": False,
+        "k_cap": 5,
         "blacklist": ["4"],
         "markov_snipers": {"30": "0", "11": "0", "32": "35"},
         "mirror_pairs": {"11": "00", "12": "21", "13": "31", "23": "32"},
@@ -74,11 +75,12 @@ RULETAS = {
     "Gatazo": {
         "file": os.path.join(ROOT_DIR, "gatazo.csv"),
         "title": "Gatazo",
-        "lags": [35, 22, 20, 9],
+        "lags": [35, 22, 17, 9],
         "target_streaks": [1, 2],
         "wr_optimos": [1, 2],
         "rec_w": 6,
         "anti_clustering": False,
+        "k_cap": 4,
         "blacklist": ["11"],
         "markov_snipers": {"30": "63", "48": "21", "23": "42"},
         "mirror_pairs": {"12": "21", "13": "31", "24": "42", "34": "43"},
@@ -88,11 +90,12 @@ RULETAS = {
     "Monje Millonario": {
         "file": os.path.join(ROOT_DIR, "monje_millonario.csv"),
         "title": "Monje Millonario",
-        "lags": [24, 42, 52, 51, 48, 35, 23, 44],
+        "lags": [24, 42, 52, 48, 51],
         "target_streaks": [0, 1],
         "wr_optimos": [0, 1],
         "rec_w": 6,
         "anti_clustering": False,
+        "k_cap": 5,
         "blacklist": ["75"],
         "markov_snipers": {},
         "mirror_pairs": {"24": "42"},
@@ -107,6 +110,7 @@ RULETAS = {
         "wr_optimos": [1, 2],
         "rec_w": 6,
         "anti_clustering": True,
+        "k_cap": 5,
         "blacklist": [],
         "markov_snipers": {"14": "0", "31": "0", "6": "0"},
         "mirror_pairs": {"12": "21", "13": "31", "23": "32", "0": "00"},
@@ -116,11 +120,12 @@ RULETAS = {
     "Ruleta Royal": {
         "file": os.path.join(ROOT_DIR, "data_vz", "ruleta_royal_2anios.csv"),
         "title": "Ruleta Royal",
-        "lags": [16, 19, 31],
-        "target_streaks": [1],
-        "wr_optimos": [1],
+        "lags": [16, 19, 31, 23],
+        "target_streaks": [1, 2],
+        "wr_optimos": [1, 2],
         "rec_w": 6,
         "anti_clustering": True,
+        "k_cap": 4,
         "blacklist": [],
         "markov_snipers": {"25": "22", "8": "27"},
         "mirror_pairs": {"12": "21", "13": "31", "23": "32"},
@@ -130,13 +135,14 @@ RULETAS = {
     "Guacharo Activo": {
         "file": os.path.join(ROOT_DIR, "data_vz", "guacharo_activo_2anios.csv"),
         "title": "Guacharo",
-        "lags": [41, 54, 31, 52, 42, 25, 35, 21],
+        "lags": [41, 54, 31, 52, 42, 25],
         "target_streaks": [1, 3],
         "wr_optimos": [1, 3],
         "rec_w": 8,
         "anti_clustering": False,
+        "k_cap": 5,
         "blacklist": ["75"],
-        "markov_snipers": {"21": "0", "8": "67", "29": "2"},
+        "markov_snipers": {"21": "0", "8": "67", "29": "2", "72": "66", "30": "63"},
         "mirror_pairs": {"12": "21", "13": "31", "14": "41", "23": "32"},
         "payout": 60.0,
         "emoji": "🦇"
@@ -144,11 +150,12 @@ RULETAS = {
     "Lotto Gato": {
         "file": os.path.join(ROOT_DIR, "lotto_gato.csv"),
         "title": "Lotto Gato",
-        "lags": [18, 38, 16],
+        "lags": [18, 26, 14, 38],
         "target_streaks": [1, 2],
         "wr_optimos": [1, 2],
         "rec_w": 8,
         "anti_clustering": True,
+        "k_cap": 4,
         "blacklist": [],
         "markov_snipers": {"14": "0", "27": "15", "3": "7"},
         "mirror_pairs": {"0": "00", "1": "10", "2": "20", "3": "30", "4": "40"},
@@ -163,6 +170,7 @@ RULETAS = {
         "wr_optimos": [1],
         "rec_w": 6,
         "anti_clustering": False,
+        "k_cap": 4,
         "blacklist": [],
         "markov_snipers": {},
         "mirror_pairs": {"15": "51", "26": "62"},
@@ -315,6 +323,15 @@ def get_current_streaks(r_name):
         rec_set = set(nums[i - rec_w : i])
         raw_cands = [nums[i - l] for l in lags if i - l >= 0]
         cands_lag = sorted(list((set(raw_cands) - rec_set) - blacklist))
+        k_cap = cfg.get("k_cap", 0)
+        if k_cap and len(cands_lag) > k_cap:
+            ord_c = []
+            for c in raw_cands:
+                if c in cands_lag and c not in ord_c:
+                    ord_c.append(c)
+                    if len(ord_c) == k_cap:
+                        break
+            cands_lag = ord_c
         skip_anti = bool(use_anti and prev_was_repeat)
 
         if cands_lag and not skip_anti:
@@ -336,6 +353,15 @@ def get_current_streaks(r_name):
     rec_set_now = set(nums[-rec_w:])
     raw_now = [nums[-l] for l in lags if len(nums) >= l]
     cands_lag_now = sorted(list((set(raw_now) - rec_set_now) - blacklist))
+    k_cap = cfg.get("k_cap", 0)
+    if k_cap and len(cands_lag_now) > k_cap:
+        ord_c = []
+        for c in raw_now:
+            if c in cands_lag_now and c not in ord_c:
+                ord_c.append(c)
+                if len(ord_c) == k_cap:
+                    break
+        cands_lag_now = ord_c
     
     # Comprobar AntiCluster hoy
     last_date = dates[-1] if dates else ""

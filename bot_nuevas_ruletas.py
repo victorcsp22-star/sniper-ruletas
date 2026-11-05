@@ -273,6 +273,102 @@ def get_rebound_momentum_multiplier(trigger_misses: int) -> Tuple[float, str]:
         return NEUTRAL_MULTIPLIER, f"⚖️ Neutral ({NEUTRAL_MULTIPLIER:.2f}x Kelly)"
 
 
+
+def get_30d_color_bubbles(days_window: int = 30) -> Dict[str, Dict]:
+    """
+    SISTEMA DINÁMICO DE BURBUJAS DE COLOR BASADO EN EL RENDIMIENTO DE LOS ÚLTIMOS 30 DÍAS:
+      - 3 Verdes (Top 3 mejores ruletas del mes): Stake = $1.50 USD
+      - 2 Amarillos (4° y 5° puesto - Zona media): Stake = $1.00 USD
+      - 3 Rojos (6°, 7° y 8° puesto - Ruletas frías): Stake = $0.50 USD (Defensivo)
+    """
+    cutoff = datetime.datetime.now() - datetime.timedelta(days=days_window)
+    perf = {}
+    
+    for r_name, cfg in RULETAS_CONFIG.items():
+        if not cfg.get("active", False):
+            continue
+        fpath = cfg["file"]
+        if not os.path.exists(fpath):
+            continue
+        try:
+            df = pd.read_csv(fpath, dtype={"numero": str})
+            df["numero"] = df["numero"].astype(str).str.strip()
+            if "fecha" not in df.columns or "hora" not in df.columns:
+                continue
+            df["dt"] = pd.to_datetime(df["fecha"] + " " + df["hora"], format="%Y-%m-%d %I:%M %p", errors="coerce")
+            
+            lags = cfg["lags"]
+            rec_w = cfg["rec_w"]
+            anti_clust = cfg.get("anti_clustering", False)
+            payout = cfg["payout"]
+            streaks = cfg.get("target_streaks", [1])
+            
+            nums = df["numero"].tolist()
+            dts = df["dt"].tolist()
+            fechas = df["fecha"].tolist()
+            
+            streak = 0
+            cost = 0.0
+            rev = 0.0
+            seen_today = set()
+            last_f = None
+            prev_rep = False
+            
+            min_i = max(lags) + rec_w
+            for i in range(min_i, len(nums)):
+                dt = dts[i]
+                if pd.isna(dt): continue
+                f = fechas[i]
+                act = nums[i]
+                if f != last_f:
+                    seen_today = set()
+                    last_f = f
+                    prev_rep = False
+                rec_set = set(nums[i-rec_w:i])
+                raw = [nums[i-l] for l in lags if i>=l]
+                cands = sorted(list(set(raw) - rec_set))
+                cnt = len(cands)
+                is_rep = (act in seen_today)
+                skip = (anti_clust and prev_rep)
+                hit = (act in cands) if cnt > 0 else False
+                
+                if dt >= cutoff and cnt > 0 and not skip:
+                    if streak in streaks:
+                        cost += cnt
+                        if hit:
+                            rev += payout
+                    streak = 0 if hit else streak + 1
+                elif cnt > 0 and skip:
+                    streak = 0 if hit else streak + 1
+                seen_today.add(act)
+                prev_rep = is_rep
+            
+            pnl = rev - cost
+            perf[r_name] = pnl
+        except Exception:
+            perf[r_name] = 0.0
+
+    sorted_r = sorted(perf.items(), key=lambda x: x[1], reverse=True)
+    tiers = {}
+    for rank, (r, pnl_val) in enumerate(sorted_r, 1):
+        if rank <= 3:
+            tiers[r] = {
+                "rank": rank, "color": "VERDE", "emoji": "🟢", "stake": 1.50,
+                "pnl_30d": round(pnl_val, 2), "color_hex": "#10b981", "badge": "🟢 $1.50 (Top Mes)"
+            }
+        elif rank <= 5:
+            tiers[r] = {
+                "rank": rank, "color": "AMARILLO", "emoji": "🟡", "stake": 1.00,
+                "pnl_30d": round(pnl_val, 2), "color_hex": "#f59e0b", "badge": "🟡 $1.00 (Medio)"
+            }
+        else:
+            tiers[r] = {
+                "rank": rank, "color": "ROJO", "emoji": "🔴", "stake": 0.50,
+                "pnl_30d": round(pnl_val, 2), "color_hex": "#ef4444", "badge": "🔴 $0.50 (Defensivo)"
+            }
+    return tiers
+
+
 def calculate_stake_grossman_zhou(
     bankroll: float,
     peak: float,
@@ -581,7 +677,17 @@ def calculate_current_streak_and_misses(r_name: str) -> Tuple[int, int]:
             prev_was_repeat = False
 
         rec_set = set(nums[i-rec_w:i])
-        cands = list(({nums[i-l] for l in lags if i >= l} - rec_set) - set(cfg.get("blacklist", [])))
+        raw_l = [nums[i-l] for l in lags if i >= l]
+        cands = list((set(raw_l) - rec_set) - set(cfg.get("blacklist", [])))
+        k_cap = cfg.get("k_cap", 0)
+        if k_cap and len(cands) > k_cap:
+            ord_c = []
+            for c in raw_l:
+                if c in cands and c not in ord_c:
+                    ord_c.append(c)
+                    if len(ord_c) == k_cap:
+                        break
+            cands = ord_c
 
         is_repeat_now = (actual in seen_today)
         skip_shot = bool(use_anti_cluster and prev_was_repeat)
@@ -630,6 +736,15 @@ def generate_upcoming_candidates(r_name: str) -> Dict:
     rec_set = set(nums[-rec_w:])
     raw_lags = [nums[-l] for l in lags if l <= len(nums)]
     cands_lag = sorted(list((set(raw_lags) - rec_set) - blacklist))
+    k_cap = cfg.get("k_cap", 0)
+    if k_cap and len(cands_lag) > k_cap:
+        ord_c = []
+        for c in raw_lags:
+            if c in cands_lag and c not in ord_c:
+                ord_c.append(c)
+                if len(ord_c) == k_cap:
+                    break
+        cands_lag = ord_c
     
     # Comprobar si el sorteo más reciente fue una repetición intradía
     is_anti_cluster_blocked = False
@@ -881,6 +996,15 @@ def check_and_update(verbose: bool = True) -> Dict:
                     rec_set = set(past_nums[-rec_w:])
                     raw_cands = [past_nums[-l] for l in cfg["lags"] if l <= len(past_nums)]
                     c_list = sorted(list((set(raw_cands) - rec_set) - set(cfg.get("blacklist", []))))
+                    k_cap = cfg.get("k_cap", 0)
+                    if k_cap and len(c_list) > k_cap:
+                        ord_c = []
+                        for c in raw_cands:
+                            if c in c_list and c not in ord_c:
+                                ord_c.append(c)
+                                if len(ord_c) == k_cap:
+                                    break
+                        c_list = ord_c
                     if c_list:
                         num_to_anim = {str(row["numero"]): row["animal"] for _, row in df.iloc[:d_idx].iterrows()}
                         cands = c_list
@@ -967,6 +1091,15 @@ def check_and_update(verbose: bool = True) -> Dict:
                 rec_set = set(past_nums[-rec_w:])
                 raw_cands = [past_nums[-l] for l in cfg["lags"] if l <= len(past_nums)]
                 c_list = sorted(list((set(raw_cands) - rec_set) - set(cfg.get("blacklist", []))))
+                k_cap = cfg.get("k_cap", 0)
+                if k_cap and len(c_list) > k_cap:
+                    ord_c = []
+                    for c in raw_cands:
+                        if c in c_list and c not in ord_c:
+                            ord_c.append(c)
+                            if len(ord_c) == k_cap:
+                                break
+                    c_list = ord_c
                 if c_list and not is_recov_blocked:
                     hit_pattern = (salido_num in c_list)
                     if r_streak in cfg.get("target_streaks", [1]):
@@ -990,6 +1123,10 @@ def check_and_update(verbose: bool = True) -> Dict:
     if "trigger_misses" not in state:
         state["trigger_misses"] = {}
 
+    # Asignación Dinámica de Burbujas de Color (Rendimiento 30 Días Móviles)
+    color_bubbles = get_30d_color_bubbles(days_window=30)
+    state["color_bubbles"] = color_bubbles
+
     for r_name, cfg in RULETAS_CONFIG.items():
         if not cfg["active"]:
             continue
@@ -1003,15 +1140,13 @@ def check_and_update(verbose: bool = True) -> Dict:
         # Inversión Inteligente: Modulación Rebound Momentum
         smart_mult, smart_label = get_rebound_momentum_multiplier(trigger_misses)
         
-        # Dimensionamiento de Apuesta: $1.00 USD Fijo o Kelly Optimizado
+        # Dimensionamiento Dinámico por Burbujas de Color ($1.50 Verde, $1.00 Amarillo, $0.50 Rojo)
+        bubble = color_bubbles.get(r_name, {
+            "color": "AMARILLO", "emoji": "🟡", "stake": 1.00, "rank": 4, 
+            "badge": "🟡 $1.00", "pnl_30d": 0.0, "color_hex": "#f59e0b"
+        })
+        stake_unit = bubble["stake"]
         f_unit = cfg.get("f_unit", 0.008)
-        if SIZING_MODEL == "fixed_stake_with_weekly_withdrawals":
-            stake_unit = FIXED_STAKE_UNIT
-        else:
-            stake_unit = state.get("weekly_fixed_stakes", {}).get(
-                r_name,
-                round(max(MIN_BET, cycle_base * f_unit * eff_kelly), 2)
-            )
         total_stake = round(cost_fichas * stake_unit, 2)
         posible_premio = round(stake_unit * cfg["payout"], 2)
 
@@ -1067,6 +1202,10 @@ def check_and_update(verbose: bool = True) -> Dict:
             "payout": cfg["payout"],
             "total_cands": cost_fichas,
             "candidates_str": cands_formatted,
+            "bubble": bubble,
+            "color_bubble": bubble["color"],
+            "color_emoji": bubble["emoji"],
+            "color_badge": bubble["badge"],
             "stake_unit": stake_unit,
             "total_stake": total_stake,
             "posible_premio": posible_premio,
@@ -1129,7 +1268,7 @@ def check_and_update(verbose: bool = True) -> Dict:
                         del state["pending_bets"][r_name]
                 else:
                     if SIZING_MODEL == "fixed_stake_with_weekly_withdrawals":
-                        final_stake = FIXED_STAKE_UNIT
+                        final_stake = stake_unit
                         r_card["stake_unit"] = final_stake
                         r_card["total_stake"] = round(cost_fichas * final_stake, 2)
                         r_card["posible_premio"] = round(final_stake * cfg["payout"], 2)
@@ -1170,8 +1309,9 @@ def check_and_update(verbose: bool = True) -> Dict:
         print("=" * 115)
         if active_signals:
             for s in active_signals:
-                print(f" 🚨 ¡ENTRADA INMINENTE ACTIVADA! -> {s['ruleta']} (Payout: {s['payout']:.0f}x)")
+                print(f" 🚨 ¡ENTRADA INMINENTE ACTIVADA! -> {s['ruleta']} [{s['color_badge']}] (Payout: {s['payout']:.0f}x)")
                 print(f"    • ESTADO:                   {s['conteo_str']} | Racha Actual: {s['racha']}")
+                print(f"    • BURBUJA 30 DÍAS:          {s['color_emoji']} {s['color_bubble']} (Stake: ${s['stake_unit']:.2f} USD)")
                 print(f"    • Último Sorteo Salido:     {s['last_salido_str']}")
                 print(f"    • Condición del Patrón:     {s['smart_label']}")
                 print(f"    • ANIMALES A COMPRAR:       {s['candidates_str']} ({s['total_cands']} animales)")
@@ -1189,9 +1329,9 @@ def check_and_update(verbose: bool = True) -> Dict:
         print("\n" + "=" * 165)
         print(" 📡 RADAR DE MONITOREO TÁCTICO (ESTADO, CONTEO DE FALLOS Y ÚLTIMO SALIDO CON HORA):")
         print("=" * 165)
-        headers = f" {'RULETA':<19} | {'ESTADO ACTUAL':<19} | {'FALLOS QUE FALTAN':<22} | {'ÚLTIMO SALIDO (HORA)':<26} | {'ANIMALES A COMPRAR':<26} | {'MONTO C/U':<11} | {'TOTAL':<11} | {'PREMIO':<11} | {'CONDICIÓN PATRÓN'}"
+        headers = f" {'RULETA':<19} | {'BURBUJA 30D':<13} | {'ESTADO ACTUAL':<19} | {'FALLOS QUE FALTAN':<22} | {'ÚLTIMO SALIDO (HORA)':<26} | {'ANIMALES A COMPRAR':<26} | {'MONTO C/U':<11} | {'TOTAL':<11} | {'PREMIO':<11} | {'CONDICIÓN PATRÓN'}"
         print(headers)
-        print("-" * 165)
+        print("-" * 179)
 
         for item in all_radar_items:
             if item["fallos_restantes"] == 0:
@@ -1214,7 +1354,8 @@ def check_and_update(verbose: bool = True) -> Dict:
             if len(u_salido) > 25:
                 u_salido = u_salido[:23] + ".."
 
-            row = f" {item['ruleta']:<19} | {item['badge']:<19} | {item['conteo_str']:<22} | {u_salido:<26} | {c_display:<26} | {apuesta_str:<11} | {total_str:<11} | {premio_str:<11} | {item['smart_label']}"
+            b_badge = f"{item.get('color_emoji', '🟡')} ${item.get('stake_unit', 1.0):.2f}"
+            row = f" {item['ruleta']:<19} | {b_badge:<13} | {item['badge']:<19} | {item['conteo_str']:<22} | {u_salido:<26} | {c_display:<26} | {apuesta_str:<11} | {total_str:<11} | {premio_str:<11} | {item['smart_label']}"
             print(row)
 
         print("=" * 165 + "\n")

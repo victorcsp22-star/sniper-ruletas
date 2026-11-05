@@ -1,683 +1,706 @@
 <!DOCTYPE html>
 <html lang="es" class="dark">
 <head>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(function(registrations) {
+    for(let registration of registrations) {
+      registration.unregister();
+    }
+  });
+  caches.keys().then(function(names) {
+    for (let name of names) caches.delete(name);
+  });
+}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>SNIPER PWA AUTONOMA V10</title>
+  <title>Sniper Ruletas | Cartera Táctica</title>
+  
+  <!-- PWA Meta Tags -->
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#10b981">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="apple-touch-icon" href="/icon-192.png">
+  <meta name="apple-mobile-web-app-title" content="Sniper Ruletas">
+  <link rel="icon" type="image/png" href="/icon-192.png">
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#070b14',
+              card: '#0f172a',
+              cardLight: '#1e293b',
+              accent: '#10b981',
+              accentHover: '#059669',
+              markov: '#06b6d4',
+              warning: '#f59e0b',
+              danger: '#ef4444'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
   <style>
+    /* Estilos Nativos Móviles */
     body {
       background-color: #070b14;
       color: #f8fafc;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
       touch-action: manipulation;
     }
-    .glass-card {
-      background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+    .safe-top { padding-top: env(safe-area-inset-top, 16px); }
+    .safe-bottom { padding-bottom: env(safe-area-inset-bottom, 20px); }
+    
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.4); border-color: rgba(16, 185, 129, 0.8); }
+      50% { box-shadow: 0 0 35px rgba(16, 185, 129, 0.8); border-color: rgba(52, 211, 153, 1); }
     }
-    .glass-card-active {
-      background: rgba(6, 78, 59, 0.4);
-      border: 1px solid rgba(16, 185, 129, 0.4);
-      box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.25);
+    .animate-pulse-glow {
+      animation: pulseGlow 2s infinite ease-in-out;
     }
-    .chip {
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(16, 185, 129, 0.3);
+    @keyframes spinSync {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
-    ::-webkit-scrollbar { display: none; }
+    .sync-spin {
+      animation: spinSync 0.8s linear infinite;
+    }
   </style>
 </head>
-<body class="min-h-screen pb-24 selection:bg-emerald-500 selection:text-white">
+<body class="flex flex-col min-h-screen">
 
-  <!-- HEADER FIJO -->
-  <header class="sticky top-0 z-40 glass-card border-b border-slate-800/80 px-4 py-3">
+  <!-- Header Táctico Fijo -->
+  <header class="sticky top-0 z-50 bg-brand-dark/95 backdrop-blur-md border-b border-slate-800 safe-top px-4 py-3">
     <div class="flex items-center justify-between">
-      <div class="flex items-center space-x-2.5">
-        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center shadow-lg shadow-emerald-500/20">
-          <i data-lucide="crosshair" class="w-5 h-5 text-white"></i>
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 rounded-full bg-emerald-500/20 border border-emerald-500 flex items-center justify-center text-emerald-400">
+          <i data-lucide="crosshair" class="w-4 h-4"></i>
         </div>
         <div>
-          <div class="flex items-center space-x-1.5">
-            <h1 class="text-sm font-black tracking-wider text-white uppercase">SNIPER V10</h1>
-            <span class="px-1.5 py-0.5 text-[9px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded">100% AUTONOMO</span>
-          </div>
-          <p id="reloj-header" class="text-[11px] font-mono text-slate-400">12:00:00 p. m.</p>
+          <h1 class="text-sm font-bold tracking-tight text-white flex items-center gap-1.5">
+            SNIPER V3 DINÁMICO
+            <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-mono font-bold">BURBUJAS 30D</span>
+          </h1>
+          <p id="header-time" class="text-[11px] text-slate-400 font-mono">Conectando...</p>
         </div>
       </div>
 
-      <div class="flex items-center space-x-2">
-        <button onclick="abrirModalEntrada()" class="px-3 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs flex items-center space-x-1.5 shadow-lg shadow-amber-500/20 active:scale-95 transition-all">
-          <i data-lucide="plus-circle" class="w-4 h-4"></i>
-          <span>Anotar Sorteo</span>
+      <!-- Botón de Sincronización Inmediata -->
+            <div class="flex items-center space-x-1.5">
+        <!-- Botón Entrada Rápida Offline (Cero Dependencia de Internet) -->
+        <button onclick="toggleModalManual()" class="flex items-center space-x-1 bg-amber-500/20 active:bg-amber-500 text-amber-300 active:text-slate-950 px-2.5 py-1.5 rounded-lg border border-amber-500/40 text-xs font-bold shadow-sm transition">
+          <i data-lucide="plus-circle" class="w-3.5 h-3.5"></i>
+          <span>Entrada Offline</span>
         </button>
-      </div>
-    </div>
 
-    <!-- TARJETA FINANCIERA -->
-    <div class="mt-3 pt-2.5 border-t border-slate-800/80 grid grid-cols-4 gap-2 text-center">
-      <div>
-        <span class="text-[10px] text-slate-400 font-medium block">Operaciones</span>
-        <span id="hdr-ops" class="text-xs font-bold text-slate-200">0 (0 Hits)</span>
-      </div>
-      <div>
-        <span class="text-[10px] text-slate-400 font-medium block">Invertido</span>
-        <span id="hdr-inv" class="text-xs font-bold text-slate-200">Bs 0.00</span>
-      </div>
-      <div>
-        <span class="text-[10px] text-slate-400 font-medium block">Cobrado</span>
-        <span id="hdr-cob" class="text-xs font-bold text-emerald-400">Bs 0.00</span>
-      </div>
-      <div>
-        <span class="text-[10px] text-slate-400 font-medium block">Saldo Mesa</span>
-        <span id="hdr-saldo" class="text-xs font-black text-white">Bs 24,100.00</span>
+        <!-- Botón de Sincronización Inmediata -->
+        <button id="btn-sync" onclick="syncTuAzar()" class="flex items-center space-x-1.5 bg-brand-cardLight active:bg-emerald-600 text-slate-200 active:text-white px-2.5 py-1.5 rounded-lg border border-slate-700 text-xs font-semibold shadow-sm transition-all">
+          <i id="sync-icon" data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+          <span id="sync-text">TuAzar</span>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
-  <main class="px-4 py-4 space-y-6 max-w-lg mx-auto">
-
-    <!-- SECCION: DISPAROS INMINENTES -->
-    <div>
-      <div class="flex items-center justify-between mb-3">
-        <h2 class="text-xs font-black uppercase tracking-wider text-slate-400 flex items-center space-x-1.5">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>Disparos Inminentes (Ordenes Activas)</span>
-        </h2>
-        <span id="count-inminentes" class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-800 text-slate-300">0 Activas</span>
-      </div>
-
-      <div id="inminentes-container" class="space-y-3">
-        <!-- Se inyecta dinamicamente -->
-      </div>
+  <!-- Banner de Instalación PWA (Aparece si la app no está instalada aún) -->
+  <div id="pwa-install-banner" class="hidden bg-emerald-950/90 border-b border-emerald-600 px-4 py-2.5 flex items-center justify-between text-xs text-emerald-200">
+    <div class="flex items-center space-x-2">
+      <i data-lucide="download" class="w-4 h-4 text-emerald-400"></i>
+      <span>Instala esta app en tu pantalla de inicio</span>
     </div>
+    <button onclick="installPWA()" class="bg-emerald-500 text-slate-950 font-bold px-2.5 py-1 rounded shadow">Instalar</button>
+  </div>
 
-    <!-- SECCION: RADAR DE LAS 7 RULETAS -->
-    <div>
-      <div class="flex items-center justify-between mb-3">
-        <h2 class="text-xs font-black uppercase tracking-wider text-slate-400 flex items-center space-x-1.5">
-          <i data-lucide="radar" class="w-4 h-4 text-cyan-400"></i>
-          <span>Radar de las 7 Ruletas Oficiales</span>
+  <!-- Contenedor Principal con Scroll -->
+  <main class="flex-1 px-4 py-3 space-y-4 max-w-md mx-auto w-full">
+
+    <!-- Billetera Táctica (Balance de Capital) -->
+    <section class="bg-gradient-to-br from-slate-900 via-brand-card to-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl">
+      <div class="flex items-center justify-between border-b border-slate-800/80 pb-2.5 mb-3">
+        <span class="text-xs uppercase font-semibold tracking-wider text-slate-400 flex items-center gap-1.5">
+          <i data-lucide="wallet" class="w-3.5 h-3.5 text-emerald-400"></i> Billetera Táctica
+        </span>
+        <span id="cycle-badge" class="text-[11px] font-mono font-medium px-2 py-0.5 rounded-full bg-slate-800 text-slate-300">
+          Ciclo 5 (Día 3/7)
+        </span>
+      </div>
+
+      <!-- Grilla de Saldos -->
+      <div class="grid grid-cols-2 gap-3 mb-3">
+        <!-- Saldo en Mesa -->
+        <div class="bg-slate-950/60 rounded-xl p-3 border border-slate-800/60">
+          <p class="text-[11px] text-slate-400">Saldo en Mesa</p>
+          <p id="val-mesa" class="text-xl font-black text-white font-mono tracking-tight">Bs 0.00</p>
+          <p class="text-[10px] text-emerald-400 font-medium">Base semanal: Bs 200.00</p>
+        </div>
+
+        <!-- Ganancias Retiradas -->
+        <div class="bg-slate-950/60 rounded-xl p-3 border border-slate-800/60">
+          <p class="text-[11px] text-slate-400">Ganancias Retiradas</p>
+          <p id="val-retiradas" class="text-xl font-black text-emerald-400 font-mono tracking-tight">Bs 0.00</p>
+          <p class="text-[10px] text-slate-400">Cobrado a cartera</p>
+        </div>
+      </div>
+
+      <!-- Total Patrimonio Consolidado -->
+      <div class="bg-emerald-950/30 border border-emerald-500/30 rounded-xl p-3 flex items-center justify-between">
+        <div>
+          <p class="text-[11px] text-emerald-300 font-medium">Patrimonio Total (Mesa + Mano)</p>
+          <p id="val-patrimonio" class="text-2xl font-black text-white font-mono">Bs 0.00</p>
+        </div>
+        <div class="text-right">
+          <span id="val-pnl-semanal" class="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/10 px-2 py-1 rounded-md border border-emerald-500/20">
+            +Bs 0.00 (+0%)
+          </span>
+          <p class="text-[10px] text-slate-400 mt-1">Semana en curso</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Señales Activas Inminentes (Dato del momento próximo a jugar tal y como está) -->
+    <section id="section-active-signals" class="space-y-3">
+      <!-- Se inyecta dinámicamente con JS -->
+    </section>
+
+    <!-- Registro de Jugadas de Hoy (Animalitos jugados y resultados) -->
+    <section id="section-today-ops" class="bg-brand-card border border-slate-800 rounded-2xl p-3.5 shadow-lg space-y-3">
+      <div class="flex items-center justify-between pb-2 border-b border-slate-800/80">
+        <h3 class="text-xs font-bold text-white flex items-center gap-1.5">
+          <i data-lucide="history" class="w-4 h-4 text-emerald-400"></i> Registro de Jugadas de Hoy
+        </h3>
+        <div class="flex items-center space-x-2">
+          <span id="stat-today" class="text-[11px] font-mono text-emerald-400 font-semibold px-2 py-0.5 rounded bg-slate-900 border border-slate-800">
+            PnL Hoy: Bs 0.00
+          </span>
+          <button onclick="limpiarRegistroDiario()" class="flex items-center space-x-1 px-2.5 py-1 rounded-lg bg-rose-500/15 hover:bg-rose-500/30 active:bg-rose-500 text-rose-300 active:text-white border border-rose-500/40 text-[10px] font-bold shadow-sm transition">
+            <i data-lucide="trash-2" class="w-3 h-3"></i>
+            <span>Limpiar</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="recent-ops-list" class="space-y-2.5 max-h-72 overflow-y-auto pr-1">
+        <!-- Tarjetas detalladas de operaciones inyectadas con JS -->
+      </div>
+    </section>
+
+    <!-- Radar Táctico de las 7 Ruletas -->
+    <section class="space-y-2.5">
+      <div class="flex items-center justify-between px-1">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+          <i data-lucide="radar" class="w-3.5 h-3.5 text-cyan-400"></i> Radar de las 7 Ruletas
         </h2>
-        <span class="text-[10px] text-slate-500 font-mono">Apuesta Bs 100 / ficha</span>
+        <span class="text-[10px] text-emerald-400 font-mono font-bold">Burbujas: 🟢 $1.50 | 🟡 $1.00 | 🔴 $0.50</span>
       </div>
 
-      <div id="radar-container" class="space-y-2">
-        <!-- Se inyecta dinamicamente -->
+      <div id="radar-list" class="space-y-2">
+        <!-- Tarjetas del radar inyectadas con JS -->
       </div>
-    </div>
+    </section>
 
-    <!-- SECCION: HISTORIAL DIARIO DE OPERACIONES -->
-    <div>
-      <div class="flex items-center justify-between mb-3">
-        <h2 class="text-xs font-black uppercase tracking-wider text-slate-400 flex items-center space-x-1.5">
-          <i data-lucide="history" class="w-4 h-4 text-amber-400"></i>
-          <span>Libro Contable de Hoy (Auditoria)</span>
-        </h2>
-        <button onclick="borrarHistorialHoy()" class="text-[10px] text-rose-400 hover:text-rose-300">Reiniciar Hoy</button>
-      </div>
-
-      <div id="historial-container" class="space-y-2">
-        <!-- Se inyecta dinamicamente -->
-      </div>
-    </div>
+    <!-- Botón para ver Reporte Táctico Horario Completo -->
+    <button onclick="toggleReportModal()" class="w-full bg-slate-900 hover:bg-slate-800 active:bg-slate-950 border border-slate-800 text-slate-300 font-semibold py-3 px-4 rounded-xl text-xs flex items-center justify-center space-x-2 transition shadow">
+      <i data-lucide="file-text" class="w-4 h-4 text-emerald-400"></i>
+      <span>Ver Reporte Táctico Horario Completo</span>
+    </button>
 
   </main>
 
-  <!-- MODAL: ANOTAR SORTEO -->
-  <div id="modal-entrada" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
-    <div class="glass-card w-full max-w-sm rounded-2xl p-5 border border-slate-700 space-y-4">
-      <div class="flex justify-between items-center pb-2 border-b border-slate-800">
-        <h3 class="text-sm font-black text-white flex items-center space-x-2">
-          <i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i>
-          <span>Anotar Resultado Oficial</span>
+  <!-- Modal de Reporte Táctico Horario -->
+  <div id="report-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm p-4 flex items-center justify-center">
+    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-lg w-full max-h-[85vh] flex flex-col shadow-2xl">
+      <div class="flex items-center justify-between p-4 border-b border-slate-800">
+        <h3 class="font-bold text-sm text-white flex items-center gap-2">
+          <i data-lucide="file-text" class="w-4 h-4 text-emerald-400"></i> Reporte Táctico
         </h3>
-        <button onclick="cerrarModalEntrada()" class="text-slate-400 hover:text-white">
+        <button onclick="toggleReportModal()" class="text-slate-400 hover:text-white p-1">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
+      </div>
+      <div class="p-4 overflow-y-auto font-mono text-xs text-slate-300 space-y-2 leading-relaxed" id="report-modal-content">
+        Cargando reporte...
+      </div>
+    </div>
+  </div>
+
+  <!-- Navegación Inferior Móvil -->
+  <nav class="sticky bottom-0 z-40 bg-brand-dark/95 backdrop-blur-md border-t border-slate-800 safe-bottom px-6 py-2">
+    <div class="flex items-center justify-around text-[10px] text-slate-400">
+      <button onclick="window.scrollTo({top: 0, behavior: 'smooth'}); loadTacticalStatus()" class="flex flex-col items-center space-y-1 text-emerald-400">
+        <i data-lucide="home" class="w-4 h-4"></i>
+        <span>Inicio</span>
+      </button>
+      <button onclick="document.getElementById('section-today-ops').scrollIntoView({behavior: 'smooth'})" class="flex flex-col items-center space-y-1 hover:text-white">
+        <i data-lucide="history" class="w-4 h-4"></i>
+        <span>Jugadas Hoy</span>
+      </button>
+      <button onclick="syncTuAzar()" class="flex flex-col items-center space-y-1 hover:text-white">
+        <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+        <span>Sincronizar</span>
+      </button>
+      <button onclick="toggleReportModal()" class="flex flex-col items-center space-y-1 hover:text-white">
+        <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
+        <span>Reporte</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Script Lógica Frontend -->
+  <script>
+    let deferredPrompt = null;
+
+    function renderCandidatos(candsStr, isHero = false) {
+      if (!candsStr) return '';
+      // Separar por comas si vienen varios animales
+      const items = candsStr.split(',').map(s => s.trim()).filter(Boolean);
+      return items.map(item => {
+        // Buscar si tiene [P:X/10] o [P:X]
+        const match = item.match(/\[P:(\d+)(\/10)?\]/i);
+        let pesoBadge = '';
+        let cleanText = item;
+        if (match) {
+          const peso = parseInt(match[1], 10);
+          cleanText = item.replace(/\[P:\d+(\/10)?\]/i, '').trim();
+          let colorClass = 'bg-slate-700 text-slate-300 border-slate-600';
+          if (peso >= 7) {
+            colorClass = 'bg-emerald-500/30 text-emerald-300 border-emerald-400 font-black animate-pulse';
+          } else if (peso >= 5) {
+            colorClass = 'bg-amber-500/20 text-amber-300 border-amber-500/40 font-bold';
+          } else if (peso >= 3) {
+            colorClass = 'bg-blue-500/20 text-blue-300 border-blue-500/40';
+          } else {
+            colorClass = 'bg-rose-500/20 text-rose-300 border-rose-500/40';
+          }
+          pesoBadge = `<span class="ml-1.5 px-1.5 py-0.5 rounded text-[10px] font-mono border ${colorClass}">P:${peso}/10</span>`;
+        }
+
+        if (isHero) {
+          return `<span class="inline-flex items-center px-2.5 py-1 rounded-lg bg-emerald-950/60 border border-emerald-500/50 text-emerald-200 text-sm font-black font-mono shadow-sm">${cleanText} ${pesoBadge}</span>`;
+        } else {
+          return `<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-slate-900 border border-slate-700 text-amber-300 text-[10px] font-semibold font-mono">${cleanText} ${pesoBadge}</span>`;
+        }
+      }).join(' ');
+    }
+
+    // Registro del Service Worker para funcionamiento como App PWA
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').catch(err => {
+          console.log('SW registration failed:', err);
+        });
+      });
+    }
+
+    // Captura del evento de instalación PWA en Android
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const banner = document.getElementById('pwa-install-banner');
+      if (banner) banner.classList.remove('hidden');
+    });
+
+    function installPWA() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            document.getElementById('pwa-install-banner').classList.add('hidden');
+          }
+          deferredPrompt = null;
+        });
+      }
+    }
+
+    // Cargar estado táctico en vivo
+    async function loadTacticalStatus() {
+      try {
+        const res = await fetch('/api/status');
+        const data = await res.json();
+        if (data.status !== 'ok') return;
+
+        // 1. Header y Wallet
+        document.getElementById('header-time').textContent = `${data.hora} | ${data.timestamp.split(' ')[0]} • Auto-Sync 🟢`;
+        document.getElementById('val-mesa').textContent = `Bs ${data.wallet.bankroll.toFixed(2)}`;
+        document.getElementById('val-retiradas').textContent = `Bs ${data.wallet.withdrawn.toFixed(2)}`;
+        document.getElementById('val-patrimonio').textContent = `Bs ${data.wallet.patrimonio.toFixed(2)}`;
+        document.getElementById('val-pnl-semanal').textContent = `${data.wallet.cycle_pnl >= 0 ? '+' : ''}Bs ${data.wallet.cycle_pnl.toFixed(2)} (${data.wallet.cycle_pct >= 0 ? '+' : ''}${data.wallet.cycle_pct}%)`;
+        document.getElementById('cycle-badge').textContent = `Ciclo ${data.wallet.cycle_num} (Semana 5)`;
+        document.getElementById('stat-today').textContent = `Hoy: ${data.wallet.pnl_today >= 0 ? '+' : ''}Bs ${data.wallet.pnl_today.toFixed(2)} (${data.wallet.wins_today}/${data.wallet.ops_today})`;
+
+        // 2. Señales Activas Inminentes (Hero Card de Compra)
+        const signalsContainer = document.getElementById('section-active-signals');
+        signalsContainer.innerHTML = '';
+
+        if (data.active_signals && data.active_signals.length > 0) {
+          data.active_signals.forEach(sig => {
+            if (!sig.candidatos_str && (!sig.candidatos || sig.candidatos.length === 0)) return;
+            const card = document.createElement('div');
+            
+            // Extraer peso del agente (por propiedad o parseando)
+            let peso = (typeof sig.peso_agente === 'number') ? sig.peso_agente : null;
+            if (peso === null && sig.peso_label) {
+              const m = sig.peso_label.match(/P:(\d+)/i);
+              if (m) peso = parseInt(m[1], 10);
+            }
+            if (peso === null && sig.candidatos_str) {
+              const m = sig.candidatos_str.match(/\[P:(\d+)(\/10)?\]/i);
+              if (m) peso = parseInt(m[1], 10);
+            }
+            if (peso === null) peso = 5; // Default moderado
+
+            // Estilos dinámicos para la tarjeta Hero según el peso del agente
+            let borderClass = 'border-emerald-500';
+            let bgGradient = 'from-emerald-950 via-slate-900 to-emerald-950';
+            let headerTextClass = 'text-emerald-400';
+            let pingClass = 'bg-emerald-400';
+            let badgeClass = 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30';
+            let pesoPillClass = 'bg-emerald-500/30 text-emerald-300 border-emerald-400';
+
+            if (peso >= 7) {
+              // Convicción Alta / Élite (Verde Esmeralda Radiante)
+              borderClass = 'border-emerald-400 shadow-[0_0_25px_rgba(16,185,129,0.35)]';
+              bgGradient = 'from-emerald-950 via-slate-900 to-emerald-950';
+              headerTextClass = 'text-emerald-300';
+              pingClass = 'bg-emerald-400';
+              badgeClass = 'bg-emerald-500/30 text-emerald-300 border-emerald-400 font-black';
+              pesoPillClass = 'bg-emerald-500 text-slate-950 font-black border-emerald-300 shadow-sm';
+            } else if (peso >= 5) {
+              // Convicción Media / Buena (Ámbar / Dorado)
+              borderClass = 'border-amber-500 shadow-[0_0_20px_rgba(245,158,11,0.25)]';
+              bgGradient = 'from-amber-950 via-slate-900 to-amber-950';
+              headerTextClass = 'text-amber-400';
+              pingClass = 'bg-amber-400';
+              badgeClass = 'bg-amber-500/20 text-amber-300 border-amber-500/40 font-bold';
+              pesoPillClass = 'bg-amber-500 text-slate-950 font-black border-amber-300 shadow-sm';
+            } else if (peso >= 3) {
+              // Convicción Prudente / Normal (Azul / Cian)
+              borderClass = 'border-cyan-500 shadow-[0_0_20px_rgba(6,182,212,0.2)]';
+              bgGradient = 'from-cyan-950 via-slate-900 to-cyan-950';
+              headerTextClass = 'text-cyan-400';
+              pingClass = 'bg-cyan-400';
+              badgeClass = 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40 font-bold';
+              pesoPillClass = 'bg-cyan-500 text-slate-950 font-black border-cyan-300 shadow-sm';
+            } else {
+              // Convicción Defensiva / Reducida (Rosa / Rosa Atenuado)
+              borderClass = 'border-rose-500/80 shadow-[0_0_20px_rgba(244,63,94,0.2)]';
+              bgGradient = 'from-rose-950 via-slate-900 to-rose-950';
+              headerTextClass = 'text-rose-400';
+              pingClass = 'bg-rose-400';
+              badgeClass = 'bg-rose-500/20 text-rose-300 border-rose-500/40 font-bold';
+              pesoPillClass = 'bg-rose-500 text-slate-950 font-black border-rose-300 shadow-sm';
+            }
+
+            card.className = `bg-gradient-to-r ${bgGradient} border-2 ${borderClass} rounded-2xl p-4 shadow-2xl animate-pulse-glow relative overflow-hidden`;
+            card.innerHTML = `
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-black uppercase tracking-wider ${headerTextClass} flex items-center gap-1.5">
+                  <span class="inline-block w-2.5 h-2.5 rounded-full ${pingClass} animate-ping"></span>
+                  🚨 ¡COMPRA INMINENTE ACTIVADA!
+                </span>
+                <div class="flex items-center space-x-1.5">
+                  <span class="text-[10px] font-mono font-black px-2 py-0.5 rounded-full border ${pesoPillClass}">
+                    P:${peso}/10
+                  </span>
+                  <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded border ${badgeClass}">
+                    ${sig.tipo.replace(/\[P:\d+(\/10)?\]/g, '').trim()}
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-center space-x-3 my-3">
+                <span class="text-3xl">${sig.emoji}</span>
+                <div>
+                  <h3 class="text-base font-black text-white">${sig.ruleta}</h3>
+                  <p class="text-xs text-slate-400">Último Salido: <span class="text-slate-200 font-semibold">${sig.ultimo_salido}</span></p>
+                </div>
+              </div>
+
+              <div class="bg-slate-950/80 rounded-xl p-3 border ${borderClass.split(' ')[0]} mb-3">
+                <p class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Animales a Comprar ($ ${sig.stake_unit ? sig.stake_unit.toFixed(2) : '1.00'} c/u):</p>
+                <div class="flex flex-wrap gap-1.5 mt-1">${renderCandidatos(sig.candidatos_str, true)}</div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2 text-center text-xs">
+                <div class="bg-slate-900/80 rounded-lg p-2 border border-slate-800">
+                  <span class="text-slate-400 text-[10px]">Total a Comprar</span>
+                  <p class="font-bold text-white font-mono text-sm">💰 $ ${sig.costo.toFixed(2)}</p>
+                </div>
+                <div class="bg-slate-900/80 rounded-lg p-2 border border-slate-800">
+                  <span class="text-slate-400 text-[10px]">Premio Potencial</span>
+                  <p class="font-bold text-emerald-400 font-mono text-sm">🏆 $ ${sig.premio_potencial.toFixed(2)}</p>
+                </div>
+              </div>
+            `;
+            signalsContainer.appendChild(card);
+          });
+        } else {
+          signalsContainer.innerHTML = `
+            <div class="bg-brand-card border border-slate-800 rounded-2xl p-4 text-center">
+              <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mx-auto mb-2 text-slate-400">
+                <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400"></i>
+              </div>
+              <h3 class="text-xs font-bold text-slate-300 uppercase">Sin Compras para Esta Ronda</h3>
+              <p class="text-[11px] text-slate-400 mt-1">Las 7 ruletas están en estado de espera disciplinada sin arriesgar capital.</p>
+            </div>
+          `;
+        }
+
+        // 3. Radar de las 7 Ruletas
+        const radarContainer = document.getElementById('radar-list');
+        radarContainer.innerHTML = '';
+
+        data.radar_items.forEach(item => {
+          const itemDiv = document.createElement('div');
+          const isTarget = item.urgencia === 1;
+          const bgClass = isTarget ? 'bg-emerald-950/20 border-emerald-500/40' : 'bg-brand-card border-slate-800/80';
+          const badgeColor = isTarget ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' : (item.urgencia === 2 ? 'bg-amber-500/20 text-amber-300 border-amber-500/30' : 'bg-slate-800 text-slate-400 border-slate-700');
+
+          itemDiv.className = `border rounded-xl p-3 flex items-center justify-between ${bgClass}`;
+          itemDiv.innerHTML = `
+            <div class="flex items-center space-x-2.5">
+              <span class="text-2xl">${item.emoji}</span>
+              <div>
+                <div class="flex items-center space-x-1.5">
+                  <h4 class="text-xs font-bold text-white">${item.ruleta}</h4>
+                  <span class="text-[9px] font-mono px-1 py-0.2 rounded border ${badgeColor}">
+                    ${item.badge}
+                  </span>
+                  ${item.burbuja ? `
+                    <span class="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded-full border shadow-sm flex items-center space-x-1" 
+                          style="background: ${item.burbuja.color_hex}22; color: ${item.burbuja.color_hex}; border-color: ${item.burbuja.color_hex}55;">
+                      <span>${item.burbuja.emoji}</span>
+                      <span>$${item.burbuja.stake.toFixed(2)}</span>
+                    </span>` : ''}
+                  ${item.peso_label ? `<span class="text-[9px] font-mono px-1 py-0.2 rounded border ${item.peso_agente >= 7 ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' : (item.peso_agente >= 5 ? 'bg-amber-500/20 text-amber-300 border-amber-500/30' : 'bg-slate-800 text-slate-400 border-slate-700')}">${item.peso_label}</span>` : ''}
+                </div>
+                <p class="text-[11px] text-slate-400">${item.conteo_str}</p>
+                <p class="text-[10px] text-slate-500 font-mono">Último: ${item.ultimo_salido}</p>
+                ${(item.urgencia === 1 && item.candidatos_str) ? `
+                  <div class="mt-2 pt-2 border-t border-emerald-500/30">
+                    <p class="text-[10px] font-bold text-emerald-300 mb-1">🎯 ANIMALES A COMPRAR ($${item.burbuja ? item.burbuja.stake.toFixed(2) : '1.00'} c/u):</p>
+                    <div class="flex flex-wrap gap-1">${renderCandidatos(item.candidatos_str, false)}</div>
+                  </div>
+                ` : ''}
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="text-[11px] font-mono font-bold text-slate-300">${item.payout}x</span>
+            </div>
+          `;
+          radarContainer.appendChild(itemDiv);
+        });
+
+        // 4. Historial Reciente de Operaciones de Hoy
+        const opsContainer = document.getElementById('recent-ops-list');
+        opsContainer.innerHTML = '';
+        if (data.recent_ledger && data.recent_ledger.length > 0) {
+          data.recent_ledger.slice().reverse().forEach(op => {
+            const isWin = parseFloat(op.pnl) > 0;
+            const pnlVal = parseFloat(op.pnl);
+            const card = document.createElement('div');
+            card.className = `p-3 bg-slate-900/90 border ${isWin ? 'border-emerald-500/50 bg-emerald-950/20' : 'border-slate-800'} rounded-xl space-y-2 transition shadow-sm`;
+            card.innerHTML = `
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                  <span class="text-base">${op.emoji || '🎲'}</span>
+                  <span class="font-bold text-xs text-white">${op.ruleta}</span>
+                  <span class="text-[10px] text-slate-400 font-mono bg-slate-950 px-1.5 py-0.5 rounded border border-slate-800">${op.hora}</span>
+                </div>
+                <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded ${isWin ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-rose-500/10 text-rose-400 border border-rose-500/30'}">
+                  ${isWin ? '🟢 GANADA +Bs ' + pnlVal.toFixed(2) : '🔴 FALLO -Bs ' + Math.abs(pnlVal).toFixed(2)}
+                </span>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2 text-[11px] bg-slate-950/80 p-2 rounded-lg border border-slate-800/60 font-mono">
+                <div>
+                  <span class="text-slate-500 block text-[9px] uppercase font-bold tracking-wider mb-0.5">🎯 Jugados (${op.cands_count || 1}):</span>
+                  <div class="flex flex-wrap gap-1 leading-tight">${renderCandidatos(op.candidatos, false)}</div>
+                </div>
+                <div>
+                  <span class="text-slate-500 block text-[9px] uppercase font-bold tracking-wider mb-0.5">🎲 Salido Oficial:</span>
+                  <span class="text-slate-200 font-semibold text-[10px] leading-tight block">${op.resultado}</span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between text-[10px] font-mono text-slate-400 pt-0.5 px-0.5">
+                <span>Inversión: <b class="text-slate-300">Bs ${parseFloat(op.total_bet || 1).toFixed(2)}</b></span>
+                <span>Cobrado: <b class="${isWin ? 'text-emerald-400 font-bold' : 'text-slate-400'}">Bs ${parseFloat(op.cobrado || 0).toFixed(2)}</b></span>
+                <span>Saldo: <b class="text-slate-200">Bs ${parseFloat(op.saldo).toFixed(2)}</b></span>
+              </div>
+            `;
+            opsContainer.appendChild(card);
+          });
+        } else {
+          opsContainer.innerHTML = '<p class="text-[11px] text-slate-500 py-3 text-center">Sin jugadas registradas hoy aún.</p>';
+        }
+
+        lucide.createIcons();
+      } catch (err) {
+        console.error('Error cargando estado táctico:', err);
+      }
+    }
+
+    // Sincronizar en vivo con TuAzar
+        // Sincronizar en vivo con TuAzar bajo demanda
+    async function syncTuAzar() {
+      const btn = document.getElementById('btn-sync');
+      const icon = document.getElementById('sync-icon');
+      const txt = document.getElementById('sync-text');
+
+      if (icon) icon.classList.add('sync-spin');
+      if (txt) txt.textContent = 'Consultando...';
+      if (btn) btn.disabled = true;
+
+      if (navigator.vibrate) navigator.vibrate(30);
+
+      try {
+        const res = await fetch('/api/sync', { method: 'POST' });
+        const data = await res.json();
+        await loadTacticalStatus();
+        if (data.status === 'ok') {
+          alert(`✅ Sincronización Completada\nNuevos sorteos: ${data.total_new_draws}\nHora: ${data.synced_at}`);
+        } else {
+          alert('⚠️ Aviso: ' + (data.message || 'Sin respuesta'));
+        }
+      } catch (err) {
+        alert('❌ Error al conectar: ' + err);
+      } finally {
+        if (icon) icon.classList.remove('sync-spin');
+        if (txt) txt.textContent = 'TuAzar';
+        if (btn) btn.disabled = false;
+      }
+    }
+
+    // Alternar Modal de Reporte Táctico
+    async function toggleReportModal() {
+      const modal = document.getElementById('report-modal');
+      const isHidden = modal.classList.contains('hidden');
+      if (isHidden) {
+        modal.classList.remove('hidden');
+        const content = document.getElementById('report-modal-content');
+        content.innerHTML = '<p class="text-slate-400 animate-pulse">Generando reporte táctico horario...</p>';
+        try {
+          const res = await fetch('/api/reporte');
+          const data = await res.json();
+          // Renderizar markdown básico a HTML
+          content.innerHTML = data.reporte.replace(/\n/g, '<br>').replace(/#{1,3} /g, '<strong>').replace(/\*\*(.*?)\*\*/g, '<strong>Bs 1</strong>');
+        } catch (e) {
+          content.innerHTML = 'Error cargando reporte: ' + e;
+        }
+      } else {
+        modal.classList.add('hidden');
+      }
+    }
+
+    // Carga inicial y auto-refresco
+    document.addEventListener('DOMContentLoaded', () => {
+      loadTacticalStatus();
+      lucide.createIcons();
+      // Auto-refrescar táctico cada 15 segundos para colocar jugadas de inmediato
+      setInterval(loadTacticalStatus, 30000);
+    });
+
+    // Refrescar de inmediato al volver a la app o encender pantalla
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        loadTacticalStatus();
+      }
+    });
+  </script>
+
+  <!-- Modal de Entrada Rápida Offline (Ingreso manual sin internet) -->
+  <div id="modal-manual" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-sm p-5 space-y-4 shadow-2xl">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div class="flex items-center space-x-2">
+          <span class="text-amber-400 font-bold text-sm">⚡ Entrada Rápida Offline</span>
+        </div>
+        <button onclick="toggleModalManual()" class="text-slate-400 hover:text-white text-lg font-bold">✕</button>
       </div>
 
       <div class="space-y-3">
         <div>
-          <label class="text-[11px] font-bold text-slate-300 block mb-1">Ruleta</label>
-          <select id="in-ruleta" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-white focus:outline-none focus:border-emerald-500">
-            <option value="Lotto Activo">🦁 Lotto Activo (30x)</option>
-            <option value="Gatazo">🐯 Gatazo (60x)</option>
-            <option value="Monje Millonario">🧘 Monje Millonario (60x)</option>
-            <option value="Lotto Gato">🐱 Lotto Gato (60x)</option>
-            <option value="Guacharo Activo">🦇 Guacharo Activo (60x)</option>
-            <option value="Ruleta Royal">👑 Ruleta Royal (30x)</option>
-            <option value="Loto Chaima">🏹 Loto Chaima (60x)</option>
-            <option value="Granja Millonaria - Granjazo">🚜 Granja Millonaria - Granjazo (60x)</option>
-            <option value="Mega Animal 40">🦚 Mega Animal 40 (30x)</option>
+          <label class="text-[11px] text-slate-400 block mb-1 font-semibold uppercase">1. Selecciona la Ruleta:</label>
+          <select id="manual-ruleta" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400">
+            <option value="Lotto Gato">🐱 Lotto Gato</option>
+            <option value="Loto Chaima">🏹 Loto Chaima</option>
+            <option value="Guacharo Activo">🦇 Guacharo Activo</option>
+            <option value="Lotto Activo">🦁 Lotto Activo</option>
+            <option value="Ruleta Royal">👑 Ruleta Royal</option>
+            <option value="Gatazo">🐯 Gatazo</option>
+            <option value="Monje Millonario">🧘‍♂️ Monje Millonario</option>
           </select>
         </div>
 
         <div>
-          <label class="text-[11px] font-bold text-slate-300 block mb-1">Hora del Sorteo</label>
-          <input type="text" id="in-hora" placeholder="Ej: 2:00 PM" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs font-mono text-white focus:outline-none focus:border-emerald-500">
+          <label class="text-[11px] text-slate-400 block mb-1 font-semibold uppercase">2. Número Salido:</label>
+          <input type="text" id="manual-num" placeholder="Ej: 75, 08, 4" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400 font-mono font-bold">
         </div>
 
         <div>
-          <label class="text-[11px] font-bold text-slate-300 block mb-1">Numero Salido</label>
-          <input type="text" id="in-numero" placeholder="Ej: 34 o 00" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs font-mono font-black text-amber-400 text-lg focus:outline-none focus:border-amber-500">
-          <span id="animal-preview" class="text-[11px] font-bold text-emerald-400 mt-1 block h-4"></span>
+          <label class="text-[11px] text-slate-400 block mb-1 font-semibold uppercase">3. Nombre del Animal (Opcional):</label>
+          <input type="text" id="manual-anim" placeholder="Ej: CODORNIZ, CABALLO..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400 uppercase">
         </div>
       </div>
 
-      <div class="pt-2 flex space-x-2">
-        <button onclick="cerrarModalEntrada()" class="w-1/2 py-2 rounded-xl bg-slate-800 text-slate-300 text-xs font-bold hover:bg-slate-700">Cancelar</button>
-        <button onclick="procesarEntradaManual()" class="w-1/2 py-2 rounded-xl bg-emerald-500 text-slate-950 text-xs font-black hover:bg-emerald-400 shadow-lg shadow-emerald-500/20">Confirmar</button>
+      <div class="pt-2">
+        <button onclick="submitManualDraw()" class="w-full bg-emerald-500 hover:bg-emerald-400 active:bg-emerald-600 text-slate-950 font-bold py-2.5 rounded-xl text-xs transition shadow-lg">
+          ⚡ Calcular Disparo Instantáneo (0.001s)
+        </button>
       </div>
     </div>
   </div>
 
   <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
-          .then(r => console.log('SW reg:', r.scope))
-          .catch(e => console.log('SW error:', e));
-      });
+    function toggleModalManual() {
+      const m = document.getElementById('modal-manual');
+      m.classList.toggle('hidden');
     }
 
-    // BASE DE DATOS Y MAPEO DE ANIMALES AUTOCONTENIDOS
-    const ANIMALES = {"25": "GALLINA", "29": "ELEFANTE", "34": "VENADO", "27": "PERRO", "36": "CULEBRA", "16": "OSO", "08": "RATÓN", "17": "PAVO", "21": "GALLO", "14": "PALOMA", "22": "CAMELLO", "06": "RANA", "20": "COCHINO", "15": "ZORRO", "11": "GATO", "18": "BURRO", "35": "JIRAFA", "23": "CEBRA", "03": "CIEMPIÉS", "24": "IGUANA", "00": "BALLENA", "12": "CABALLO", "02": "TORO", "19": "CHIVO", "13": "MONO", "32": "ARDILLA", "31": "LAPA", "26": "VACA", "07": "PERICO", "30": "CAIMÁN", "04": "ALACRÁN", "09": "ÁGUILA", "0": "DELFÍN", "28": "ZAMURO", "01": "CARNERO", "10": "TIGRE", "33": "PESCADO", "05": "LEÓN", "9": "ÁGUILA", "5": "LEÓN", "3": "CIENPIES", "2": "TORO", "7": "PERICO", "1": "CARNERO", "4": "ALACRÁN", "8": "RATÓN", "6": "RANA", "43": "MARIPOSA", "49": "PEREZA", "40": "AVISPA", "38": "BÚFALO", "54": "GRILLO", "44": "CHUGÜIRE", "51": "PELICANO", "55": "HORMIGUERO", "39": "LECHUZA", "42": "TUCÁN", "37": "TORTUGA", "46": "PUMA", "41": "CANGURO", "53": "CARACOL", "52": "PULPO", "48": "PUERCOESPÍN", "47": "PAVO REAL", "45": "GARZA", "50": "CANARIO", "69": "CONEJO", "65": "ARAÑA", "70": "BISONTE", "67": "AVESTRUZ", "60": "CAMALEÓN", "72": "GORILA", "68": "JAGUAR", "74": "TURPIAL", "61": "PANDA", "58": "HORMIGA", "62": "CACHICAMO", "64": "GAVILÁN", "63": "CANGREJO", "59": "PANTERA", "73": "HIPOPÓTAMO", "56": "TIBURÓN", "75": "GUACHARO", "71": "GUACAMAYA", "57": "PATO", "66": "LOBO", "76": "MANTIS"};
-    const SEED_DATA_V10 = {"Lotto Activo": {"title": "Lotto Activo", "emoji": "\ud83e\udd81", "payout": 30.0, "target_streaks": [1, 2], "lags": [20, 18, 15, 27, 32, 37, 42, 47], "rec_w": 6, "anti_clustering": true, "blacklist": [], "history": [{"fecha": "2026-10-25", "hora": "2:00 PM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-10-25", "hora": "3:00 PM", "numero": "3", "animal": "CIEMPI\u00c9S"}, {"fecha": "2026-10-25", "hora": "4:00 PM", "numero": "29", "animal": "ELEFANTE"}, {"fecha": "2026-10-25", "hora": "5:00 PM", "numero": "21", "animal": "GALLO"}, {"fecha": "2026-10-25", "hora": "6:00 PM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-10-25", "hora": "7:00 PM", "numero": "36", "animal": "CULEBRA"}, {"fecha": "2026-10-26", "hora": "8:00 AM", "numero": "24", "animal": "IGUANA"}, {"fecha": "2026-10-26", "hora": "9:00 AM", "numero": "14", "animal": "PALOMA"}, {"fecha": "2026-10-26", "hora": "10:00 AM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-10-26", "hora": "11:00 AM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-10-26", "hora": "12:00 PM", "numero": "0", "animal": "DELF\u00cdN"}, {"fecha": "2026-10-26", "hora": "1:00 PM", "numero": "13", "animal": "MONO"}, {"fecha": "2026-10-26", "hora": "2:00 PM", "numero": "16", "animal": "OSO"}, {"fecha": "2026-10-26", "hora": "3:00 PM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-10-26", "hora": "4:00 PM", "numero": "10", "animal": "TIGRE"}, {"fecha": "2026-10-26", "hora": "5:00 PM", "numero": "30", "animal": "CAIM\u00c1N"}, {"fecha": "2026-10-26", "hora": "6:00 PM", "numero": "26", "animal": "VACA"}, {"fecha": "2026-10-26", "hora": "7:00 PM", "numero": "31", "animal": "LAPA"}, {"fecha": "2026-10-27", "hora": "8:00 AM", "numero": "21", "animal": "GALLO"}, {"fecha": "2026-10-27", "hora": "9:00 AM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-10-27", "hora": "10:00 AM", "numero": "13", "animal": "MONO"}, {"fecha": "2026-10-27", "hora": "11:00 AM", "numero": "1", "animal": "CARNERO"}, {"fecha": "2026-10-27", "hora": "12:00 PM", "numero": "4", "animal": "ALACR\u00c1N"}, {"fecha": "2026-10-27", "hora": "1:00 PM", "numero": "6", "animal": "RANA"}, {"fecha": "2026-10-27", "hora": "2:00 PM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-10-27", "hora": "3:00 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-10-27", "hora": "4:00 PM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-10-27", "hora": "5:00 PM", "numero": "30", "animal": "CAIM\u00c1N"}, {"fecha": "2026-10-27", "hora": "6:00 PM", "numero": "36", "animal": "CULEBRA"}, {"fecha": "2026-10-27", "hora": "7:00 PM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-10-28", "hora": "8:00 AM", "numero": "6", "animal": "RANA"}, {"fecha": "2026-10-28", "hora": "9:00 AM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-10-28", "hora": "10:00 AM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-10-28", "hora": "11:00 AM", "numero": "21", "animal": "GALLO"}, {"fecha": "2026-10-28", "hora": "12:00 PM", "numero": "36", "animal": "CULEBRA"}, {"fecha": "2026-10-28", "hora": "1:00 PM", "numero": "29", "animal": "ELEFANTE"}, {"fecha": "2026-10-28", "hora": "2:00 PM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-10-28", "hora": "3:00 PM", "numero": "31", "animal": "LAPA"}, {"fecha": "2026-10-28", "hora": "4:00 PM", "numero": "16", "animal": "OSO"}, {"fecha": "2026-10-28", "hora": "5:00 PM", "numero": "11", "animal": "GATO"}, {"fecha": "2026-10-28", "hora": "6:00 PM", "numero": "1", "animal": "CARNERO"}, {"fecha": "2026-10-28", "hora": "7:00 PM", "numero": "20", "animal": "COCHINO"}, {"fecha": "2026-10-29", "hora": "8:00 AM", "numero": "4", "animal": "ALACR\u00c1N"}, {"fecha": "2026-10-29", "hora": "9:00 AM", "numero": "22", "animal": "CAMELLO"}, {"fecha": "2026-10-29", "hora": "10:00 AM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-10-29", "hora": "11:00 AM", "numero": "9", "animal": "\u00c1GUILA"}, {"fecha": "2026-10-29", "hora": "12:00 PM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-10-29", "hora": "1:00 PM", "numero": "36", "animal": "CULEBRA"}, {"fecha": "2026-10-29", "hora": "2:00 PM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-10-29", "hora": "3:00 PM", "numero": "10", "animal": "TIGRE"}, {"fecha": "2026-10-29", "hora": "4:00 PM", "numero": "7", "animal": "PERICO"}, {"fecha": "2026-10-29", "hora": "5:00 PM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-10-29", "hora": "6:00 PM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-10-29", "hora": "7:00 PM", "numero": "24", "animal": "IGUANA"}, {"fecha": "2026-10-30", "hora": "8:00 AM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-10-30", "hora": "9:00 AM", "numero": "34", "animal": "VENADO"}, {"fecha": "2026-10-30", "hora": "10:00 AM", "numero": "24", "animal": "IGUANA"}, {"fecha": "2026-10-30", "hora": "11:00 AM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-10-30", "hora": "12:00 PM", "numero": "35", "animal": "JIRAFA"}, {"fecha": "2026-10-30", "hora": "1:00 PM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-10-30", "hora": "2:00 PM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-10-30", "hora": "3:00 PM", "numero": "19", "animal": "CHIVO"}, {"fecha": "2026-10-30", "hora": "4:00 PM", "numero": "18", "animal": "BURRO"}, {"fecha": "2026-10-30", "hora": "5:00 PM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-10-30", "hora": "6:00 PM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-10-30", "hora": "7:00 PM", "numero": "20", "animal": "COCHINO"}, {"fecha": "2026-10-31", "hora": "8:00 AM", "numero": "6", "animal": "RANA"}, {"fecha": "2026-10-31", "hora": "9:00 AM", "numero": "10", "animal": "TIGRE"}, {"fecha": "2026-10-31", "hora": "10:00 AM", "numero": "16", "animal": "OSO"}, {"fecha": "2026-10-31", "hora": "11:00 AM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-10-31", "hora": "12:00 PM", "numero": "22", "animal": "CAMELLO"}, {"fecha": "2026-10-31", "hora": "1:00 PM", "numero": "28", "animal": "ZAMURO"}, {"fecha": "2026-10-31", "hora": "2:00 PM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-10-31", "hora": "3:00 PM", "numero": "9", "animal": "\u00c1GUILA"}, {"fecha": "2026-10-31", "hora": "4:00 PM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-10-31", "hora": "5:00 PM", "numero": "18", "animal": "BURRO"}, {"fecha": "2026-10-31", "hora": "6:00 PM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-10-31", "hora": "7:00 PM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-11-01", "hora": "8:00 AM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-11-01", "hora": "9:00 AM", "numero": "30", "animal": "CAIM\u00c1N"}, {"fecha": "2026-11-01", "hora": "10:00 AM", "numero": "34", "animal": "VENADO"}, {"fecha": "2026-11-01", "hora": "11:00 AM", "numero": "20", "animal": "COCHINO"}, {"fecha": "2026-11-01", "hora": "12:00 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-11-01", "hora": "1:00 PM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-11-01", "hora": "2:00 PM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-11-01", "hora": "3:00 PM", "numero": "35", "animal": "JIRAFA"}, {"fecha": "2026-11-01", "hora": "4:00 PM", "numero": "4", "animal": "ALACR\u00c1N"}, {"fecha": "2026-11-01", "hora": "5:00 PM", "numero": "18", "animal": "BURRO"}, {"fecha": "2026-11-01", "hora": "6:00 PM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-11-01", "hora": "7:00 PM", "numero": "9", "animal": "\u00c1GUILA"}, {"fecha": "2026-11-02", "hora": "8:00 AM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-11-02", "hora": "9:00 AM", "numero": "34", "animal": "VENADO"}, {"fecha": "2026-11-02", "hora": "10:00 AM", "numero": "0", "animal": "DELF\u00cdN"}, {"fecha": "2026-11-02", "hora": "11:00 AM", "numero": "32", "animal": "ARDILLA"}, {"fecha": "2026-11-02", "hora": "12:00 PM", "numero": "36", "animal": "CULEBRA"}, {"fecha": "2026-11-02", "hora": "1:00 PM", "numero": "29", "animal": "ELEFANTE"}, {"fecha": "2026-11-02", "hora": "2:00 PM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-11-02", "hora": "3:00 PM", "numero": "22", "animal": "CAMELLO"}, {"fecha": "2026-11-02", "hora": "4:00 PM", "numero": "6", "animal": "RANA"}, {"fecha": "2026-11-02", "hora": "5:00 PM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-11-02", "hora": "6:00 PM", "numero": "20", "animal": "COCHINO"}, {"fecha": "2026-11-02", "hora": "7:00 PM", "numero": "18", "animal": "BURRO"}, {"fecha": "2026-11-03", "hora": "8:00 AM", "numero": "6", "animal": "RANA"}, {"fecha": "2026-11-03", "hora": "9:00 AM", "numero": "13", "animal": "MONO"}, {"fecha": "2026-11-03", "hora": "10:00 AM", "numero": "32", "animal": "ARDILLA"}, {"fecha": "2026-11-03", "hora": "11:00 AM", "numero": "00", "animal": "BALLENA"}, {"fecha": "2026-11-03", "hora": "12:00 PM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-11-03", "hora": "1:00 PM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-11-03", "hora": "2:00 PM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-11-03", "hora": "3:00 PM", "numero": "0", "animal": "DELF\u00cdN"}, {"fecha": "2026-11-03", "hora": "4:00 PM", "numero": "29", "animal": "ELEFANTE"}, {"fecha": "2026-11-03", "hora": "5:00 PM", "numero": "4", "animal": "ALACR\u00c1N"}, {"fecha": "2026-11-03", "hora": "6:00 PM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-11-03", "hora": "7:00 PM", "numero": "35", "animal": "JIRAFA"}, {"fecha": "2026-11-04", "hora": "8:00 AM", "numero": "9", "animal": "\u00c1GUILA"}, {"fecha": "2026-11-04", "hora": "9:00 AM", "numero": "20", "animal": "COCHINO"}, {"fecha": "2026-11-04", "hora": "10:00 AM", "numero": "22", "animal": "CAMELLO"}, {"fecha": "2026-11-04", "hora": "11:00 AM", "numero": "34", "animal": "VENADO"}, {"fecha": "2026-11-04", "hora": "12:00 PM", "numero": "0", "animal": "DELF\u00cdN"}, {"fecha": "2026-11-04", "hora": "1:00 PM", "numero": "24", "animal": "IGUANA"}]}, "Monje Millonario": {"title": "Monje Millonario", "emoji": "\ud83e\uddd8\u200d\u2642\ufe0f", "payout": 60.0, "target_streaks": [0, 1], "lags": [24, 42, 48, 31, 36, 41, 46, 51], "rec_w": 6, "anti_clustering": false, "blacklist": ["75"], "history": [{"fecha": "2026-10-25", "hora": "2:05 PM", "numero": "00", "animal": "BALLENA"}, {"fecha": "2026-10-25", "hora": "3:05 PM", "numero": "20", "animal": "COCHINO"}, {"fecha": "2026-10-25", "hora": "4:05 PM", "numero": "67", "animal": "AVESTRUZ"}, {"fecha": "2026-10-25", "hora": "5:05 PM", "numero": "55", "animal": "OSO HORMIGUERO"}, {"fecha": "2026-10-25", "hora": "6:05 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-10-25", "hora": "7:05 PM", "numero": "42", "animal": "TUC\u00c1N"}, {"fecha": "2026-10-26", "hora": "8:05 AM", "numero": "10", "animal": "TIGRE"}, {"fecha": "2026-10-26", "hora": "9:05 AM", "numero": "35", "animal": "JIRAFA"}, {"fecha": "2026-10-26", "hora": "10:05 AM", "numero": "44", "animal": "CHIGUIRE"}, {"fecha": "2026-10-26", "hora": "11:05 AM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-10-26", "hora": "12:05 PM", "numero": "52", "animal": "PULPO"}, {"fecha": "2026-10-26", "hora": "1:05 PM", "numero": "3", "animal": "CIEMPI\u00c9S"}, {"fecha": "2026-10-26", "hora": "2:05 PM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-10-26", "hora": "3:05 PM", "numero": "37", "animal": "TORTUGA"}, {"fecha": "2026-10-26", "hora": "4:05 PM", "numero": "75", "animal": "PATRONUS"}, {"fecha": "2026-10-26", "hora": "5:05 PM", "numero": "74", "animal": "TURPIAL"}, {"fecha": "2026-10-26", "hora": "6:05 PM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-10-26", "hora": "7:05 PM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-10-27", "hora": "8:05 AM", "numero": "68", "animal": "JAGUAR"}, {"fecha": "2026-10-27", "hora": "9:05 AM", "numero": "38", "animal": "B\u00daFALO"}, {"fecha": "2026-10-27", "hora": "10:05 AM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-10-27", "hora": "11:05 AM", "numero": "26", "animal": "VACA"}, {"fecha": "2026-10-27", "hora": "12:05 PM", "numero": "44", "animal": "CHIGUIRE"}, {"fecha": "2026-10-27", "hora": "1:05 PM", "numero": "30", "animal": "CAIM\u00c1N"}, {"fecha": "2026-10-27", "hora": "2:05 PM", "numero": "50", "animal": "CANARIO"}, {"fecha": "2026-10-27", "hora": "3:05 PM", "numero": "42", "animal": "TUC\u00c1N"}, {"fecha": "2026-10-27", "hora": "4:05 PM", "numero": "58", "animal": "HORMIGA"}, {"fecha": "2026-10-27", "hora": "5:05 PM", "numero": "37", "animal": "TORTUGA"}, {"fecha": "2026-10-27", "hora": "6:05 PM", "numero": "53", "animal": "CARACOL"}, {"fecha": "2026-10-27", "hora": "7:05 PM", "numero": "55", "animal": "OSO HORMIGUERO"}, {"fecha": "2026-10-28", "hora": "8:05 AM", "numero": "46", "animal": "PUMA"}, {"fecha": "2026-10-28", "hora": "9:05 AM", "numero": "63", "animal": "CANGREJO"}, {"fecha": "2026-10-28", "hora": "10:05 AM", "numero": "48", "animal": "PUERCOESP\u00cdN"}, {"fecha": "2026-10-28", "hora": "11:05 AM", "numero": "71", "animal": "GUACAMAYA"}, {"fecha": "2026-10-28", "hora": "12:05 PM", "numero": "26", "animal": "VACA"}, {"fecha": "2026-10-28", "hora": "1:05 PM", "numero": "62", "animal": "CACHICAMO"}, {"fecha": "2026-10-28", "hora": "2:05 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-10-28", "hora": "3:05 PM", "numero": "24", "animal": "IGUANA"}, {"fecha": "2026-10-28", "hora": "4:05 PM", "numero": "14", "animal": "PALOMA"}, {"fecha": "2026-10-28", "hora": "5:05 PM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-10-28", "hora": "6:05 PM", "numero": "49", "animal": "PEREZA"}, {"fecha": "2026-10-28", "hora": "7:05 PM", "numero": "10", "animal": "TIGRE"}, {"fecha": "2026-10-29", "hora": "8:05 AM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-10-29", "hora": "9:05 AM", "numero": "36", "animal": "CULEBRA"}, {"fecha": "2026-10-29", "hora": "10:05 AM", "numero": "00", "animal": "BALLENA"}, {"fecha": "2026-10-29", "hora": "11:05 AM", "numero": "13", "animal": "MONO"}, {"fecha": "2026-10-29", "hora": "12:05 PM", "numero": "45", "animal": "GARZA"}, {"fecha": "2026-10-29", "hora": "1:05 PM", "numero": "67", "animal": "AVESTRUZ"}, {"fecha": "2026-10-29", "hora": "2:05 PM", "numero": "69", "animal": "CONEJO"}, {"fecha": "2026-10-29", "hora": "3:05 PM", "numero": "57", "animal": "PATO"}, {"fecha": "2026-10-29", "hora": "4:05 PM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-10-29", "hora": "5:05 PM", "numero": "58", "animal": "HORMIGA"}, {"fecha": "2026-10-29", "hora": "6:05 PM", "numero": "4", "animal": "ALACR\u00c1N"}, {"fecha": "2026-10-29", "hora": "7:05 PM", "numero": "59", "animal": "PANTERA"}, {"fecha": "2026-10-30", "hora": "8:05 AM", "numero": "54", "animal": "GRILLO"}, {"fecha": "2026-10-30", "hora": "9:05 AM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-10-30", "hora": "10:05 AM", "numero": "73", "animal": "HIPOP\u00d3TAMO"}, {"fecha": "2026-10-30", "hora": "11:05 AM", "numero": "52", "animal": "PULPO"}, {"fecha": "2026-10-30", "hora": "12:05 PM", "numero": "28", "animal": "ZAMURO"}, {"fecha": "2026-10-30", "hora": "1:05 PM", "numero": "16", "animal": "OSO"}, {"fecha": "2026-10-30", "hora": "2:05 PM", "numero": "56", "animal": "TIBUR\u00d3N"}, {"fecha": "2026-10-30", "hora": "3:05 PM", "numero": "30", "animal": "CAIM\u00c1N"}, {"fecha": "2026-10-30", "hora": "4:05 PM", "numero": "31", "animal": "LAPA"}, {"fecha": "2026-10-30", "hora": "5:05 PM", "numero": "39", "animal": "LECHUZA"}, {"fecha": "2026-10-30", "hora": "6:05 PM", "numero": "46", "animal": "PUMA"}, {"fecha": "2026-10-30", "hora": "7:05 PM", "numero": "4", "animal": "ALACR\u00c1N"}, {"fecha": "2026-10-31", "hora": "8:05 AM", "numero": "62", "animal": "CACHICAMO"}, {"fecha": "2026-10-31", "hora": "9:05 AM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-10-31", "hora": "10:05 AM", "numero": "43", "animal": "MARIPOSA"}, {"fecha": "2026-10-31", "hora": "11:05 AM", "numero": "54", "animal": "GRILLO"}, {"fecha": "2026-10-31", "hora": "12:05 PM", "numero": "26", "animal": "VACA"}, {"fecha": "2026-10-31", "hora": "1:05 PM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-10-31", "hora": "2:05 PM", "numero": "69", "animal": "CONEJO"}, {"fecha": "2026-10-31", "hora": "3:05 PM", "numero": "20", "animal": "COCHINO"}, {"fecha": "2026-10-31", "hora": "4:05 PM", "numero": "49", "animal": "PEREZA"}, {"fecha": "2026-10-31", "hora": "5:05 PM", "numero": "6", "animal": "RANA"}, {"fecha": "2026-10-31", "hora": "6:05 PM", "numero": "3", "animal": "CIEMPI\u00c9S"}, {"fecha": "2026-10-31", "hora": "7:05 PM", "numero": "44", "animal": "CHIGUIRE"}, {"fecha": "2026-11-01", "hora": "8:05 AM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-11-01", "hora": "9:05 AM", "numero": "38", "animal": "B\u00daFALO"}, {"fecha": "2026-11-01", "hora": "10:05 AM", "numero": "58", "animal": "HORMIGA"}, {"fecha": "2026-11-01", "hora": "11:05 AM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-11-01", "hora": "12:05 PM", "numero": "00", "animal": "BALLENA"}, {"fecha": "2026-11-01", "hora": "1:05 PM", "numero": "61", "animal": "PANDA"}, {"fecha": "2026-11-01", "hora": "2:05 PM", "numero": "71", "animal": "GUACAMAYA"}, {"fecha": "2026-11-01", "hora": "3:05 PM", "numero": "57", "animal": "PATO"}, {"fecha": "2026-11-01", "hora": "4:05 PM", "numero": "26", "animal": "VACA"}, {"fecha": "2026-11-01", "hora": "5:05 PM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-11-01", "hora": "6:05 PM", "numero": "34", "animal": "VENADO"}, {"fecha": "2026-11-01", "hora": "7:05 PM", "numero": "16", "animal": "OSO"}, {"fecha": "2026-11-02", "hora": "8:05 AM", "numero": "14", "animal": "PALOMA"}, {"fecha": "2026-11-02", "hora": "9:05 AM", "numero": "49", "animal": "PEREZA"}, {"fecha": "2026-11-02", "hora": "10:05 AM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-11-02", "hora": "11:05 AM", "numero": "43", "animal": "MARIPOSA"}, {"fecha": "2026-11-02", "hora": "12:05 PM", "numero": "52", "animal": "PULPO"}, {"fecha": "2026-11-02", "hora": "1:05 PM", "numero": "30", "animal": "CAIM\u00c1N"}, {"fecha": "2026-11-02", "hora": "2:05 PM", "numero": "46", "animal": "PUMA"}, {"fecha": "2026-11-02", "hora": "3:05 PM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-11-02", "hora": "4:05 PM", "numero": "39", "animal": "LECHUZA"}, {"fecha": "2026-11-02", "hora": "5:05 PM", "numero": "34", "animal": "VENADO"}, {"fecha": "2026-11-02", "hora": "6:05 PM", "numero": "44", "animal": "CHIGUIRE"}, {"fecha": "2026-11-02", "hora": "7:05 PM", "numero": "10", "animal": "TIGRE"}, {"fecha": "2026-11-03", "hora": "8:05 AM", "numero": "28", "animal": "ZAMURO"}, {"fecha": "2026-11-03", "hora": "9:05 AM", "numero": "21", "animal": "GALLO"}, {"fecha": "2026-11-03", "hora": "10:05 AM", "numero": "71", "animal": "GUACAMAYA"}, {"fecha": "2026-11-03", "hora": "11:05 AM", "numero": "26", "animal": "VACA"}, {"fecha": "2026-11-03", "hora": "12:05 PM", "numero": "72", "animal": "GORILA"}, {"fecha": "2026-11-03", "hora": "1:05 PM", "numero": "63", "animal": "CANGREJO"}, {"fecha": "2026-11-03", "hora": "2:05 PM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-11-03", "hora": "3:05 PM", "numero": "22", "animal": "CAMELLO"}, {"fecha": "2026-11-03", "hora": "4:05 PM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-11-03", "hora": "5:05 PM", "numero": "54", "animal": "GRILLO"}, {"fecha": "2026-11-03", "hora": "6:05 PM", "numero": "59", "animal": "PANTERA"}, {"fecha": "2026-11-03", "hora": "7:05 PM", "numero": "19", "animal": "CHIVO"}, {"fecha": "2026-11-04", "hora": "8:05 AM", "numero": "70", "animal": "BISONTE"}, {"fecha": "2026-11-04", "hora": "9:05 AM", "numero": "3", "animal": "CIEMPI\u00c9S"}, {"fecha": "2026-11-04", "hora": "10:05 AM", "numero": "48", "animal": "PUERCOESP\u00cdN"}, {"fecha": "2026-11-04", "hora": "11:05 AM", "numero": "14", "animal": "PALOMA"}, {"fecha": "2026-11-04", "hora": "12:05 PM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-11-04", "hora": "1:05 PM", "numero": "43", "animal": "MARIPOSA"}]}, "Guacharo Activo": {"title": "Guacharo Activo", "emoji": "\ud83e\udd87", "payout": 60.0, "target_streaks": [1, 3], "lags": [31, 54, 41, 38, 43, 48, 53, 58], "rec_w": 8, "anti_clustering": false, "blacklist": ["75"], "history": [{"fecha": "2026-10-25", "hora": "2:00 PM", "numero": "4", "animal": "ALACR\u00c1N"}, {"fecha": "2026-10-25", "hora": "3:00 PM", "numero": "29", "animal": "ELEFANTE"}, {"fecha": "2026-10-25", "hora": "4:00 PM", "numero": "37", "animal": "TORTUGA"}, {"fecha": "2026-10-25", "hora": "5:00 PM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-10-25", "hora": "6:00 PM", "numero": "43", "animal": "MARIPOSA"}, {"fecha": "2026-10-25", "hora": "7:00 PM", "numero": "42", "animal": "TUC\u00c1N"}, {"fecha": "2026-10-26", "hora": "8:00 AM", "numero": "22", "animal": "CAMELLO"}, {"fecha": "2026-10-26", "hora": "9:00 AM", "numero": "40", "animal": "AVISPA"}, {"fecha": "2026-10-26", "hora": "10:00 AM", "numero": "32", "animal": "ARDILLA"}, {"fecha": "2026-10-26", "hora": "11:00 AM", "numero": "63", "animal": "CANGREJO"}, {"fecha": "2026-10-26", "hora": "12:00 PM", "numero": "28", "animal": "ZAMURO"}, {"fecha": "2026-10-26", "hora": "1:00 PM", "numero": "52", "animal": "PULPO"}, {"fecha": "2026-10-26", "hora": "2:00 PM", "numero": "59", "animal": "PANTERA"}, {"fecha": "2026-10-26", "hora": "3:00 PM", "numero": "13", "animal": "MONO"}, {"fecha": "2026-10-26", "hora": "4:00 PM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-10-26", "hora": "5:00 PM", "numero": "58", "animal": "HORMIGA"}, {"fecha": "2026-10-26", "hora": "6:00 PM", "numero": "6", "animal": "RANA"}, {"fecha": "2026-10-26", "hora": "7:00 PM", "numero": "69", "animal": "CONEJO"}, {"fecha": "2026-10-27", "hora": "8:00 AM", "numero": "53", "animal": "CARACOL"}, {"fecha": "2026-10-27", "hora": "9:00 AM", "numero": "16", "animal": "OSO"}, {"fecha": "2026-10-27", "hora": "10:00 AM", "numero": "51", "animal": "PELICANO"}, {"fecha": "2026-10-27", "hora": "11:00 AM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-10-27", "hora": "12:00 PM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-10-27", "hora": "1:00 PM", "numero": "32", "animal": "ARDILLA"}, {"fecha": "2026-10-27", "hora": "2:00 PM", "numero": "4", "animal": "ALACR\u00c1N"}, {"fecha": "2026-10-27", "hora": "3:00 PM", "numero": "24", "animal": "IGUANA"}, {"fecha": "2026-10-27", "hora": "4:00 PM", "numero": "10", "animal": "TIGRE"}, {"fecha": "2026-10-27", "hora": "5:00 PM", "numero": "39", "animal": "LECHUZA"}, {"fecha": "2026-10-27", "hora": "6:00 PM", "numero": "00", "animal": "BALLENA"}, {"fecha": "2026-10-27", "hora": "7:00 PM", "numero": "50", "animal": "CANARIO"}, {"fecha": "2026-10-28", "hora": "8:00 AM", "numero": "47", "animal": "PAVO REAL"}, {"fecha": "2026-10-28", "hora": "9:00 AM", "numero": "13", "animal": "MONO"}, {"fecha": "2026-10-28", "hora": "10:00 AM", "numero": "35", "animal": "JIRAFA"}, {"fecha": "2026-10-28", "hora": "11:00 AM", "numero": "1", "animal": "CARNERO"}, {"fecha": "2026-10-28", "hora": "12:00 PM", "numero": "51", "animal": "PELICANO"}, {"fecha": "2026-10-28", "hora": "1:00 PM", "numero": "66", "animal": "LOBO"}, {"fecha": "2026-10-28", "hora": "2:00 PM", "numero": "58", "animal": "HORMIGA"}, {"fecha": "2026-10-28", "hora": "3:00 PM", "numero": "00", "animal": "BALLENA"}, {"fecha": "2026-10-28", "hora": "4:00 PM", "numero": "46", "animal": "PUMA"}, {"fecha": "2026-10-28", "hora": "5:00 PM", "numero": "4", "animal": "ALACR\u00c1N"}, {"fecha": "2026-10-28", "hora": "6:00 PM", "numero": "61", "animal": "PANDA"}, {"fecha": "2026-10-28", "hora": "7:00 PM", "numero": "41", "animal": "CANGURO"}, {"fecha": "2026-10-29", "hora": "8:00 AM", "numero": "32", "animal": "ARDILLA"}, {"fecha": "2026-10-29", "hora": "9:00 AM", "numero": "46", "animal": "PUMA"}, {"fecha": "2026-10-29", "hora": "10:00 AM", "numero": "37", "animal": "TORTUGA"}, {"fecha": "2026-10-29", "hora": "11:00 AM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-10-29", "hora": "12:00 PM", "numero": "40", "animal": "AVISPA"}, {"fecha": "2026-10-29", "hora": "1:00 PM", "numero": "0", "animal": "DELF\u00cdN"}, {"fecha": "2026-10-29", "hora": "2:00 PM", "numero": "21", "animal": "GALLO"}, {"fecha": "2026-10-29", "hora": "3:00 PM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-10-29", "hora": "4:00 PM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-10-29", "hora": "5:00 PM", "numero": "42", "animal": "TUC\u00c1N"}, {"fecha": "2026-10-29", "hora": "6:00 PM", "numero": "53", "animal": "CARACOL"}, {"fecha": "2026-10-29", "hora": "7:00 PM", "numero": "61", "animal": "PANDA"}, {"fecha": "2026-10-30", "hora": "8:00 AM", "numero": "18", "animal": "BURRO"}, {"fecha": "2026-10-30", "hora": "9:00 AM", "numero": "66", "animal": "LOBO"}, {"fecha": "2026-10-30", "hora": "10:00 AM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-10-30", "hora": "11:00 AM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-10-30", "hora": "12:00 PM", "numero": "64", "animal": "GAVIL\u00c1N"}, {"fecha": "2026-10-30", "hora": "1:00 PM", "numero": "70", "animal": "BISONTE"}, {"fecha": "2026-10-30", "hora": "2:00 PM", "numero": "60", "animal": "CAMALE\u00d3N"}, {"fecha": "2026-10-30", "hora": "3:00 PM", "numero": "61", "animal": "PANDA"}, {"fecha": "2026-10-30", "hora": "4:00 PM", "numero": "18", "animal": "BURRO"}, {"fecha": "2026-10-30", "hora": "5:00 PM", "numero": "62", "animal": "CACHICAMO"}, {"fecha": "2026-10-30", "hora": "6:00 PM", "numero": "35", "animal": "JIRAFA"}, {"fecha": "2026-10-30", "hora": "7:00 PM", "numero": "41", "animal": "CANGURO"}, {"fecha": "2026-10-31", "hora": "8:00 AM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-10-31", "hora": "9:00 AM", "numero": "0", "animal": "DELF\u00cdN"}, {"fecha": "2026-10-31", "hora": "10:00 AM", "numero": "66", "animal": "LOBO"}, {"fecha": "2026-10-31", "hora": "11:00 AM", "numero": "22", "animal": "CAMELLO"}, {"fecha": "2026-10-31", "hora": "12:00 PM", "numero": "62", "animal": "CACHICAMO"}, {"fecha": "2026-10-31", "hora": "1:00 PM", "numero": "9", "animal": "\u00c1GUILA"}, {"fecha": "2026-10-31", "hora": "2:00 PM", "numero": "43", "animal": "MARIPOSA"}, {"fecha": "2026-10-31", "hora": "3:00 PM", "numero": "38", "animal": "B\u00daFALO"}, {"fecha": "2026-10-31", "hora": "4:00 PM", "numero": "11", "animal": "GATO"}, {"fecha": "2026-10-31", "hora": "5:00 PM", "numero": "3", "animal": "CIEMPI\u00c9S"}, {"fecha": "2026-10-31", "hora": "6:00 PM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-10-31", "hora": "7:00 PM", "numero": "58", "animal": "HORMIGA"}, {"fecha": "2026-11-01", "hora": "8:00 AM", "numero": "42", "animal": "TUC\u00c1N"}, {"fecha": "2026-11-01", "hora": "9:00 AM", "numero": "37", "animal": "TORTUGA"}, {"fecha": "2026-11-01", "hora": "10:00 AM", "numero": "61", "animal": "PANDA"}, {"fecha": "2026-11-01", "hora": "11:00 AM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-11-01", "hora": "12:00 PM", "numero": "72", "animal": "GORILA"}, {"fecha": "2026-11-01", "hora": "1:00 PM", "numero": "32", "animal": "ARDILLA"}, {"fecha": "2026-11-01", "hora": "2:00 PM", "numero": "19", "animal": "CHIVO"}, {"fecha": "2026-11-01", "hora": "3:00 PM", "numero": "30", "animal": "CAIM\u00c1N"}, {"fecha": "2026-11-01", "hora": "4:00 PM", "numero": "28", "animal": "ZAMURO"}, {"fecha": "2026-11-01", "hora": "5:00 PM", "numero": "10", "animal": "TIGRE"}, {"fecha": "2026-11-01", "hora": "6:00 PM", "numero": "60", "animal": "CAMALE\u00d3N"}, {"fecha": "2026-11-01", "hora": "7:00 PM", "numero": "44", "animal": "CHUG\u00dcIRE"}, {"fecha": "2026-11-02", "hora": "8:00 AM", "numero": "0", "animal": "DELF\u00cdN"}, {"fecha": "2026-11-02", "hora": "9:00 AM", "numero": "29", "animal": "ELEFANTE"}, {"fecha": "2026-11-02", "hora": "10:00 AM", "numero": "63", "animal": "CANGREJO"}, {"fecha": "2026-11-02", "hora": "11:00 AM", "numero": "70", "animal": "BISONTE"}, {"fecha": "2026-11-02", "hora": "12:00 PM", "numero": "61", "animal": "PANDA"}, {"fecha": "2026-11-02", "hora": "1:00 PM", "numero": "24", "animal": "IGUANA"}, {"fecha": "2026-11-02", "hora": "2:00 PM", "numero": "18", "animal": "BURRO"}, {"fecha": "2026-11-02", "hora": "3:00 PM", "numero": "69", "animal": "CONEJO"}, {"fecha": "2026-11-02", "hora": "4:00 PM", "numero": "40", "animal": "AVISPA"}, {"fecha": "2026-11-02", "hora": "5:00 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-11-02", "hora": "6:00 PM", "numero": "61", "animal": "PANDA"}, {"fecha": "2026-11-02", "hora": "7:00 PM", "numero": "73", "animal": "HIPOP\u00d3TAMO"}, {"fecha": "2026-11-03", "hora": "8:00 AM", "numero": "39", "animal": "LECHUZA"}, {"fecha": "2026-11-03", "hora": "9:00 AM", "numero": "70", "animal": "BISONTE"}, {"fecha": "2026-11-03", "hora": "10:00 AM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-11-03", "hora": "11:00 AM", "numero": "59", "animal": "PANTERA"}, {"fecha": "2026-11-03", "hora": "12:00 PM", "numero": "18", "animal": "BURRO"}, {"fecha": "2026-11-03", "hora": "1:00 PM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-11-03", "hora": "2:00 PM", "numero": "72", "animal": "GORILA"}, {"fecha": "2026-11-03", "hora": "3:00 PM", "numero": "75", "animal": "GUACHARO"}, {"fecha": "2026-11-03", "hora": "4:00 PM", "numero": "24", "animal": "IGUANA"}, {"fecha": "2026-11-03", "hora": "5:00 PM", "numero": "53", "animal": "CARACOL"}, {"fecha": "2026-11-03", "hora": "6:00 PM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-11-03", "hora": "7:00 PM", "numero": "22", "animal": "CAMELLO"}, {"fecha": "2026-11-04", "hora": "8:00 AM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-11-04", "hora": "9:00 AM", "numero": "65", "animal": "ARA\u00d1A"}, {"fecha": "2026-11-04", "hora": "10:00 AM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-11-04", "hora": "11:00 AM", "numero": "51", "animal": "PELICANO"}, {"fecha": "2026-11-04", "hora": "12:00 PM", "numero": "00", "animal": "BALLENA"}, {"fecha": "2026-11-04", "hora": "1:00 PM", "numero": "39", "animal": "LECHUZA"}]}, "Ruleta Royal": {"title": "Ruleta Royal", "emoji": "\ud83d\udc51", "payout": 30.0, "target_streaks": [1], "lags": [19, 16, 31, 26, 31, 36, 41, 46], "rec_w": 6, "anti_clustering": true, "blacklist": [], "history": [{"fecha": "2026-10-26", "hora": "11:30 AM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-10-26", "hora": "12:30 PM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-10-26", "hora": "1:30 PM", "numero": "7", "animal": "PERICO"}, {"fecha": "2026-10-26", "hora": "2:30 PM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-10-26", "hora": "3:30 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-10-26", "hora": "4:30 PM", "numero": "21", "animal": "GALLO"}, {"fecha": "2026-10-26", "hora": "5:30 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-10-26", "hora": "6:30 PM", "numero": "16", "animal": "OSO"}, {"fecha": "2026-10-26", "hora": "7:30 PM", "numero": "1", "animal": "CARNERO"}, {"fecha": "2026-10-26", "hora": "8:30 PM", "numero": "21", "animal": "GALLO"}, {"fecha": "2026-10-27", "hora": "8:30 AM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-10-27", "hora": "9:30 AM", "numero": "24", "animal": "IGUANA"}, {"fecha": "2026-10-27", "hora": "10:30 AM", "numero": "1", "animal": "CARNERO"}, {"fecha": "2026-10-27", "hora": "11:30 AM", "numero": "16", "animal": "OSO"}, {"fecha": "2026-10-27", "hora": "12:30 PM", "numero": "36", "animal": "CULEBRA"}, {"fecha": "2026-10-27", "hora": "1:30 PM", "numero": "13", "animal": "MONO"}, {"fecha": "2026-10-27", "hora": "2:30 PM", "numero": "3", "animal": "CIEMPI\u00c9S"}, {"fecha": "2026-10-27", "hora": "3:30 PM", "numero": "14", "animal": "PALOMA"}, {"fecha": "2026-10-27", "hora": "4:30 PM", "numero": "20", "animal": "COCHINO"}, {"fecha": "2026-10-27", "hora": "5:30 PM", "numero": "16", "animal": "OSO"}, {"fecha": "2026-10-27", "hora": "6:30 PM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-10-27", "hora": "7:30 PM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-10-27", "hora": "8:30 PM", "numero": "9", "animal": "\u00c1GUILA"}, {"fecha": "2026-10-28", "hora": "8:30 AM", "numero": "0", "animal": "TIBUR\u00d3N"}, {"fecha": "2026-10-28", "hora": "9:30 AM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-10-28", "hora": "10:30 AM", "numero": "19", "animal": "CHIVO"}, {"fecha": "2026-10-28", "hora": "11:30 AM", "numero": "3", "animal": "CIEMPI\u00c9S"}, {"fecha": "2026-10-28", "hora": "12:30 PM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-10-28", "hora": "1:30 PM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-10-28", "hora": "2:30 PM", "numero": "13", "animal": "MONO"}, {"fecha": "2026-10-28", "hora": "3:30 PM", "numero": "35", "animal": "PANTERA"}, {"fecha": "2026-10-28", "hora": "4:30 PM", "numero": "6", "animal": "RANA"}, {"fecha": "2026-10-28", "hora": "5:30 PM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-10-28", "hora": "6:30 PM", "numero": "18", "animal": "BURRO"}, {"fecha": "2026-10-28", "hora": "7:30 PM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-10-28", "hora": "8:30 PM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-10-29", "hora": "8:30 AM", "numero": "22", "animal": "CAMELLO"}, {"fecha": "2026-10-29", "hora": "9:30 AM", "numero": "18", "animal": "BURRO"}, {"fecha": "2026-10-29", "hora": "10:30 AM", "numero": "7", "animal": "PERICO"}, {"fecha": "2026-10-29", "hora": "11:30 AM", "numero": "1", "animal": "CARNERO"}, {"fecha": "2026-10-29", "hora": "12:30 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-10-29", "hora": "1:30 PM", "numero": "31", "animal": "LAPA"}, {"fecha": "2026-10-29", "hora": "2:30 PM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-10-29", "hora": "3:30 PM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-10-29", "hora": "4:30 PM", "numero": "26", "animal": "VACA"}, {"fecha": "2026-10-29", "hora": "5:30 PM", "numero": "9", "animal": "\u00c1GUILA"}, {"fecha": "2026-10-29", "hora": "6:30 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-10-29", "hora": "7:30 PM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-10-29", "hora": "8:30 PM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-10-30", "hora": "8:30 AM", "numero": "29", "animal": "ELEFANTE"}, {"fecha": "2026-10-30", "hora": "9:30 AM", "numero": "22", "animal": "CAMELLO"}, {"fecha": "2026-10-30", "hora": "10:30 AM", "numero": "26", "animal": "VACA"}, {"fecha": "2026-10-30", "hora": "11:30 AM", "numero": "18", "animal": "BURRO"}, {"fecha": "2026-10-30", "hora": "12:30 PM", "numero": "31", "animal": "LAPA"}, {"fecha": "2026-10-30", "hora": "1:30 PM", "numero": "21", "animal": "GALLO"}, {"fecha": "2026-10-30", "hora": "2:30 PM", "numero": "19", "animal": "CHIVO"}, {"fecha": "2026-10-30", "hora": "3:30 PM", "numero": "36", "animal": "CULEBRA"}, {"fecha": "2026-10-30", "hora": "4:30 PM", "numero": "30", "animal": "CAIM\u00c1N"}, {"fecha": "2026-10-30", "hora": "5:30 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-10-30", "hora": "6:30 PM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-10-30", "hora": "7:30 PM", "numero": "13", "animal": "MONO"}, {"fecha": "2026-10-30", "hora": "8:30 PM", "numero": "13", "animal": "MONO"}, {"fecha": "2026-10-31", "hora": "8:30 AM", "numero": "36", "animal": "CULEBRA"}, {"fecha": "2026-10-31", "hora": "9:30 AM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-10-31", "hora": "10:30 AM", "numero": "35", "animal": "PANTERA"}, {"fecha": "2026-10-31", "hora": "11:30 AM", "numero": "10", "animal": "TIGRE"}, {"fecha": "2026-10-31", "hora": "12:30 PM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-10-31", "hora": "1:30 PM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-10-31", "hora": "2:30 PM", "numero": "1", "animal": "CARNERO"}, {"fecha": "2026-10-31", "hora": "3:30 PM", "numero": "21", "animal": "GALLO"}, {"fecha": "2026-10-31", "hora": "4:30 PM", "numero": "7", "animal": "PERICO"}, {"fecha": "2026-10-31", "hora": "5:30 PM", "numero": "26", "animal": "VACA"}, {"fecha": "2026-10-31", "hora": "6:30 PM", "numero": "29", "animal": "ELEFANTE"}, {"fecha": "2026-10-31", "hora": "7:30 PM", "numero": "32", "animal": "ARDILLA"}, {"fecha": "2026-10-31", "hora": "8:30 PM", "numero": "18", "animal": "BURRO"}, {"fecha": "2026-11-01", "hora": "8:30 AM", "numero": "19", "animal": "CHIVO"}, {"fecha": "2026-11-01", "hora": "9:30 AM", "numero": "22", "animal": "CAMELLO"}, {"fecha": "2026-11-01", "hora": "10:30 AM", "numero": "6", "animal": "RANA"}, {"fecha": "2026-11-01", "hora": "11:30 AM", "numero": "31", "animal": "LAPA"}, {"fecha": "2026-11-01", "hora": "12:30 PM", "numero": "24", "animal": "IGUANA"}, {"fecha": "2026-11-01", "hora": "1:30 PM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-11-01", "hora": "2:30 PM", "numero": "31", "animal": "LAPA"}, {"fecha": "2026-11-01", "hora": "3:30 PM", "numero": "14", "animal": "PALOMA"}, {"fecha": "2026-11-01", "hora": "4:30 PM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-11-01", "hora": "5:30 PM", "numero": "30", "animal": "CAIM\u00c1N"}, {"fecha": "2026-11-01", "hora": "6:30 PM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-11-01", "hora": "7:30 PM", "numero": "26", "animal": "VACA"}, {"fecha": "2026-11-01", "hora": "8:30 PM", "numero": "21", "animal": "GALLO"}, {"fecha": "2026-11-02", "hora": "8:30 AM", "numero": "35", "animal": "PANTERA"}, {"fecha": "2026-11-02", "hora": "9:30 AM", "numero": "7", "animal": "PERICO"}, {"fecha": "2026-11-02", "hora": "10:30 AM", "numero": "4", "animal": "ALACR\u00c1N"}, {"fecha": "2026-11-02", "hora": "11:30 AM", "numero": "6", "animal": "RANA"}, {"fecha": "2026-11-02", "hora": "12:30 PM", "numero": "19", "animal": "CHIVO"}, {"fecha": "2026-11-02", "hora": "1:30 PM", "numero": "30", "animal": "CAIM\u00c1N"}, {"fecha": "2026-11-02", "hora": "2:30 PM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-11-02", "hora": "3:30 PM", "numero": "31", "animal": "LAPA"}, {"fecha": "2026-11-02", "hora": "4:30 PM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-11-02", "hora": "5:30 PM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-11-02", "hora": "6:30 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-11-02", "hora": "7:30 PM", "numero": "11", "animal": "GATO"}, {"fecha": "2026-11-02", "hora": "8:30 PM", "numero": "31", "animal": "LAPA"}, {"fecha": "2026-11-03", "hora": "8:30 AM", "numero": "1", "animal": "CARNERO"}, {"fecha": "2026-11-03", "hora": "9:30 AM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-11-03", "hora": "10:30 AM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-11-03", "hora": "11:30 AM", "numero": "36", "animal": "CULEBRA"}, {"fecha": "2026-11-03", "hora": "12:30 PM", "numero": "6", "animal": "RANA"}, {"fecha": "2026-11-03", "hora": "1:30 PM", "numero": "34", "animal": "VENADO"}, {"fecha": "2026-11-03", "hora": "2:30 PM", "numero": "31", "animal": "LAPA"}, {"fecha": "2026-11-03", "hora": "3:30 PM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-11-03", "hora": "4:30 PM", "numero": "6", "animal": "RANA"}, {"fecha": "2026-11-03", "hora": "5:30 PM", "numero": "10", "animal": "TIGRE"}, {"fecha": "2026-11-03", "hora": "6:30 PM", "numero": "19", "animal": "CHIVO"}, {"fecha": "2026-11-03", "hora": "7:30 PM", "numero": "29", "animal": "ELEFANTE"}, {"fecha": "2026-11-03", "hora": "8:30 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-11-04", "hora": "8:30 AM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-11-04", "hora": "9:30 AM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-11-04", "hora": "10:30 AM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-11-04", "hora": "11:30 AM", "numero": "0", "animal": "TIBUR\u00d3N"}, {"fecha": "2026-11-04", "hora": "12:30 PM", "numero": "6", "animal": "RANA"}, {"fecha": "2026-11-04", "hora": "1:30 PM", "numero": "31", "animal": "LAPA"}]}, "Loto Chaima": {"title": "Loto Chaima", "emoji": "\ud83c\udff9", "payout": 60.0, "target_streaks": [0, 1], "lags": [49, 41, 35, 56, 61, 66, 71, 76], "rec_w": 6, "anti_clustering": false, "blacklist": [], "history": [{"fecha": "2026-10-25", "hora": "2:00 PM", "numero": "16", "animal": "OSO"}, {"fecha": "2026-10-25", "hora": "3:00 PM", "numero": "21", "animal": "GALLO"}, {"fecha": "2026-10-25", "hora": "4:00 PM", "numero": "50", "animal": "CANARIO"}, {"fecha": "2026-10-25", "hora": "5:00 PM", "numero": "29", "animal": "ELEFANTE"}, {"fecha": "2026-10-25", "hora": "6:00 PM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-10-25", "hora": "7:00 PM", "numero": "31", "animal": "LAPA"}, {"fecha": "2026-10-26", "hora": "8:00 AM", "numero": "21", "animal": "GALLO"}, {"fecha": "2026-10-26", "hora": "9:00 AM", "numero": "0", "animal": "DELF\u00cdN"}, {"fecha": "2026-10-26", "hora": "10:00 AM", "numero": "53", "animal": "CARACOL"}, {"fecha": "2026-10-26", "hora": "11:00 AM", "numero": "52", "animal": "PULPO"}, {"fecha": "2026-10-26", "hora": "12:00 PM", "numero": "3", "animal": "CIEMPI\u00c9S"}, {"fecha": "2026-10-26", "hora": "1:00 PM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-10-26", "hora": "2:00 PM", "numero": "36", "animal": "CULEBRA"}, {"fecha": "2026-10-26", "hora": "3:00 PM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-10-26", "hora": "4:00 PM", "numero": "32", "animal": "ARDILLA"}, {"fecha": "2026-10-26", "hora": "5:00 PM", "numero": "38", "animal": "B\u00daFALO"}, {"fecha": "2026-10-26", "hora": "6:00 PM", "numero": "44", "animal": "CHUG\u00dcIRE"}, {"fecha": "2026-10-26", "hora": "7:00 PM", "numero": "24", "animal": "IGUANA"}, {"fecha": "2026-10-27", "hora": "8:00 AM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-10-27", "hora": "9:00 AM", "numero": "40", "animal": "AVISPA"}, {"fecha": "2026-10-27", "hora": "10:00 AM", "numero": "43", "animal": "MARIPOSA"}, {"fecha": "2026-10-27", "hora": "11:00 AM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-10-27", "hora": "12:00 PM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-10-27", "hora": "1:00 PM", "numero": "28", "animal": "ZAMURO"}, {"fecha": "2026-10-27", "hora": "2:00 PM", "numero": "11", "animal": "GATO"}, {"fecha": "2026-10-27", "hora": "3:00 PM", "numero": "6", "animal": "RANA"}, {"fecha": "2026-10-27", "hora": "4:00 PM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-10-27", "hora": "5:00 PM", "numero": "9", "animal": "\u00c1GUILA"}, {"fecha": "2026-10-27", "hora": "6:00 PM", "numero": "41", "animal": "CANGURO"}, {"fecha": "2026-10-27", "hora": "7:00 PM", "numero": "18", "animal": "CEBRA"}, {"fecha": "2026-10-28", "hora": "8:00 AM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-10-28", "hora": "9:00 AM", "numero": "40", "animal": "AVISPA"}, {"fecha": "2026-10-28", "hora": "10:00 AM", "numero": "1", "animal": "CARNERO"}, {"fecha": "2026-10-28", "hora": "11:00 AM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-10-28", "hora": "12:00 PM", "numero": "53", "animal": "CARACOL"}, {"fecha": "2026-10-28", "hora": "1:00 PM", "numero": "54", "animal": "GRILLO"}, {"fecha": "2026-10-28", "hora": "2:00 PM", "numero": "39", "animal": "LECHUZA"}, {"fecha": "2026-10-28", "hora": "3:00 PM", "numero": "19", "animal": "CHIVO"}, {"fecha": "2026-10-28", "hora": "4:00 PM", "numero": "51", "animal": "PELICANO"}, {"fecha": "2026-10-28", "hora": "5:00 PM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-10-28", "hora": "6:00 PM", "numero": "20", "animal": "COCHINO"}, {"fecha": "2026-10-28", "hora": "7:00 PM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-10-29", "hora": "8:00 AM", "numero": "28", "animal": "ZAMURO"}, {"fecha": "2026-10-29", "hora": "9:00 AM", "numero": "00", "animal": "BALLENA"}, {"fecha": "2026-10-29", "hora": "10:00 AM", "numero": "24", "animal": "IGUANA"}, {"fecha": "2026-10-29", "hora": "11:00 AM", "numero": "53", "animal": "CARACOL"}, {"fecha": "2026-10-29", "hora": "12:00 PM", "numero": "11", "animal": "GATO"}, {"fecha": "2026-10-29", "hora": "1:00 PM", "numero": "32", "animal": "ARDILLA"}, {"fecha": "2026-10-29", "hora": "2:00 PM", "numero": "22", "animal": "CAMELLO"}, {"fecha": "2026-10-29", "hora": "3:00 PM", "numero": "50", "animal": "CANARIO"}, {"fecha": "2026-10-29", "hora": "4:00 PM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-10-29", "hora": "5:00 PM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-10-29", "hora": "6:00 PM", "numero": "10", "animal": "TIGRE"}, {"fecha": "2026-10-29", "hora": "7:00 PM", "numero": "39", "animal": "LECHUZA"}, {"fecha": "2026-10-30", "hora": "8:00 AM", "numero": "10", "animal": "TIGRE"}, {"fecha": "2026-10-30", "hora": "9:00 AM", "numero": "38", "animal": "B\u00daFALO"}, {"fecha": "2026-10-30", "hora": "10:00 AM", "numero": "29", "animal": "ELEFANTE"}, {"fecha": "2026-10-30", "hora": "11:00 AM", "numero": "54", "animal": "GRILLO"}, {"fecha": "2026-10-30", "hora": "12:00 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-10-30", "hora": "1:00 PM", "numero": "53", "animal": "CARACOL"}, {"fecha": "2026-10-30", "hora": "2:00 PM", "numero": "21", "animal": "GALLO"}, {"fecha": "2026-10-30", "hora": "3:00 PM", "numero": "31", "animal": "LAPA"}, {"fecha": "2026-10-30", "hora": "4:00 PM", "numero": "16", "animal": "OSO"}, {"fecha": "2026-10-30", "hora": "5:00 PM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-10-30", "hora": "6:00 PM", "numero": "7", "animal": "PERICO"}, {"fecha": "2026-10-30", "hora": "7:00 PM", "numero": "43", "animal": "MARIPOSA"}, {"fecha": "2026-10-31", "hora": "8:00 AM", "numero": "54", "animal": "GRILLO"}, {"fecha": "2026-10-31", "hora": "9:00 AM", "numero": "16", "animal": "OSO"}, {"fecha": "2026-10-31", "hora": "10:00 AM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-10-31", "hora": "11:00 AM", "numero": "39", "animal": "LECHUZA"}, {"fecha": "2026-10-31", "hora": "12:00 PM", "numero": "32", "animal": "ARDILLA"}, {"fecha": "2026-10-31", "hora": "1:00 PM", "numero": "26", "animal": "VACA"}, {"fecha": "2026-10-31", "hora": "2:00 PM", "numero": "35", "animal": "JIRAFA"}, {"fecha": "2026-10-31", "hora": "3:00 PM", "numero": "48", "animal": "PUERCOESP\u00cdN"}, {"fecha": "2026-10-31", "hora": "4:00 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-10-31", "hora": "5:00 PM", "numero": "10", "animal": "TIGRE"}, {"fecha": "2026-10-31", "hora": "6:00 PM", "numero": "51", "animal": "PELICANO"}, {"fecha": "2026-10-31", "hora": "7:00 PM", "numero": "42", "animal": "TUC\u00c1N"}, {"fecha": "2026-11-01", "hora": "8:00 AM", "numero": "22", "animal": "CAMELLO"}, {"fecha": "2026-11-01", "hora": "9:00 AM", "numero": "52", "animal": "PULPO"}, {"fecha": "2026-11-01", "hora": "10:00 AM", "numero": "39", "animal": "LECHUZA"}, {"fecha": "2026-11-01", "hora": "11:00 AM", "numero": "24", "animal": "IGUANA"}, {"fecha": "2026-11-01", "hora": "12:00 PM", "numero": "4", "animal": "ALACR\u00c1N"}, {"fecha": "2026-11-01", "hora": "1:00 PM", "numero": "43", "animal": "MARIPOSA"}, {"fecha": "2026-11-01", "hora": "2:00 PM", "numero": "13", "animal": "MONO"}, {"fecha": "2026-11-01", "hora": "3:00 PM", "numero": "46", "animal": "PUMA"}, {"fecha": "2026-11-01", "hora": "4:00 PM", "numero": "48", "animal": "PUERCOESP\u00cdN"}, {"fecha": "2026-11-01", "hora": "5:00 PM", "numero": "44", "animal": "CHUG\u00dcIRE"}, {"fecha": "2026-11-01", "hora": "6:00 PM", "numero": "9", "animal": "\u00c1GUILA"}, {"fecha": "2026-11-01", "hora": "7:00 PM", "numero": "16", "animal": "OSO"}, {"fecha": "2026-11-02", "hora": "8:00 AM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-11-02", "hora": "9:00 AM", "numero": "44", "animal": "CHUG\u00dcIRE"}, {"fecha": "2026-11-02", "hora": "10:00 AM", "numero": "51", "animal": "PELICANO"}, {"fecha": "2026-11-02", "hora": "11:00 AM", "numero": "45", "animal": "GARZA"}, {"fecha": "2026-11-02", "hora": "12:00 PM", "numero": "29", "animal": "ELEFANTE"}, {"fecha": "2026-11-02", "hora": "1:00 PM", "numero": "37", "animal": "TORTUGA"}, {"fecha": "2026-11-02", "hora": "2:00 PM", "numero": "14", "animal": "PALOMA"}, {"fecha": "2026-11-02", "hora": "3:00 PM", "numero": "40", "animal": "AVISPA"}, {"fecha": "2026-11-02", "hora": "4:00 PM", "numero": "47", "animal": "PAVO REAL"}, {"fecha": "2026-11-02", "hora": "5:00 PM", "numero": "36", "animal": "CULEBRA"}, {"fecha": "2026-11-02", "hora": "6:00 PM", "numero": "38", "animal": "B\u00daFALO"}, {"fecha": "2026-11-02", "hora": "7:00 PM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-11-03", "hora": "8:00 AM", "numero": "32", "animal": "ARDILLA"}, {"fecha": "2026-11-03", "hora": "9:00 AM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-11-03", "hora": "10:00 AM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-11-03", "hora": "11:00 AM", "numero": "40", "animal": "AVISPA"}, {"fecha": "2026-11-03", "hora": "12:00 PM", "numero": "38", "animal": "B\u00daFALO"}, {"fecha": "2026-11-03", "hora": "1:00 PM", "numero": "21", "animal": "GALLO"}, {"fecha": "2026-11-03", "hora": "2:00 PM", "numero": "28", "animal": "ZAMURO"}, {"fecha": "2026-11-03", "hora": "3:00 PM", "numero": "24", "animal": "IGUANA"}, {"fecha": "2026-11-03", "hora": "4:00 PM", "numero": "22", "animal": "CAMELLO"}, {"fecha": "2026-11-03", "hora": "5:00 PM", "numero": "37", "animal": "TORTUGA"}, {"fecha": "2026-11-03", "hora": "6:00 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-11-03", "hora": "7:00 PM", "numero": "43", "animal": "MARIPOSA"}, {"fecha": "2026-11-04", "hora": "8:00 AM", "numero": "30", "animal": "CAIM\u00c1N"}, {"fecha": "2026-11-04", "hora": "9:00 AM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-11-04", "hora": "10:00 AM", "numero": "43", "animal": "MARIPOSA"}, {"fecha": "2026-11-04", "hora": "11:00 AM", "numero": "1", "animal": "CARNERO"}, {"fecha": "2026-11-04", "hora": "12:00 PM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-11-04", "hora": "1:00 PM", "numero": "18", "animal": "BURRO"}]}, "Lotto Gato": {"title": "Lotto Gato", "emoji": "\ud83d\udc31", "payout": 60.0, "target_streaks": [1, 2], "lags": [18, 38, 14, 25, 30, 35, 40, 45], "rec_w": 6, "anti_clustering": false, "blacklist": [], "history": [{"fecha": "2026-10-23", "hora": "3:10 PM", "numero": "1", "animal": "CARNERO"}, {"fecha": "2026-10-23", "hora": "4:10 PM", "numero": "21", "animal": "GALLO"}, {"fecha": "2026-10-23", "hora": "5:10 PM", "numero": "3", "animal": "CIENPIES"}, {"fecha": "2026-10-23", "hora": "6:10 PM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-10-23", "hora": "7:10 PM", "numero": "29", "animal": "ELEFANTE"}, {"fecha": "2026-10-24", "hora": "9:10 AM", "numero": "19", "animal": "CHIVO"}, {"fecha": "2026-10-24", "hora": "10:10 AM", "numero": "6", "animal": "RANA"}, {"fecha": "2026-10-24", "hora": "11:10 AM", "numero": "20", "animal": "COCHINO"}, {"fecha": "2026-10-24", "hora": "12:10 PM", "numero": "3", "animal": "CIENPIES"}, {"fecha": "2026-10-24", "hora": "1:10 PM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-10-24", "hora": "3:10 PM", "numero": "26", "animal": "VACA"}, {"fecha": "2026-10-24", "hora": "4:10 PM", "numero": "16", "animal": "OSO"}, {"fecha": "2026-10-24", "hora": "5:10 PM", "numero": "0", "animal": "DELF\u00cdN"}, {"fecha": "2026-10-24", "hora": "6:10 PM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-10-24", "hora": "7:10 PM", "numero": "9", "animal": "\u00c1GUILA"}, {"fecha": "2026-10-25", "hora": "9:10 AM", "numero": "26", "animal": "VACA"}, {"fecha": "2026-10-25", "hora": "10:10 AM", "numero": "00", "animal": "BALLENA"}, {"fecha": "2026-10-25", "hora": "11:10 AM", "numero": "22", "animal": "CAMELLO"}, {"fecha": "2026-10-25", "hora": "12:10 PM", "numero": "30", "animal": "CAIM\u00c1N"}, {"fecha": "2026-10-25", "hora": "1:10 PM", "numero": "20", "animal": "COCHINO"}, {"fecha": "2026-10-25", "hora": "3:10 PM", "numero": "24", "animal": "IGUANA"}, {"fecha": "2026-10-25", "hora": "4:10 PM", "numero": "18", "animal": "BURRO"}, {"fecha": "2026-10-25", "hora": "5:10 PM", "numero": "9", "animal": "\u00c1GUILA"}, {"fecha": "2026-10-25", "hora": "6:10 PM", "numero": "7", "animal": "PERICO"}, {"fecha": "2026-10-25", "hora": "7:10 PM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-10-26", "hora": "9:10 AM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-10-26", "hora": "10:10 AM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-10-26", "hora": "11:10 AM", "numero": "3", "animal": "CIENPIES"}, {"fecha": "2026-10-26", "hora": "12:10 PM", "numero": "19", "animal": "CHIVO"}, {"fecha": "2026-10-26", "hora": "1:10 PM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-10-26", "hora": "3:10 PM", "numero": "10", "animal": "TIGRE"}, {"fecha": "2026-10-26", "hora": "4:10 PM", "numero": "14", "animal": "PALOMA"}, {"fecha": "2026-10-26", "hora": "5:10 PM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-10-26", "hora": "6:10 PM", "numero": "35", "animal": "JIRAFA"}, {"fecha": "2026-10-26", "hora": "7:10 PM", "numero": "00", "animal": "BALLENA"}, {"fecha": "2026-10-27", "hora": "9:10 AM", "numero": "31", "animal": "LAPA"}, {"fecha": "2026-10-27", "hora": "10:10 AM", "numero": "7", "animal": "PERICO"}, {"fecha": "2026-10-27", "hora": "11:10 AM", "numero": "11", "animal": "GATO"}, {"fecha": "2026-10-27", "hora": "12:10 PM", "numero": "1", "animal": "CARNERO"}, {"fecha": "2026-10-27", "hora": "1:10 PM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-10-27", "hora": "3:10 PM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-10-27", "hora": "4:10 PM", "numero": "20", "animal": "COCHINO"}, {"fecha": "2026-10-27", "hora": "5:10 PM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-10-27", "hora": "6:10 PM", "numero": "0", "animal": "DELF\u00cdN"}, {"fecha": "2026-10-27", "hora": "7:10 PM", "numero": "26", "animal": "VACA"}, {"fecha": "2026-10-28", "hora": "9:10 AM", "numero": "14", "animal": "PALOMA"}, {"fecha": "2026-10-28", "hora": "10:10 AM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-10-28", "hora": "11:10 AM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-10-28", "hora": "12:10 PM", "numero": "00", "animal": "BALLENA"}, {"fecha": "2026-10-28", "hora": "1:10 PM", "numero": "26", "animal": "VACA"}, {"fecha": "2026-10-28", "hora": "3:10 PM", "numero": "24", "animal": "IGUANA"}, {"fecha": "2026-10-28", "hora": "4:10 PM", "numero": "30", "animal": "CAIM\u00c1N"}, {"fecha": "2026-10-28", "hora": "5:10 PM", "numero": "31", "animal": "LAPA"}, {"fecha": "2026-10-28", "hora": "6:10 PM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-10-28", "hora": "7:10 PM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-10-29", "hora": "9:10 AM", "numero": "7", "animal": "PERICO"}, {"fecha": "2026-10-29", "hora": "10:10 AM", "numero": "18", "animal": "BURRO"}, {"fecha": "2026-10-29", "hora": "11:10 AM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-10-29", "hora": "12:10 PM", "numero": "4", "animal": "ALACR\u00c1N"}, {"fecha": "2026-10-29", "hora": "1:10 PM", "numero": "0", "animal": "DELF\u00cdN"}, {"fecha": "2026-10-29", "hora": "3:10 PM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-10-29", "hora": "4:10 PM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-10-29", "hora": "5:10 PM", "numero": "6", "animal": "RANA"}, {"fecha": "2026-10-29", "hora": "6:10 PM", "numero": "35", "animal": "JIRAFA"}, {"fecha": "2026-10-29", "hora": "7:10 PM", "numero": "11", "animal": "GATO"}, {"fecha": "2026-10-30", "hora": "9:10 AM", "numero": "13", "animal": "MONO"}, {"fecha": "2026-10-30", "hora": "10:10 AM", "numero": "24", "animal": "IGUANA"}, {"fecha": "2026-10-30", "hora": "11:10 AM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-10-30", "hora": "12:10 PM", "numero": "28", "animal": "ZAMURO"}, {"fecha": "2026-10-30", "hora": "1:10 PM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-10-30", "hora": "3:10 PM", "numero": "0", "animal": "DELF\u00cdN"}, {"fecha": "2026-10-30", "hora": "4:10 PM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-10-30", "hora": "5:10 PM", "numero": "1", "animal": "CARNERO"}, {"fecha": "2026-10-30", "hora": "6:10 PM", "numero": "21", "animal": "GALLO"}, {"fecha": "2026-10-30", "hora": "7:10 PM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-10-31", "hora": "9:10 AM", "numero": "32", "animal": "ARDILLA"}, {"fecha": "2026-10-31", "hora": "10:10 AM", "numero": "19", "animal": "CHIVO"}, {"fecha": "2026-10-31", "hora": "11:10 AM", "numero": "18", "animal": "BURRO"}, {"fecha": "2026-10-31", "hora": "12:10 PM", "numero": "14", "animal": "PALOMA"}, {"fecha": "2026-10-31", "hora": "1:10 PM", "numero": "36", "animal": "CULEBRA"}, {"fecha": "2026-10-31", "hora": "3:10 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-10-31", "hora": "4:10 PM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-10-31", "hora": "5:10 PM", "numero": "0", "animal": "DELF\u00cdN"}, {"fecha": "2026-10-31", "hora": "6:10 PM", "numero": "1", "animal": "CARNERO"}, {"fecha": "2026-10-31", "hora": "7:10 PM", "numero": "22", "animal": "CAMELLO"}, {"fecha": "2026-11-01", "hora": "9:10 AM", "numero": "20", "animal": "COCHINO"}, {"fecha": "2026-11-01", "hora": "10:10 AM", "numero": "22", "animal": "CAMELLO"}, {"fecha": "2026-11-01", "hora": "11:10 AM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-11-01", "hora": "12:10 PM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-11-01", "hora": "1:10 PM", "numero": "19", "animal": "CHIVO"}, {"fecha": "2026-11-01", "hora": "3:10 PM", "numero": "36", "animal": "CULEBRA"}, {"fecha": "2026-11-01", "hora": "4:10 PM", "numero": "14", "animal": "PALOMA"}, {"fecha": "2026-11-01", "hora": "5:10 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-11-01", "hora": "6:10 PM", "numero": "13", "animal": "MONO"}, {"fecha": "2026-11-01", "hora": "7:10 PM", "numero": "24", "animal": "IGUANA"}, {"fecha": "2026-11-02", "hora": "9:10 AM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-11-02", "hora": "10:10 AM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-11-02", "hora": "11:10 AM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-11-02", "hora": "12:10 PM", "numero": "26", "animal": "VACA"}, {"fecha": "2026-11-02", "hora": "1:10 PM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-11-02", "hora": "3:10 PM", "numero": "0", "animal": "DELF\u00cdN"}, {"fecha": "2026-11-02", "hora": "4:10 PM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-11-02", "hora": "5:10 PM", "numero": "7", "animal": "PERICO"}, {"fecha": "2026-11-02", "hora": "6:10 PM", "numero": "18", "animal": "BURRO"}, {"fecha": "2026-11-02", "hora": "7:10 PM", "numero": "3", "animal": "CIENPIES"}, {"fecha": "2026-11-03", "hora": "9:10 AM", "numero": "00", "animal": "BALLENA"}, {"fecha": "2026-11-03", "hora": "10:10 AM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-11-03", "hora": "11:10 AM", "numero": "29", "animal": "ELEFANTE"}, {"fecha": "2026-11-03", "hora": "12:10 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-11-03", "hora": "1:10 PM", "numero": "18", "animal": "BURRO"}, {"fecha": "2026-11-03", "hora": "3:10 PM", "numero": "9", "animal": "\u00c1GUILA"}, {"fecha": "2026-11-03", "hora": "4:10 PM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-11-03", "hora": "5:10 PM", "numero": "19", "animal": "CHIVO"}, {"fecha": "2026-11-03", "hora": "6:10 PM", "numero": "1", "animal": "CARNERO"}, {"fecha": "2026-11-03", "hora": "7:10 PM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-11-04", "hora": "9:10 AM", "numero": "29", "animal": "ELEFANTE"}, {"fecha": "2026-11-04", "hora": "10:10 AM", "numero": "20", "animal": "COCHINO"}, {"fecha": "2026-11-04", "hora": "11:10 AM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-11-04", "hora": "12:10 PM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-11-04", "hora": "1:10 PM", "numero": "31", "animal": "LAPA"}]}, "Gatazo": {"title": "Gatazo", "emoji": "\ud83d\udc2f", "payout": 60.0, "target_streaks": [1], "lags": [35, 9, 20, 42, 47, 52, 57, 62], "rec_w": 6, "anti_clustering": false, "blacklist": ["11"], "history": [{"fecha": "2026-10-23", "hora": "3:40 PM", "numero": "45", "animal": "GARZA"}, {"fecha": "2026-10-23", "hora": "4:40 PM", "numero": "68", "animal": "JAGUAR"}, {"fecha": "2026-10-23", "hora": "5:40 PM", "numero": "66", "animal": "LOBO"}, {"fecha": "2026-10-23", "hora": "6:40 PM", "numero": "1", "animal": "CARNERO"}, {"fecha": "2026-10-23", "hora": "7:40 PM", "numero": "74", "animal": "TURPIAL"}, {"fecha": "2026-10-24", "hora": "9:40 AM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-10-24", "hora": "10:40 AM", "numero": "47", "animal": "PAVO REAL"}, {"fecha": "2026-10-24", "hora": "11:40 AM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-10-24", "hora": "12:40 PM", "numero": "48", "animal": "PUERCOESP\u00cdN"}, {"fecha": "2026-10-24", "hora": "1:40 PM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-10-24", "hora": "3:40 PM", "numero": "0", "animal": "DELF\u00cdN"}, {"fecha": "2026-10-24", "hora": "4:40 PM", "numero": "64", "animal": "GAVIL\u00c1N"}, {"fecha": "2026-10-24", "hora": "5:40 PM", "numero": "29", "animal": "ELEFANTE"}, {"fecha": "2026-10-24", "hora": "6:40 PM", "numero": "36", "animal": "CULEBRA"}, {"fecha": "2026-10-24", "hora": "7:40 PM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-10-25", "hora": "9:40 AM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-10-25", "hora": "10:40 AM", "numero": "64", "animal": "GAVIL\u00c1N"}, {"fecha": "2026-10-25", "hora": "11:40 AM", "numero": "63", "animal": "CANGREJO"}, {"fecha": "2026-10-25", "hora": "12:40 PM", "numero": "44", "animal": "CHIGUIRE"}, {"fecha": "2026-10-25", "hora": "1:40 PM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-10-25", "hora": "3:40 PM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-10-25", "hora": "4:40 PM", "numero": "56", "animal": "TIBUR\u00d3N"}, {"fecha": "2026-10-25", "hora": "5:40 PM", "numero": "00", "animal": "BALLENA"}, {"fecha": "2026-10-25", "hora": "6:40 PM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-10-25", "hora": "7:40 PM", "numero": "69", "animal": "CONEJO"}, {"fecha": "2026-10-26", "hora": "9:40 AM", "numero": "57", "animal": "PATO"}, {"fecha": "2026-10-26", "hora": "10:40 AM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-10-26", "hora": "11:40 AM", "numero": "42", "animal": "TUC\u00c1N"}, {"fecha": "2026-10-26", "hora": "12:40 PM", "numero": "14", "animal": "PALOMA"}, {"fecha": "2026-10-26", "hora": "1:40 PM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-10-26", "hora": "3:40 PM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-10-26", "hora": "4:40 PM", "numero": "38", "animal": "B\u00daFALO"}, {"fecha": "2026-10-26", "hora": "5:40 PM", "numero": "4", "animal": "ALACR\u00c1N"}, {"fecha": "2026-10-26", "hora": "6:40 PM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-10-26", "hora": "7:40 PM", "numero": "17", "animal": "PAVO"}, {"fecha": "2026-10-27", "hora": "9:40 AM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-10-27", "hora": "10:40 AM", "numero": "3", "animal": "CIENPIES"}, {"fecha": "2026-10-27", "hora": "11:40 AM", "numero": "55", "animal": "OSOHRMIGUERO"}, {"fecha": "2026-10-27", "hora": "12:40 PM", "numero": "18", "animal": "BURRO"}, {"fecha": "2026-10-27", "hora": "1:40 PM", "numero": "61", "animal": "COLIBRI"}, {"fecha": "2026-10-27", "hora": "3:40 PM", "numero": "74", "animal": "TURPIAL"}, {"fecha": "2026-10-27", "hora": "4:40 PM", "numero": "51", "animal": "PELICANO"}, {"fecha": "2026-10-27", "hora": "5:40 PM", "numero": "14", "animal": "PALOMA"}, {"fecha": "2026-10-27", "hora": "6:40 PM", "numero": "54", "animal": "GRILLO"}, {"fecha": "2026-10-27", "hora": "7:40 PM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-10-28", "hora": "9:40 AM", "numero": "21", "animal": "GALLO"}, {"fecha": "2026-10-28", "hora": "10:40 AM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-10-28", "hora": "11:40 AM", "numero": "69", "animal": "CONEJO"}, {"fecha": "2026-10-28", "hora": "12:40 PM", "numero": "72", "animal": "GORILA"}, {"fecha": "2026-10-28", "hora": "1:40 PM", "numero": "20", "animal": "COCHINO"}, {"fecha": "2026-10-28", "hora": "3:40 PM", "numero": "7", "animal": "PERICO"}, {"fecha": "2026-10-28", "hora": "4:40 PM", "numero": "57", "animal": "PATO"}, {"fecha": "2026-10-28", "hora": "5:40 PM", "numero": "51", "animal": "PELICANO"}, {"fecha": "2026-10-28", "hora": "6:40 PM", "numero": "73", "animal": "HIPOP\u00d3TAMO"}, {"fecha": "2026-10-28", "hora": "7:40 PM", "numero": "55", "animal": "OSOHRMIGUERO"}, {"fecha": "2026-10-29", "hora": "9:40 AM", "numero": "43", "animal": "MARIPOSA"}, {"fecha": "2026-10-29", "hora": "10:40 AM", "numero": "14", "animal": "PALOMA"}, {"fecha": "2026-10-29", "hora": "11:40 AM", "numero": "30", "animal": "CAIM\u00c1N"}, {"fecha": "2026-10-29", "hora": "12:40 PM", "numero": "0", "animal": "DELF\u00cdN"}, {"fecha": "2026-10-29", "hora": "1:40 PM", "numero": "50", "animal": "CANARIO"}, {"fecha": "2026-10-29", "hora": "3:40 PM", "numero": "71", "animal": "GUACAMAYA"}, {"fecha": "2026-10-29", "hora": "4:40 PM", "numero": "20", "animal": "COCHINO"}, {"fecha": "2026-10-29", "hora": "5:40 PM", "numero": "60", "animal": "CAMALE\u00d3N"}, {"fecha": "2026-10-29", "hora": "6:40 PM", "numero": "72", "animal": "GORILA"}, {"fecha": "2026-10-29", "hora": "7:40 PM", "numero": "42", "animal": "TUC\u00c1N"}, {"fecha": "2026-10-30", "hora": "9:40 AM", "numero": "3", "animal": "CIENPIES"}, {"fecha": "2026-10-30", "hora": "10:40 AM", "numero": "52", "animal": "PULPO"}, {"fecha": "2026-10-30", "hora": "11:40 AM", "numero": "43", "animal": "MARIPOSA"}, {"fecha": "2026-10-30", "hora": "12:40 PM", "numero": "74", "animal": "TURPIAL"}, {"fecha": "2026-10-30", "hora": "1:40 PM", "numero": "41", "animal": "CANGURO"}, {"fecha": "2026-10-30", "hora": "3:40 PM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-10-30", "hora": "4:40 PM", "numero": "39", "animal": "LECHUZA"}, {"fecha": "2026-10-30", "hora": "5:40 PM", "numero": "5", "animal": "LE\u00d3N"}, {"fecha": "2026-10-30", "hora": "6:40 PM", "numero": "51", "animal": "PELICANO"}, {"fecha": "2026-10-30", "hora": "7:40 PM", "numero": "25", "animal": "GALLINA"}, {"fecha": "2026-10-31", "hora": "9:40 AM", "numero": "16", "animal": "OSO"}, {"fecha": "2026-10-31", "hora": "10:40 AM", "numero": "27", "animal": "PERRO"}, {"fecha": "2026-10-31", "hora": "11:40 AM", "numero": "72", "animal": "GORILA"}, {"fecha": "2026-10-31", "hora": "12:40 PM", "numero": "42", "animal": "TUC\u00c1N"}, {"fecha": "2026-10-31", "hora": "1:40 PM", "numero": "20", "animal": "COCHINO"}, {"fecha": "2026-10-31", "hora": "3:40 PM", "numero": "73", "animal": "HIPOP\u00d3TAMO"}, {"fecha": "2026-10-31", "hora": "4:40 PM", "numero": "33", "animal": "PESCADO"}, {"fecha": "2026-10-31", "hora": "5:40 PM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-10-31", "hora": "6:40 PM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-10-31", "hora": "7:40 PM", "numero": "4", "animal": "ALACR\u00c1N"}, {"fecha": "2026-11-01", "hora": "9:40 AM", "numero": "0", "animal": "DELF\u00cdN"}, {"fecha": "2026-11-01", "hora": "10:40 AM", "numero": "8", "animal": "RAT\u00d3N"}, {"fecha": "2026-11-01", "hora": "11:40 AM", "numero": "51", "animal": "PELICANO"}, {"fecha": "2026-11-01", "hora": "12:40 PM", "numero": "54", "animal": "GRILLO"}, {"fecha": "2026-11-01", "hora": "1:40 PM", "numero": "48", "animal": "PUERCOESP\u00cdN"}, {"fecha": "2026-11-01", "hora": "3:40 PM", "numero": "7", "animal": "PERICO"}, {"fecha": "2026-11-01", "hora": "4:40 PM", "numero": "14", "animal": "PALOMA"}, {"fecha": "2026-11-01", "hora": "5:40 PM", "numero": "43", "animal": "MARIPOSA"}, {"fecha": "2026-11-01", "hora": "6:40 PM", "numero": "2", "animal": "TORO"}, {"fecha": "2026-11-01", "hora": "7:40 PM", "numero": "72", "animal": "GORILA"}, {"fecha": "2026-11-02", "hora": "9:40 AM", "numero": "23", "animal": "CEBRA"}, {"fecha": "2026-11-02", "hora": "10:40 AM", "numero": "40", "animal": "AVISPA"}, {"fecha": "2026-11-02", "hora": "11:40 AM", "numero": "12", "animal": "CABALLO"}, {"fecha": "2026-11-02", "hora": "12:40 PM", "numero": "73", "animal": "HIPOP\u00d3TAMO"}, {"fecha": "2026-11-02", "hora": "1:40 PM", "numero": "7", "animal": "PERICO"}, {"fecha": "2026-11-02", "hora": "3:40 PM", "numero": "42", "animal": "TUC\u00c1N"}, {"fecha": "2026-11-02", "hora": "4:40 PM", "numero": "15", "animal": "ZORRO"}, {"fecha": "2026-11-02", "hora": "5:40 PM", "numero": "74", "animal": "TURPIAL"}, {"fecha": "2026-11-02", "hora": "6:40 PM", "numero": "30", "animal": "CAIM\u00c1N"}, {"fecha": "2026-11-02", "hora": "7:40 PM", "numero": "50", "animal": "CANARIO"}, {"fecha": "2026-11-03", "hora": "9:40 AM", "numero": "4", "animal": "ALACR\u00c1N"}, {"fecha": "2026-11-03", "hora": "10:40 AM", "numero": "26", "animal": "VACA"}, {"fecha": "2026-11-03", "hora": "11:40 AM", "numero": "71", "animal": "GUACAMAYA"}, {"fecha": "2026-11-03", "hora": "12:40 PM", "numero": "29", "animal": "ELEFANTE"}, {"fecha": "2026-11-03", "hora": "1:40 PM", "numero": "51", "animal": "PELICANO"}, {"fecha": "2026-11-03", "hora": "3:40 PM", "numero": "20", "animal": "COCHINO"}, {"fecha": "2026-11-03", "hora": "4:40 PM", "numero": "72", "animal": "GORILA"}, {"fecha": "2026-11-03", "hora": "5:40 PM", "numero": "74", "animal": "TURPIAL"}, {"fecha": "2026-11-03", "hora": "6:40 PM", "numero": "1", "animal": "CARNERO"}, {"fecha": "2026-11-03", "hora": "7:40 PM", "numero": "30", "animal": "CAIM\u00c1N"}, {"fecha": "2026-11-04", "hora": "9:40 AM", "numero": "72", "animal": "GORILA"}, {"fecha": "2026-11-04", "hora": "10:40 AM", "numero": "50", "animal": "CANARIO"}, {"fecha": "2026-11-04", "hora": "11:40 AM", "numero": "43", "animal": "MARIPOSA"}, {"fecha": "2026-11-04", "hora": "12:40 PM", "numero": "42", "animal": "TUC\u00c1N"}, {"fecha": "2026-11-04", "hora": "1:40 PM", "numero": "13", "animal": "MONO"}]}};
-    const TODAY_LEDGER_INIT = [{"hora": "9:10 AM", "ruleta": "Lotto Gato", "candidatos": "#0 BALLENA, #8 RATON, #17 PAVO, #20 COCHINO, #27 PERRO, #32 ARDILLA, #36 CULEBRA", "resultado": "[29] ELEFANTE", "condicion": "🔴 PERDIDA", "total_bet": 700.0, "cobrado": 0.0, "pnl": -700.0, "saldo": 23400.0}, {"hora": "10:00 AM", "ruleta": "Guacharo Activo", "candidatos": "#3 CIEMPIES, #18 BURRO, #30 CAIMAN, #38 BUFALO, #42 TUCAN, #62 CACHICAMO, #64 GAVILAN, #66 LOBO", "resultado": "[12] CABALLO", "condicion": "🔴 PERDIDA", "total_bet": 800.0, "cobrado": 0.0, "pnl": -800.0, "saldo": 22600.0}, {"hora": "10:10 AM", "ruleta": "Lotto Gato", "candidatos": "#7 PERICO, #8 RATON, #14 PALOMA, #22 CAMELLO, #26 VACA", "resultado": "[20] COCHINO", "condicion": "🔴 PERDIDA", "total_bet": 500.0, "cobrado": 0.0, "pnl": -500.0, "saldo": 22100.0}, {"hora": "10:40 AM", "ruleta": "Gatazo", "candidatos": "#25 GALLINA [P:10/10], #33 PESCADO [P:10/10], #40 AVISPA [P:10/10], #41 CANGURO [P:10/10], #42 TUCÁN [P:10/10], #50 CANARIO [P:10/10], #55 OSOHRMIGUERO [P:10/10], #71 GUACAMAYA [P:10/10]", "resultado": "[50] CANARIO", "condicion": "🟢 GANADA", "total_bet": 8.0, "cobrado": 60.0, "pnl": 52.0, "saldo": 23246.0}, {"hora": "11:00 AM", "ruleta": "Lotto Activo", "candidatos": "#18 BURRO [P:9/10], #23 CEBRA [P:9/10], #27 PERRO [P:9/10], #34 VENADO [P:9/10], #6 RANA [P:9/10]", "resultado": "[34] VENADO", "condicion": "🟢 GANADA", "total_bet": 5.0, "cobrado": 30.0, "pnl": 25.0, "saldo": 23271.0}, {"hora": "12:00 PM", "ruleta": "Guacharo Activo", "candidatos": "#10 TIGRE [P:9/10], #3 CIEMPIÉS [P:9/10], #35 JIRAFA [P:9/10], #41 CANGURO [P:9/10], #58 HORMIGA [P:9/10], #60 CAMALEÓN [P:9/10], #61 PANDA [P:9/10], #62 CACHICAMO [P:9/10]", "resultado": "[00] BALLENA", "condicion": "🔴 PERDIDA", "total_bet": 8.0, "cobrado": 0.0, "pnl": -8.0, "saldo": 23236.0}, {"hora": "1:10 PM", "ruleta": "Lotto Gato", "candidatos": "#15 ZORRO [P:8/10]", "resultado": "[31] LAPA", "condicion": "🔴 PERDIDA", "total_bet": 1.0, "cobrado": 0.0, "pnl": -1.0, "saldo": 23235.0}, {"hora": "1:00 PM", "ruleta": "Lotto Activo", "candidatos": "#17 PAVO [P:7/10], #18 BURRO [P:7/10], #27 PERRO [P:7/10], #32 ARDILLA [P:7/10], #5 LEÓN [P:7/10], #8 RATÓN [P:7/10]", "resultado": "[24] IGUANA", "condicion": "🔴 PERDIDA", "total_bet": 6.0, "cobrado": 0.0, "pnl": -6.0, "saldo": 23229.0}, {"hora": "1:05 PM", "ruleta": "Monje Millonario", "candidatos": "#17 PAVO [P:9/10], #20 COCHINO [P:9/10], #30 CAIMÁN [P:9/10], #33 PESCADO [P:9/10], #34 VENADO [P:9/10], #43 MARIPOSA [P:9/10], #44 CHIGUIRE [P:9/10], #61 PANDA [P:9/10]", "resultado": "[43] MARIPOSA", "condicion": "🟢 GANADA", "total_bet": 8.0, "cobrado": 60.0, "pnl": 52.0, "saldo": 23281.0}, {"hora": "1:40 PM", "ruleta": "Gatazo", "candidatos": "#20 COCHINO [P:8/10], #4 ALACRÁN [P:8/10], #5 LEÓN [P:8/10], #60 CAMALEÓN [P:8/10], #7 PERICO [P:8/10]", "resultado": "[13] MONO", "condicion": "🔴 PERDIDA", "total_bet": 5.0, "cobrado": 0.0, "pnl": -5.0, "saldo": 23276.0}];
+    async function submitManualDraw() {
+      const rul = document.getElementById('manual-ruleta').value;
+      const num = document.getElementById('manual-num').value.trim();
+      const anim = document.getElementById('manual-anim').value.trim();
 
-    // 1. RECOLECTOR DE BASURA Y PURGA INICIAL DE STORAGE
-    function inicializarSistemaAutonomo() {
-      // Purgar claves viejas de versiones anteriores
-      const clavesViejas = ['ruletas_db', 'wallet_state', 'v1', 'v2', 'v3', 'v4', 'v5', 'v6', 'v7', 'v8', 'wallet_state_v9', 'sniper_master_v9', 'sniper_db_v10', 'wallet_v10'];
-      clavesViejas.forEach(k => localStorage.removeItem(k));
-
-      // Inicializar base de datos v10
-      if (!localStorage.getItem('sniper_db_v11')) {
-        localStorage.setItem('sniper_db_v11', JSON.stringify(SEED_DATA_V10));
-      }
-
-      // Inicializar billetera v10
-      if (!localStorage.getItem('wallet_v11')) {
-        const w = {
-          bankroll: 23276.0,
-          ledger: TODAY_LEDGER_INIT
-        };
-        localStorage.setItem('wallet_v11', JSON.stringify(w));
-      }
-
-      ejecutarEvaluacionCompleta();
-    }
-
-    // 2. MOTOR MATEMATICO INSTITUCIONAL EXACTO DE PYTHON
-    function calcularRachaYCandidatos(history, cfg) {
-      if (!history || history.length < 40) {
-        return { racha: 0, misses: 0, cands: [], ultimo_str: 'Sin datos', is_active: false };
-      }
-
-      const nums = history.map(r => String(r.numero).trim());
-      const dates = history.map(r => String(r.fecha).trim());
-      const lags = cfg.lags;
-      const rec_w = cfg.rec_w;
-      const use_anti = Boolean(cfg.anti_clustering);
-      const blacklist = new Set((cfg.blacklist || []).map(b => String(b).trim()));
-      const target_streaks = cfg.target_streaks || [1];
-
-      let streak = 0;
-      let trigger_misses = 0;
-      let cur_d = null;
-      let seen_today = new Set();
-      let prev_was_repeat = false;
-
-      const min_k = Math.max(Math.max(...lags), rec_w) + 1;
-
-      for (let i = min_k; i < nums.length; i++) {
-        const actual = nums[i];
-        const d = dates[i];
-
-        if (d !== cur_d) {
-          cur_d = d;
-          seen_today = new Set();
-          prev_was_repeat = false;
-        }
-
-        const rec_set = new Set(nums.slice(i - rec_w, i));
-        const raw_cands = [];
-        for (let l of lags) {
-          if (i - l >= 0) raw_cands.push(nums[i - l]);
-        }
-
-        const cands_set = new Set();
-        for (let c of raw_cands) {
-          if (!rec_set.has(c) && !blacklist.has(c)) {
-            cands_set.add(c);
-          }
-        }
-
-        const cands_arr = Array.from(cands_set).sort();
-        const skip_anti = (use_anti && prev_was_repeat);
-
-        if (cands_arr.length > 0 && !skip_anti) {
-          const hit = cands_set.has(actual);
-          if (target_streaks.includes(streak)) {
-            trigger_misses = hit ? 0 : trigger_misses + 1;
-          }
-          streak = hit ? 0 : streak + 1;
-        } else if (cands_arr.length > 0 && skip_anti) {
-          const hit = cands_set.has(actual);
-          streak = hit ? 0 : streak + 1;
-          if (target_streaks.includes(streak)) {
-            trigger_misses += 1;
-          }
-        }
-
-        const is_rep = seen_today.has(actual);
-        seen_today.add(actual);
-        prev_was_repeat = is_rep;
-      }
-
-      // Candidatos para el PROXIMO sorteo
-      const rec_set_now = new Set(nums.slice(-rec_w));
-      const raw_now = [];
-      for (let l of lags) {
-        if (nums.length >= l) raw_now.push(nums[nums.length - l]);
-      }
-
-      const cands_now_set = new Set();
-      for (let c of raw_now) {
-        if (!rec_set_now.has(c) && !blacklist.has(c)) {
-          cands_now_set.add(c);
-        }
-      }
-      const cands_final = Array.from(cands_now_set).sort();
-
-      const last_row = history[history.length - 1];
-      const ultimo_str = '#' + last_row.numero + ' ' + (last_row.animal || ANIMALES[last_row.numero] || '') + ' (' + last_row.hora + ')';
-
-      const is_anti_blocked = Boolean(use_anti && prev_was_repeat);
-      const is_active = target_streaks.includes(streak) && !is_anti_blocked && cands_final.length > 0;
-
-      return {
-        racha: streak,
-        misses: trigger_misses,
-        cands: is_anti_blocked ? [] : cands_final,
-        ultimo_str: ultimo_str,
-        is_active: is_active
-      };
-    }
-
-    // 3. EVALUACION Y RENDERIZADO REACTIVO
-    function ejecutarEvaluacionCompleta() {
-      const db = JSON.parse(localStorage.getItem('sniper_db_v11'));
-      const inminentesContainer = document.getElementById('inminentes-container');
-      const radarContainer = document.getElementById('radar-container');
-      
-      inminentesContainer.innerHTML = '';
-      radarContainer.innerHTML = '';
-
-      let activasCount = 0;
-
-      for (const [rName, cfg] of Object.entries(db)) {
-        const res = calcularRachaYCandidatos(cfg.history, cfg);
-
-        // A. Si esta activa, agregar a Disparos Inminentes
-        if (res.is_active) {
-          activasCount++;
-          const fichasCount = res.cands.length;
-          const costoTotal = fichasCount * 100.0;
-          const premioPotencial = 100.0 * cfg.payout;
-
-          const chipsHtml = res.cands.map(c => `
-            <span class="chip px-2.5 py-1 rounded-lg text-xs font-mono font-bold text-emerald-400">
-              #${c} ${ANIMALES[c] || ''}
-            </span>
-          `).join('');
-
-          inminentesContainer.innerHTML += `
-            <div class="glass-card glass-card-active rounded-2xl p-4">
-              <div class="flex justify-between items-start mb-2">
-                <div class="flex items-center space-x-2">
-                  <span class="text-2xl">${cfg.emoji || '🎯'}</span>
-                  <div>
-                    <h3 class="text-sm font-black text-white">${rName}</h3>
-                    <span class="text-[10px] text-emerald-400 font-bold animate-pulse">🚨 ¡DISPARAR AHORA!</span>
-                  </div>
-                </div>
-                <div class="text-right">
-                  <span class="text-xs font-black text-emerald-400 block">${cfg.payout}x Payout</span>
-                  <span class="text-[10px] text-slate-300 font-mono">Premio: Bs ${premioPotencial.toLocaleString('es-VE')}</span>
-                </div>
-              </div>
-
-              <div class="mt-3 pt-2 border-t border-emerald-500/20">
-                <div class="text-[10px] font-bold text-slate-400 mb-1.5 flex justify-between">
-                  <span>CANDIDATOS OFICIALES (${fichasCount} FICHAS - BS ${costoTotal.toLocaleString('es-VE')}):</span>
-                  <span class="text-slate-500">Racha ${res.racha} (Objetivo)</span>
-                </div>
-                <div class="flex flex-wrap gap-1.5">
-                  ${chipsHtml}
-                </div>
-              </div>
-
-              <div class="mt-3 pt-2 border-t border-slate-800/80 flex justify-between items-center text-[10px] text-slate-400">
-                <span>Ultimo: ${res.ultimo_str}</span>
-                <span class="text-emerald-400 font-mono font-bold">Apuesta Bs 100 c/u</span>
-              </div>
-            </div>
-          `;
-        }
-
-        // B. Renderizar en el Radar de las 7 Ruletas
-        const statusBadge = res.is_active 
-          ? `<span class="px-2 py-0.5 rounded text-[10px] font-black bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">🚨 ¡DISPARAR! (${res.cands.length})</span>`
-          : (res.racha === 0 
-              ? `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">⚠️ Falta 1 fallo</span>`
-              : `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-800 text-slate-400">⏳ Espera reinicio (${res.racha})</span>`);
-
-        radarContainer.innerHTML += `
-          <div class="glass-card rounded-xl px-3 py-2.5 flex items-center justify-between">
-            <div class="flex items-center space-x-2.5">
-              <span class="text-xl">${cfg.emoji || '🎯'}</span>
-              <div>
-                <h4 class="text-xs font-black text-white">${rName}</h4>
-                <p class="text-[10px] text-slate-400">${res.ultimo_str}</p>
-              </div>
-            </div>
-            <div class="text-right space-y-1">
-              ${statusBadge}
-              <div class="text-[9px] text-slate-500 font-mono">${cfg.payout}x | Racha ${res.racha}</div>
-            </div>
-          </div>
-        `;
-      }
-
-      document.getElementById('count-inminentes').innerText = activasCount + ' Activas';
-
-      if (activasCount === 0) {
-        inminentesContainer.innerHTML = `
-          <div class="glass-card rounded-2xl p-6 text-center text-slate-400">
-            <i data-lucide="shield-check" class="w-8 h-8 mx-auto mb-2 text-emerald-400 opacity-80"></i>
-            <p class="text-xs font-bold text-white">Radar en Monitoreo Preventivo</p>
-            <p class="text-[11px] text-slate-400 mt-0.5">No hay gatillos de racha activos en este instante. Capital protegido.</p>
-          </div>
-        `;
-      }
-
-      actualizarBilleteraYHistorial();
-      if (window.lucide) lucide.createIcons();
-    }
-
-    // 4. ACTUALIZAR HISTORIAL Y BILLETERA
-    function actualizarBilleteraYHistorial() {
-      const w = JSON.parse(localStorage.getItem('wallet_v11')) || { bankroll: 23276.0, ledger: [] };
-      const ledger = w.ledger || [];
-
-      let hits = 0;
-      let totInv = 0;
-      let totCob = 0;
-      for (let op of ledger) {
-        if (op.condicion && op.condicion.includes('GANADA')) hits++;
-        totInv += (op.total_bet || 0);
-        totCob += (op.cobrado || 0);
-      }
-
-      document.getElementById('hdr-ops').innerText = `${ledger.length} (${hits} Hits)`;
-      document.getElementById('hdr-inv').innerText = `Bs ${totInv.toLocaleString('es-VE', {minimumFractionDigits: 2})}`;
-      document.getElementById('hdr-cob').innerText = `Bs ${totCob.toLocaleString('es-VE', {minimumFractionDigits: 2})}`;
-      document.getElementById('hdr-saldo').innerText = `Bs ${(w.bankroll || 23276.0).toLocaleString('es-VE', {minimumFractionDigits: 2})}`;
-
-      const histContainer = document.getElementById('historial-container');
-      histContainer.innerHTML = '';
-
-      if (ledger.length === 0) {
-        histContainer.innerHTML = `
-          <div class="glass-card rounded-xl p-4 text-center text-slate-500 text-xs">
-            Aun no hay disparos ejecutados en la jornada de hoy.
-          </div>
-        `;
-      } else {
-        ledger.slice().reverse().forEach(op => {
-          const esGanada = op.condicion && op.condicion.includes('GANADA');
-          const borderClass = esGanada ? 'border-emerald-500/40 bg-emerald-950/20' : 'border-rose-900/30 bg-rose-950/10';
-          const badgeClass = esGanada ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30' : 'bg-rose-500/10 text-rose-400 border border-rose-500/20';
-          const pnlText = (op.pnl >= 0 ? '+' : '') + 'Bs ' + (op.pnl || 0).toLocaleString('es-VE', {minimumFractionDigits: 2});
-
-          histContainer.innerHTML += `
-            <div class="glass-card rounded-xl p-3 border ${borderClass}">
-              <div class="flex justify-between items-start mb-1">
-                <div class="flex items-center space-x-2">
-                  <span class="text-xs font-black text-white">${op.ruleta}</span>
-                  <span class="text-[10px] text-slate-400 font-mono">${op.hora}</span>
-                </div>
-                <span class="px-2 py-0.5 rounded text-[9px] font-black ${badgeClass}">${op.condicion}</span>
-              </div>
-              <div class="text-[11px] text-slate-300 mb-1">
-                Salio: <span class="font-black text-white">${op.resultado}</span>
-              </div>
-              <div class="text-[10px] text-slate-400 truncate mb-1.5">
-                Jugados: ${op.candidatos}
-              </div>
-              <div class="pt-1.5 border-t border-slate-800/80 flex justify-between items-center text-[10px] font-mono">
-                <span class="text-slate-400">Inv: Bs ${(op.total_bet || 0).toFixed(0)} | Cob: Bs ${(op.cobrado || 0).toFixed(0)}</span>
-                <span class="font-black ${esGanada ? 'text-emerald-400' : 'text-rose-400'}">${pnlText}</span>
-              </div>
-            </div>
-          `;
-        });
-      }
-    }
-
-    // 5. REGISTRO MANUAL DE SORTEO Y AUTO-LIQUIDACION DETERMINISTA
-    function procesarEntradaManual() {
-      const rName = document.getElementById('in-ruleta').value;
-      const hora = document.getElementById('in-hora').value.trim();
-      const num = document.getElementById('in-numero').value.trim();
-
-      if (!hora || !num) {
-        alert('Por favor introduce la hora y el numero salidos.');
+      if (!num) {
+        alert('Por favor escribe el número que salió.');
         return;
       }
 
-      const db = JSON.parse(localStorage.getItem('sniper_db_v11'));
-      if (!db[rName]) return;
-
-      const cfg = db[rName];
-      const resPrev = calcularRachaYCandidatos(cfg.history, cfg);
-      const w = JSON.parse(localStorage.getItem('wallet_v11'));
-
-      const animalName = ANIMALES[num] || 'ANIMAL';
-      const hoyStr = new Date().toISOString().split('T')[0];
-
-      // Si habia disparo activo en esa ruleta, LIQUIDAR APUESTA
-      if (resPrev.is_active && resPrev.cands.length > 0) {
-        const fichasCount = resPrev.cands.length;
-        const totalBet = fichasCount * 100.0;
-        const hit = resPrev.cands.includes(num);
-        const cobrado = hit ? (100.0 * cfg.payout) : 0.0;
-        const pnl = cobrado - totalBet;
-
-        w.bankroll = Math.round((w.bankroll + pnl) * 100) / 100;
-
-        const nuevaOp = {
-          hora: hora,
-          ruleta: rName,
-          candidatos: resPrev.cands.map(c => '#' + c + ' ' + (ANIMALES[c] || '')).join(', '),
-          resultado: `[${num}] ${animalName}`,
-          condicion: hit ? '🟢 GANADA' : '🔴 PERDIDA',
-          total_bet: totalBet,
-          cobrado: cobrado,
-          pnl: pnl,
-          saldo: w.bankroll
-        };
-
-        if (!w.ledger) w.ledger = [];
-        w.ledger.push(nuevaOp);
-        localStorage.setItem('wallet_v11', JSON.stringify(w));
-      }
-
-      // Incorporar sorteo al historial de la ruleta
-      cfg.history.push({
-        fecha: hoyStr,
-        hora: hora,
-        numero: num,
-        animal: animalName
-      });
-
-      // Guardar base de datos
-      localStorage.setItem('sniper_db_v11', JSON.stringify(db));
-
-      cerrarModalEntrada();
-      document.getElementById('in-numero').value = '';
-      document.getElementById('in-hora').value = '';
-      document.getElementById('animal-preview').innerText = '';
-
-      ejecutarEvaluacionCompleta();
-    }
-
-    function borrarHistorialHoy() {
-      if (confirm('¿Deseas reiniciar el libro contable de hoy en el celular?')) {
-        const w = JSON.parse(localStorage.getItem('wallet_v11')) || {};
-        w.ledger = [];
-        localStorage.setItem('wallet_v11', JSON.stringify(w));
-        actualizarBilleteraYHistorial();
-      }
-    }
-
-    // MODAL HELPERS
-    function abrirModalEntrada() {
-      document.getElementById('modal-entrada').classList.remove('hidden');
-      document.getElementById('modal-entrada').classList.add('flex');
-    }
-    function cerrarModalEntrada() {
-      document.getElementById('modal-entrada').classList.add('hidden');
-      document.getElementById('modal-entrada').classList.remove('flex');
-    }
-
-    // AUTO-COMPLETAR ANIMALITO AL ESCRIBIR NUMERO
-    document.getElementById('in-numero').addEventListener('input', function(e) {
-      const val = e.target.value.trim();
-      const prev = document.getElementById('animal-preview');
-      if (ANIMALES[val]) {
-        prev.innerText = '-> ' + ANIMALES[val];
-      } else {
-        prev.innerText = '';
-      }
-    });
-
-    // RELOJ EN TIEMPO REAL
-    setInterval(() => {
-      const now = new Date();
-      const r = document.getElementById('reloj-header');
-      if (r) r.innerText = now.toLocaleTimeString('es-VE');
-    }, 1000);
-
-    // INICIAR AL CARGAR
-    window.addEventListener('DOMContentLoaded', inicializarSistemaAutonomo);
-  
-    // ==========================================
-    // AUTO-SYNC 24/7 VIA GITHUB ACTIONS CLOUD
-    // ==========================================
-    const GITHUB_API_URL = 'https://api.github.com/repos/victorcsp22-star/sniper-ruletas/contents/app_movil/static/live_radar.json';
-    const GITHUB_RAW_URL = 'https://raw.githubusercontent.com/victorcsp22-star/sniper-ruletas/main/app_movil/static/live_radar.json?t=';
-
-    async function sincronizarConGitHubCloud() {
       try {
-        const res = await fetch(GITHUB_API_URL, { headers: { 'Accept': 'application/vnd.github.v3.raw' } });
-        if (res.ok) {
-          const radar = await res.json();
-          renderizarRadarRemoto(radar);
-          return;
+        const resp = await fetch('/api/ingresar_sorteo', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ ruleta: rul, numero: num, animal: anim })
+        });
+        const res = await resp.json();
+        if (res.status === 'ok') {
+          toggleModalManual();
+          document.getElementById('manual-num').value = '';
+          document.getElementById('manual-anim').value = '';
+          loadTacticalStatus();
+        } else {
+          alert('Error: ' + res.message);
         }
-      } catch (e) {}
-
-      try {
-        const res2 = await fetch(GITHUB_RAW_URL + Date.now());
-        if (res2.ok) {
-          const radar2 = await res2.json();
-          renderizarRadarRemoto(radar2);
-        }
-      } catch (e2) {}
-    }
-
-    function renderizarRadarRemoto(radar) {
-      const container = document.getElementById('radar-container');
-      const inminentes = document.getElementById('inminentes-container');
-      if (!container || !inminentes) return;
-
-      let actHtml = '';
-      let radHtml = '';
-      let actCount = 0;
-
-      for (const [rName, rData] of Object.entries(radar)) {
-        const cands = rData.candidatos || rData.cands || [];
-        if (rData.is_active && cands.length > 0) {
-          actCount++;
-          const chips = cands.map(c => '<span class="chip px-3 py-1.5 rounded-xl text-xs font-mono font-black text-amber-400 border border-amber-500/20 shadow-sm">#' + (c.numero || c.num) + ' ' + c.animal + '</span>').join('');
-          actHtml += '<div class="glass-card glass-card-active rounded-2xl p-4 border border-emerald-500/40 relative overflow-hidden">' +
-            '<div class="flex items-center justify-between mb-3">' +
-              '<div class="flex items-center space-x-2.5"><span class="text-2xl">' + (rData.emoji || '🎯') + '</span>' +
-                '<div><h3 class="text-sm font-black text-slate-100">' + rName + '</h3>' +
-                  '<span class="text-[10px] text-emerald-400 font-bold flex items-center space-x-1"><span>🚨 ¡DISPARAR AHORA!</span></span>' +
-                '</div>' +
-              '</div>' +
-              '<div class="text-right"><span class="text-xs font-black font-mono text-emerald-400">' + rData.payout + 'x Payout</span>' +
-                '<span class="text-[10px] text-slate-400 block">Premio: Bs ' + (100 * rData.payout).toLocaleString('es-VE') + '</span>' +
-              '</div>' +
-            '</div>' +
-            '<div class="bg-slate-950/60 rounded-xl p-3 border border-emerald-500/20">' +
-              '<div class="flex items-center justify-between mb-2">' +
-                '<span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Candidatos Oficiales (' + cands.length + ' fichas - Bs ' + (cands.length * 100) + '):</span>' +
-                '<span class="text-[10px] font-bold text-amber-400">Racha ' + rData.racha + ' (Objetivo)</span>' +
-              '</div>' +
-              '<div class="flex flex-wrap gap-1.5">' + chips + '</div>' +
-            '</div>' +
-            '<div class="mt-3 pt-2.5 border-t border-slate-800/80 flex items-center justify-between text-[11px]">' +
-              '<span class="text-slate-400">Último: <strong class="text-slate-200 font-mono">' + (rData.ultimo_str || '') + '</strong></span>' +
-              '<span class="text-emerald-400 font-mono font-bold">Apuesta Bs 100 c/u</span>' +
-            '</div>' +
-          '</div>';
-        }
-
-        const statusBadge = rData.is_active 
-          ? '<span class="px-2 py-0.5 rounded text-[10px] font-black bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">🚨 ¡DISPARAR! (' + cands.length + ')</span>'
-          : (rData.racha === 0 
-              ? '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">⚠️ Falta 1 fallo</span>'
-              : '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-800 text-slate-400">⏳ Espera reinicio (' + rData.racha + ')</span>');
-
-        radHtml += '<div class="glass-card rounded-xl p-3 flex items-center justify-between hover:border-slate-700 transition">' +
-          '<div class="flex items-center space-x-3"><span class="text-2xl">' + (rData.emoji || '🎯') + '</span>' +
-            '<div><h4 class="text-xs font-bold text-slate-200">' + rName + '</h4>' +
-              '<span class="text-[10px] text-slate-400 font-mono">' + (rData.ultimo_str || 'En radar') + '</span>' +
-            '</div>' +
-          '</div>' +
-          '<div class="text-right flex flex-col items-end space-y-1">' +
-            statusBadge +
-            '<span class="text-[10px] text-slate-500 font-mono">' + rData.payout + 'x | Racha ' + rData.racha + '</span>' +
-          '</div>' +
-        '</div>';
+      } catch (err) {
+        alert('Error al registrar sorteo offline: ' + err);
       }
-
-      container.innerHTML = radHtml;
-      inminentes.innerHTML = actCount > 0 ? actHtml : '<div class="glass-card rounded-2xl p-5 text-center border-dashed border-slate-800"><p class="text-xs text-slate-400 font-medium">Todas las ruletas en fase de observación o espera.</p></div>';
-      const countBadge = document.getElementById('activas-count');
-      if (countBadge) countBadge.innerText = actCount + ' Activas';
-      if (window.lucide) lucide.createIcons();
     }
+  </script>
 
-    window.addEventListener('load', () => {
-      sincronizarConGitHubCloud();
-      setInterval(sincronizarConGitHubCloud, 30000);
-    });
-
-</script>
 </body>
 </html>
