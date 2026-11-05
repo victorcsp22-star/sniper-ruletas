@@ -1,5 +1,5 @@
 {
-  "bankroll": -161.0,
+  "bankroll": -961.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 734.0,
   "peak_bankroll": 240.0,
@@ -54,29 +54,29 @@
     "Monje Millonario": "2026-10-30 2:05 PM"
   },
   "pending_bets": {
-    "Monje Millonario": {
-      "ruleta": "Monje Millonario",
+    "Gatazo": {
+      "ruleta": "Gatazo",
       "candidatos": [
-        "14",
-        "17",
-        "28",
-        "30",
-        "57",
-        "58",
-        "6",
-        "71"
+        "13",
+        "2",
+        "27",
+        "29",
+        "33",
+        "39",
+        "52",
+        "8"
       ],
-      "candidatos_str": "#14 PALOMA [P:8/10], #17 PAVO [P:8/10], #28 ZAMURO [P:8/10], #30 CAIMÁN [P:8/10], #57 PATO [P:8/10], #58 HORMIGA [P:8/10], #6 RANA [P:8/10], #71 GUACAMAYA [P:8/10]",
+      "candidatos_str": "#13 MONO [P:9/10], #2 TORO [P:9/10], #27 PERRO [P:9/10], #29 ELEFANTE [P:9/10], #33 PESCADO [P:9/10], #39 LECHUZA [P:9/10], #52 PULPO [P:9/10], #8 RATÓN [P:9/10]",
       "total_cands": 8,
       "stake_unit": 100.0,
       "total_stake": 800.0,
       "posible_premio": 6000.0,
       "payout": 60.0,
-      "peso_agente": 8,
-      "peso_label": "P:8/10",
-      "smart_label": "🎯 Canasta Rezagados [P:8/10]",
-      "last_salido_str": "#1 CARNERO (7:05 PM)",
-      "created_at": "2026-11-05 01:05:57 AM"
+      "peso_agente": 9,
+      "peso_label": "P:9/10",
+      "smart_label": "🎯 Canasta Rezagados [P:9/10]",
+      "last_salido_str": "#51 PELICANO (11:40 AM)",
+      "created_at": "2026-11-05 04:05:35 PM"
     }
   },
   "effective_kelly": 0.3594,
