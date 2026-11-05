@@ -1,5 +1,5 @@
 {
-  "bankroll": -961.0,
+  "bankroll": -1761.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 734.0,
   "peak_bankroll": 240.0,
@@ -54,29 +54,24 @@
     "Monje Millonario": "2026-10-30 2:05 PM"
   },
   "pending_bets": {
-    "Gatazo": {
-      "ruleta": "Gatazo",
+    "Mega Animal 40": {
+      "ruleta": "Mega Animal 40",
       "candidatos": [
-        "13",
-        "2",
+        "16",
         "27",
-        "29",
-        "33",
-        "39",
-        "52",
-        "8"
+        "28"
       ],
-      "candidatos_str": "#13 MONO [P:9/10], #2 TORO [P:9/10], #27 PERRO [P:9/10], #29 ELEFANTE [P:9/10], #33 PESCADO [P:9/10], #39 LECHUZA [P:9/10], #52 PULPO [P:9/10], #8 RATÓN [P:9/10]",
-      "total_cands": 8,
+      "candidatos_str": "#16 OSO [P:8/10], #27 PERRO [P:8/10], #28 ZAMURO [P:8/10]",
+      "total_cands": 3,
       "stake_unit": 100.0,
-      "total_stake": 800.0,
-      "posible_premio": 6000.0,
-      "payout": 60.0,
-      "peso_agente": 9,
-      "peso_label": "P:9/10",
-      "smart_label": "🎯 Canasta Rezagados [P:9/10]",
-      "last_salido_str": "#51 PELICANO (11:40 AM)",
-      "created_at": "2026-11-05 04:05:35 PM"
+      "total_stake": 300.0,
+      "posible_premio": 3000.0,
+      "payout": 30.0,
+      "peso_agente": 8,
+      "peso_label": "P:8/10",
+      "smart_label": "🎯 Canasta Rezagados [P:8/10]",
+      "last_salido_str": "#34 VENADO (7:00 PM)",
+      "created_at": "2026-11-05 11:47:25 PM"
     }
   },
   "effective_kelly": 0.3594,
