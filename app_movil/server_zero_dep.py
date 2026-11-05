@@ -57,90 +57,137 @@ DEFAULT_BANKROLL = 20000.0
 QUARANTINE_MISSES = 20
 
 RULETAS = {
-    "Lotto Gato": {
-        "file": os.path.join(ROOT_DIR, "lotto_gato.csv"),
-        "title": "Lotto Gato",
-        "lags": [18, 38, 14, 25, 30, 35, 40, 45],
-        "target_streaks": [1, 2],
-        "wr_optimos": [1, 2],
-        "rec_w": 6,
-        "anti_clustering": False,
-        "blacklist": [],
-        "payout": 60.0,
-        "emoji": "🐱"
-    },
-    "Loto Chaima": {
-        "file": os.path.join(ROOT_DIR, "loto_chaima.csv"),
-        "title": "Loto Chaima",
-        "lags": [49, 41, 35, 56, 61, 66, 71, 76],
-        "target_streaks": [0, 1],
-        "wr_optimos": [0, 1],
-        "rec_w": 6,
-        "anti_clustering": False,
-        "blacklist": [],
-        "payout": 60.0,
-        "emoji": "🦜"
-    },
-    "Guacharo Activo": {
-        "file": os.path.join(ROOT_DIR, "data_vz", "guacharo_activo_2anios.csv"),
-        "title": "Guacharo",
-        "lags": [31, 54, 41, 38, 43, 48, 53, 58],
-        "target_streaks": [1, 3],
-        "wr_optimos": [1, 3, 6],
+    "Mega Animal 40": {
+        "file": os.path.join(ROOT_DIR, "mega_animal_40.csv"),
+        "title": "Mega Animal 40",
+        "lags": [18, 21, 22, 20, 43, 46],
+        "target_streaks": [1, 2, 3],
+        "wr_optimos": [1, 2, 3],
         "rec_w": 8,
         "anti_clustering": False,
-        "blacklist": ["75"],
-        "payout": 60.0,
-        "emoji": "🦇"
-    },
-    "Ruleta Royal": {
-        "file": os.path.join(ROOT_DIR, "data_vz", "ruleta_royal_2anios.csv"),
-        "title": "Ruleta Royal",
-        "lags": [19, 16, 31, 26, 31, 36, 41, 46],
-        "target_streaks": [1],
-        "wr_optimos": [0, 1, 6],
-        "rec_w": 6,
-        "anti_clustering": True,
-        "blacklist": [],
+        "blacklist": ["4"],
+        "markov_snipers": {"30": "0", "11": "0", "32": "35"},
+        "mirror_pairs": {"11": "00", "12": "21", "13": "31", "23": "32"},
         "payout": 30.0,
-        "emoji": "👑"
+        "emoji": "🦏"
     },
     "Gatazo": {
         "file": os.path.join(ROOT_DIR, "gatazo.csv"),
         "title": "Gatazo",
-        "lags": [35, 9, 20, 42, 47, 52, 57, 62],
-        "target_streaks": [1],
-        "wr_optimos": [0, 1, 3],
+        "lags": [35, 22, 20, 9],
+        "target_streaks": [1, 2],
+        "wr_optimos": [1, 2],
         "rec_w": 6,
         "anti_clustering": False,
         "blacklist": ["11"],
+        "markov_snipers": {"30": "63", "48": "21", "23": "42"},
+        "mirror_pairs": {"12": "21", "13": "31", "24": "42", "34": "43"},
         "payout": 60.0,
         "emoji": "🐯"
-    },
-    "Lotto Activo": {
-        "file": os.path.join(ROOT_DIR, "data_vz", "lotto_activo_2anios.csv"),
-        "title": "Lotto Activo",
-        "lags": [20, 18, 15, 27, 32, 37, 42, 47],
-        "target_streaks": [1, 2],
-        "wr_optimos": [0, 1, 2],
-        "rec_w": 6,
-        "anti_clustering": True,
-        "blacklist": [],
-        "payout": 30.0,
-        "emoji": "🦁"
     },
     "Monje Millonario": {
         "file": os.path.join(ROOT_DIR, "monje_millonario.csv"),
         "title": "Monje Millonario",
-        "lags": [24, 42, 48, 31, 36, 41, 46, 51],
+        "lags": [24, 42, 52, 51, 48, 35, 23, 44],
         "target_streaks": [0, 1],
         "wr_optimos": [0, 1],
         "rec_w": 6,
         "anti_clustering": False,
         "blacklist": ["75"],
+        "markov_snipers": {},
+        "mirror_pairs": {"24": "42"},
         "payout": 60.0,
         "emoji": "🧘"
+    },
+    "Lotto Activo": {
+        "file": os.path.join(ROOT_DIR, "data_vz", "lotto_activo_2anios.csv"),
+        "title": "Lotto Activo",
+        "lags": [20, 18, 19, 14, 15, 55],
+        "target_streaks": [1, 2],
+        "wr_optimos": [1, 2],
+        "rec_w": 6,
+        "anti_clustering": True,
+        "blacklist": [],
+        "markov_snipers": {"14": "0", "31": "0", "6": "0"},
+        "mirror_pairs": {"12": "21", "13": "31", "23": "32", "0": "00"},
+        "payout": 30.0,
+        "emoji": "🦁"
+    },
+    "Ruleta Royal": {
+        "file": os.path.join(ROOT_DIR, "data_vz", "ruleta_royal_2anios.csv"),
+        "title": "Ruleta Royal",
+        "lags": [16, 19, 31],
+        "target_streaks": [1],
+        "wr_optimos": [1],
+        "rec_w": 6,
+        "anti_clustering": True,
+        "blacklist": [],
+        "markov_snipers": {"25": "22", "8": "27"},
+        "mirror_pairs": {"12": "21", "13": "31", "23": "32"},
+        "payout": 30.0,
+        "emoji": "👑"
+    },
+    "Guacharo Activo": {
+        "file": os.path.join(ROOT_DIR, "data_vz", "guacharo_activo_2anios.csv"),
+        "title": "Guacharo",
+        "lags": [41, 54, 31, 52, 42, 25, 35, 21],
+        "target_streaks": [1, 3],
+        "wr_optimos": [1, 3],
+        "rec_w": 8,
+        "anti_clustering": False,
+        "blacklist": ["75"],
+        "markov_snipers": {"21": "0", "8": "67", "29": "2"},
+        "mirror_pairs": {"12": "21", "13": "31", "14": "41", "23": "32"},
+        "payout": 60.0,
+        "emoji": "🦇"
+    },
+    "Lotto Gato": {
+        "file": os.path.join(ROOT_DIR, "lotto_gato.csv"),
+        "title": "Lotto Gato",
+        "lags": [18, 38, 16],
+        "target_streaks": [1, 2],
+        "wr_optimos": [1, 2],
+        "rec_w": 8,
+        "anti_clustering": True,
+        "blacklist": [],
+        "markov_snipers": {"14": "0", "27": "15", "3": "7"},
+        "mirror_pairs": {"0": "00", "1": "10", "2": "20", "3": "30", "4": "40"},
+        "payout": 30.0,
+        "emoji": "🐱"
+    },
+    "Granja Millonaria - Granjazo": {
+        "file": os.path.join(ROOT_DIR, "granja_millonaria_granjazo.csv"),
+        "title": "Granjazo",
+        "lags": [15, 48, 45, 26],
+        "target_streaks": [1],
+        "wr_optimos": [1],
+        "rec_w": 6,
+        "anti_clustering": False,
+        "blacklist": [],
+        "markov_snipers": {},
+        "mirror_pairs": {"15": "51", "26": "62"},
+        "payout": 60.0,
+        "emoji": "🚜"
     }
+}
+
+ANIMALS_MASTER = {
+    "0": "DELFÍN", "00": "BALLENA", "1": "CARNERO", "2": "TORO", "3": "CIEMPIÉS",
+    "4": "ALACRÁN", "5": "LEÓN", "6": "RANA", "7": "PERICO", "8": "RATÓN",
+    "9": "ÁGUILA", "10": "TIGRE", "11": "GATO", "12": "CABALLO", "13": "MONO",
+    "14": "PALOMA", "15": "ZORRO", "16": "OSO", "17": "PAVO", "18": "BURRO",
+    "19": "CHIVO", "20": "COCHINO", "21": "GALLO", "22": "CAMELLO", "23": "CEBRA",
+    "24": "IGUANA", "25": "GALLINA", "26": "VACA", "27": "PERRO", "28": "ZAMURO",
+    "29": "ELEFANTE", "30": "CAIMÁN", "31": "LAPA", "32": "ARDILLA", "33": "PESCADO",
+    "34": "VENADO", "35": "JIRAFA", "36": "CULEBRA", "37": "TORTUGA", "38": "BÚFALO",
+    "39": "LECHUZA", "40": "AVISPA", "41": "CANGURO", "42": "TUCÁN", "43": "MARIPOSA",
+    "44": "CHIGÜIRE", "45": "GARZA", "46": "PUMA", "47": "PAVO REAL", "48": "PUERCOESPÍN",
+    "49": "PEREZA", "50": "CANARIO", "51": "PELICANO", "52": "PULPO", "53": "CARACOL",
+    "54": "GRILLO", "55": "OSO HORMIGUERO", "56": "TIBURÓN", "57": "PATO", "58": "HORMIGA",
+    "59": "PANTERA", "60": "CAMALEÓN", "61": "COLIBRÍ", "62": "CACHICAMO", "63": "CANGREJO",
+    "64": "GAVILÁN", "65": "ARAÑA", "66": "LOBO", "67": "AVESTRUZ", "68": "JAGUAR",
+    "69": "CONEJO", "70": "BISONTE", "71": "GUACAMAYA", "72": "GORILA", "73": "HIPOPÓTAMO",
+    "74": "TURPIAL", "75": "CODORNIZ", "76": "MANTIS"
 }
 
 
@@ -163,7 +210,8 @@ def read_csv_series(fpath):
             
             for r in reader:
                 if len(r) > max(f_idx, h_idx, n_idx):
-                    num = str(r[n_idx]).strip().lstrip("0") or "0"
+                    raw_n = str(r[n_idx]).strip()
+                    num = raw_n if raw_n in ("00", "0") else (raw_n.lstrip("0") or "0")
                     anim = str(r[a_idx]).strip() if len(r) > a_idx else ""
                     rows.append({
                         "fecha": str(r[f_idx]).strip(),
@@ -294,15 +342,44 @@ def get_current_streaks(r_name):
     day_nums = [nums[j] for j in range(len(nums)) if dates[j] == last_date]
     is_anti_blocked = bool(use_anti and len(day_nums) >= 2 and day_nums[-1] in day_nums[:-1])
 
-    cands = cands_lag_now if not is_anti_blocked else []
-
-    cands_formatted = [{"numero": c, "animal": animals.get(c, "")} for c in cands]
     last_row = rows[-1]
     last_str = f"#{last_row['numero']} {last_row['animal']} ({last_row['hora']})"
+    last_num_str = str(last_row["numero"]).strip()
+
+    # Comprobar Markov Sniper & Espejo Sniper
+    is_markov = False
+    is_mirror = False
+    markov_snipers = cfg.get("markov_snipers", {})
+    mirror_pairs = cfg.get("mirror_pairs", {})
+
+    if last_num_str in markov_snipers:
+        target_num = str(markov_snipers[last_num_str]).strip()
+        if target_num not in rec_set_now and target_num not in blacklist:
+            is_markov = True
+            cands = [target_num]
+            anim_name = ANIMALS_MASTER.get(target_num, animals.get(target_num, "OBJETIVO"))
+            cands_formatted = [{"numero": target_num, "animal": anim_name}]
+        else:
+            cands = cands_lag_now if not is_anti_blocked else []
+            cands_formatted = [{"numero": c, "animal": ANIMALS_MASTER.get(c, animals.get(c, ""))} for c in cands]
+    elif last_num_str in mirror_pairs and not cands_lag_now:
+        target_num = str(mirror_pairs[last_num_str]).strip()
+        if target_num not in rec_set_now and target_num not in blacklist:
+            is_mirror = True
+            cands = [target_num]
+            anim_name = ANIMALS_MASTER.get(target_num, animals.get(target_num, "ESPEJO"))
+            cands_formatted = [{"numero": target_num, "animal": anim_name}]
+        else:
+            cands = cands_lag_now if not is_anti_blocked else []
+            cands_formatted = [{"numero": c, "animal": ANIMALS_MASTER.get(c, animals.get(c, ""))} for c in cands]
+    else:
+        cands = cands_lag_now if not is_anti_blocked else []
+        cands_formatted = [{"numero": c, "animal": ANIMALS_MASTER.get(c, animals.get(c, ""))} for c in cands]
 
     return streak, trigger_misses, {
         "cands": cands_formatted,
-        "is_markov": False,
+        "is_markov": is_markov,
+        "is_mirror": is_mirror,
         "is_anti_blocked": is_anti_blocked,
         "last_str": last_str,
         "last_num": last_row["numero"],
@@ -326,6 +403,7 @@ def fetch_tuazar_html():
         os.path.join(this_dir, "curl_static"),
         os.path.join(ROOT_DIR, "curl_static"),
         os.path.join(STATIC_DIR, "curl_static"),
+        "/data/data/com.termux/files/usr/bin/curl",
         "/data/data/com.termux/files/home/sniper/curl_static",
         "/data/data/com.termux/files/home/curl_static",
         "./curl_static"
@@ -333,7 +411,7 @@ def fetch_tuazar_html():
 
     valid_curl = None
     for cp in c_paths:
-        if os.path.exists(cp) and os.path.getsize(cp) > 1000000:
+        if os.path.exists(cp) and (os.path.getsize(cp) > 1000000 or "usr/bin/curl" in cp):
             valid_curl = cp
             try:
                 os.chmod(cp, 0o777)
@@ -356,18 +434,18 @@ def fetch_tuazar_html():
             except Exception:
                 pass
 
-        # 2. Windows PC (curl.exe nativo)
-        if sys.platform == "win32":
-            try:
-                res = subprocess.run(
-                    ["curl.exe", "-k", "-s", "-L", "--connect-timeout", "6", "-m", "10", "-A", ua, url],
-                    capture_output=True,
-                    timeout=12
-                )
-                if res.returncode == 0 and len(res.stdout) > 2000:
-                    return res.stdout.decode("utf-8", errors="ignore")
-            except Exception:
-                pass
+        # 2. curl en PATH del sistema (Windows o Termux/Linux)
+        curl_cmd = "curl.exe" if sys.platform == "win32" else "curl"
+        try:
+            res = subprocess.run(
+                [curl_cmd, "-k", "-s", "-L", "--connect-timeout", "6", "-m", "10", "-A", ua, url],
+                capture_output=True,
+                timeout=12
+            )
+            if res.returncode == 0 and len(res.stdout) > 2000:
+                return res.stdout.decode("utf-8", errors="ignore")
+        except Exception:
+            pass
 
         # 3. urllib estándar si la librería SSL no está dañada
         try:
@@ -647,15 +725,18 @@ def evaluate_and_update_all_pure(live_data):
                 print(f"[+] 🎯 JUGADA REGISTRADA AUTOMÁTICAMENTE: {r_name} {hora_res} -> {row_dict['condicion']} (PnL: {pnl})")
 
     # Reevaluar señales inminentes para la siguiente ronda
+    color_bubbles = get_30d_color_bubbles(30)
     for r_name, cfg in RULETAS.items():
         stk, miss, info = get_current_streaks(r_name)
-        is_markov = False
+        is_markov = info.get("is_markov", False)
         is_anti = info.get("is_anti_blocked", False)
         cands = info.get("cands", [])
         target_streaks = cfg.get("target_streaks", [1])
+        burbuja = color_bubbles.get(r_name, {"stake": 1.00})
 
         is_quar = bool(QUARANTINE_MISSES > 0 and miss >= QUARANTINE_MISSES)
-        if (stk in target_streaks and not is_anti and not is_quar):
+        is_mirror = info.get("is_mirror", False)
+        if ((stk in target_streaks or is_markov or is_mirror) and not is_anti and not is_quar):
             if cands and r_name not in state["pending_bets"]:
                 cands_nums = [str(c["numero"]) for c in cands]
                 p_ag, p_lbl = calcular_peso_agente_pure(r_name, stk, miss)
@@ -770,6 +851,81 @@ def sync_from_pc():
     pass
 
 
+def get_30d_color_bubbles(days_window=30):
+    """Calcula dinámicamente el rendimiento a 30 días de cada ruleta y asigna burbujas de color y stake."""
+    cutoff = datetime.datetime.now() - datetime.timedelta(days=days_window)
+    perf = {}
+    for r_name, cfg in RULETAS.items():
+        fpath = cfg.get("file", "")
+        if not os.path.exists(fpath):
+            fpath = get_ruleta_filepath(r_name)
+        if not os.path.exists(fpath):
+            continue
+        try:
+            records = read_csv_series(fpath)
+            lags = cfg["lags"]
+            rec_w = cfg["rec_w"]
+            anti_clust = cfg.get("anti_clustering", False)
+            payout = cfg["payout"]
+            streaks = cfg.get("target_streaks", [1])
+            
+            streak = 0
+            cost = 0.0
+            rev = 0.0
+            seen_today = set()
+            last_f = None
+            prev_rep = False
+            
+            min_i = max(lags) + rec_w
+            for i in range(min_i, len(records)):
+                rec = records[i]
+                dt_str = rec.get("fecha", "") + " " + rec.get("hora", "")
+                try:
+                    dt = datetime.datetime.strptime(dt_str, "%Y-%m-%d %I:%M %p")
+                except Exception:
+                    continue
+                f = rec.get("fecha", "")
+                act = rec.get("numero", "")
+                if f != last_f:
+                    seen_today = set()
+                    last_f = f
+                    prev_rep = False
+                
+                recent_window = [r["numero"] for r in records[i-rec_w:i]]
+                rec_set = set(recent_window)
+                raw = [records[i-l]["numero"] for l in lags if i>=l]
+                cands = sorted(list(set(raw) - rec_set))
+                cnt = len(cands)
+                is_rep = (act in seen_today)
+                skip = (anti_clust and prev_rep)
+                hit = (act in cands) if cnt > 0 else False
+                
+                if dt >= cutoff and cnt > 0 and not skip:
+                    if streak in streaks:
+                        cost += cnt
+                        if hit:
+                            rev += payout
+                    streak = 0 if hit else streak + 1
+                elif cnt > 0 and skip:
+                    streak = 0 if hit else streak + 1
+                seen_today.add(act)
+                prev_rep = is_rep
+            perf[r_name] = rev - cost
+        except Exception:
+            perf[r_name] = 0.0
+            
+    sorted_r = sorted(perf.items(), key=lambda x: x[1], reverse=True)
+    tiers = {}
+    for rank, (r, pnl_val) in enumerate(sorted_r, 1):
+        if rank <= 3:
+            tiers[r] = {"rank": rank, "color": "VERDE", "emoji": "🟢", "stake": 1.50, "pnl_30d": round(pnl_val, 2), "color_hex": "#10b981", "badge": "🟢 $1.50"}
+        elif rank <= 5:
+            tiers[r] = {"rank": rank, "color": "AMARILLO", "emoji": "🟡", "stake": 1.00, "pnl_30d": round(pnl_val, 2), "color_hex": "#f59e0b", "badge": "🟡 $1.00"}
+        else:
+            tiers[r] = {"rank": rank, "color": "ROJO", "emoji": "🔴", "stake": 0.50, "pnl_30d": round(pnl_val, 2), "color_hex": "#ef4444", "badge": "🔴 $0.50"}
+    return tiers
+
+
 class SniperHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=STATIC_DIR, **kwargs)
@@ -822,8 +978,55 @@ class SniperHandler(SimpleHTTPRequestHandler):
             self.handle_api_sync()
         elif self.path == "/api/ingresar_sorteo":
             self.handle_api_ingresar_sorteo()
+        elif self.path == "/api/clear_today_ledger":
+            self.handle_api_clear_today_ledger()
         else:
             self.send_error(404, "Endpoint no encontrado")
+
+    def handle_api_clear_today_ledger(self):
+        """Elimina y archiva el registro de jugadas del día para no saturar la pantalla ni la memoria."""
+        try:
+            today_str = datetime.date.today().strftime("%Y-%m-%d")
+            lpath = get_ledger_write_path()
+            removed_count = 0
+            if os.path.exists(lpath):
+                archive_path = os.path.join(ROOT_DIR, "ledger_archive.csv")
+                with open(lpath, "r", encoding="utf-8", errors="ignore") as f:
+                    lines = f.readlines()
+                
+                if lines:
+                    header = lines[0]
+                    kept_lines = [header]
+                    archived_lines = []
+                    for line in lines[1:]:
+                        if line.startswith(today_str):
+                            archived_lines.append(line)
+                            removed_count += 1
+                        else:
+                            kept_lines.append(line)
+                    
+                    if archived_lines:
+                        file_exists = os.path.exists(archive_path) and os.path.getsize(archive_path) > 0
+                        with open(archive_path, "a", encoding="utf-8") as af:
+                            if not file_exists:
+                                af.write(header)
+                            af.writelines(archived_lines)
+                    
+                    with open(lpath, "w", encoding="utf-8") as f:
+                        f.writelines(kept_lines)
+            
+            state = load_state_pure()
+            state["last_ledger_purge"] = datetime.datetime.now().strftime("%Y-%m-%d %I:%M:%S %p")
+            save_state_pure(state)
+            
+            self.send_json_response({
+                "status": "ok", 
+                "message": f"Registro diario vaciado con éxito ({removed_count} operaciones archivadas en el historial).",
+                "removed_count": removed_count
+            })
+        except Exception as e:
+            self.send_json_response({"status": "error", "message": str(e)}, 500)
+
 
     def handle_api_ingresar_sorteo(self):
         """Permite ingresar un resultado manualmente en 0.001s cuando no hay internet."""
@@ -851,6 +1054,10 @@ class SniperHandler(SimpleHTTPRequestHandler):
             self.send_json_response({"status": "error", "message": str(e)}, 500)
 
 
+    
+
+
+
     def handle_api_status(self):
         try:
             sync_from_pc()
@@ -868,11 +1075,16 @@ class SniperHandler(SimpleHTTPRequestHandler):
 
             active_signals = []
             radar_items = []
+            color_bubbles = get_30d_color_bubbles(30)
 
             # 1. Incluir primero las apuestas pendientes que ya están en el estado
             state = load_state_pure()
             for r_name, pb in state.get("pending_bets", {}).items():
                 cfg = RULETAS.get(r_name, {})
+                burbuja = color_bubbles.get(r_name, {
+                    "color": "AMARILLO", "emoji": "🟡", "stake": 1.00, "rank": 4, 
+                    "badge": "🟡 $1.00", "pnl_30d": 0.0, "color_hex": "#f59e0b"
+                })
                 active_signals.append({
                     "ruleta": r_name,
                     "emoji": cfg.get("emoji", "🎯"),
@@ -880,22 +1092,28 @@ class SniperHandler(SimpleHTTPRequestHandler):
                     "candidatos": pb.get("candidatos", []),
                     "candidatos_str": pb.get("candidatos_str", ""),
                     "total_fichas": pb.get("total_cands", 1),
+                    "stake_unit": float(pb.get("stake_unit", burbuja["stake"])),
                     "costo": float(pb.get("total_stake", 1.0)),
                     "premio_potencial": float(pb.get("posible_premio", 30.0)),
                     "payout": float(pb.get("payout", 30.0)),
                     "peso_agente": pb.get("peso_agente", 5),
                     "peso_label": pb.get("peso_label", "P:5/10"),
-                    "ultimo_salido": pb.get("last_salido_str", "---")
+                    "ultimo_salido": pb.get("last_salido_str", "---"),
+                    "burbuja": burbuja
                 })
 
             for r_name, cfg in RULETAS.items():
                 stk, miss, info = get_current_streaks(r_name)
-                is_markov = False
+                is_markov = info.get("is_markov", False)
                 is_anti = info.get("is_anti_blocked", False)
                 cands = info.get("cands", [])
                 target_streaks = cfg.get("target_streaks", [1])
 
-                if stk in target_streaks and not is_anti:
+                if is_markov:
+                    badge = "⚡ Markov Sniper"
+                    conteo = "🚨 ¡DISPARAR MARKOV! (1)"
+                    urg = 1
+                elif stk in target_streaks and not is_anti:
                     badge = f"🔥 Racha {stk} (Objetivo)"
                     conteo = "🚨 ¡DISPARAR AHORA! (0)"
                     urg = 1
@@ -913,10 +1131,15 @@ class SniperHandler(SimpleHTTPRequestHandler):
                     urg = 3
 
                 p_agente, p_label = calcular_peso_agente_pure(r_name, stk, miss)
+                burbuja = color_bubbles.get(r_name, {
+                    "color": "AMARILLO", "emoji": "🟡", "stake": 1.00, "rank": 4, 
+                    "badge": "🟡 $1.00", "pnl_30d": 0.0, "color_hex": "#f59e0b"
+                })
 
                 # Si no estaba ya en pending_bets, agregar si califica
                 is_quar = bool(QUARANTINE_MISSES > 0 and miss >= QUARANTINE_MISSES)
-                if (stk in target_streaks and not is_anti and not is_quar) and r_name not in state.get("pending_bets", {}):
+                is_mirror = info.get("is_mirror", False)
+                if ((stk in target_streaks or is_markov or is_mirror) and not is_anti and not is_quar) and r_name not in state.get("pending_bets", {}):
                     active_signals.append({
                         "ruleta": r_name,
                         "emoji": cfg["emoji"],
@@ -924,13 +1147,22 @@ class SniperHandler(SimpleHTTPRequestHandler):
                         "candidatos": cands,
                         "candidatos_str": ", ".join([f"#{c['numero']} {c['animal']} [{p_label}]" for c in cands]),
                         "total_fichas": len(cands),
-                        "costo": round(len(cands) * FIXED_STAKE_UNIT, 2),
-                        "premio_potencial": round(FIXED_STAKE_UNIT * cfg["payout"], 2),
+                        "stake_unit": burbuja["stake"],
+                        "costo": round(len(cands) * burbuja["stake"], 2),
+                        "premio_potencial": round(burbuja["stake"] * cfg["payout"], 2),
                         "payout": cfg["payout"],
                         "peso_agente": p_agente,
                         "peso_label": p_label,
-                        "ultimo_salido": info.get("last_str", "---")
+                        "ultimo_salido": info.get("last_str", "---"),
+                        "burbuja": burbuja
                     })
+
+                c_str = ""
+                if urg == 1:
+                    if r_name in state.get("pending_bets", {}):
+                        c_str = state["pending_bets"][r_name].get("candidatos_str", "")
+                    elif cands:
+                        c_str = ", ".join([f"#{c['numero']} {c['animal']} [{p_label}]" for c in cands])
 
                 radar_items.append({
                     "ruleta": r_name,
@@ -945,7 +1177,9 @@ class SniperHandler(SimpleHTTPRequestHandler):
                     "peso_label": p_label,
                     "ultimo_salido": info.get("last_str", "---"),
                     "is_markov": False,
-                    "is_anti_blocked": is_anti
+                    "is_anti_blocked": is_anti,
+                    "burbuja": burbuja,
+                    "candidatos_str": c_str
                 })
 
             radar_items.sort(key=lambda x: (x["urgencia"], x["racha"]))
@@ -1021,13 +1255,18 @@ class SniperHandler(SimpleHTTPRequestHandler):
             self.send_json_response({"status": "error", "message": str(e)}, 500)
 
     def send_json_response(self, data, code=200):
-        body = json.dumps(data, ensure_ascii=False).encode("utf-8")
-        self.send_response(code)
-        self.send_header("Content-Type", "application/json; charset=utf-8")
-        self.send_header("Content-Length", str(len(body)))
-        self.send_header("Access-Control-Allow-Origin", "*")
-        self.end_headers()
-        self.wfile.write(body)
+        try:
+            body = json.dumps(data, ensure_ascii=False).encode("utf-8")
+            self.send_response(code)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.send_header("Content-Length", str(len(body)))
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(body)
+        except (BrokenPipeError, ConnectionResetError):
+            pass
+        except Exception as e:
+            print(f"[-] Error enviando JSON: {e}")
 
 
 def start_background_auto_sync():
@@ -1071,6 +1310,7 @@ if __name__ == "__main__":
         print("[*] 🔒 Termux Wake-Lock activado (operación continua en segundo plano).")
     except Exception:
         pass
-    start_background_auto_sync()
+    # Sincronización bajo demanda (Ahorro de batería y sin saturar red)
+    print("[*] 🛡️ Modo Bajo Demanda Activado: Las actualizaciones se realizan al tocar 'TuAzar' en la app.")
     server = ThreadingHTTPServer(("0.0.0.0", port), SniperHandler)
     server.serve_forever()
