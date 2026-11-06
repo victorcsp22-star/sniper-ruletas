@@ -1,11 +1,25 @@
 {
-  "items": [],
+  "items": [
+    {
+      "fecha": "2026-11-06",
+      "hora": "9:00 AM",
+      "ruleta": "Mega Animal 40",
+      "candidatos": "#16 OSO [P:7/10], #28 ZAMURO [P:7/10]",
+      "cands_count": 2,
+      "total_bet": 200.0,
+      "resultado": "[25] GALLINA",
+      "cobrado": 0.0,
+      "pnl": -200.0,
+      "saldo": -2261.0,
+      "emoji": "🦏"
+    }
+  ],
   "summary": {
-    "ops_today": 0,
+    "ops_today": 1,
     "wins_today": 0,
-    "inv_today": 0.0,
+    "inv_today": 200.0,
     "cob_today": 0.0,
-    "pnl_today": 0.0,
+    "pnl_today": -200.0,
     "win_rate_today": 0.0
   }
 }

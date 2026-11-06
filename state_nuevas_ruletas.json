@@ -1,5 +1,5 @@
 {
-  "bankroll": -2061.0,
+  "bankroll": -2261.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 734.0,
   "peak_bankroll": 240.0,
@@ -54,23 +54,67 @@
     "Monje Millonario": "2026-10-30 2:05 PM"
   },
   "pending_bets": {
-    "Mega Animal 40": {
-      "ruleta": "Mega Animal 40",
+    "Monje Millonario": {
+      "ruleta": "Monje Millonario",
       "candidatos": [
-        "16",
-        "28"
+        "10",
+        "27",
+        "30",
+        "43",
+        "49"
       ],
-      "candidatos_str": "#16 OSO [P:7/10], #28 ZAMURO [P:7/10]",
-      "total_cands": 2,
+      "candidatos_str": "#10 TIGRE [P:8/10], #27 PERRO [P:8/10], #30 CAIMÁN [P:8/10], #43 MARIPOSA [P:8/10], #49 PEREZA [P:8/10]",
+      "total_cands": 5,
       "stake_unit": 100.0,
-      "total_stake": 200.0,
+      "total_stake": 500.0,
+      "posible_premio": 6000.0,
+      "payout": 60.0,
+      "peso_agente": 8,
+      "peso_label": "P:8/10",
+      "smart_label": "🎯 Canasta Rezagados [P:8/10]",
+      "last_salido_str": "#52 PULPO (12:05 PM)",
+      "created_at": "2026-11-06 04:52:55 PM"
+    },
+    "Lotto Activo": {
+      "ruleta": "Lotto Activo",
+      "candidatos": [
+        "0",
+        "11",
+        "15",
+        "34"
+      ],
+      "candidatos_str": "#0 DELFÍN [P:6/10], #11 GATO [P:6/10], #15 ZORRO [P:6/10], #34 VENADO [P:6/10]",
+      "total_cands": 4,
+      "stake_unit": 100.0,
+      "total_stake": 400.0,
       "posible_premio": 3000.0,
       "payout": 30.0,
+      "peso_agente": 6,
+      "peso_label": "P:6/10",
+      "smart_label": "🎯 Canasta Rezagados [P:6/10]",
+      "last_salido_str": "#29 ELEFANTE (12:00 PM)",
+      "created_at": "2026-11-06 04:52:55 PM"
+    },
+    "Guacharo Activo": {
+      "ruleta": "Guacharo Activo",
+      "candidatos": [
+        "39",
+        "44",
+        "27",
+        "29",
+        "73"
+      ],
+      "candidatos_str": "#39 LECHUZA [P:7/10], #44 CHIGÜIRE [P:7/10], #27 PERRO [P:7/10], #29 ELEFANTE [P:7/10], #73 HIPOPÓTAMO [P:7/10]",
+      "total_cands": 5,
+      "stake_unit": 100.0,
+      "total_stake": 500.0,
+      "posible_premio": 6000.0,
+      "payout": 60.0,
       "peso_agente": 7,
       "peso_label": "P:7/10",
       "smart_label": "🎯 Canasta Rezagados [P:7/10]",
-      "last_salido_str": "#23 CEBRA (8:00 PM)",
-      "created_at": "2026-11-06 02:10:43 AM"
+      "last_salido_str": "#70 BISONTE (12:00 PM)",
+      "created_at": "2026-11-06 04:52:55 PM"
     }
   },
   "effective_kelly": 0.3594,
