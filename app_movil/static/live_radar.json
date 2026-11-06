@@ -7,8 +7,8 @@
       0,
       1
     ],
-    "racha": 0,
-    "misses": 0,
+    "racha": 1,
+    "misses": 1,
     "is_active": true,
     "candidatos": [
       {
@@ -16,15 +16,11 @@
         "animal": "OSO"
       },
       {
-        "numero": "27",
-        "animal": "PERRO"
-      },
-      {
         "numero": "28",
         "animal": "ZAMURO"
       }
     ],
-    "ultimo_str": "#34 VENADO (7:00 PM)"
+    "ultimo_str": "#23 CEBRA (8:00 PM)"
   },
   "Gatazo": {
     "title": "Gatazo",
@@ -106,24 +102,28 @@
       1,
       2
     ],
-    "racha": 19,
+    "racha": 0,
     "misses": 22,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "10",
-        "animal": "TIGRE"
+        "numero": "0",
+        "animal": "DELFÍN"
       },
       {
-        "numero": "17",
-        "animal": "PAVO"
+        "numero": "2",
+        "animal": "TORO"
       },
       {
-        "numero": "3",
-        "animal": "CIEMPIÉS"
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "numero": "9",
+        "animal": "ÁGUILA"
       }
     ],
-    "ultimo_str": "#36 CULEBRA (7:30 PM)"
+    "ultimo_str": "#17 PAVO (8:30 PM)"
   },
   "Guacharo Activo": {
     "title": "Guacharo",

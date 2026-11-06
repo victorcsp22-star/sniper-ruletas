@@ -1,38 +1,11 @@
 {
-  "items": [
-    {
-      "fecha": "2026-11-05",
-      "hora": "8:05 AM",
-      "ruleta": "Monje Millonario",
-      "candidatos": "#14 PALOMA [P:8/10], #17 PAVO [P:8/10], #28 ZAMURO [P:8/10], #30 CAIMÁN [P:8/10], #57 PATO [P:8/10], #58 HORMIGA [P:8/10], #6 RANA [P:8/10], #71 GUACAMAYA [P:8/10]",
-      "cands_count": 8,
-      "total_bet": 800.0,
-      "resultado": "[40] AVISPA",
-      "cobrado": 0.0,
-      "pnl": -800.0,
-      "saldo": -961.0,
-      "emoji": "🧘"
-    },
-    {
-      "fecha": "2026-11-05",
-      "hora": "12:40 PM",
-      "ruleta": "Gatazo",
-      "candidatos": "#13 MONO [P:9/10], #2 TORO [P:9/10], #27 PERRO [P:9/10], #29 ELEFANTE [P:9/10], #33 PESCADO [P:9/10], #39 LECHUZA [P:9/10], #52 PULPO [P:9/10], #8 RATÓN [P:9/10]",
-      "cands_count": 8,
-      "total_bet": 800.0,
-      "resultado": "[30] CAIMAN",
-      "cobrado": 0.0,
-      "pnl": -800.0,
-      "saldo": -1761.0,
-      "emoji": "🐯"
-    }
-  ],
+  "items": [],
   "summary": {
-    "ops_today": 2,
+    "ops_today": 0,
     "wins_today": 0,
-    "inv_today": 1600.0,
+    "inv_today": 0.0,
     "cob_today": 0.0,
-    "pnl_today": -1600.0,
+    "pnl_today": 0.0,
     "win_rate_today": 0.0
   }
 }

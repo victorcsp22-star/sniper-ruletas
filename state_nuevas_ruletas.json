@@ -1,5 +1,5 @@
 {
-  "bankroll": -1761.0,
+  "bankroll": -2061.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 734.0,
   "peak_bankroll": 240.0,
@@ -58,20 +58,19 @@
       "ruleta": "Mega Animal 40",
       "candidatos": [
         "16",
-        "27",
         "28"
       ],
-      "candidatos_str": "#16 OSO [P:8/10], #27 PERRO [P:8/10], #28 ZAMURO [P:8/10]",
-      "total_cands": 3,
+      "candidatos_str": "#16 OSO [P:7/10], #28 ZAMURO [P:7/10]",
+      "total_cands": 2,
       "stake_unit": 100.0,
-      "total_stake": 300.0,
+      "total_stake": 200.0,
       "posible_premio": 3000.0,
       "payout": 30.0,
-      "peso_agente": 8,
-      "peso_label": "P:8/10",
-      "smart_label": "🎯 Canasta Rezagados [P:8/10]",
-      "last_salido_str": "#34 VENADO (7:00 PM)",
-      "created_at": "2026-11-05 11:47:25 PM"
+      "peso_agente": 7,
+      "peso_label": "P:7/10",
+      "smart_label": "🎯 Canasta Rezagados [P:7/10]",
+      "last_salido_str": "#23 CEBRA (8:00 PM)",
+      "created_at": "2026-11-06 02:10:43 AM"
     }
   },
   "effective_kelly": 0.3594,
