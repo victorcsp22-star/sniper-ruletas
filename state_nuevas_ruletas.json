@@ -1,5 +1,5 @@
 {
-  "bankroll": -675.0,
+  "bankroll": -1375.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 273.0,
@@ -62,47 +62,7 @@
     "Loto Chaima": "2026-11-06 7:00 PM",
     "Granja Millonaria - Granjazo": "2026-11-06 8:30 PM"
   },
-  "pending_bets": {
-    "Gatazo": {
-      "ruleta": "Gatazo",
-      "candidatos": [
-        "63"
-      ],
-      "candidatos_str": "#63 CANGREJO [P:6/10]",
-      "total_cands": 1,
-      "stake_unit": 100.0,
-      "total_stake": 100.0,
-      "posible_premio": 6000.0,
-      "payout": 60.0,
-      "peso_agente": 6,
-      "peso_label": "P:6/10",
-      "smart_label": "⚡ Markov Sniper [P:6/10]",
-      "last_salido_str": "#30 CAIMÁN (7:40 PM)",
-      "created_at": "2026-11-07 12:59:15 PM"
-    },
-    "Guacharo Activo": {
-      "ruleta": "Guacharo Activo",
-      "candidatos": [
-        "15",
-        "17",
-        "35",
-        "40",
-        "53",
-        "61"
-      ],
-      "candidatos_str": "#15 ZORRO [P:7/10], #17 PAVO [P:7/10], #35 JIRAFA [P:7/10], #40 AVISPA [P:7/10], #53 CARACOL [P:7/10], #61 COLIBRÍ [P:7/10]",
-      "total_cands": 6,
-      "stake_unit": 100.0,
-      "total_stake": 600.0,
-      "posible_premio": 6000.0,
-      "payout": 60.0,
-      "peso_agente": 7,
-      "peso_label": "P:7/10",
-      "smart_label": "🎯 Canasta Rezagados [P:7/10]",
-      "last_salido_str": "#00 BALLENA (9:00 AM)",
-      "created_at": "2026-11-07 01:11:34 PM"
-    }
-  },
+  "pending_bets": {},
   "effective_kelly": 0.1233,
   "damping": 0.1644,
   "cycle_elapsed_days": 2.1710466208796295,
