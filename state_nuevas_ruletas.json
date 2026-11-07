@@ -1,5 +1,5 @@
 {
-  "bankroll": 125.0,
+  "bankroll": -675.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 273.0,
@@ -63,30 +63,6 @@
     "Granja Millonaria - Granjazo": "2026-11-06 8:30 PM"
   },
   "pending_bets": {
-    "Loto Chaima": {
-      "ruleta": "Loto Chaima",
-      "candidatos": [
-        "10",
-        "22",
-        "27",
-        "32",
-        "37",
-        "39",
-        "43",
-        "46"
-      ],
-      "candidatos_str": "#10 TIGRE [P:9/10], #22 CAMELLO [P:9/10], #27 PERRO [P:9/10], #32 ARDILLA [P:9/10], #37 TORTUGA [P:9/10], #39 LECHUZA [P:9/10], #43 MARIPOSA [P:9/10], #46 PUMA [P:9/10]",
-      "total_cands": 8,
-      "stake_unit": 100.0,
-      "total_stake": 800.0,
-      "posible_premio": 6000.0,
-      "payout": 60.0,
-      "peso_agente": 9,
-      "peso_label": "P:9/10",
-      "smart_label": "🎯 Canasta Rezagados [P:9/10]",
-      "last_salido_str": "#41 CANGURO (8:00 AM)",
-      "created_at": "2026-11-07 12:59:15 PM"
-    },
     "Gatazo": {
       "ruleta": "Gatazo",
       "candidatos": [
@@ -103,6 +79,28 @@
       "smart_label": "⚡ Markov Sniper [P:6/10]",
       "last_salido_str": "#30 CAIMÁN (7:40 PM)",
       "created_at": "2026-11-07 12:59:15 PM"
+    },
+    "Guacharo Activo": {
+      "ruleta": "Guacharo Activo",
+      "candidatos": [
+        "15",
+        "17",
+        "35",
+        "40",
+        "53",
+        "61"
+      ],
+      "candidatos_str": "#15 ZORRO [P:7/10], #17 PAVO [P:7/10], #35 JIRAFA [P:7/10], #40 AVISPA [P:7/10], #53 CARACOL [P:7/10], #61 COLIBRÍ [P:7/10]",
+      "total_cands": 6,
+      "stake_unit": 100.0,
+      "total_stake": 600.0,
+      "posible_premio": 6000.0,
+      "payout": 60.0,
+      "peso_agente": 7,
+      "peso_label": "P:7/10",
+      "smart_label": "🎯 Canasta Rezagados [P:7/10]",
+      "last_salido_str": "#00 BALLENA (9:00 AM)",
+      "created_at": "2026-11-07 01:11:34 PM"
     }
   },
   "effective_kelly": 0.1233,

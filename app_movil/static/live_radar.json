@@ -42,44 +42,44 @@
       0,
       1
     ],
-    "racha": 1,
-    "misses": 1,
-    "is_active": true,
+    "racha": 2,
+    "misses": 2,
+    "is_active": false,
     "candidatos": [
       {
-        "numero": "10",
-        "animal": "TIGRE"
+        "numero": "1",
+        "animal": "CARNERO"
       },
       {
-        "numero": "22",
-        "animal": "CAMELLO"
+        "numero": "14",
+        "animal": "PALOMA"
       },
       {
-        "numero": "27",
-        "animal": "PERRO"
-      },
-      {
-        "numero": "32",
-        "animal": "ARDILLA"
+        "numero": "24",
+        "animal": "IGUANA"
       },
       {
         "numero": "37",
         "animal": "TORTUGA"
       },
       {
-        "numero": "39",
-        "animal": "LECHUZA"
+        "numero": "44",
+        "animal": "CHIGÜIRE"
       },
       {
-        "numero": "43",
-        "animal": "MARIPOSA"
+        "numero": "48",
+        "animal": "PUERCOESPÍN"
       },
       {
-        "numero": "46",
-        "animal": "PUMA"
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "numero": "51",
+        "animal": "PELICANO"
       }
     ],
-    "ultimo_str": "#41 CANGURO (8:00 AM)"
+    "ultimo_str": "#11 GATO (9:00 AM)"
   },
   "Guacharo Activo": {
     "title": "Guacharo",
@@ -89,36 +89,36 @@
       1,
       3
     ],
-    "racha": 2,
+    "racha": 3,
     "misses": 13,
-    "is_active": false,
+    "is_active": true,
     "candidatos": [
       {
-        "numero": "22",
-        "animal": "CAMELLO"
+        "numero": "15",
+        "animal": "ZORRO"
       },
       {
-        "numero": "24",
-        "animal": "IGUANA"
+        "numero": "17",
+        "animal": "PAVO"
       },
       {
-        "numero": "33",
-        "animal": "PESCADO"
+        "numero": "35",
+        "animal": "JIRAFA"
       },
       {
         "numero": "40",
         "animal": "AVISPA"
       },
       {
-        "numero": "69",
-        "animal": "CONEJO"
+        "numero": "53",
+        "animal": "CARACOL"
       },
       {
-        "numero": "70",
-        "animal": "BISONTE"
+        "numero": "61",
+        "animal": "COLIBRÍ"
       }
     ],
-    "ultimo_str": "#3 CIEMPIÉS (8:00 AM)"
+    "ultimo_str": "#00 BALLENA (9:00 AM)"
   },
   "Gatazo": {
     "title": "Gatazo",
