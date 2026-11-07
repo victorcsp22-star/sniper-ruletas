@@ -1,0 +1,11 @@
+fecha,hora,ruleta,candidatos,cands_count,zona_patron,smart_mult,stake_unit,total_bet,resultado,condicion,cobrado,pnl,saldo,peak,drawdown_pct
+2026-11-05,9:00 AM,Guacharo Activo,"#18 BURRO [P:10/10], #28 ZAMURO [P:10/10], #30 CAIMÁN [P:10/10], #63 CANGREJO [P:10/10]",4,🔥 Zona Dulce Rebote (1.25x Kelly) | ⚖️ ESTABLE (1.00x),1.0,1.0,4.0,[9] ÁGUILA,🔴 PERDIDA,0.0,-4.0,196.0,200.0,2.0
+2026-11-05,10:30 AM,Granja Millonaria - Granjazo,"#20 COCHINO [P:9/10], #25 GALLINA [P:9/10], #53 JAGUAR [P:9/10]",3,⚖️ Neutral (1.00x Kelly) | 🔥 FUERTE (1.30x),1.0,1.0,3.0,[31] LAPA,🔴 PERDIDA,0.0,-3.0,193.0,200.0,3.5
+2026-11-05,4:00 PM,Mega Animal 40,"#12 CABALLO [P:6/10], #16 OSO [P:6/10], #30 CAIMÁN [P:6/10]",3,[RECUPERADO TRAS CORTE] Kelly 0.75x,1.0,1.0,3.0,[23] CEBRA,🔴 PERDIDA,0.0,-3.0,190.0,200.0,5.0
+2026-11-05,5:00 PM,Mega Animal 40,"#12 CABALLO [P:6/10], #17 PAVO [P:6/10], #29 ELEFANTE [P:6/10]",3,[RECUPERADO TRAS CORTE] Kelly 0.75x,1.0,1.0,3.0,[17] PAVO,🟢 GANADA,30.0,27.0,217.0,217.0,0.0
+2026-11-05,7:00 PM,Mega Animal 40,"#16 OSO [P:7/10], #34 VENADO [P:7/10]",2,🛡️ Zona Fatigada (0.85x Kelly) | 🔥 FUERTE (1.30x),1.0,1.0,2.0,[34] VENADO,🟢 GANADA,30.0,28.0,245.0,245.0,0.0
+2026-11-06,9:00 AM,Mega Animal 40,"#16 OSO [P:7/10], #28 ZAMURO [P:7/10]",2,🛡️ Zona Fatigada (0.85x Kelly) | 🔥 FUERTE (1.30x),1.0,1.0,2.0,[25] GALLINA,🔴 PERDIDA,0.0,-2.0,243.0,245.0,0.82
+2026-11-06,10:00 AM,Mega Animal 40,#20 COCHINO [P:9/10],1,[RECUPERADO TRAS CORTE] Kelly 0.32x,1.0,1.0,1.0,[4] ALACRÁN,🔴 PERDIDA,0.0,-1.0,242.0,245.0,1.22
+2026-11-06,11:00 AM,Mega Animal 40,"#16 OSO [P:9/10], #7 PERICO [P:9/10]",2,[RECUPERADO TRAS CORTE] Kelly 0.32x,1.0,1.0,2.0,[33] PESCADO,🔴 PERDIDA,0.0,-2.0,240.0,245.0,2.04
+2026-11-06,11:00 AM,Lotto Activo,"#11 GATO [P:6/10], #6 RANA [P:6/10]",2,[RECUPERADO TRAS CORTE] Kelly 0.32x,1.0,1.0,2.0,[2] TORO,🔴 PERDIDA,0.0,-2.0,238.0,245.0,2.86
+2026-11-06,12:00 PM,Lotto Activo,"#0 DELFÍN [P:6/10], #15 ZORRO [P:6/10], #31 LAPA [P:6/10]",3,[RECUPERADO TRAS CORTE] Kelly 0.32x,1.0,1.0,3.0,[29] ELEFANTE,🔴 PERDIDA,0.0,-3.0,235.0,245.0,4.08

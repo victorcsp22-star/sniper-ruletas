@@ -1,0 +1,33 @@
+{
+  "bankroll": 23600.0,
+  "peak_bankroll": 23600.0,
+  "total_withdrawn": 734.0,
+  "cycle_number": 5,
+  "cycle_start_bankroll": 20000.0,
+  "pending_bets": {
+    "Loto Chaima": {
+      "ruleta": "Loto Chaima",
+      "candidatos": [
+        "0",
+        "12",
+        "17",
+        "22",
+        "39",
+        "51",
+        "8"
+      ],
+      "candidatos_str": "#0 BALLENA [P:8/10], #12 CABALLO [P:8/10], #17 PAVO [P:8/10], #22 CAMELLO [P:8/10], #39 LECHUZA [P:8/10], #51 PELICANO [P:8/10], #8 RAT\u00c3\u201cN [P:8/10]",
+      "total_cands": 7,
+      "stake_unit": 100.0,
+      "total_stake": 700.0,
+      "posible_premio": 6000.0,
+      "payout": 60.0,
+      "peso_agente": 8,
+      "peso_label": "P:8/10",
+      "smart_label": "\u00f0\u0178\u017d\u00af Canasta Rezagados [P:8/10]",
+      "last_salido_str": "#28 ZAMURO (2:00 PM)",
+      "created_at": "2026-11-03 02:06:21 PM"
+    }
+  },
+  "initial_bankroll": 20000.0
+}
