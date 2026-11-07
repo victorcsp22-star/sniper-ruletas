@@ -1,64 +1,11 @@
 {
-  "items": [
-    {
-      "fecha": "2026-11-06",
-      "hora": "9:00 AM",
-      "ruleta": "Mega Animal 40",
-      "candidatos": "#16 OSO [P:7/10], #28 ZAMURO [P:7/10]",
-      "cands_count": 2,
-      "total_bet": 200.0,
-      "resultado": "[25] GALLINA",
-      "cobrado": 0.0,
-      "pnl": -200.0,
-      "saldo": -2261.0,
-      "emoji": "🦏"
-    },
-    {
-      "fecha": "2026-11-06",
-      "hora": "1:05 PM",
-      "ruleta": "Monje Millonario",
-      "candidatos": "#10 TIGRE [P:8/10], #27 PERRO [P:8/10], #30 CAIMÁN [P:8/10], #43 MARIPOSA [P:8/10], #49 PEREZA [P:8/10]",
-      "cands_count": 5,
-      "total_bet": 500.0,
-      "resultado": "[1] CARNERO",
-      "cobrado": 0.0,
-      "pnl": -500.0,
-      "saldo": -2761.0,
-      "emoji": "🧘"
-    },
-    {
-      "fecha": "2026-11-06",
-      "hora": "1:00 PM",
-      "ruleta": "Lotto Activo",
-      "candidatos": "#0 DELFÍN [P:6/10], #11 GATO [P:6/10], #15 ZORRO [P:6/10], #34 VENADO [P:6/10]",
-      "cands_count": 4,
-      "total_bet": 400.0,
-      "resultado": "[18] BURRO",
-      "cobrado": 0.0,
-      "pnl": -400.0,
-      "saldo": -3161.0,
-      "emoji": "🦁"
-    },
-    {
-      "fecha": "2026-11-06",
-      "hora": "1:00 PM",
-      "ruleta": "Guacharo Activo",
-      "candidatos": "#39 LECHUZA [P:7/10], #44 CHIGÜIRE [P:7/10], #27 PERRO [P:7/10], #29 ELEFANTE [P:7/10], #73 HIPOPÓTAMO [P:7/10]",
-      "cands_count": 5,
-      "total_bet": 500.0,
-      "resultado": "[72] GORILA",
-      "cobrado": 0.0,
-      "pnl": -500.0,
-      "saldo": -3661.0,
-      "emoji": "🦇"
-    }
-  ],
+  "items": [],
   "summary": {
-    "ops_today": 4,
+    "ops_today": 0,
     "wins_today": 0,
-    "inv_today": 1600.0,
+    "inv_today": 0.0,
     "cob_today": 0.0,
-    "pnl_today": -1600.0,
+    "pnl_today": 0.0,
     "win_rate_today": 0.0
   }
 }
