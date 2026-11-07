@@ -57,26 +57,54 @@ DEFAULT_BANKROLL = 20000.0
 QUARANTINE_MISSES = 20
 
 RULETAS = {
-    "Mega Animal 40": {
-        "file": os.path.join(ROOT_DIR, "mega_animal_40.csv"),
-        "title": "Mega Animal 40",
-        "lags": [18, 21, 22, 20, 43, 46],
-        "target_streaks": [1, 2, 3],
-        "wr_optimos": [1, 2, 3],
+    "Lotto Gato": {
+        "file": os.path.join(ROOT_DIR, "lotto_gato.csv"),
+        "title": "Lotto Gato",
+        "lags": [18, 38, 14, 25, 30, 35, 40, 45],
+        "target_streaks": [1, 2],
+        "wr_optimos": [1, 2],
+        "rec_w": 6,
+        "anti_clustering": False,
+        "blacklist": [],
+        "markov_snipers": {"14": "0", "27": "15", "3": "7"},
+        "mirror_pairs": {"0": "00", "1": "10", "2": "20", "3": "30", "4": "40"},
+        "payout": 60.0,
+        "emoji": "🐱"
+    },
+    "Loto Chaima": {
+        "file": os.path.join(ROOT_DIR, "loto_chaima.csv"),
+        "title": "Loto Chaima",
+        "lags": [49, 41, 35, 56, 61, 66, 71, 76],
+        "target_streaks": [0, 1],
+        "wr_optimos": [0, 1],
+        "rec_w": 6,
+        "anti_clustering": False,
+        "blacklist": [],
+        "markov_snipers": {"48": "0", "55": "0", "12": "0"},
+        "mirror_pairs": {"0": "00", "5": "50", "6": "60", "7": "70"},
+        "payout": 60.0,
+        "emoji": "🏹"
+    },
+    "Guacharo Activo": {
+        "file": os.path.join(ROOT_DIR, "data_vz", "guacharo_activo_2anios.csv"),
+        "title": "Guacharo",
+        "lags": [31, 54, 41, 38, 43, 48, 53, 58],
+        "target_streaks": [1, 3],
+        "wr_optimos": [1, 3, 6],
         "rec_w": 8,
         "anti_clustering": False,
-        "blacklist": ["4"],
-        "markov_snipers": {"30": "0", "11": "0", "32": "35"},
-        "mirror_pairs": {"11": "00", "12": "21", "13": "31", "23": "32"},
-        "payout": 30.0,
-        "emoji": "🦏"
+        "blacklist": ["75"],
+        "markov_snipers": {"21": "0", "8": "67", "29": "2"},
+        "mirror_pairs": {"12": "21", "13": "31", "14": "41", "23": "32"},
+        "payout": 60.0,
+        "emoji": "🦇"
     },
     "Gatazo": {
         "file": os.path.join(ROOT_DIR, "gatazo.csv"),
         "title": "Gatazo",
-        "lags": [35, 22, 20, 9],
-        "target_streaks": [1, 2],
-        "wr_optimos": [1, 2],
+        "lags": [35, 9, 20, 42, 47, 52, 57, 62],
+        "target_streaks": [1],
+        "wr_optimos": [1, 11, 12],
         "rec_w": 6,
         "anti_clustering": False,
         "blacklist": ["11"],
@@ -88,7 +116,7 @@ RULETAS = {
     "Monje Millonario": {
         "file": os.path.join(ROOT_DIR, "monje_millonario.csv"),
         "title": "Monje Millonario",
-        "lags": [24, 42, 52, 51, 48, 35, 23, 44],
+        "lags": [24, 42, 48, 31, 36, 41, 46, 51],
         "target_streaks": [0, 1],
         "wr_optimos": [0, 1],
         "rec_w": 6,
@@ -97,70 +125,14 @@ RULETAS = {
         "markov_snipers": {},
         "mirror_pairs": {"24": "42"},
         "payout": 60.0,
-        "emoji": "🧘"
-    },
-    "Lotto Activo": {
-        "file": os.path.join(ROOT_DIR, "data_vz", "lotto_activo_2anios.csv"),
-        "title": "Lotto Activo",
-        "lags": [20, 18, 19, 14, 15, 55],
-        "target_streaks": [1, 2],
-        "wr_optimos": [1, 2],
-        "rec_w": 6,
-        "anti_clustering": True,
-        "blacklist": [],
-        "markov_snipers": {"14": "0", "31": "0", "6": "0"},
-        "mirror_pairs": {"12": "21", "13": "31", "23": "32", "0": "00"},
-        "payout": 30.0,
-        "emoji": "🦁"
-    },
-    "Ruleta Royal": {
-        "file": os.path.join(ROOT_DIR, "data_vz", "ruleta_royal_2anios.csv"),
-        "title": "Ruleta Royal",
-        "lags": [16, 19, 31],
-        "target_streaks": [1],
-        "wr_optimos": [1],
-        "rec_w": 6,
-        "anti_clustering": True,
-        "blacklist": [],
-        "markov_snipers": {"25": "22", "8": "27"},
-        "mirror_pairs": {"12": "21", "13": "31", "23": "32"},
-        "payout": 30.0,
-        "emoji": "👑"
-    },
-    "Guacharo Activo": {
-        "file": os.path.join(ROOT_DIR, "data_vz", "guacharo_activo_2anios.csv"),
-        "title": "Guacharo",
-        "lags": [41, 54, 31, 52, 42, 25, 35, 21],
-        "target_streaks": [1, 3],
-        "wr_optimos": [1, 3],
-        "rec_w": 8,
-        "anti_clustering": False,
-        "blacklist": ["75"],
-        "markov_snipers": {"21": "0", "8": "67", "29": "2"},
-        "mirror_pairs": {"12": "21", "13": "31", "14": "41", "23": "32"},
-        "payout": 60.0,
-        "emoji": "🦇"
-    },
-    "Lotto Gato": {
-        "file": os.path.join(ROOT_DIR, "lotto_gato.csv"),
-        "title": "Lotto Gato",
-        "lags": [18, 38, 16],
-        "target_streaks": [1, 2],
-        "wr_optimos": [1, 2],
-        "rec_w": 8,
-        "anti_clustering": True,
-        "blacklist": [],
-        "markov_snipers": {"14": "0", "27": "15", "3": "7"},
-        "mirror_pairs": {"0": "00", "1": "10", "2": "20", "3": "30", "4": "40"},
-        "payout": 30.0,
-        "emoji": "🐱"
+        "emoji": "🧘‍♂️"
     },
     "Granja Millonaria - Granjazo": {
         "file": os.path.join(ROOT_DIR, "granja_millonaria_granjazo.csv"),
         "title": "Granjazo",
-        "lags": [15, 48, 45, 26],
-        "target_streaks": [1],
-        "wr_optimos": [1],
+        "lags": [45, 26, 15],
+        "target_streaks": [1, 3],
+        "wr_optimos": [1, 3],
         "rec_w": 6,
         "anti_clustering": False,
         "blacklist": [],
@@ -315,6 +287,15 @@ def get_current_streaks(r_name):
         rec_set = set(nums[i - rec_w : i])
         raw_cands = [nums[i - l] for l in lags if i - l >= 0]
         cands_lag = sorted(list((set(raw_cands) - rec_set) - blacklist))
+        k_cap = cfg.get("k_cap", 0)
+        if k_cap and len(cands_lag) > k_cap:
+            ord_c = []
+            for c in raw_cands:
+                if c in cands_lag and c not in ord_c:
+                    ord_c.append(c)
+                    if len(ord_c) == k_cap:
+                        break
+            cands_lag = ord_c
         skip_anti = bool(use_anti and prev_was_repeat)
 
         if cands_lag and not skip_anti:
@@ -336,6 +317,15 @@ def get_current_streaks(r_name):
     rec_set_now = set(nums[-rec_w:])
     raw_now = [nums[-l] for l in lags if len(nums) >= l]
     cands_lag_now = sorted(list((set(raw_now) - rec_set_now) - blacklist))
+    k_cap = cfg.get("k_cap", 0)
+    if k_cap and len(cands_lag_now) > k_cap:
+        ord_c = []
+        for c in raw_now:
+            if c in cands_lag_now and c not in ord_c:
+                ord_c.append(c)
+                if len(ord_c) == k_cap:
+                    break
+        cands_lag_now = ord_c
     
     # Comprobar AntiCluster hoy
     last_date = dates[-1] if dates else ""
