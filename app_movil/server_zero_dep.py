@@ -1069,7 +1069,9 @@ class SniperHandler(SimpleHTTPRequestHandler):
 
             # 1. Incluir primero las apuestas pendientes que ya están en el estado
             state = load_state_pure()
-            for r_name, pb in state.get("pending_bets", {}).items():
+            for r_name, pb in list(state.get("pending_bets", {}).items()):
+                if r_name not in RULETAS:
+                    continue
                 cfg = RULETAS.get(r_name, {})
                 burbuja = color_bubbles.get(r_name, {
                     "color": "AMARILLO", "emoji": "🟡", "stake": 1.00, "rank": 4, 
