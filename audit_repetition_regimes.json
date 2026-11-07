@@ -1,0 +1,800 @@
+{
+  "Lotto Activo": {
+    "ruleta": "Lotto Activo",
+    "timestamp": "2026-11-06 09:03:59 PM",
+    "rep_status": "SUPRIMIDA",
+    "rep_badge": "🛡️ Repetición Suprimida",
+    "rep_desc": "Repetición contigua deprimida (0/119, Z=-1.79). Periodo refractario universal activo.",
+    "z_contig": -1.79,
+    "contig_repeats": 0,
+    "contig_trials": 119,
+    "today_date": "2026-11-06",
+    "dups_today": 0,
+    "n_today": 12,
+    "dup_pct_today": 0.0,
+    "intraday_status": "NORMAL",
+    "monitored_snipers": [
+      {
+        "from_num": "14",
+        "from_anim": "PALOMA",
+        "to_num": "0",
+        "to_anim": "DELFÍN",
+        "occurrences": 1,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/1)"
+      },
+      {
+        "from_num": "31",
+        "from_anim": "LAPA",
+        "to_num": "0",
+        "to_anim": "DELFÍN",
+        "occurrences": 3,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/3)"
+      },
+      {
+        "from_num": "6",
+        "from_anim": "RANA",
+        "to_num": "0",
+        "to_anim": "DELFÍN",
+        "occurrences": 6,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/6)"
+      }
+    ],
+    "new_emerging": [
+      {
+        "from_num": "36",
+        "from_anim": "CULEBRA",
+        "to_num": "29",
+        "to_anim": "ELEFANTE",
+        "count": 2,
+        "total_from": 6,
+        "prob_pct": 33.3,
+        "lift": 12.67,
+        "z_score": 4.7,
+        "ev_pct": 900.0
+      },
+      {
+        "from_num": "31",
+        "from_anim": "LAPA",
+        "to_num": "3",
+        "to_anim": "CIEMPIÉS",
+        "count": 2,
+        "total_from": 7,
+        "prob_pct": 28.6,
+        "lift": 10.86,
+        "z_score": 4.29,
+        "ev_pct": 757.1
+      },
+      {
+        "from_num": "25",
+        "from_anim": "GALLINA",
+        "to_num": "22",
+        "to_anim": "CAMELLO",
+        "count": 2,
+        "total_from": 7,
+        "prob_pct": 28.6,
+        "lift": 10.86,
+        "z_score": 4.29,
+        "ev_pct": 757.1
+      }
+    ]
+  },
+  "La Granjita": {
+    "ruleta": "La Granjita",
+    "timestamp": "2026-10-31 09:21:46 PM",
+    "rep_status": "NORMAL",
+    "rep_badge": "⚖️ Repetición Normal",
+    "rep_desc": "Repetición contigua estándar (1/119, 0.8% vs 2.6% base).",
+    "z_contig": -1.22,
+    "contig_repeats": 1,
+    "contig_trials": 119,
+    "today_date": "2026-10-31",
+    "dups_today": 1,
+    "n_today": 12,
+    "dup_pct_today": 8.3,
+    "intraday_status": "NORMAL",
+    "monitored_snipers": [
+      {
+        "from_num": "11",
+        "from_anim": "GATO",
+        "to_num": "34",
+        "to_anim": "VENADO",
+        "occurrences": 7,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/7)"
+      },
+      {
+        "from_num": "30",
+        "from_anim": "CAIMÁN",
+        "to_num": "14",
+        "to_anim": "PALOMA",
+        "occurrences": 5,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/5)"
+      },
+      {
+        "from_num": "26",
+        "from_anim": "VACA",
+        "to_num": "15",
+        "to_anim": "ZORRO",
+        "occurrences": 6,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/6)"
+      },
+      {
+        "from_num": "3",
+        "from_anim": "CIEMPIÉS",
+        "to_num": "6",
+        "to_anim": "RANA",
+        "occurrences": 5,
+        "hits": 1,
+        "health": "ACTIVO",
+        "health_badge": "🟢 Activo (1/5)"
+      },
+      {
+        "from_num": "24",
+        "from_anim": "IGUANA",
+        "to_num": "16",
+        "to_anim": "OSO",
+        "occurrences": 7,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/7)"
+      }
+    ],
+    "new_emerging": [
+      {
+        "from_num": "17",
+        "from_anim": "PAVO",
+        "to_num": "19",
+        "to_anim": "CHIVO",
+        "count": 2,
+        "total_from": 4,
+        "prob_pct": 50.0,
+        "lift": 19.0,
+        "z_score": 5.92,
+        "ev_pct": 1400.0
+      },
+      {
+        "from_num": "2",
+        "from_anim": "TORO",
+        "to_num": "25",
+        "to_anim": "GALLINA",
+        "count": 2,
+        "total_from": 5,
+        "prob_pct": 40.0,
+        "lift": 15.2,
+        "z_score": 5.22,
+        "ev_pct": 1100.0
+      },
+      {
+        "from_num": "1",
+        "from_anim": "CARNERO",
+        "to_num": "3",
+        "to_anim": "CIEMPIÉS",
+        "count": 2,
+        "total_from": 5,
+        "prob_pct": 40.0,
+        "lift": 15.2,
+        "z_score": 5.22,
+        "ev_pct": 1100.0
+      }
+    ]
+  },
+  "Ruleta Royal": {
+    "ruleta": "Ruleta Royal",
+    "timestamp": "2026-11-06 09:03:59 PM",
+    "rep_status": "NORMAL",
+    "rep_badge": "⚖️ Repetición Normal",
+    "rep_desc": "Repetición contigua estándar (1/119, 0.8% vs 2.6% base).",
+    "z_contig": -1.22,
+    "contig_repeats": 1,
+    "contig_trials": 119,
+    "today_date": "2026-11-06",
+    "dups_today": 1,
+    "n_today": 13,
+    "dup_pct_today": 7.7,
+    "intraday_status": "NORMAL",
+    "monitored_snipers": [
+      {
+        "from_num": "25",
+        "from_anim": "GALLINA",
+        "to_num": "22",
+        "to_anim": "CAMELLO",
+        "occurrences": 4,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/4)"
+      },
+      {
+        "from_num": "8",
+        "from_anim": "RATÓN",
+        "to_num": "27",
+        "to_anim": "PERRO",
+        "occurrences": 8,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/8)"
+      }
+    ],
+    "new_emerging": [
+      {
+        "from_num": "11",
+        "from_anim": "GATO",
+        "to_num": "29",
+        "to_anim": "ELEFANTE",
+        "count": 2,
+        "total_from": 6,
+        "prob_pct": 33.3,
+        "lift": 12.67,
+        "z_score": 4.7,
+        "ev_pct": 900.0
+      },
+      {
+        "from_num": "30",
+        "from_anim": "CAIMÁN",
+        "to_num": "17",
+        "to_anim": "PAVO",
+        "count": 2,
+        "total_from": 8,
+        "prob_pct": 25.0,
+        "lift": 9.5,
+        "z_score": 3.95,
+        "ev_pct": 650.0
+      },
+      {
+        "from_num": "30",
+        "from_anim": "CAIMÁN",
+        "to_num": "12",
+        "to_anim": "CABALLO",
+        "count": 2,
+        "total_from": 8,
+        "prob_pct": 25.0,
+        "lift": 9.5,
+        "z_score": 3.95,
+        "ev_pct": 650.0
+      }
+    ]
+  },
+  "Guacharo Activo": {
+    "ruleta": "Guacharo Activo",
+    "timestamp": "2026-11-06 09:03:59 PM",
+    "rep_status": "NORMAL",
+    "rep_badge": "⚖️ Repetición Normal",
+    "rep_desc": "Repetición contigua estándar (0/119, 0.0% vs 1.3% base).",
+    "z_contig": -1.25,
+    "contig_repeats": 0,
+    "contig_trials": 119,
+    "today_date": "2026-11-06",
+    "dups_today": 0,
+    "n_today": 12,
+    "dup_pct_today": 0.0,
+    "intraday_status": "NORMAL",
+    "monitored_snipers": [
+      {
+        "from_num": "21",
+        "from_anim": "GALLO",
+        "to_num": "0",
+        "to_anim": "DELFÍN",
+        "occurrences": 2,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/2)"
+      },
+      {
+        "from_num": "8",
+        "from_anim": "RATÓN",
+        "to_num": "67",
+        "to_anim": "AVESTRUZ",
+        "occurrences": 1,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/1)"
+      },
+      {
+        "from_num": "29",
+        "from_anim": "ELEFANTE",
+        "to_num": "2",
+        "to_anim": "TORO",
+        "occurrences": 3,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/3)"
+      }
+    ],
+    "new_emerging": [
+      {
+        "from_num": "72",
+        "from_anim": "GORILA",
+        "to_num": "66",
+        "to_anim": "LOBO",
+        "count": 2,
+        "total_from": 7,
+        "prob_pct": 28.6,
+        "lift": 22.0,
+        "z_score": 6.37,
+        "ev_pct": 1614.3
+      },
+      {
+        "from_num": "72",
+        "from_anim": "GORILA",
+        "to_num": "58",
+        "to_anim": "HORMIGA",
+        "count": 2,
+        "total_from": 7,
+        "prob_pct": 28.6,
+        "lift": 22.0,
+        "z_score": 6.37,
+        "ev_pct": 1614.3
+      },
+      {
+        "from_num": "66",
+        "from_anim": "LOBO",
+        "to_num": "58",
+        "to_anim": "HORMIGA",
+        "count": 2,
+        "total_from": 7,
+        "prob_pct": 28.6,
+        "lift": 22.0,
+        "z_score": 6.37,
+        "ev_pct": 1614.3
+      }
+    ]
+  },
+  "Gatazo": {
+    "ruleta": "Gatazo",
+    "timestamp": "2026-11-06 09:03:59 PM",
+    "rep_status": "NORMAL",
+    "rep_badge": "⚖️ Repetición Normal",
+    "rep_desc": "Repetición contigua estándar (0/119, 0.0% vs 1.3% base).",
+    "z_contig": -1.25,
+    "contig_repeats": 0,
+    "contig_trials": 119,
+    "today_date": "2026-11-06",
+    "dups_today": 0,
+    "n_today": 10,
+    "dup_pct_today": 0.0,
+    "intraday_status": "NORMAL",
+    "monitored_snipers": [
+      {
+        "from_num": "30",
+        "from_anim": "CAIMÁN",
+        "to_num": "63",
+        "to_anim": "CANGREJO",
+        "occurrences": 5,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/5)"
+      },
+      {
+        "from_num": "48",
+        "from_anim": "PUERCOESPÍN",
+        "to_num": "21",
+        "to_anim": "GALLO",
+        "occurrences": 5,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/5)"
+      },
+      {
+        "from_num": "23",
+        "from_anim": "CEBRA",
+        "to_num": "42",
+        "to_anim": "TUCÁN",
+        "occurrences": 6,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/6)"
+      }
+    ],
+    "new_emerging": [
+      {
+        "from_num": "1",
+        "from_anim": "CARNERO",
+        "to_num": "30",
+        "to_anim": "CAIMÁN",
+        "count": 2,
+        "total_from": 5,
+        "prob_pct": 40.0,
+        "lift": 30.8,
+        "z_score": 7.64,
+        "ev_pct": 2300.0
+      },
+      {
+        "from_num": "69",
+        "from_anim": "CONEJO",
+        "to_num": "57",
+        "to_anim": "PATO",
+        "count": 2,
+        "total_from": 6,
+        "prob_pct": 33.3,
+        "lift": 25.67,
+        "z_score": 6.93,
+        "ev_pct": 1900.0
+      },
+      {
+        "from_num": "14",
+        "from_anim": "PALOMA",
+        "to_num": "43",
+        "to_anim": "MARIPOSA",
+        "count": 2,
+        "total_from": 6,
+        "prob_pct": 33.3,
+        "lift": 25.67,
+        "z_score": 6.93,
+        "ev_pct": 1900.0
+      }
+    ]
+  },
+  "Mega Animal 40": {
+    "ruleta": "Mega Animal 40",
+    "timestamp": "2026-11-06 09:03:59 PM",
+    "rep_status": "SUPRIMIDA",
+    "rep_badge": "🛡️ Repetición Suprimida",
+    "rep_desc": "Repetición contigua deprimida (0/119, Z=-1.79). Periodo refractario universal activo.",
+    "z_contig": -1.79,
+    "contig_repeats": 0,
+    "contig_trials": 119,
+    "today_date": "2026-11-06",
+    "dups_today": 0,
+    "n_today": 12,
+    "dup_pct_today": 0.0,
+    "intraday_status": "NORMAL",
+    "monitored_snipers": [
+      {
+        "from_num": "30",
+        "from_anim": "CAIMÁN",
+        "to_num": "0",
+        "to_anim": "DELFÍN",
+        "occurrences": 6,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/6)"
+      },
+      {
+        "from_num": "11",
+        "from_anim": "GATO",
+        "to_num": "0",
+        "to_anim": "DELFÍN",
+        "occurrences": 3,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/3)"
+      },
+      {
+        "from_num": "32",
+        "from_anim": "ARDILLA",
+        "to_num": "35",
+        "to_anim": "JIRAFA",
+        "occurrences": 4,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/4)"
+      }
+    ],
+    "new_emerging": [
+      {
+        "from_num": "22",
+        "from_anim": "CAMELLO",
+        "to_num": "5",
+        "to_anim": "LEÓN",
+        "count": 2,
+        "total_from": 5,
+        "prob_pct": 40.0,
+        "lift": 15.2,
+        "z_score": 5.22,
+        "ev_pct": 1100.0
+      },
+      {
+        "from_num": "9",
+        "from_anim": "ÁGUILA",
+        "to_num": "33",
+        "to_anim": "PESCADO",
+        "count": 2,
+        "total_from": 5,
+        "prob_pct": 40.0,
+        "lift": 15.2,
+        "z_score": 5.22,
+        "ev_pct": 1100.0
+      },
+      {
+        "from_num": "11",
+        "from_anim": "GATO",
+        "to_num": "12",
+        "to_anim": "CABALLO",
+        "count": 2,
+        "total_from": 5,
+        "prob_pct": 40.0,
+        "lift": 15.2,
+        "z_score": 5.22,
+        "ev_pct": 1100.0
+      }
+    ]
+  },
+  "Monje Millonario": {
+    "ruleta": "Monje Millonario",
+    "timestamp": "2026-11-06 09:03:59 PM",
+    "rep_status": "NORMAL",
+    "rep_badge": "⚖️ Repetición Normal",
+    "rep_desc": "Repetición contigua estándar (0/119, 0.0% vs 1.3% base).",
+    "z_contig": -1.25,
+    "contig_repeats": 0,
+    "contig_trials": 119,
+    "today_date": "2026-11-06",
+    "dups_today": 0,
+    "n_today": 12,
+    "dup_pct_today": 0.0,
+    "intraday_status": "NORMAL",
+    "monitored_snipers": [],
+    "new_emerging": [
+      {
+        "from_num": "71",
+        "from_anim": "GUACAMAYA",
+        "to_num": "26",
+        "to_anim": "VACA",
+        "count": 2,
+        "total_from": 5,
+        "prob_pct": 40.0,
+        "lift": 30.8,
+        "z_score": 7.64,
+        "ev_pct": 2300.0
+      },
+      {
+        "from_num": "15",
+        "from_anim": "ZORRO",
+        "to_num": "43",
+        "to_anim": "MARIPOSA",
+        "count": 2,
+        "total_from": 5,
+        "prob_pct": 40.0,
+        "lift": 30.8,
+        "z_score": 7.64,
+        "ev_pct": 2300.0
+      },
+      {
+        "from_num": "69",
+        "from_anim": "CONEJO",
+        "to_num": "57",
+        "to_anim": "PATO",
+        "count": 2,
+        "total_from": 5,
+        "prob_pct": 40.0,
+        "lift": 30.8,
+        "z_score": 7.64,
+        "ev_pct": 2300.0
+      }
+    ]
+  },
+  "Lotto Gato": {
+    "ruleta": "Lotto Gato",
+    "timestamp": "2026-11-06 09:03:59 PM",
+    "rep_status": "NORMAL",
+    "rep_badge": "⚖️ Repetición Normal",
+    "rep_desc": "Repetición contigua estándar (1/119, 0.8% vs 1.3% base).",
+    "z_contig": -0.44,
+    "contig_repeats": 1,
+    "contig_trials": 119,
+    "today_date": "2026-11-06",
+    "dups_today": 2,
+    "n_today": 10,
+    "dup_pct_today": 20.0,
+    "intraday_status": "NORMAL",
+    "monitored_snipers": [
+      {
+        "from_num": "14",
+        "from_anim": "PALOMA",
+        "to_num": "0",
+        "to_anim": "DELFÍN",
+        "occurrences": 6,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/6)"
+      },
+      {
+        "from_num": "27",
+        "from_anim": "PERRO",
+        "to_num": "15",
+        "to_anim": "ZORRO",
+        "occurrences": 7,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/7)"
+      },
+      {
+        "from_num": "3",
+        "from_anim": "CIENPIES",
+        "to_num": "7",
+        "to_anim": "PERICO",
+        "occurrences": 5,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/5)"
+      }
+    ],
+    "new_emerging": [
+      {
+        "from_num": "11",
+        "from_anim": "GATO",
+        "to_num": "1",
+        "to_anim": "CARNERO",
+        "count": 2,
+        "total_from": 4,
+        "prob_pct": 50.0,
+        "lift": 38.5,
+        "z_score": 8.6,
+        "ev_pct": 2900.0
+      },
+      {
+        "from_num": "8",
+        "from_anim": "RATÓN",
+        "to_num": "0",
+        "to_anim": "DELFÍN",
+        "count": 3,
+        "total_from": 9,
+        "prob_pct": 33.3,
+        "lift": 25.67,
+        "z_score": 8.49,
+        "ev_pct": 1900.0
+      },
+      {
+        "from_num": "9",
+        "from_anim": "ÁGUILA",
+        "to_num": "34",
+        "to_anim": "VENADO",
+        "count": 2,
+        "total_from": 7,
+        "prob_pct": 28.6,
+        "lift": 22.0,
+        "z_score": 6.37,
+        "ev_pct": 1614.3
+      }
+    ]
+  },
+  "Loto Chaima": {
+    "ruleta": "Loto Chaima",
+    "timestamp": "2026-11-06 09:03:59 PM",
+    "rep_status": "NORMAL",
+    "rep_badge": "⚖️ Repetición Normal",
+    "rep_desc": "Repetición contigua estándar (0/119, 0.0% vs 1.3% base).",
+    "z_contig": -1.25,
+    "contig_repeats": 0,
+    "contig_trials": 119,
+    "today_date": "2026-11-06",
+    "dups_today": 0,
+    "n_today": 12,
+    "dup_pct_today": 0.0,
+    "intraday_status": "NORMAL",
+    "monitored_snipers": [
+      {
+        "from_num": "48",
+        "from_anim": "PUERCOESPÍN",
+        "to_num": "0",
+        "to_anim": "DELFÍN",
+        "occurrences": 4,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/4)"
+      },
+      {
+        "from_num": "55",
+        "from_anim": "HORMIGUERO",
+        "to_num": "0",
+        "to_anim": "DELFÍN",
+        "occurrences": 1,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/1)"
+      },
+      {
+        "from_num": "12",
+        "from_anim": "CABALLO",
+        "to_num": "0",
+        "to_anim": "DELFÍN",
+        "occurrences": 3,
+        "hits": 0,
+        "health": "FATIGA",
+        "health_badge": "⚠️ Fatiga (0/3)"
+      }
+    ],
+    "new_emerging": [
+      {
+        "from_num": "23",
+        "from_anim": "CEBRA",
+        "to_num": "43",
+        "to_anim": "MARIPOSA",
+        "count": 2,
+        "total_from": 4,
+        "prob_pct": 50.0,
+        "lift": 38.5,
+        "z_score": 8.6,
+        "ev_pct": 2900.0
+      },
+      {
+        "from_num": "29",
+        "from_anim": "ELEFANTE",
+        "to_num": "37",
+        "to_anim": "TORTUGA",
+        "count": 2,
+        "total_from": 6,
+        "prob_pct": 33.3,
+        "lift": 25.67,
+        "z_score": 6.93,
+        "ev_pct": 1900.0
+      },
+      {
+        "from_num": "17",
+        "from_anim": "PAVO",
+        "to_num": "53",
+        "to_anim": "CARACOL",
+        "count": 2,
+        "total_from": 8,
+        "prob_pct": 25.0,
+        "lift": 19.25,
+        "z_score": 5.92,
+        "ev_pct": 1400.0
+      }
+    ]
+  },
+  "Granja Millonaria - Granjazo": {
+    "ruleta": "Granja Millonaria - Granjazo",
+    "timestamp": "2026-11-06 09:03:59 PM",
+    "rep_status": "NORMAL",
+    "rep_badge": "⚖️ Repetición Normal",
+    "rep_desc": "Repetición contigua estándar (0/119, 0.0% vs 1.3% base).",
+    "z_contig": -1.25,
+    "contig_repeats": 0,
+    "contig_trials": 119,
+    "today_date": "2026-11-06",
+    "dups_today": 0,
+    "n_today": 10,
+    "dup_pct_today": 0.0,
+    "intraday_status": "NORMAL",
+    "monitored_snipers": [],
+    "new_emerging": [
+      {
+        "from_num": "76",
+        "from_anim": "MANTIS",
+        "to_num": "61",
+        "to_anim": "TURPIAL",
+        "count": 2,
+        "total_from": 4,
+        "prob_pct": 50.0,
+        "lift": 38.5,
+        "z_score": 8.6,
+        "ev_pct": 2900.0
+      },
+      {
+        "from_num": "39",
+        "from_anim": "RINOCERONTE",
+        "to_num": "56",
+        "to_anim": "ARMIÑO",
+        "count": 2,
+        "total_from": 4,
+        "prob_pct": 50.0,
+        "lift": 38.5,
+        "z_score": 8.6,
+        "ev_pct": 2900.0
+      },
+      {
+        "from_num": "58",
+        "from_anim": "CASTOR",
+        "to_num": "38",
+        "to_anim": "CONEJO",
+        "count": 2,
+        "total_from": 5,
+        "prob_pct": 40.0,
+        "lift": 30.8,
+        "z_score": 7.64,
+        "ev_pct": 2300.0
+      }
+    ]
+  }
+}

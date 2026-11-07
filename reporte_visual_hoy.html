@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Táctico Sniper - Jornada de Hoy</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --border: #334155;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-green: #10b981;
+      --accent-blue: #38bdf8;
+      --accent-yellow: #f59e0b;
+      --accent-red: #ef4444;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 24px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: var(--accent-blue);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .badge-live {
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--accent-green);
+      border: 1px solid var(--accent-green);
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: bold;
+    }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .metric-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .metric-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+    .metric-value {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .text-green { color: var(--accent-green); }
+    .text-blue { color: var(--accent-blue); }
+    .table-container {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow-x: auto;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.85rem;
+    }
+    th {
+      background: #111827;
+      color: var(--text-muted);
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+    }
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    tr:hover {
+      background-color: rgba(255, 255, 255, 0.03);
+    }
+    .badge-win {
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--accent-green);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+    }
+    .badge-trigger {
+      background: rgba(56, 189, 248, 0.2);
+      color: var(--accent-blue);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .badge-wait {
+      color: var(--text-muted);
+    }
+    .badge-hit-row {
+      background-color: rgba(16, 185, 129, 0.08);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🎯 Monitor Intradía Sniper (7 Ruletas)</h1>
+      <span class="badge-live">● EN VIVO</span>
+    </div>
+
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-label">Capital Activo</div>
+        <div class="metric-value text-green">$265.11 USD</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Rendimiento Ciclo 1</div>
+        <div class="metric-value text-blue">+32.56% (+$65.11)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">PnL Hoy (Lunes)</div>
+        <div class="metric-value text-green">+$23.22 USD</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Efectividad Hoy</div>
+        <div class="metric-value text-green">2 / 2 (100%)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Drawdown</div>
+        <div class="metric-value text-blue">0.00% (ATH)</div>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Hora</th>
+            <th>Ruleta</th>
+            <th>Salido Oficial</th>
+            <th>Condición Estrategia</th>
+            <th>¿Disparo?</th>
+            <th>Números Seleccionados</th>
+            <th>Resultado / PnL</th>
+            <th>Saldo en Banca</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>08:00 AM</td>
+            <td>🦇 Guacharo Activo</td>
+            <td><strong>#34 VENADO</strong></td>
+            <td><span class="badge-wait">⏳ Racha 5 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$241.89 USD</td>
+          </tr>
+          <tr>
+            <td>08:00 AM</td>
+            <td>🐸 La Granjita</td>
+            <td><strong>#34 VENADO</strong></td>
+            <td><span class="badge-wait">⏳ Racha 31 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$241.89 USD</td>
+          </tr>
+          <tr>
+            <td>08:00 AM</td>
+            <td>🦁 Lotto Activo</td>
+            <td><strong>#28 ZAMURO</strong></td>
+            <td><span class="badge-wait">⏳ Racha 45 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$241.89 USD</td>
+          </tr>
+          <tr>
+            <td>08:05 AM</td>
+            <td>🧘‍♂️ Monje Millonario</td>
+            <td><strong>#40 AVISPA</strong></td>
+            <td><span class="badge-wait">⏳ Racha 13 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$241.89 USD</td>
+          </tr>
+          <tr class="badge-hit-row">
+            <td><strong>08:30 AM</strong></td>
+            <td>👑 <strong>Ruleta Royal</strong></td>
+            <td><strong>#26 VACA</strong></td>
+            <td><span class="badge-trigger">🎯 GATILLO Racha 1</span></td>
+            <td>💥 <strong>SÍ</strong></td>
+            <td><code>#26 VACA, #34 VENADO, #7 PERICO</code></td>
+            <td><span class="badge-win">+ $11.88 USD</span></td>
+            <td><strong>$253.77 USD</strong></td>
+          </tr>
+          <tr>
+            <td>09:00 AM</td>
+            <td>🦇 Guacharo Activo</td>
+            <td><strong>#13 MONO</strong></td>
+            <td><span class="badge-wait">⏳ Racha 6 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$253.77 USD</td>
+          </tr>
+          <tr>
+            <td>09:00 AM</td>
+            <td>🐸 La Granjita</td>
+            <td><strong>#24 IGUANA</strong></td>
+            <td><span class="badge-wait">⏳ Racha 32 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$253.77 USD</td>
+          </tr>
+          <tr>
+            <td>09:00 AM</td>
+            <td>🦁 Lotto Activo</td>
+            <td><strong>#00 BALLENA</strong></td>
+            <td><span class="badge-wait">⏳ Racha 46 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$253.77 USD</td>
+          </tr>
+          <tr>
+            <td>09:00 AM</td>
+            <td>🦏 Mega Animal 40</td>
+            <td><strong>#32 ARDILLA</strong></td>
+            <td><span class="badge-wait">⏳ Racha 15 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$253.77 USD</td>
+          </tr>
+          <tr>
+            <td>09:05 AM</td>
+            <td>🧘‍♂️ Monje Millonario</td>
+            <td><strong>#45 GARZA</strong></td>
+            <td><span class="badge-wait">⏳ Racha 14 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$253.77 USD</td>
+          </tr>
+          <tr>
+            <td>09:30 AM</td>
+            <td>👑 Ruleta Royal</td>
+            <td><strong>#0 TIBURÓN</strong></td>
+            <td><span class="badge-wait">💤 Espera Fallo (Post-Win R0)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$253.77 USD</td>
+          </tr>
+          <tr>
+            <td>09:40 AM</td>
+            <td>🐯 Gatazo</td>
+            <td><strong>#57 PATO</strong></td>
+            <td><span class="badge-wait">⏳ Racha 6 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$253.77 USD</td>
+          </tr>
+          <tr>
+            <td>10:00 AM</td>
+            <td>🦇 Guacharo Activo</td>
+            <td><strong>#62 CACHICAMO</strong></td>
+            <td><span class="badge-wait">⏳ Racha 7 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$253.77 USD</td>
+          </tr>
+          <tr>
+            <td>10:00 AM</td>
+            <td>🐸 La Granjita</td>
+            <td><strong>#13 MONO</strong></td>
+            <td><span class="badge-wait">⏳ Racha 33 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$253.77 USD</td>
+          </tr>
+          <tr>
+            <td>10:00 AM</td>
+            <td>🦁 Lotto Activo</td>
+            <td><strong>#30 CAIMÁN</strong></td>
+            <td><span class="badge-wait">⏳ Racha 47 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$253.77 USD</td>
+          </tr>
+          <tr>
+            <td>10:00 AM</td>
+            <td>🦏 Mega Animal 40</td>
+            <td><strong>#30 CAIMÁN</strong></td>
+            <td><span class="badge-wait">⏳ Racha 16 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$253.77 USD</td>
+          </tr>
+          <tr>
+            <td>10:05 AM</td>
+            <td>🧘‍♂️ Monje Millonario</td>
+            <td><strong>#25 GALLINA</strong></td>
+            <td><span class="badge-wait">⏳ Racha 15 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$253.77 USD</td>
+          </tr>
+          <tr class="badge-hit-row">
+            <td><strong>10:30 AM</strong></td>
+            <td>👑 <strong>Ruleta Royal</strong></td>
+            <td><strong>#3 CIEMPIÉS</strong></td>
+            <td><span class="badge-trigger">🎯 GATILLO Racha 1</span></td>
+            <td>💥 <strong>SÍ</strong></td>
+            <td><code>#19 CHIVO, #3 CIEMPIÉS, #4 ALACRÁN</code></td>
+            <td><span class="badge-win">+ $11.34 USD</span></td>
+            <td><strong>$265.11 USD</strong></td>
+          </tr>
+          <tr>
+            <td>10:40 AM</td>
+            <td>🐯 Gatazo</td>
+            <td><strong>#41 CANGURO</strong></td>
+            <td><span class="badge-wait">⏳ Racha 7 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>11:00 AM</td>
+            <td>🦇 Guacharo Activo</td>
+            <td><strong>#46 PUMA</strong></td>
+            <td><span class="badge-wait">⏳ Racha 8 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>11:00 AM</td>
+            <td>🐸 La Granjita</td>
+            <td><strong>#33 PESCADO</strong></td>
+            <td><span class="badge-wait">⏳ Racha 34 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>11:00 AM</td>
+            <td>🦁 Lotto Activo</td>
+            <td><strong>#29 ELEFANTE</strong></td>
+            <td><span class="badge-wait">⏳ Racha 48 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>11:00 AM</td>
+            <td>🦏 Mega Animal 40</td>
+            <td><strong>#7 PERICO</strong></td>
+            <td><span class="badge-wait">⏳ Racha 17 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>11:05 AM</td>
+            <td>🧘‍♂️ Monje Millonario</td>
+            <td><strong>#47 PAVO REAL</strong></td>
+            <td><span class="badge-wait">⏳ Racha 16 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>11:30 AM</td>
+            <td>👑 Ruleta Royal</td>
+            <td><strong>#17 PAVO</strong></td>
+            <td><span class="badge-wait">💤 Espera Fallo (Post-Win R0)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>11:40 AM</td>
+            <td>🐯 Gatazo</td>
+            <td><strong>#16 OSO</strong></td>
+            <td><span class="badge-wait">⏳ Racha 8 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>12:00 PM</td>
+            <td>🦇 Guacharo Activo</td>
+            <td><strong>#72 GORILA</strong></td>
+            <td><span class="badge-wait">⏳ Racha 9 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>12:00 PM</td>
+            <td>🐸 La Granjita</td>
+            <td><strong>#14 PALOMA</strong></td>
+            <td><span class="badge-wait">⏳ Racha 35 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>12:00 PM</td>
+            <td>🦁 Lotto Activo</td>
+            <td><strong>#31 LAPA</strong></td>
+            <td><span class="badge-wait">⏳ Racha 49 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>12:00 PM</td>
+            <td>🦏 Mega Animal 40</td>
+            <td><strong>#31 LAPA</strong></td>
+            <td><span class="badge-wait">⏳ Racha 18 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>12:05 PM</td>
+            <td>🧘‍♂️ Monje Millonario</td>
+            <td><strong>#22 CAMELLO</strong></td>
+            <td><span class="badge-wait">⏳ Racha 17 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>12:30 PM</td>
+            <td>👑 Ruleta Royal</td>
+            <td><strong>#32 ARDILLA</strong></td>
+            <td><span class="badge-wait">⏳ Racha 1 (Sin disparo / Reinicio)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>12:40 PM</td>
+            <td>🐯 Gatazo</td>
+            <td><strong>#00 BALLENA</strong></td>
+            <td><span class="badge-wait">⏳ Racha 9 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>01:00 PM</td>
+            <td>🦇 Guacharo Activo</td>
+            <td><strong>#66 LOBO</strong></td>
+            <td><span class="badge-wait">⏳ Racha 10 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>01:00 PM</td>
+            <td>🐸 La Granjita</td>
+            <td><strong>#8 RATÓN</strong></td>
+            <td><span class="badge-wait">⏳ Racha 36 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>01:00 PM</td>
+            <td>🦁 Lotto Activo</td>
+            <td><strong>#24 IGUANA</strong></td>
+            <td><span class="badge-wait">⏳ Racha 50 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>01:00 PM</td>
+            <td>🦏 Mega Animal 40</td>
+            <td><strong>#14 PALOMA</strong></td>
+            <td><span class="badge-wait">⏳ Racha 19 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+          <tr>
+            <td>01:05 PM</td>
+            <td>🧘‍♂️ Monje Millonario</td>
+            <td><strong>#8 RATÓN</strong></td>
+            <td><span class="badge-wait">⏳ Racha 18 (Fuera Zona)</span></td>
+            <td>⚪ No</td>
+            <td>---</td>
+            <td>---</td>
+            <td>$265.11 USD</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

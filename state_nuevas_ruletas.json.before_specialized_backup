@@ -1,0 +1,83 @@
+{
+  "bankroll": 267.03,
+  "initial_bankroll": 200.0,
+  "peak_bankroll": 309.08,
+  "sizing_model": "optimized_step_compounding",
+  "created_at": "2026-10-17T09:47:00",
+  "last_updated": "2026-10-30T12:52:48.187204",
+  "cycle_start_time": "2026-10-24T10:00:00",
+  "cycle_start_bankroll": 265.69,
+  "cycle_number": 2,
+  "cycle_pnl": -27.34,
+  "cycle_elapsed_days": 6.11990708275463,
+  "effective_kelly": 0.421,
+  "damping": 0.5613,
+  "weekly_fixed_stakes": {
+    "Lotto Activo": 1.01,
+    "La Granjita": 0.54,
+    "Ruleta Royal": 0.92,
+    "Guacharo Activo": 0.76,
+    "Gatazo": 1.01,
+    "Mega Animal 40": 0.89,
+    "Monje Millonario": 0.78
+  },
+  "total_invested": 181.37,
+  "total_collected": 248.4,
+  "total_pnl": 67.03,
+  "wins": 6,
+  "losses": 61,
+  "streaks": {
+    "Lotto Activo": 16,
+    "La Granjita": 6,
+    "Ruleta Royal": 1,
+    "Guacharo Activo": 2,
+    "Gatazo": 62,
+    "Mega Animal 40": 0,
+    "Monje Millonario": 75
+  },
+  "trigger_misses": {
+    "Lotto Activo": 4,
+    "La Granjita": 14,
+    "Ruleta Royal": 2,
+    "Guacharo Activo": 7,
+    "Gatazo": 22,
+    "Mega Animal 40": 0,
+    "Monje Millonario": 18
+  },
+  "last_seen_draw": {},
+  "active_bets": {},
+  "pending_bets": {
+    "Ruleta Royal": {
+      "ruleta": "Ruleta Royal",
+      "candidatos": [
+        "0",
+        "5",
+        "7"
+      ],
+      "candidatos_str": "#0 TIBURÓN, #5 LEÓN, #7 PERICO",
+      "total_cands": 3,
+      "stake_unit": 0.92,
+      "total_stake": 2.76,
+      "posible_premio": 27.6,
+      "payout": 30.0,
+      "smart_label": "🔥 Zona Dulce Rebote (1.25x Kelly) | ⚖️ ESTABLE (1.00x)",
+      "audit_verdict": "ESTABLE / EN PARIDAD",
+      "audit_multiplier": 1.0,
+      "last_fecha": "2026-10-30",
+      "last_hora": "12:30 PM",
+      "last_salido_str": "#31 LAPA (12:30 PM)",
+      "created_at": "2026-10-30 12:37:07 PM"
+    }
+  },
+  "mdd_floor": 0.4,
+  "min_bet": 0.1,
+  "last_processed_draw": {
+    "Lotto Activo": "2026-10-30 12:00 PM",
+    "La Granjita": "2026-10-30 12:00 PM",
+    "Ruleta Royal": "2026-10-30 12:30 PM",
+    "Guacharo Activo": "2026-10-30 12:00 PM",
+    "Gatazo": "2026-10-30 12:40 PM",
+    "Mega Animal 40": "2026-10-30 12:00 PM",
+    "Monje Millonario": "2026-10-30 12:05 PM"
+  }
+}

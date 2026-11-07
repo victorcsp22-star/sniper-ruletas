@@ -1,0 +1,63 @@
+{
+  "initial_bankroll": 200.0,
+  "final_bankroll": 403477.3,
+  "net_pnl": 403277.3000000012,
+  "total_invested": 2255976.6999999983,
+  "total_collected": 2659253.9999999995,
+  "total_bets": 2775,
+  "total_wins": 278,
+  "win_rate": 10.018018018018019,
+  "profit_factor": 1.1989546345960684,
+  "expectancy_per_bet": 145.3251531531536,
+  "roi": 17.87595146705201,
+  "max_drawdown": 33.27211321883408,
+  "sharpe": 2.2135676103875235,
+  "sortino": 6.4374634588373345,
+  "cagr_weekly": 7.230706193748837,
+  "n_weeks": 109,
+  "winning_weeks": 60,
+  "roulette_stats": {
+    "Lotto Activo": {
+      "bets": 774,
+      "wins": 96,
+      "invested": 716763.2199999999,
+      "collected": 742763.1
+    },
+    "La Granjita": {
+      "bets": 420,
+      "wins": 33,
+      "invested": 81674.17999999996,
+      "collected": 71944.5
+    },
+    "Guacharo Activo": {
+      "bets": 607,
+      "wins": 62,
+      "invested": 543222.8899999998,
+      "collected": 657090.0000000001
+    },
+    "Ruleta Royal": {
+      "bets": 502,
+      "wins": 56,
+      "invested": 499483.55000000016,
+      "collected": 704518.4999999999
+    },
+    "Gatazo": {
+      "bets": 264,
+      "wins": 10,
+      "invested": 246320.3200000001,
+      "collected": 284238.0
+    },
+    "Mega Animal 40": {
+      "bets": 181,
+      "wins": 20,
+      "invested": 149116.31000000003,
+      "collected": 191737.50000000003
+    },
+    "Monje Millonario": {
+      "bets": 27,
+      "wins": 1,
+      "invested": 19396.229999999996,
+      "collected": 6962.4
+    }
+  }
+}

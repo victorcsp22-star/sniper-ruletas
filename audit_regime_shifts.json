@@ -1,0 +1,443 @@
+{
+  "Lotto Activo": {
+    "ruleta": "Lotto Activo",
+    "timestamp": "2026-11-06 03:01:25 PM",
+    "current_lags": [
+      15,
+      18,
+      20,
+      27,
+      32,
+      37,
+      42,
+      47
+    ],
+    "regime_status": "DERIVA CRÍTICA / DESPLAZAMIENTO DE RÉGIMEN",
+    "is_drifting": true,
+    "drift_direction": "Ruptura de lags antiguos. La masa espectral migró hacia [26, 25, 19]",
+    "top_emerging_lags": [
+      26,
+      25,
+      19
+    ],
+    "top_emerging_details": [
+      {
+        "lag": 26,
+        "hits": 7,
+        "trials": 102,
+        "wr_pct": 6.86,
+        "roi_pct": 105.88
+      },
+      {
+        "lag": 25,
+        "hits": 7,
+        "trials": 103,
+        "wr_pct": 6.8,
+        "roi_pct": 103.88
+      },
+      {
+        "lag": 19,
+        "hits": 6,
+        "trials": 99,
+        "wr_pct": 6.06,
+        "roi_pct": 81.82
+      }
+    ],
+    "action_recommendation": "Rotar configuración para Lotto Activo hacia lags [26, 25, 19]",
+    "scan_window_draws": 120
+  },
+  "La Granjita": {
+    "ruleta": "La Granjita",
+    "timestamp": "2026-10-31 08:13:34 AM",
+    "current_lags": [
+      15,
+      17
+    ],
+    "regime_status": "DERIVA CRÍTICA / DESPLAZAMIENTO DE RÉGIMEN",
+    "is_drifting": true,
+    "drift_direction": "Ruptura de lags antiguos. La masa espectral migró hacia [35, 25, 20]",
+    "top_emerging_lags": [
+      35,
+      25,
+      20
+    ],
+    "top_emerging_details": [
+      {
+        "lag": 35,
+        "hits": 5,
+        "trials": 100,
+        "wr_pct": 5.0,
+        "roi_pct": 50.0
+      },
+      {
+        "lag": 25,
+        "hits": 4,
+        "trials": 97,
+        "wr_pct": 4.12,
+        "roi_pct": 23.71
+      },
+      {
+        "lag": 20,
+        "hits": 4,
+        "trials": 98,
+        "wr_pct": 4.08,
+        "roi_pct": 22.45
+      }
+    ],
+    "action_recommendation": "Rotar configuración para La Granjita hacia lags [35, 25, 20]",
+    "scan_window_draws": 120
+  },
+  "Ruleta Royal": {
+    "ruleta": "Ruleta Royal",
+    "timestamp": "2026-11-05 06:35:41 PM",
+    "current_lags": [
+      16,
+      19,
+      31
+    ],
+    "regime_status": "DERIVA CRÍTICA / DESPLAZAMIENTO DE RÉGIMEN",
+    "is_drifting": true,
+    "drift_direction": "Ruptura de lags antiguos. La masa espectral migró hacia [15, 34, 27]",
+    "top_emerging_lags": [
+      15,
+      34,
+      27
+    ],
+    "top_emerging_details": [
+      {
+        "lag": 15,
+        "hits": 7,
+        "trials": 103,
+        "wr_pct": 6.8,
+        "roi_pct": 103.88
+      },
+      {
+        "lag": 34,
+        "hits": 7,
+        "trials": 103,
+        "wr_pct": 6.8,
+        "roi_pct": 103.88
+      },
+      {
+        "lag": 27,
+        "hits": 7,
+        "trials": 105,
+        "wr_pct": 6.67,
+        "roi_pct": 100.0
+      }
+    ],
+    "action_recommendation": "Rotar configuración para Ruleta Royal hacia lags [15, 34, 27]",
+    "scan_window_draws": 120
+  },
+  "Guacharo Activo": {
+    "ruleta": "Guacharo Activo",
+    "timestamp": "2026-11-06 03:01:24 PM",
+    "current_lags": [
+      31,
+      38,
+      41,
+      43,
+      48,
+      53,
+      54,
+      58
+    ],
+    "regime_status": "DERIVA CRÍTICA / DESPLAZAMIENTO DE RÉGIMEN",
+    "is_drifting": true,
+    "drift_direction": "Ruptura de lags antiguos. La masa espectral migró hacia [39, 34, 35]",
+    "top_emerging_lags": [
+      39,
+      34,
+      35
+    ],
+    "top_emerging_details": [
+      {
+        "lag": 39,
+        "hits": 5,
+        "trials": 103,
+        "wr_pct": 4.85,
+        "roi_pct": 191.26
+      },
+      {
+        "lag": 34,
+        "hits": 5,
+        "trials": 108,
+        "wr_pct": 4.63,
+        "roi_pct": 177.78
+      },
+      {
+        "lag": 35,
+        "hits": 4,
+        "trials": 105,
+        "wr_pct": 3.81,
+        "roi_pct": 128.57
+      }
+    ],
+    "action_recommendation": "Rotar configuración para Guacharo Activo hacia lags [39, 34, 35]",
+    "scan_window_draws": 120
+  },
+  "Gatazo": {
+    "ruleta": "Gatazo",
+    "timestamp": "2026-11-05 01:43:34 PM",
+    "current_lags": [
+      9,
+      20,
+      22,
+      35
+    ],
+    "regime_status": "DERIVA CRÍTICA / DESPLAZAMIENTO DE RÉGIMEN",
+    "is_drifting": true,
+    "drift_direction": "Ruptura de lags antiguos. La masa espectral migró hacia [14, 17, 36]",
+    "top_emerging_lags": [
+      14,
+      17,
+      36
+    ],
+    "top_emerging_details": [
+      {
+        "lag": 14,
+        "hits": 8,
+        "trials": 108,
+        "wr_pct": 7.41,
+        "roi_pct": 344.44
+      },
+      {
+        "lag": 17,
+        "hits": 6,
+        "trials": 103,
+        "wr_pct": 5.83,
+        "roi_pct": 249.51
+      },
+      {
+        "lag": 36,
+        "hits": 6,
+        "trials": 107,
+        "wr_pct": 5.61,
+        "roi_pct": 236.45
+      }
+    ],
+    "action_recommendation": "Rotar configuración para Gatazo hacia lags [14, 17, 36]",
+    "scan_window_draws": 120
+  },
+  "Mega Animal 40": {
+    "ruleta": "Mega Animal 40",
+    "timestamp": "2026-11-05 09:42:35 PM",
+    "current_lags": [
+      18,
+      20,
+      21
+    ],
+    "regime_status": "PATRÓN MANTENIDO",
+    "is_drifting": false,
+    "drift_direction": "Estable (Resonancia alineada con los rezagos oficiales)",
+    "top_emerging_lags": [
+      18,
+      35,
+      22
+    ],
+    "top_emerging_details": [
+      {
+        "lag": 18,
+        "hits": 8,
+        "trials": 99,
+        "wr_pct": 8.08,
+        "roi_pct": 142.42
+      },
+      {
+        "lag": 35,
+        "hits": 6,
+        "trials": 96,
+        "wr_pct": 6.25,
+        "roi_pct": 87.5
+      },
+      {
+        "lag": 22,
+        "hits": 5,
+        "trials": 91,
+        "wr_pct": 5.49,
+        "roi_pct": 64.84
+      }
+    ],
+    "action_recommendation": "Mantener estrategia actual sin cambios.",
+    "scan_window_draws": 120
+  },
+  "Monje Millonario": {
+    "ruleta": "Monje Millonario",
+    "timestamp": "2026-11-05 07:15:25 PM",
+    "current_lags": [
+      23,
+      24,
+      35,
+      42,
+      44,
+      48,
+      51,
+      52
+    ],
+    "regime_status": "DERIVA CRÍTICA / DESPLAZAMIENTO DE RÉGIMEN",
+    "is_drifting": true,
+    "drift_direction": "Ruptura de lags antiguos. La masa espectral migró hacia [26, 36, 20]",
+    "top_emerging_lags": [
+      26,
+      36,
+      20
+    ],
+    "top_emerging_details": [
+      {
+        "lag": 26,
+        "hits": 5,
+        "trials": 112,
+        "wr_pct": 4.46,
+        "roi_pct": 167.86
+      },
+      {
+        "lag": 36,
+        "hits": 4,
+        "trials": 107,
+        "wr_pct": 3.74,
+        "roi_pct": 124.3
+      },
+      {
+        "lag": 20,
+        "hits": 4,
+        "trials": 112,
+        "wr_pct": 3.57,
+        "roi_pct": 114.29
+      }
+    ],
+    "action_recommendation": "Rotar configuración para Monje Millonario hacia lags [26, 36, 20]",
+    "scan_window_draws": 120
+  },
+  "Lotto Gato": {
+    "ruleta": "Lotto Gato",
+    "timestamp": "2026-11-04 01:14:52 PM",
+    "current_lags": [
+      14,
+      18,
+      25,
+      30,
+      35,
+      38,
+      40,
+      45
+    ],
+    "regime_status": "DERIVA LEVE / MONITOREO",
+    "is_drifting": true,
+    "drift_direction": "Energía dispersándose hacia lags [28, 27, 30]",
+    "top_emerging_lags": [
+      28,
+      27,
+      30
+    ],
+    "top_emerging_details": [
+      {
+        "lag": 28,
+        "hits": 7,
+        "trials": 97,
+        "wr_pct": 7.22,
+        "roi_pct": 332.99
+      },
+      {
+        "lag": 27,
+        "hits": 7,
+        "trials": 103,
+        "wr_pct": 6.8,
+        "roi_pct": 307.77
+      },
+      {
+        "lag": 30,
+        "hits": 5,
+        "trials": 93,
+        "wr_pct": 5.38,
+        "roi_pct": 222.58
+      }
+    ],
+    "action_recommendation": "Supervisión estrecha. Lags emergentes de mayor captura: [28, 27, 30]",
+    "scan_window_draws": 120
+  },
+  "Loto Chaima": {
+    "ruleta": "Loto Chaima",
+    "timestamp": "2026-10-31 10:41:26 PM",
+    "current_lags": [
+      35,
+      41,
+      49
+    ],
+    "regime_status": "DERIVA CRÍTICA / DESPLAZAMIENTO DE RÉGIMEN",
+    "is_drifting": true,
+    "drift_direction": "Ruptura de lags antiguos. La masa espectral migró hacia [40, 37, 31]",
+    "top_emerging_lags": [
+      40,
+      37,
+      31
+    ],
+    "top_emerging_details": [
+      {
+        "lag": 40,
+        "hits": 5,
+        "trials": 112,
+        "wr_pct": 4.46,
+        "roi_pct": 167.86
+      },
+      {
+        "lag": 37,
+        "hits": 4,
+        "trials": 108,
+        "wr_pct": 3.7,
+        "roi_pct": 122.22
+      },
+      {
+        "lag": 31,
+        "hits": 4,
+        "trials": 110,
+        "wr_pct": 3.64,
+        "roi_pct": 118.18
+      }
+    ],
+    "action_recommendation": "Rotar configuración para Loto Chaima hacia lags [40, 37, 31]",
+    "scan_window_draws": 120
+  },
+  "Granja Millonaria - Granjazo": {
+    "ruleta": "Granja Millonaria - Granjazo",
+    "timestamp": "2026-11-05 10:34:43 AM",
+    "current_lags": [
+      15,
+      26,
+      45,
+      48
+    ],
+    "regime_status": "PATRÓN MANTENIDO",
+    "is_drifting": false,
+    "drift_direction": "Estable (Resonancia alineada con los rezagos oficiales)",
+    "top_emerging_lags": [
+      15,
+      45,
+      20
+    ],
+    "top_emerging_details": [
+      {
+        "lag": 15,
+        "hits": 6,
+        "trials": 111,
+        "wr_pct": 5.41,
+        "roi_pct": 224.32
+      },
+      {
+        "lag": 45,
+        "hits": 5,
+        "trials": 108,
+        "wr_pct": 4.63,
+        "roi_pct": 177.78
+      },
+      {
+        "lag": 20,
+        "hits": 4,
+        "trials": 108,
+        "wr_pct": 3.7,
+        "roi_pct": 122.22
+      }
+    ],
+    "action_recommendation": "Mantener estrategia actual sin cambios.",
+    "scan_window_draws": 120
+  }
+}

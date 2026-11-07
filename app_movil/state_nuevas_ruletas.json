@@ -1,0 +1,10 @@
+{
+  "bankroll": 16500.0,
+  "initial_bankroll": 20000.0,
+  "cycle_start_bankroll": 20000.0,
+  "total_withdrawn": 0.0,
+  "cycle_number": 1,
+  "peak_bankroll": 20000.0,
+  "last_date": "2026-11-02",
+  "pending_bets": {}
+}

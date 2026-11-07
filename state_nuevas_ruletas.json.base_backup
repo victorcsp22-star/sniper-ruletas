@@ -1,0 +1,103 @@
+{
+  "bankroll": 288.35,
+  "initial_bankroll": 200.0,
+  "peak_bankroll": 305.16,
+  "sizing_model": "optimized_step_compounding",
+  "created_at": "2026-10-17T09:47:00",
+  "last_updated": "2026-10-30T12:00:31.153982",
+  "cycle_start_time": "2026-10-24T09:48:59.578536",
+  "cycle_start_bankroll": 259.76,
+  "cycle_number": 2,
+  "cycle_pnl": 0.0,
+  "cycle_elapsed_days": 6.091282740520834,
+  "effective_kelly": 0.4013,
+  "damping": 0.5351,
+  "weekly_fixed_stakes": {
+    "Lotto Activo": 0.94,
+    "La Granjita": 0.5,
+    "Ruleta Royal": 0.86,
+    "Guacharo Activo": 0.71,
+    "Gatazo": 0.94,
+    "Mega Animal 40": 0.83,
+    "Monje Millonario": 0.73
+  },
+  "total_invested": 91.95,
+  "total_collected": 180.3,
+  "total_pnl": 88.35,
+  "wins": 6,
+  "losses": 53,
+  "streaks": {
+    "Lotto Activo": 15,
+    "La Granjita": 5,
+    "Ruleta Royal": 0,
+    "Guacharo Activo": 1,
+    "Gatazo": 61,
+    "Mega Animal 40": 1,
+    "Monje Millonario": 74
+  },
+  "trigger_misses": {
+    "Lotto Activo": 4,
+    "La Granjita": 14,
+    "Ruleta Royal": 2,
+    "Guacharo Activo": 6,
+    "Gatazo": 22,
+    "Mega Animal 40": 16,
+    "Monje Millonario": 18
+  },
+  "last_seen_draw": {},
+  "active_bets": {},
+  "pending_bets": {
+    "Guacharo Activo": {
+      "ruleta": "Guacharo Activo",
+      "candidatos": [
+        "1",
+        "32",
+        "39",
+        "6",
+        "69"
+      ],
+      "candidatos_str": "#1 CARNERO, #32 ARDILLA, #39 LECHUZA, #6 RANA, #69 CONEJO",
+      "total_cands": 5,
+      "stake_unit": 0.71,
+      "total_stake": 3.55,
+      "posible_premio": 42.6,
+      "payout": 60.0,
+      "smart_label": "⚖️ Neutral (1.00x Kelly)",
+      "last_fecha": "2026-10-30",
+      "last_hora": "11:00 AM",
+      "last_salido_str": "#5 LEÓN (11:00 AM)",
+      "created_at": "2026-10-30 11:26:21 AM"
+    },
+    "Mega Animal 40": {
+      "ruleta": "Mega Animal 40",
+      "candidatos": [
+        "23",
+        "4"
+      ],
+      "candidatos_str": "#23 CEBRA, #4 ALACRÁN",
+      "total_cands": 2,
+      "stake_unit": 1.08,
+      "total_stake": 2.16,
+      "posible_premio": 32.4,
+      "payout": 30.0,
+      "smart_label": "⚖️ Neutral (1.00x Kelly) | 🔥 FUERTE (1.30x)",
+      "audit_verdict": "FUERTE / ALTA RESONANCIA",
+      "audit_multiplier": 1.3,
+      "last_fecha": "2026-10-30",
+      "last_hora": "11:00 AM",
+      "last_salido_str": "#35 JIRAFA (11:00 AM)",
+      "created_at": "2026-10-30 11:57:09 AM"
+    }
+  },
+  "mdd_floor": 0.4,
+  "min_bet": 0.1,
+  "last_processed_draw": {
+    "Lotto Activo": "2026-10-30 11:00 AM",
+    "La Granjita": "2026-10-30 11:00 AM",
+    "Ruleta Royal": "2026-10-30 11:30 AM",
+    "Guacharo Activo": "2026-10-30 11:00 AM",
+    "Gatazo": "2026-10-30 11:40 AM",
+    "Mega Animal 40": "2026-10-30 11:00 AM",
+    "Monje Millonario": "2026-10-30 11:05 AM"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "bankroll": 252.08,
+  "initial_bankroll": 200.0,
+  "peak_bankroll": 314.35,
+  "sizing_model": "optimized_step_compounding",
+  "created_at": "2026-10-17T09:47:00",
+  "last_updated": "2026-10-30T13:11:32.145748",
+  "cycle_start_time": "2026-10-24T10:00:00",
+  "cycle_start_bankroll": 247.25,
+  "cycle_number": 2,
+  "cycle_pnl": 4.83,
+  "cycle_elapsed_days": 6.132946151423611,
+  "effective_kelly": 0.2497,
+  "damping": 0.3329,
+  "weekly_fixed_stakes": {
+    "Lotto Activo": 0.56,
+    "La Granjita": 0.3,
+    "Ruleta Royal": 0.51,
+    "Guacharo Activo": 0.42,
+    "Gatazo": 0.56,
+    "Mega Animal 40": 0.49,
+    "Monje Millonario": 0.43
+  },
+  "total_invested": 215.52,
+  "total_collected": 267.6,
+  "total_pnl": 52.08,
+  "wins": 7,
+  "losses": 85,
+  "streaks": {
+    "Lotto Activo": 16,
+    "La Granjita": 7,
+    "Ruleta Royal": 1,
+    "Guacharo Activo": 2,
+    "Gatazo": 39,
+    "Mega Animal 40": 1,
+    "Monje Millonario": 75
+  },
+  "trigger_misses": {
+    "Lotto Activo": 4,
+    "La Granjita": 14,
+    "Ruleta Royal": 2,
+    "Guacharo Activo": 7,
+    "Gatazo": 4,
+    "Mega Animal 40": 0,
+    "Monje Millonario": 18
+  },
+  "last_seen_draw": {},
+  "active_bets": {},
+  "pending_bets": {
+    "Ruleta Royal": {
+      "ruleta": "Ruleta Royal",
+      "candidatos": [
+        "0",
+        "5",
+        "7"
+      ],
+      "candidatos_str": "#0 TIBURÓN, #5 LEÓN, #7 PERICO",
+      "total_cands": 3,
+      "stake_unit": 0.51,
+      "total_stake": 1.53,
+      "posible_premio": 15.3,
+      "payout": 30.0,
+      "smart_label": "🔥 Zona Dulce Rebote (1.25x Kelly) | ⚖️ ESTABLE (1.00x)",
+      "audit_verdict": "ESTABLE / EN PARIDAD",
+      "audit_multiplier": 1.0,
+      "last_fecha": "2026-10-30",
+      "last_hora": "12:30 PM",
+      "last_salido_str": "#31 LAPA (12:30 PM)",
+      "created_at": "2026-10-30 12:55:22 PM"
+    },
+    "Mega Animal 40": {
+      "ruleta": "Mega Animal 40",
+      "candidatos": [
+        "32"
+      ],
+      "candidatos_str": "#32 ARDILLA",
+      "total_cands": 1,
+      "stake_unit": 0.64,
+      "total_stake": 0.64,
+      "posible_premio": 19.2,
+      "payout": 30.0,
+      "smart_label": "🛡️ Zona Fatigada (0.85x Kelly) | 🔥 FUERTE (1.30x)",
+      "audit_verdict": "FUERTE / ALTA RESONANCIA",
+      "audit_multiplier": 1.3,
+      "last_fecha": "2026-10-30",
+      "last_hora": "1:00 PM",
+      "last_salido_str": "#25 GALLINA (1:00 PM)",
+      "created_at": "2026-10-30 01:08:26 PM"
+    }
+  },
+  "mdd_floor": 0.4,
+  "min_bet": 0.1,
+  "last_processed_draw": {
+    "Lotto Activo": "2026-10-30 12:00 PM",
+    "La Granjita": "2026-10-30 1:00 PM",
+    "Ruleta Royal": "2026-10-30 12:30 PM",
+    "Guacharo Activo": "2026-10-30 12:00 PM",
+    "Gatazo": "2026-10-30 12:40 PM",
+    "Mega Animal 40": "2026-10-30 1:00 PM",
+    "Monje Millonario": "2026-10-30 12:05 PM"
+  }
+}

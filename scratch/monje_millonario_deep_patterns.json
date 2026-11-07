@@ -1,0 +1,652 @@
+{
+  "roulette": "Monje Millonario",
+  "sample_size": 641,
+  "date_range": {
+    "start": "2026-09-07",
+    "end": "2026-10-30"
+  },
+  "payout": 60.0,
+  "k_animals": 77,
+  "chi_square": {
+    "statistic": 61.13,
+    "degrees_of_freedom": 76,
+    "p_value": 0.89255,
+    "uniformity_rejected": false
+  },
+  "weibull_hazard": {
+    "shape_beta": 1.2259,
+    "scale_lambda": 72.9,
+    "mean_gap": 67.7,
+    "median_gap": 45.0
+  },
+  "intraday_repeats_pct": 0.16,
+  "top_hot": [
+    {
+      "num": "33",
+      "animal": "PESCADO",
+      "count": 14,
+      "z": 1.98
+    },
+    {
+      "num": "12",
+      "animal": "CABALLO",
+      "count": 13,
+      "z": 1.63
+    },
+    {
+      "num": "38",
+      "animal": "BÚFALO",
+      "count": 13,
+      "z": 1.63
+    },
+    {
+      "num": "66",
+      "animal": "LOBO",
+      "count": 12,
+      "z": 1.28
+    },
+    {
+      "num": "45",
+      "animal": "GARZA",
+      "count": 12,
+      "z": 1.28
+    }
+  ],
+  "top_cold": [
+    {
+      "num": "75",
+      "animal": "PATRONUS",
+      "count": 2,
+      "z": -2.21
+    },
+    {
+      "num": "0",
+      "animal": "DELFÍN",
+      "count": 3,
+      "z": -1.86
+    },
+    {
+      "num": "21",
+      "animal": "GALLO",
+      "count": 3,
+      "z": -1.86
+    },
+    {
+      "num": "54",
+      "animal": "GRILLO",
+      "count": 3,
+      "z": -1.86
+    },
+    {
+      "num": "22",
+      "animal": "CAMELLO",
+      "count": 4,
+      "z": -1.51
+    }
+  ],
+  "top_lags": [
+    {
+      "lag": 24,
+      "hits": 18,
+      "trials": 617,
+      "observed_wr_pct": 2.917,
+      "expected_wr_pct": 1.299,
+      "z_score": 3.55,
+      "roi_pct": 75.04
+    },
+    {
+      "lag": 42,
+      "hits": 14,
+      "trials": 599,
+      "observed_wr_pct": 2.337,
+      "expected_wr_pct": 1.299,
+      "z_score": 2.24,
+      "roi_pct": 40.23
+    },
+    {
+      "lag": 48,
+      "hits": 13,
+      "trials": 593,
+      "observed_wr_pct": 2.192,
+      "expected_wr_pct": 1.299,
+      "z_score": 1.92,
+      "roi_pct": 31.53
+    },
+    {
+      "lag": 59,
+      "hits": 12,
+      "trials": 582,
+      "observed_wr_pct": 2.062,
+      "expected_wr_pct": 1.299,
+      "z_score": 1.63,
+      "roi_pct": 23.71
+    },
+    {
+      "lag": 52,
+      "hits": 12,
+      "trials": 589,
+      "observed_wr_pct": 2.037,
+      "expected_wr_pct": 1.299,
+      "z_score": 1.58,
+      "roi_pct": 22.24
+    },
+    {
+      "lag": 23,
+      "hits": 12,
+      "trials": 618,
+      "observed_wr_pct": 1.942,
+      "expected_wr_pct": 1.299,
+      "z_score": 1.41,
+      "roi_pct": 16.5
+    },
+    {
+      "lag": 53,
+      "hits": 11,
+      "trials": 588,
+      "observed_wr_pct": 1.871,
+      "expected_wr_pct": 1.299,
+      "z_score": 1.23,
+      "roi_pct": 12.24
+    },
+    {
+      "lag": 46,
+      "hits": 11,
+      "trials": 595,
+      "observed_wr_pct": 1.849,
+      "expected_wr_pct": 1.299,
+      "z_score": 1.19,
+      "roi_pct": 10.92
+    }
+  ],
+  "bottom_lags": [
+    {
+      "lag": 1,
+      "hits": 0,
+      "trials": 640,
+      "observed_wr_pct": 0.0,
+      "expected_wr_pct": 1.299,
+      "z_score": -2.9,
+      "roi_pct": -100.0
+    },
+    {
+      "lag": 2,
+      "hits": 1,
+      "trials": 639,
+      "observed_wr_pct": 0.156,
+      "expected_wr_pct": 1.299,
+      "z_score": -2.55,
+      "roi_pct": -90.61
+    },
+    {
+      "lag": 3,
+      "hits": 1,
+      "trials": 638,
+      "observed_wr_pct": 0.157,
+      "expected_wr_pct": 1.299,
+      "z_score": -2.55,
+      "roi_pct": -90.6
+    },
+    {
+      "lag": 4,
+      "hits": 1,
+      "trials": 637,
+      "observed_wr_pct": 0.157,
+      "expected_wr_pct": 1.299,
+      "z_score": -2.55,
+      "roi_pct": -90.58
+    },
+    {
+      "lag": 5,
+      "hits": 1,
+      "trials": 636,
+      "observed_wr_pct": 0.157,
+      "expected_wr_pct": 1.299,
+      "z_score": -2.54,
+      "roi_pct": -90.57
+    }
+  ],
+  "markov_transitions": [
+    {
+      "prev_num": "36",
+      "prev_anim": "CULEBRA",
+      "next_num": "45",
+      "next_anim": "GARZA",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 28.57
+    },
+    {
+      "prev_num": "8",
+      "prev_anim": "RATÓN",
+      "next_num": "12",
+      "next_anim": "CABALLO",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 25.0
+    },
+    {
+      "prev_num": "43",
+      "prev_anim": "MARIPOSA",
+      "next_num": "18",
+      "next_anim": "BURRO",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 20.0
+    },
+    {
+      "prev_num": "18",
+      "prev_anim": "BURRO",
+      "next_num": "74",
+      "next_anim": "TURPIAL",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 22.22
+    },
+    {
+      "prev_num": "38",
+      "prev_anim": "BÚFALO",
+      "next_num": "9",
+      "next_anim": "ÁGUILA",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 15.38
+    },
+    {
+      "prev_num": "71",
+      "prev_anim": "GUACAMAYA",
+      "next_num": "26",
+      "next_anim": "VACA",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 28.57
+    },
+    {
+      "prev_num": "17",
+      "prev_anim": "PAVO",
+      "next_num": "49",
+      "next_anim": "PEREZA",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 28.57
+    },
+    {
+      "prev_num": "22",
+      "prev_anim": "CAMELLO",
+      "next_num": "8",
+      "next_anim": "RATÓN",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 50.0
+    },
+    {
+      "prev_num": "42",
+      "prev_anim": "TUCÁN",
+      "next_num": "20",
+      "next_anim": "COCHINO",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 22.22
+    },
+    {
+      "prev_num": "6",
+      "prev_anim": "RANA",
+      "next_num": "41",
+      "next_anim": "CANGURO",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 16.67
+    },
+    {
+      "prev_num": "63",
+      "prev_anim": "CANGREJO",
+      "next_num": "40",
+      "next_anim": "AVISPA",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 25.0
+    },
+    {
+      "prev_num": "14",
+      "prev_anim": "PALOMA",
+      "next_num": "10",
+      "next_anim": "TIGRE",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 25.0
+    },
+    {
+      "prev_num": "18",
+      "prev_anim": "BURRO",
+      "next_num": "33",
+      "next_anim": "PESCADO",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 22.22
+    },
+    {
+      "prev_num": "64",
+      "prev_anim": "GAVILÁN",
+      "next_num": "36",
+      "next_anim": "CULEBRA",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 20.0
+    },
+    {
+      "prev_num": "60",
+      "prev_anim": "CAMALEÓN",
+      "next_num": "59",
+      "next_anim": "PANTERA",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 22.22
+    },
+    {
+      "prev_num": "55",
+      "prev_anim": "OSO HORMIGUERO",
+      "next_num": "34",
+      "next_anim": "VENADO",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 22.22
+    },
+    {
+      "prev_num": "67",
+      "prev_anim": "AVESTRUZ",
+      "next_num": "25",
+      "next_anim": "GALLINA",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 18.18
+    },
+    {
+      "prev_num": "38",
+      "prev_anim": "BÚFALO",
+      "next_num": "14",
+      "next_anim": "PALOMA",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 15.38
+    },
+    {
+      "prev_num": "31",
+      "prev_anim": "LAPA",
+      "next_num": "27",
+      "next_anim": "PERRO",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 33.33
+    },
+    {
+      "prev_num": "29",
+      "prev_anim": "ELEFANTE",
+      "next_num": "39",
+      "next_anim": "LECHUZA",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 25.0
+    },
+    {
+      "prev_num": "62",
+      "prev_anim": "CACHICAMO",
+      "next_num": "17",
+      "next_anim": "PAVO",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 18.18
+    },
+    {
+      "prev_num": "32",
+      "prev_anim": "ARDILLA",
+      "next_num": "6",
+      "next_anim": "RANA",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 22.22
+    },
+    {
+      "prev_num": "10",
+      "prev_anim": "TIGRE",
+      "next_num": "35",
+      "next_anim": "JIRAFA",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 25.0
+    },
+    {
+      "prev_num": "69",
+      "prev_anim": "CONEJO",
+      "next_num": "57",
+      "next_anim": "PATO",
+      "count": 2,
+      "expected": 0.11,
+      "z_score": 5.76,
+      "probability_pct": 25.0
+    }
+  ],
+  "hourly_seasonality": [
+    {
+      "hora": "1:05 PM",
+      "numero": "27",
+      "animal": "PERRO",
+      "count": 5,
+      "expected": 0.7,
+      "z_score": 5.23,
+      "rel_ratio": 7.26
+    },
+    {
+      "hora": "1:05 PM",
+      "numero": "66",
+      "animal": "LOBO",
+      "count": 4,
+      "expected": 0.7,
+      "z_score": 4.02,
+      "rel_ratio": 5.81
+    },
+    {
+      "hora": "7:05 PM",
+      "numero": "33",
+      "animal": "PESCADO",
+      "count": 4,
+      "expected": 0.7,
+      "z_score": 4.02,
+      "rel_ratio": 5.81
+    },
+    {
+      "hora": "9:05 AM",
+      "numero": "72",
+      "animal": "GORILA",
+      "count": 4,
+      "expected": 0.7,
+      "z_score": 3.96,
+      "rel_ratio": 5.7
+    },
+    {
+      "hora": "10:05 AM",
+      "numero": "38",
+      "animal": "BÚFALO",
+      "count": 4,
+      "expected": 0.7,
+      "z_score": 3.96,
+      "rel_ratio": 5.7
+    },
+    {
+      "hora": "1:05 PM",
+      "numero": "8",
+      "animal": "RATÓN",
+      "count": 3,
+      "expected": 0.7,
+      "z_score": 2.8,
+      "rel_ratio": 4.36
+    },
+    {
+      "hora": "1:05 PM",
+      "numero": "53",
+      "animal": "CARACOL",
+      "count": 3,
+      "expected": 0.7,
+      "z_score": 2.8,
+      "rel_ratio": 4.36
+    },
+    {
+      "hora": "1:05 PM",
+      "numero": "60",
+      "animal": "CAMALEÓN",
+      "count": 3,
+      "expected": 0.7,
+      "z_score": 2.8,
+      "rel_ratio": 4.36
+    },
+    {
+      "hora": "1:05 PM",
+      "numero": "62",
+      "animal": "CACHICAMO",
+      "count": 3,
+      "expected": 0.7,
+      "z_score": 2.8,
+      "rel_ratio": 4.36
+    },
+    {
+      "hora": "2:05 PM",
+      "numero": "69",
+      "animal": "CONEJO",
+      "count": 3,
+      "expected": 0.7,
+      "z_score": 2.8,
+      "rel_ratio": 4.36
+    },
+    {
+      "hora": "2:05 PM",
+      "numero": "51",
+      "animal": "PELICANO",
+      "count": 3,
+      "expected": 0.7,
+      "z_score": 2.8,
+      "rel_ratio": 4.36
+    },
+    {
+      "hora": "2:05 PM",
+      "numero": "45",
+      "animal": "GARZA",
+      "count": 3,
+      "expected": 0.7,
+      "z_score": 2.8,
+      "rel_ratio": 4.36
+    },
+    {
+      "hora": "3:05 PM",
+      "numero": "59",
+      "animal": "PANTERA",
+      "count": 3,
+      "expected": 0.7,
+      "z_score": 2.8,
+      "rel_ratio": 4.36
+    },
+    {
+      "hora": "4:05 PM",
+      "numero": "33",
+      "animal": "PESCADO",
+      "count": 3,
+      "expected": 0.7,
+      "z_score": 2.8,
+      "rel_ratio": 4.36
+    },
+    {
+      "hora": "4:05 PM",
+      "numero": "43",
+      "animal": "MARIPOSA",
+      "count": 3,
+      "expected": 0.7,
+      "z_score": 2.8,
+      "rel_ratio": 4.36
+    },
+    {
+      "hora": "4:05 PM",
+      "numero": "28",
+      "animal": "ZAMURO",
+      "count": 3,
+      "expected": 0.7,
+      "z_score": 2.8,
+      "rel_ratio": 4.36
+    },
+    {
+      "hora": "4:05 PM",
+      "numero": "50",
+      "animal": "CANARIO",
+      "count": 3,
+      "expected": 0.7,
+      "z_score": 2.8,
+      "rel_ratio": 4.36
+    },
+    {
+      "hora": "5:05 PM",
+      "numero": "37",
+      "animal": "TORTUGA",
+      "count": 3,
+      "expected": 0.7,
+      "z_score": 2.8,
+      "rel_ratio": 4.36
+    },
+    {
+      "hora": "6:05 PM",
+      "numero": "25",
+      "animal": "GALLINA",
+      "count": 3,
+      "expected": 0.7,
+      "z_score": 2.8,
+      "rel_ratio": 4.36
+    },
+    {
+      "hora": "6:05 PM",
+      "numero": "4",
+      "animal": "ALACRÁN",
+      "count": 3,
+      "expected": 0.7,
+      "z_score": 2.8,
+      "rel_ratio": 4.36
+    },
+    {
+      "hora": "7:05 PM",
+      "numero": "50",
+      "animal": "CANARIO",
+      "count": 3,
+      "expected": 0.7,
+      "z_score": 2.8,
+      "rel_ratio": 4.36
+    }
+  ],
+  "day_seasonality": [
+    {
+      "dia": "Sábado",
+      "numero": "56",
+      "animal": "TIBURÓN",
+      "count": 4,
+      "expected": 1.1,
+      "z_score": 2.8,
+      "ratio": 3.67
+    }
+  ]
+}

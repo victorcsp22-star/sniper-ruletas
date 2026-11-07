@@ -1,0 +1,260 @@
+{
+  "roulette": "Ruleta Royal",
+  "sample_size": 7209,
+  "date_range": {
+    "start": "2025-04-15",
+    "end": "2026-10-30"
+  },
+  "payout": 30.0,
+  "k_animals": 37,
+  "chi_square": {
+    "statistic": 21.71,
+    "degrees_of_freedom": 36,
+    "p_value": 0.97117,
+    "uniformity_rejected": false
+  },
+  "weibull_hazard": {
+    "shape_beta": 1.241,
+    "scale_lambda": 39.69,
+    "mean_gap": 36.84,
+    "median_gap": 27.0
+  },
+  "intraday_repeats_pct": 5.73,
+  "top_hot": [
+    {
+      "num": "9",
+      "animal": "ÁGUILA",
+      "count": 216,
+      "z": 1.54
+    },
+    {
+      "num": "15",
+      "animal": "ZORRO",
+      "count": 215,
+      "z": 1.46
+    },
+    {
+      "num": "23",
+      "animal": "CEBRA",
+      "count": 212,
+      "z": 1.25
+    },
+    {
+      "num": "30",
+      "animal": "CAIMÁN",
+      "count": 205,
+      "z": 0.74
+    },
+    {
+      "num": "3",
+      "animal": "CIEMPIÉS",
+      "count": 205,
+      "z": 0.74
+    }
+  ],
+  "top_cold": [
+    {
+      "num": "36",
+      "animal": "CULEBRA",
+      "count": 167,
+      "z": -2.02
+    },
+    {
+      "num": "25",
+      "animal": "GALLINA",
+      "count": 178,
+      "z": -1.22
+    },
+    {
+      "num": "20",
+      "animal": "COCHINO",
+      "count": 179,
+      "z": -1.15
+    },
+    {
+      "num": "14",
+      "animal": "PALOMA",
+      "count": 179,
+      "z": -1.15
+    },
+    {
+      "num": "0",
+      "animal": "TIBURÓN",
+      "count": 179,
+      "z": -1.15
+    }
+  ],
+  "top_lags": [
+    {
+      "lag": 19,
+      "hits": 242,
+      "trials": 7190,
+      "observed_wr_pct": 3.366,
+      "expected_wr_pct": 2.703,
+      "z_score": 3.47,
+      "roi_pct": 0.97
+    },
+    {
+      "lag": 16,
+      "hits": 241,
+      "trials": 7193,
+      "observed_wr_pct": 3.35,
+      "expected_wr_pct": 2.703,
+      "z_score": 3.39,
+      "roi_pct": 0.51
+    },
+    {
+      "lag": 31,
+      "hits": 232,
+      "trials": 7178,
+      "observed_wr_pct": 3.232,
+      "expected_wr_pct": 2.703,
+      "z_score": 2.77,
+      "roi_pct": -3.04
+    },
+    {
+      "lag": 23,
+      "hits": 230,
+      "trials": 7186,
+      "observed_wr_pct": 3.201,
+      "expected_wr_pct": 2.703,
+      "z_score": 2.6,
+      "roi_pct": -3.98
+    },
+    {
+      "lag": 21,
+      "hits": 225,
+      "trials": 7188,
+      "observed_wr_pct": 3.13,
+      "expected_wr_pct": 2.703,
+      "z_score": 2.24,
+      "roi_pct": -6.09
+    },
+    {
+      "lag": 49,
+      "hits": 224,
+      "trials": 7160,
+      "observed_wr_pct": 3.128,
+      "expected_wr_pct": 2.703,
+      "z_score": 2.22,
+      "roi_pct": -6.15
+    },
+    {
+      "lag": 44,
+      "hits": 218,
+      "trials": 7165,
+      "observed_wr_pct": 3.043,
+      "expected_wr_pct": 2.703,
+      "z_score": 1.77,
+      "roi_pct": -8.72
+    },
+    {
+      "lag": 27,
+      "hits": 218,
+      "trials": 7182,
+      "observed_wr_pct": 3.035,
+      "expected_wr_pct": 2.703,
+      "z_score": 1.74,
+      "roi_pct": -8.94
+    }
+  ],
+  "bottom_lags": [
+    {
+      "lag": 1,
+      "hits": 40,
+      "trials": 7208,
+      "observed_wr_pct": 0.555,
+      "expected_wr_pct": 2.703,
+      "z_score": -11.24,
+      "roi_pct": -83.35
+    },
+    {
+      "lag": 2,
+      "hits": 54,
+      "trials": 7207,
+      "observed_wr_pct": 0.749,
+      "expected_wr_pct": 2.703,
+      "z_score": -10.23,
+      "roi_pct": -77.52
+    },
+    {
+      "lag": 3,
+      "hits": 90,
+      "trials": 7206,
+      "observed_wr_pct": 1.249,
+      "expected_wr_pct": 2.703,
+      "z_score": -7.61,
+      "roi_pct": -62.53
+    },
+    {
+      "lag": 4,
+      "hits": 93,
+      "trials": 7205,
+      "observed_wr_pct": 1.291,
+      "expected_wr_pct": 2.703,
+      "z_score": -7.39,
+      "roi_pct": -61.28
+    },
+    {
+      "lag": 5,
+      "hits": 122,
+      "trials": 7204,
+      "observed_wr_pct": 1.694,
+      "expected_wr_pct": 2.703,
+      "z_score": -5.28,
+      "roi_pct": -49.19
+    }
+  ],
+  "markov_transitions": [
+    {
+      "prev_num": "3",
+      "prev_anim": "CIEMPIÉS",
+      "next_num": "16",
+      "next_anim": "OSO",
+      "count": 13,
+      "expected": 5.27,
+      "z_score": 3.37,
+      "probability_pct": 6.34
+    },
+    {
+      "prev_num": "8",
+      "prev_anim": "RATÓN",
+      "next_num": "27",
+      "next_anim": "PERRO",
+      "count": 13,
+      "expected": 5.27,
+      "z_score": 3.37,
+      "probability_pct": 6.74
+    }
+  ],
+  "hourly_seasonality": [
+    {
+      "hora": "10:30 AM",
+      "numero": "19",
+      "animal": "CHIVO",
+      "count": 29,
+      "expected": 15.0,
+      "z_score": 3.65,
+      "rel_ratio": 1.93
+    },
+    {
+      "hora": "10:30 AM",
+      "numero": "26",
+      "animal": "VACA",
+      "count": 27,
+      "expected": 15.0,
+      "z_score": 3.13,
+      "rel_ratio": 1.8
+    },
+    {
+      "hora": "9:30 AM",
+      "numero": "9",
+      "animal": "ÁGUILA",
+      "count": 26,
+      "expected": 15.0,
+      "z_score": 2.87,
+      "rel_ratio": 1.73
+    }
+  ],
+  "day_seasonality": []
+}

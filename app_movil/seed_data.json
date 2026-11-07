@@ -1,0 +1,5536 @@
+{
+  "Lotto Gato": {
+    "card_title": "Lotto Gato",
+    "lags": [
+      18,
+      38,
+      14
+    ],
+    "target_streaks": [
+      1,
+      2
+    ],
+    "payout": 60.0,
+    "history": [
+      {
+        "fecha": "2026-10-25",
+        "hora": "9:10 AM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "10:10 AM",
+        "numero": "00",
+        "animal": "BALLENA"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "11:10 AM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "12:10 PM",
+        "numero": "30",
+        "animal": "CAIMÁN"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "1:10 PM",
+        "numero": "20",
+        "animal": "COCHINO"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "3:10 PM",
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "4:10 PM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "5:10 PM",
+        "numero": "9",
+        "animal": "ÁGUILA"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "6:10 PM",
+        "numero": "7",
+        "animal": "PERICO"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "7:10 PM",
+        "numero": "12",
+        "animal": "CABALLO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "9:10 AM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "10:10 AM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "11:10 AM",
+        "numero": "3",
+        "animal": "CIENPIES"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "12:10 PM",
+        "numero": "19",
+        "animal": "CHIVO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "1:10 PM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "3:10 PM",
+        "numero": "10",
+        "animal": "TIGRE"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "4:10 PM",
+        "numero": "14",
+        "animal": "PALOMA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "5:10 PM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "6:10 PM",
+        "numero": "35",
+        "animal": "JIRAFA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "7:10 PM",
+        "numero": "00",
+        "animal": "BALLENA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "9:10 AM",
+        "numero": "31",
+        "animal": "LAPA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "10:10 AM",
+        "numero": "7",
+        "animal": "PERICO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "11:10 AM",
+        "numero": "11",
+        "animal": "GATO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "12:10 PM",
+        "numero": "1",
+        "animal": "CARNERO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "1:10 PM",
+        "numero": "15",
+        "animal": "ZORRO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "3:10 PM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "4:10 PM",
+        "numero": "20",
+        "animal": "COCHINO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "5:10 PM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "6:10 PM",
+        "numero": "0",
+        "animal": "DELFÍN"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "7:10 PM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "9:10 AM",
+        "numero": "14",
+        "animal": "PALOMA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "10:10 AM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "11:10 AM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "12:10 PM",
+        "numero": "00",
+        "animal": "BALLENA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "1:10 PM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "3:10 PM",
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "4:10 PM",
+        "numero": "30",
+        "animal": "CAIMÁN"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "5:10 PM",
+        "numero": "31",
+        "animal": "LAPA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "6:10 PM",
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "7:10 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "9:10 AM",
+        "numero": "7",
+        "animal": "PERICO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "10:10 AM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "11:10 AM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "12:10 PM",
+        "numero": "4",
+        "animal": "ALACRÁN"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "1:10 PM",
+        "numero": "0",
+        "animal": "DELFÍN"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "3:10 PM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "4:10 PM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "5:10 PM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "6:10 PM",
+        "numero": "35",
+        "animal": "JIRAFA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "7:10 PM",
+        "numero": "11",
+        "animal": "GATO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "9:10 AM",
+        "numero": "13",
+        "animal": "MONO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "10:10 AM",
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "11:10 AM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "12:10 PM",
+        "numero": "28",
+        "animal": "ZAMURO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "1:10 PM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "3:10 PM",
+        "numero": "0",
+        "animal": "DELFÍN"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "4:10 PM",
+        "numero": "15",
+        "animal": "ZORRO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "5:10 PM",
+        "numero": "1",
+        "animal": "CARNERO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "6:10 PM",
+        "numero": "21",
+        "animal": "GALLO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "7:10 PM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "9:10 AM",
+        "numero": "32",
+        "animal": "ARDILLA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "10:10 AM",
+        "numero": "19",
+        "animal": "CHIVO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "11:10 AM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "12:10 PM",
+        "numero": "14",
+        "animal": "PALOMA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "1:10 PM",
+        "numero": "36",
+        "animal": "CULEBRA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "3:10 PM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "4:10 PM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "5:10 PM",
+        "numero": "0",
+        "animal": "DELFÍN"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "6:10 PM",
+        "numero": "1",
+        "animal": "CARNERO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "7:10 PM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "9:10 AM",
+        "numero": "20",
+        "animal": "COCHINO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "10:10 AM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "11:10 AM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "12:10 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "1:10 PM",
+        "numero": "19",
+        "animal": "CHIVO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "3:10 PM",
+        "numero": "36",
+        "animal": "CULEBRA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "4:10 PM",
+        "numero": "14",
+        "animal": "PALOMA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "5:10 PM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "6:10 PM",
+        "numero": "13",
+        "animal": "MONO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "7:10 PM",
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "9:10 AM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "10:10 AM",
+        "numero": "15",
+        "animal": "ZORRO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "11:10 AM",
+        "numero": "8",
+        "animal": "RATON"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "12:10 PM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "1:10 PM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "3:10 PM",
+        "numero": "0",
+        "animal": "DELFIN"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "4:10 PM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "5:10 PM",
+        "numero": "7",
+        "animal": "PERICO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "6:10 PM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "7:10 PM",
+        "numero": "3",
+        "animal": "CIENPIES"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "9:10 AM",
+        "numero": "00",
+        "animal": "BALLENA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "10:10 AM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "11:10 AM",
+        "numero": "29",
+        "animal": "ELEFANTE"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "12:10 PM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "1:10 PM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "3:10 PM",
+        "numero": "9",
+        "animal": "AGUILA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "4:10 PM",
+        "numero": "15",
+        "animal": "ZORRO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "5:10 PM",
+        "numero": "19",
+        "animal": "CHIVO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "6:10 PM",
+        "numero": "1",
+        "animal": "CARNERO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "7:10 PM",
+        "numero": "12",
+        "animal": "CABALLO"
+      }
+    ]
+  },
+  "Loto Chaima": {
+    "card_title": "Loto Chaima",
+    "lags": [
+      49,
+      41,
+      35
+    ],
+    "target_streaks": [
+      0,
+      1
+    ],
+    "payout": 60.0,
+    "history": [
+      {
+        "fecha": "2026-10-26",
+        "hora": "4:00 PM",
+        "numero": "32",
+        "animal": "ARDILLA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "5:00 PM",
+        "numero": "38",
+        "animal": "BÚFALO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "6:00 PM",
+        "numero": "44",
+        "animal": "CHUGÜIRE"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "7:00 PM",
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "8:00 AM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "9:00 AM",
+        "numero": "40",
+        "animal": "AVISPA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "10:00 AM",
+        "numero": "43",
+        "animal": "MARIPOSA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "11:00 AM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "12:00 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "1:00 PM",
+        "numero": "28",
+        "animal": "ZAMURO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "2:00 PM",
+        "numero": "11",
+        "animal": "GATO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "3:00 PM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "4:00 PM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "5:00 PM",
+        "numero": "9",
+        "animal": "ÁGUILA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "6:00 PM",
+        "numero": "41",
+        "animal": "CANGURO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "7:00 PM",
+        "numero": "18",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "8:00 AM",
+        "numero": "15",
+        "animal": "ZORRO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "9:00 AM",
+        "numero": "40",
+        "animal": "AVISPA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "10:00 AM",
+        "numero": "1",
+        "animal": "CARNERO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "11:00 AM",
+        "numero": "12",
+        "animal": "CABALLO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "12:00 PM",
+        "numero": "53",
+        "animal": "CARACOL"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "1:00 PM",
+        "numero": "54",
+        "animal": "GRILLO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "2:00 PM",
+        "numero": "39",
+        "animal": "LECHUZA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "3:00 PM",
+        "numero": "19",
+        "animal": "CHIVO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "4:00 PM",
+        "numero": "51",
+        "animal": "PELICANO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "5:00 PM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "6:00 PM",
+        "numero": "20",
+        "animal": "COCHINO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "7:00 PM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "8:00 AM",
+        "numero": "28",
+        "animal": "ZAMURO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "9:00 AM",
+        "numero": "00",
+        "animal": "BALLENA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "10:00 AM",
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "11:00 AM",
+        "numero": "53",
+        "animal": "CARACOL"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "12:00 PM",
+        "numero": "11",
+        "animal": "GATO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "1:00 PM",
+        "numero": "32",
+        "animal": "ARDILLA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "2:00 PM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "3:00 PM",
+        "numero": "50",
+        "animal": "CANARIO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "4:00 PM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "5:00 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "6:00 PM",
+        "numero": "10",
+        "animal": "TIGRE"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "7:00 PM",
+        "numero": "39",
+        "animal": "LECHUZA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "8:00 AM",
+        "numero": "10",
+        "animal": "TIGRE"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "9:00 AM",
+        "numero": "38",
+        "animal": "BÚFALO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "10:00 AM",
+        "numero": "29",
+        "animal": "ELEFANTE"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "11:00 AM",
+        "numero": "54",
+        "animal": "GRILLO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "12:00 PM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "1:00 PM",
+        "numero": "53",
+        "animal": "CARACOL"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "2:00 PM",
+        "numero": "21",
+        "animal": "GALLO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "3:00 PM",
+        "numero": "31",
+        "animal": "LAPA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "4:00 PM",
+        "numero": "16",
+        "animal": "OSO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "5:00 PM",
+        "numero": "12",
+        "animal": "CABALLO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "6:00 PM",
+        "numero": "7",
+        "animal": "PERICO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "7:00 PM",
+        "numero": "43",
+        "animal": "MARIPOSA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "8:00 AM",
+        "numero": "54",
+        "animal": "GRILLO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "9:00 AM",
+        "numero": "16",
+        "animal": "OSO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "10:00 AM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "11:00 AM",
+        "numero": "39",
+        "animal": "LECHUZA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "12:00 PM",
+        "numero": "32",
+        "animal": "ARDILLA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "1:00 PM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "2:00 PM",
+        "numero": "35",
+        "animal": "JIRAFA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "3:00 PM",
+        "numero": "48",
+        "animal": "PUERCOESPÍN"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "4:00 PM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "5:00 PM",
+        "numero": "10",
+        "animal": "TIGRE"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "6:00 PM",
+        "numero": "51",
+        "animal": "PELICANO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "7:00 PM",
+        "numero": "42",
+        "animal": "TUCÁN"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "8:00 AM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "9:00 AM",
+        "numero": "52",
+        "animal": "PULPO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "10:00 AM",
+        "numero": "39",
+        "animal": "LECHUZA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "11:00 AM",
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "12:00 PM",
+        "numero": "4",
+        "animal": "ALACRÁN"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "1:00 PM",
+        "numero": "43",
+        "animal": "MARIPOSA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "2:00 PM",
+        "numero": "13",
+        "animal": "MONO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "3:00 PM",
+        "numero": "46",
+        "animal": "PUMA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "4:00 PM",
+        "numero": "48",
+        "animal": "PUERCOESPÍN"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "5:00 PM",
+        "numero": "44",
+        "animal": "CHUGÜIRE"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "6:00 PM",
+        "numero": "9",
+        "animal": "ÁGUILA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "7:00 PM",
+        "numero": "16",
+        "animal": "OSO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "8:00 AM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "9:00 AM",
+        "numero": "44",
+        "animal": "CHUGÜIRE"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "10:00 AM",
+        "numero": "51",
+        "animal": "PELICANO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "11:00 AM",
+        "numero": "45",
+        "animal": "GARZA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "12:00 PM",
+        "numero": "29",
+        "animal": "ELEFANTE"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "1:00 PM",
+        "numero": "37",
+        "animal": "TORTUGA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "2:00 PM",
+        "numero": "14",
+        "animal": "PALOMA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "3:00 PM",
+        "numero": "40",
+        "animal": "AVISPA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "4:00 PM",
+        "numero": "47",
+        "animal": "PAVO REAL"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "5:00 PM",
+        "numero": "36",
+        "animal": "CULEBRA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "6:00 PM",
+        "numero": "38",
+        "animal": "BÚFALO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "7:00 PM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "8:00 AM",
+        "numero": "32",
+        "animal": "ARDILLA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "9:00 AM",
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "10:00 AM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "11:00 AM",
+        "numero": "40",
+        "animal": "AVISPA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "12:00 PM",
+        "numero": "38",
+        "animal": "BÚFALO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "1:00 PM",
+        "numero": "21",
+        "animal": "GALLO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "2:00 PM",
+        "numero": "28",
+        "animal": "ZAMURO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "3:00 PM",
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "4:00 PM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "5:00 PM",
+        "numero": "37",
+        "animal": "TORTUGA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "6:00 PM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "7:00 PM",
+        "numero": "43",
+        "animal": "MARIPOSA"
+      }
+    ]
+  },
+  "Guacharo Activo": {
+    "card_title": "Guacharo",
+    "lags": [
+      31,
+      54,
+      41
+    ],
+    "target_streaks": [
+      1,
+      3
+    ],
+    "payout": 60.0,
+    "history": [
+      {
+        "fecha": "2026-10-26",
+        "hora": "4:00 PM",
+        "numero": "12",
+        "animal": "CABALLO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "5:00 PM",
+        "numero": "58",
+        "animal": "HORMIGA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "6:00 PM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "7:00 PM",
+        "numero": "69",
+        "animal": "CONEJO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "8:00 AM",
+        "numero": "53",
+        "animal": "CARACOL"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "9:00 AM",
+        "numero": "16",
+        "animal": "OSO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "10:00 AM",
+        "numero": "51",
+        "animal": "PELICANO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "11:00 AM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "12:00 PM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "1:00 PM",
+        "numero": "32",
+        "animal": "ARDILLA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "2:00 PM",
+        "numero": "4",
+        "animal": "ALACRÁN"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "3:00 PM",
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "4:00 PM",
+        "numero": "10",
+        "animal": "TIGRE"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "5:00 PM",
+        "numero": "39",
+        "animal": "LECHUZA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "6:00 PM",
+        "numero": "00",
+        "animal": "BALLENA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "7:00 PM",
+        "numero": "50",
+        "animal": "CANARIO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "8:00 AM",
+        "numero": "47",
+        "animal": "PAVO REAL"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "9:00 AM",
+        "numero": "13",
+        "animal": "MONO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "10:00 AM",
+        "numero": "35",
+        "animal": "JIRAFA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "11:00 AM",
+        "numero": "1",
+        "animal": "CARNERO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "12:00 PM",
+        "numero": "51",
+        "animal": "PELICANO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "1:00 PM",
+        "numero": "66",
+        "animal": "LOBO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "2:00 PM",
+        "numero": "58",
+        "animal": "HORMIGA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "3:00 PM",
+        "numero": "00",
+        "animal": "BALLENA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "4:00 PM",
+        "numero": "46",
+        "animal": "PUMA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "5:00 PM",
+        "numero": "4",
+        "animal": "ALACRÁN"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "6:00 PM",
+        "numero": "61",
+        "animal": "PANDA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "7:00 PM",
+        "numero": "41",
+        "animal": "CANGURO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "8:00 AM",
+        "numero": "32",
+        "animal": "ARDILLA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "9:00 AM",
+        "numero": "46",
+        "animal": "PUMA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "10:00 AM",
+        "numero": "37",
+        "animal": "TORTUGA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "11:00 AM",
+        "numero": "12",
+        "animal": "CABALLO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "12:00 PM",
+        "numero": "40",
+        "animal": "AVISPA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "1:00 PM",
+        "numero": "0",
+        "animal": "DELFÍN"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "2:00 PM",
+        "numero": "21",
+        "animal": "GALLO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "3:00 PM",
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "4:00 PM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "5:00 PM",
+        "numero": "42",
+        "animal": "TUCÁN"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "6:00 PM",
+        "numero": "53",
+        "animal": "CARACOL"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "7:00 PM",
+        "numero": "61",
+        "animal": "PANDA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "8:00 AM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "9:00 AM",
+        "numero": "66",
+        "animal": "LOBO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "10:00 AM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "11:00 AM",
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "12:00 PM",
+        "numero": "64",
+        "animal": "GAVILÁN"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "1:00 PM",
+        "numero": "70",
+        "animal": "BISONTE"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "2:00 PM",
+        "numero": "60",
+        "animal": "CAMALEÓN"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "3:00 PM",
+        "numero": "61",
+        "animal": "PANDA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "4:00 PM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "5:00 PM",
+        "numero": "62",
+        "animal": "CACHICAMO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "6:00 PM",
+        "numero": "35",
+        "animal": "JIRAFA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "7:00 PM",
+        "numero": "41",
+        "animal": "CANGURO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "8:00 AM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "9:00 AM",
+        "numero": "0",
+        "animal": "DELFÍN"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "10:00 AM",
+        "numero": "66",
+        "animal": "LOBO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "11:00 AM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "12:00 PM",
+        "numero": "62",
+        "animal": "CACHICAMO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "1:00 PM",
+        "numero": "9",
+        "animal": "ÁGUILA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "2:00 PM",
+        "numero": "43",
+        "animal": "MARIPOSA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "3:00 PM",
+        "numero": "38",
+        "animal": "BÚFALO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "4:00 PM",
+        "numero": "11",
+        "animal": "GATO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "5:00 PM",
+        "numero": "3",
+        "animal": "CIEMPIÉS"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "6:00 PM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "7:00 PM",
+        "numero": "58",
+        "animal": "HORMIGA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "8:00 AM",
+        "numero": "42",
+        "animal": "TUCÁN"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "9:00 AM",
+        "numero": "37",
+        "animal": "TORTUGA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "10:00 AM",
+        "numero": "61",
+        "animal": "PANDA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "11:00 AM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "12:00 PM",
+        "numero": "72",
+        "animal": "GORILA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "1:00 PM",
+        "numero": "32",
+        "animal": "ARDILLA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "2:00 PM",
+        "numero": "19",
+        "animal": "CHIVO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "3:00 PM",
+        "numero": "30",
+        "animal": "CAIMÁN"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "4:00 PM",
+        "numero": "28",
+        "animal": "ZAMURO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "5:00 PM",
+        "numero": "10",
+        "animal": "TIGRE"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "6:00 PM",
+        "numero": "60",
+        "animal": "CAMALEÓN"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "7:00 PM",
+        "numero": "44",
+        "animal": "CHUGÜIRE"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "8:00 AM",
+        "numero": "0",
+        "animal": "DELFÍN"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "9:00 AM",
+        "numero": "29",
+        "animal": "ELEFANTE"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "10:00 AM",
+        "numero": "63",
+        "animal": "CANGREJO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "11:00 AM",
+        "numero": "70",
+        "animal": "BISONTE"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "12:00 PM",
+        "numero": "61",
+        "animal": "PANDA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "1:00 PM",
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "2:00 PM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "3:00 PM",
+        "numero": "69",
+        "animal": "CONEJO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "4:00 PM",
+        "numero": "40",
+        "animal": "AVISPA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "5:00 PM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "6:00 PM",
+        "numero": "61",
+        "animal": "PANDA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "7:00 PM",
+        "numero": "73",
+        "animal": "HIPOPÓTAMO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "8:00 AM",
+        "numero": "39",
+        "animal": "LECHUZA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "9:00 AM",
+        "numero": "70",
+        "animal": "BISONTE"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "10:00 AM",
+        "numero": "15",
+        "animal": "ZORRO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "11:00 AM",
+        "numero": "59",
+        "animal": "PANTERA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "12:00 PM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "1:00 PM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "2:00 PM",
+        "numero": "72",
+        "animal": "GORILA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "3:00 PM",
+        "numero": "75",
+        "animal": "GUACHARO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "4:00 PM",
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "5:00 PM",
+        "numero": "53",
+        "animal": "CARACOL"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "6:00 PM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "7:00 PM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      }
+    ]
+  },
+  "Lotto Activo": {
+    "card_title": "Lotto Activo",
+    "lags": [
+      20,
+      18,
+      15
+    ],
+    "target_streaks": [
+      1,
+      2
+    ],
+    "payout": 30.0,
+    "history": [
+      {
+        "fecha": "2026-10-26",
+        "hora": "4:00 PM",
+        "numero": "10",
+        "animal": "TIGRE"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "5:00 PM",
+        "numero": "30",
+        "animal": "CAIMÁN"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "6:00 PM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "7:00 PM",
+        "numero": "31",
+        "animal": "LAPA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "8:00 AM",
+        "numero": "21",
+        "animal": "GALLO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "9:00 AM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "10:00 AM",
+        "numero": "13",
+        "animal": "MONO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "11:00 AM",
+        "numero": "1",
+        "animal": "CARNERO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "12:00 PM",
+        "numero": "4",
+        "animal": "ALACRÁN"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "1:00 PM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "2:00 PM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "3:00 PM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "4:00 PM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "5:00 PM",
+        "numero": "30",
+        "animal": "CAIMÁN"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "6:00 PM",
+        "numero": "36",
+        "animal": "CULEBRA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "7:00 PM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "8:00 AM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "9:00 AM",
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "10:00 AM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "11:00 AM",
+        "numero": "21",
+        "animal": "GALLO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "12:00 PM",
+        "numero": "36",
+        "animal": "CULEBRA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "1:00 PM",
+        "numero": "29",
+        "animal": "ELEFANTE"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "2:00 PM",
+        "numero": "12",
+        "animal": "CABALLO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "3:00 PM",
+        "numero": "31",
+        "animal": "LAPA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "4:00 PM",
+        "numero": "16",
+        "animal": "OSO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "5:00 PM",
+        "numero": "11",
+        "animal": "GATO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "6:00 PM",
+        "numero": "1",
+        "animal": "CARNERO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "7:00 PM",
+        "numero": "20",
+        "animal": "COCHINO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "8:00 AM",
+        "numero": "4",
+        "animal": "ALACRÁN"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "9:00 AM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "10:00 AM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "11:00 AM",
+        "numero": "9",
+        "animal": "ÁGUILA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "12:00 PM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "1:00 PM",
+        "numero": "36",
+        "animal": "CULEBRA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "2:00 PM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "3:00 PM",
+        "numero": "10",
+        "animal": "TIGRE"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "4:00 PM",
+        "numero": "7",
+        "animal": "PERICO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "5:00 PM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "6:00 PM",
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "7:00 PM",
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "8:00 AM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "9:00 AM",
+        "numero": "34",
+        "animal": "VENADO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "10:00 AM",
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "11:00 AM",
+        "numero": "12",
+        "animal": "CABALLO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "12:00 PM",
+        "numero": "35",
+        "animal": "JIRAFA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "1:00 PM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "2:00 PM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "3:00 PM",
+        "numero": "19",
+        "animal": "CHIVO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "4:00 PM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "5:00 PM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "6:00 PM",
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "7:00 PM",
+        "numero": "20",
+        "animal": "COCHINO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "8:00 AM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "9:00 AM",
+        "numero": "10",
+        "animal": "TIGRE"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "10:00 AM",
+        "numero": "16",
+        "animal": "OSO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "11:00 AM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "12:00 PM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "1:00 PM",
+        "numero": "28",
+        "animal": "ZAMURO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "2:00 PM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "3:00 PM",
+        "numero": "9",
+        "animal": "ÁGUILA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "4:00 PM",
+        "numero": "15",
+        "animal": "ZORRO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "5:00 PM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "6:00 PM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "7:00 PM",
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "8:00 AM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "9:00 AM",
+        "numero": "30",
+        "animal": "CAIMÁN"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "10:00 AM",
+        "numero": "34",
+        "animal": "VENADO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "11:00 AM",
+        "numero": "20",
+        "animal": "COCHINO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "12:00 PM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "1:00 PM",
+        "numero": "15",
+        "animal": "ZORRO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "2:00 PM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "3:00 PM",
+        "numero": "35",
+        "animal": "JIRAFA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "4:00 PM",
+        "numero": "4",
+        "animal": "ALACRÁN"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "5:00 PM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "6:00 PM",
+        "numero": "15",
+        "animal": "ZORRO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "7:00 PM",
+        "numero": "9",
+        "animal": "ÁGUILA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "8:00 AM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "9:00 AM",
+        "numero": "34",
+        "animal": "VENADO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "10:00 AM",
+        "numero": "0",
+        "animal": "DELFIN"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "11:00 AM",
+        "numero": "32",
+        "animal": "ARDILLA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "12:00 PM",
+        "numero": "36",
+        "animal": "CULEBRA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "1:00 PM",
+        "numero": "29",
+        "animal": "ELEFANTE"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "2:00 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "3:00 PM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "4:00 PM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "5:00 PM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "6:00 PM",
+        "numero": "20",
+        "animal": "COCHINO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "7:00 PM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "8:00 AM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "9:00 AM",
+        "numero": "13",
+        "animal": "MONO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "10:00 AM",
+        "numero": "32",
+        "animal": "ARDILLA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "11:00 AM",
+        "numero": "00",
+        "animal": "BALLENA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "12:00 PM",
+        "numero": "5",
+        "animal": "LEON"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "1:00 PM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "2:00 PM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "3:00 PM",
+        "numero": "0",
+        "animal": "DELFIN"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "4:00 PM",
+        "numero": "29",
+        "animal": "ELEFANTE"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "5:00 PM",
+        "numero": "4",
+        "animal": "ALACRAN"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "6:00 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "7:00 PM",
+        "numero": "35",
+        "animal": "JIRAFA"
+      }
+    ]
+  },
+  "Ruleta Royal": {
+    "card_title": "Ruleta Royal",
+    "lags": [
+      19,
+      16,
+      31
+    ],
+    "target_streaks": [
+      1
+    ],
+    "payout": 30.0,
+    "history": [
+      {
+        "fecha": "2026-10-27",
+        "hora": "11:30 AM",
+        "numero": "16",
+        "animal": "OSO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "12:30 PM",
+        "numero": "36",
+        "animal": "CULEBRA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "1:30 PM",
+        "numero": "13",
+        "animal": "MONO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "2:30 PM",
+        "numero": "3",
+        "animal": "CIEMPIÉS"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "3:30 PM",
+        "numero": "14",
+        "animal": "PALOMA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "4:30 PM",
+        "numero": "20",
+        "animal": "COCHINO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "5:30 PM",
+        "numero": "16",
+        "animal": "OSO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "6:30 PM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "7:30 PM",
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "8:30 PM",
+        "numero": "9",
+        "animal": "ÁGUILA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "8:30 AM",
+        "numero": "0",
+        "animal": "TIBURÓN"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "9:30 AM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "10:30 AM",
+        "numero": "19",
+        "animal": "CHIVO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "11:30 AM",
+        "numero": "3",
+        "animal": "CIEMPIÉS"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "12:30 PM",
+        "numero": "15",
+        "animal": "ZORRO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "1:30 PM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "2:30 PM",
+        "numero": "13",
+        "animal": "MONO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "3:30 PM",
+        "numero": "35",
+        "animal": "PANTERA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "4:30 PM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "5:30 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "6:30 PM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "7:30 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "8:30 PM",
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "8:30 AM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "9:30 AM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "10:30 AM",
+        "numero": "7",
+        "animal": "PERICO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "11:30 AM",
+        "numero": "1",
+        "animal": "CARNERO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "12:30 PM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "1:30 PM",
+        "numero": "31",
+        "animal": "LAPA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "2:30 PM",
+        "numero": "15",
+        "animal": "ZORRO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "3:30 PM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "4:30 PM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "5:30 PM",
+        "numero": "9",
+        "animal": "ÁGUILA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "6:30 PM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "7:30 PM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "8:30 PM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "8:30 AM",
+        "numero": "29",
+        "animal": "ELEFANTE"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "9:30 AM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "10:30 AM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "11:30 AM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "12:30 PM",
+        "numero": "31",
+        "animal": "LAPA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "1:30 PM",
+        "numero": "21",
+        "animal": "GALLO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "2:30 PM",
+        "numero": "19",
+        "animal": "CHIVO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "3:30 PM",
+        "numero": "36",
+        "animal": "CULEBRA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "4:30 PM",
+        "numero": "30",
+        "animal": "CAIMÁN"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "5:30 PM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "6:30 PM",
+        "numero": "15",
+        "animal": "ZORRO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "7:30 PM",
+        "numero": "13",
+        "animal": "MONO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "8:30 PM",
+        "numero": "13",
+        "animal": "MONO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "8:30 AM",
+        "numero": "36",
+        "animal": "CULEBRA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "9:30 AM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "10:30 AM",
+        "numero": "35",
+        "animal": "PANTERA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "11:30 AM",
+        "numero": "10",
+        "animal": "TIGRE"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "12:30 PM",
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "1:30 PM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "2:30 PM",
+        "numero": "1",
+        "animal": "CARNERO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "3:30 PM",
+        "numero": "21",
+        "animal": "GALLO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "4:30 PM",
+        "numero": "7",
+        "animal": "PERICO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "5:30 PM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "6:30 PM",
+        "numero": "29",
+        "animal": "ELEFANTE"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "7:30 PM",
+        "numero": "32",
+        "animal": "ARDILLA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "8:30 PM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "8:30 AM",
+        "numero": "19",
+        "animal": "CHIVO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "9:30 AM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "10:30 AM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "11:30 AM",
+        "numero": "31",
+        "animal": "LAPA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "12:30 PM",
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "1:30 PM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "2:30 PM",
+        "numero": "31",
+        "animal": "LAPA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "3:30 PM",
+        "numero": "14",
+        "animal": "PALOMA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "4:30 PM",
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "5:30 PM",
+        "numero": "30",
+        "animal": "CAIMÁN"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "6:30 PM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "7:30 PM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "8:30 PM",
+        "numero": "21",
+        "animal": "GALLO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "8:30 AM",
+        "numero": "35",
+        "animal": "PANTERA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "9:30 AM",
+        "numero": "7",
+        "animal": "PERICO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "10:30 AM",
+        "numero": "4",
+        "animal": "ALACRAN"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "11:30 AM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "12:30 PM",
+        "numero": "19",
+        "animal": "CHIVO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "1:30 PM",
+        "numero": "30",
+        "animal": "CAIMAN"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "2:30 PM",
+        "numero": "12",
+        "animal": "CABALLO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "3:30 PM",
+        "numero": "31",
+        "animal": "LAPA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "4:30 PM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "5:30 PM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "6:30 PM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "7:30 PM",
+        "numero": "11",
+        "animal": "GATO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "8:30 PM",
+        "numero": "31",
+        "animal": "LAPA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "8:30 AM",
+        "numero": "1",
+        "animal": "CARNERO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "9:30 AM",
+        "numero": "8",
+        "animal": "RATON"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "10:30 AM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "11:30 AM",
+        "numero": "36",
+        "animal": "CULEBRA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "12:30 PM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "1:30 PM",
+        "numero": "34",
+        "animal": "VENADO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "2:30 PM",
+        "numero": "31",
+        "animal": "LAPA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "3:30 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "4:30 PM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "5:30 PM",
+        "numero": "10",
+        "animal": "TIGRE"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "6:30 PM",
+        "numero": "19",
+        "animal": "CHIVO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "7:30 PM",
+        "numero": "29",
+        "animal": "ELEFANTE"
+      }
+    ]
+  },
+  "Mega Animal 40": {
+    "card_title": "Mega Animal 40",
+    "lags": [
+      18,
+      20,
+      43
+    ],
+    "target_streaks": [
+      1,
+      2,
+      3
+    ],
+    "payout": 30.0,
+    "history": [
+      {
+        "fecha": "2026-10-25",
+        "hora": "5:00 PM",
+        "numero": "3",
+        "animal": "CIEMPIÉS"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "6:00 PM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "7:00 PM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "8:00 PM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "9:00 AM",
+        "numero": "1",
+        "animal": "CARNERO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "10:00 AM",
+        "numero": "36",
+        "animal": "CULEBRA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "11:00 AM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "12:00 PM",
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "1:00 PM",
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "2:00 PM",
+        "numero": "00",
+        "animal": "BALLENA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "3:00 PM",
+        "numero": "32",
+        "animal": "ARDILLA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "4:00 PM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "5:00 PM",
+        "numero": "16",
+        "animal": "OSO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "6:00 PM",
+        "numero": "3",
+        "animal": "CIEMPIÉS"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "7:00 PM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "8:00 PM",
+        "numero": "1",
+        "animal": "CARNERO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "9:00 AM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "10:00 AM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "11:00 AM",
+        "numero": "30",
+        "animal": "CAIMÁN"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "12:00 PM",
+        "numero": "31",
+        "animal": "LAPA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "1:00 PM",
+        "numero": "21",
+        "animal": "GALLO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "2:00 PM",
+        "numero": "14",
+        "animal": "PALOMA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "3:00 PM",
+        "numero": "9",
+        "animal": "ÁGUILA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "4:00 PM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "5:00 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "6:00 PM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "7:00 PM",
+        "numero": "34",
+        "animal": "VENADO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "8:00 PM",
+        "numero": "31",
+        "animal": "LAPA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "9:00 AM",
+        "numero": "3",
+        "animal": "CIEMPIÉS"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "10:00 AM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "11:00 AM",
+        "numero": "32",
+        "animal": "ARDILLA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "12:00 PM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "1:00 PM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "2:00 PM",
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "3:00 PM",
+        "numero": "4",
+        "animal": "ALACRÁN"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "4:00 PM",
+        "numero": "0",
+        "animal": "DELFÍN"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "5:00 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "6:00 PM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "7:00 PM",
+        "numero": "36",
+        "animal": "CULEBRA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "8:00 PM",
+        "numero": "7",
+        "animal": "PERICO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "9:00 AM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "10:00 AM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "11:00 AM",
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "12:00 PM",
+        "numero": "19",
+        "animal": "CHIVO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "1:00 PM",
+        "numero": "3",
+        "animal": "CIEMPIÉS"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "2:00 PM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "3:00 PM",
+        "numero": "20",
+        "animal": "COCHINO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "4:00 PM",
+        "numero": "0",
+        "animal": "DELFÍN"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "5:00 PM",
+        "numero": "32",
+        "animal": "ARDILLA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "6:00 PM",
+        "numero": "1",
+        "animal": "CARNERO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "7:00 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "8:00 PM",
+        "numero": "00",
+        "animal": "BALLENA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "9:00 AM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "10:00 AM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "11:00 AM",
+        "numero": "35",
+        "animal": "JIRAFA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "12:00 PM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "1:00 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "2:00 PM",
+        "numero": "0",
+        "animal": "DELFÍN"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "3:00 PM",
+        "numero": "13",
+        "animal": "MONO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "4:00 PM",
+        "numero": "14",
+        "animal": "PALOMA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "5:00 PM",
+        "numero": "15",
+        "animal": "ZORRO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "6:00 PM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "7:00 PM",
+        "numero": "4",
+        "animal": "ALACRÁN"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "8:00 PM",
+        "numero": "35",
+        "animal": "JIRAFA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "9:00 AM",
+        "numero": "12",
+        "animal": "CABALLO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "10:00 AM",
+        "numero": "32",
+        "animal": "ARDILLA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "11:00 AM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "12:00 PM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "1:00 PM",
+        "numero": "1",
+        "animal": "CARNERO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "2:00 PM",
+        "numero": "00",
+        "animal": "BALLENA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "3:00 PM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "4:00 PM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "5:00 PM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "6:00 PM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "7:00 PM",
+        "numero": "36",
+        "animal": "CULEBRA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "8:00 PM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "9:00 AM",
+        "numero": "3",
+        "animal": "CIEMPIÉS"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "10:00 AM",
+        "numero": "15",
+        "animal": "ZORRO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "11:00 AM",
+        "numero": "16",
+        "animal": "OSO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "12:00 PM",
+        "numero": "31",
+        "animal": "LAPA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "1:00 PM",
+        "numero": "11",
+        "animal": "GATO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "2:00 PM",
+        "numero": "36",
+        "animal": "CULEBRA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "3:00 PM",
+        "numero": "7",
+        "animal": "PERICO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "4:00 PM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "5:00 PM",
+        "numero": "34",
+        "animal": "VENADO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "6:00 PM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "7:00 PM",
+        "numero": "14",
+        "animal": "PALOMA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "8:00 PM",
+        "numero": "19",
+        "animal": "CHIVO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "9:00 AM",
+        "numero": "30",
+        "animal": "CAIMAN"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "10:00 AM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "11:00 AM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "12:00 PM",
+        "numero": "21",
+        "animal": "GALLO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "1:00 PM",
+        "numero": "5",
+        "animal": "LEON"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "2:00 PM",
+        "numero": "12",
+        "animal": "CABALLO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "3:00 PM",
+        "numero": "16",
+        "animal": "OSO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "4:00 PM",
+        "numero": "34",
+        "animal": "VENADO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "5:00 PM",
+        "numero": "35",
+        "animal": "JIRAFA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "6:00 PM",
+        "numero": "8",
+        "animal": "RATON"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "7:00 PM",
+        "numero": "7",
+        "animal": "PERICO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "8:00 PM",
+        "numero": "1",
+        "animal": "CARNERO"
+      }
+    ]
+  },
+  "Gatazo": {
+    "card_title": "Gatazo",
+    "lags": [
+      35,
+      9,
+      20
+    ],
+    "target_streaks": [
+      1
+    ],
+    "payout": 60.0,
+    "history": [
+      {
+        "fecha": "2026-10-25",
+        "hora": "9:40 AM",
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "10:40 AM",
+        "numero": "64",
+        "animal": "GAVILÁN"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "11:40 AM",
+        "numero": "63",
+        "animal": "CANGREJO"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "12:40 PM",
+        "numero": "44",
+        "animal": "CHIGUIRE"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "1:40 PM",
+        "numero": "12",
+        "animal": "CABALLO"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "3:40 PM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "4:40 PM",
+        "numero": "56",
+        "animal": "TIBURÓN"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "5:40 PM",
+        "numero": "00",
+        "animal": "BALLENA"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "6:40 PM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-10-25",
+        "hora": "7:40 PM",
+        "numero": "69",
+        "animal": "CONEJO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "9:40 AM",
+        "numero": "57",
+        "animal": "PATO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "10:40 AM",
+        "numero": "15",
+        "animal": "ZORRO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "11:40 AM",
+        "numero": "42",
+        "animal": "TUCÁN"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "12:40 PM",
+        "numero": "14",
+        "animal": "PALOMA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "1:40 PM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "3:40 PM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "4:40 PM",
+        "numero": "38",
+        "animal": "BÚFALO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "5:40 PM",
+        "numero": "4",
+        "animal": "ALACRÁN"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "6:40 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "7:40 PM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "9:40 AM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "10:40 AM",
+        "numero": "3",
+        "animal": "CIENPIES"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "11:40 AM",
+        "numero": "55",
+        "animal": "OSOHRMIGUERO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "12:40 PM",
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "1:40 PM",
+        "numero": "61",
+        "animal": "COLIBRI"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "3:40 PM",
+        "numero": "74",
+        "animal": "TURPIAL"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "4:40 PM",
+        "numero": "51",
+        "animal": "PELICANO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "5:40 PM",
+        "numero": "14",
+        "animal": "PALOMA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "6:40 PM",
+        "numero": "54",
+        "animal": "GRILLO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "7:40 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "9:40 AM",
+        "numero": "21",
+        "animal": "GALLO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "10:40 AM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "11:40 AM",
+        "numero": "69",
+        "animal": "CONEJO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "12:40 PM",
+        "numero": "72",
+        "animal": "GORILA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "1:40 PM",
+        "numero": "20",
+        "animal": "COCHINO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "3:40 PM",
+        "numero": "7",
+        "animal": "PERICO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "4:40 PM",
+        "numero": "57",
+        "animal": "PATO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "5:40 PM",
+        "numero": "51",
+        "animal": "PELICANO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "6:40 PM",
+        "numero": "73",
+        "animal": "HIPOPÓTAMO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "7:40 PM",
+        "numero": "55",
+        "animal": "OSOHRMIGUERO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "9:40 AM",
+        "numero": "43",
+        "animal": "MARIPOSA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "10:40 AM",
+        "numero": "14",
+        "animal": "PALOMA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "11:40 AM",
+        "numero": "30",
+        "animal": "CAIMÁN"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "12:40 PM",
+        "numero": "0",
+        "animal": "DELFÍN"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "1:40 PM",
+        "numero": "50",
+        "animal": "CANARIO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "3:40 PM",
+        "numero": "71",
+        "animal": "GUACAMAYA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "4:40 PM",
+        "numero": "20",
+        "animal": "COCHINO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "5:40 PM",
+        "numero": "60",
+        "animal": "CAMALEÓN"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "6:40 PM",
+        "numero": "72",
+        "animal": "GORILA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "7:40 PM",
+        "numero": "42",
+        "animal": "TUCÁN"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "9:40 AM",
+        "numero": "3",
+        "animal": "CIENPIES"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "10:40 AM",
+        "numero": "52",
+        "animal": "PULPO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "11:40 AM",
+        "numero": "43",
+        "animal": "MARIPOSA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "12:40 PM",
+        "numero": "74",
+        "animal": "TURPIAL"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "1:40 PM",
+        "numero": "41",
+        "animal": "CANGURO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "3:40 PM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "4:40 PM",
+        "numero": "39",
+        "animal": "LECHUZA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "5:40 PM",
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "6:40 PM",
+        "numero": "51",
+        "animal": "PELICANO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "7:40 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "9:40 AM",
+        "numero": "16",
+        "animal": "OSO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "10:40 AM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "11:40 AM",
+        "numero": "72",
+        "animal": "GORILA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "12:40 PM",
+        "numero": "42",
+        "animal": "TUCÁN"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "1:40 PM",
+        "numero": "20",
+        "animal": "COCHINO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "3:40 PM",
+        "numero": "73",
+        "animal": "HIPOPÓTAMO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "4:40 PM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "5:40 PM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "6:40 PM",
+        "numero": "12",
+        "animal": "CABALLO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "7:40 PM",
+        "numero": "4",
+        "animal": "ALACRÁN"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "9:40 AM",
+        "numero": "0",
+        "animal": "DELFÍN"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "10:40 AM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "11:40 AM",
+        "numero": "51",
+        "animal": "PELICANO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "12:40 PM",
+        "numero": "54",
+        "animal": "GRILLO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "1:40 PM",
+        "numero": "48",
+        "animal": "PUERCOESPÍN"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "3:40 PM",
+        "numero": "7",
+        "animal": "PERICO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "4:40 PM",
+        "numero": "14",
+        "animal": "PALOMA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "5:40 PM",
+        "numero": "43",
+        "animal": "MARIPOSA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "6:40 PM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "7:40 PM",
+        "numero": "72",
+        "animal": "GORILA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "9:40 AM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "10:40 AM",
+        "numero": "40",
+        "animal": "AVISPA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "11:40 AM",
+        "numero": "12",
+        "animal": "CABALLO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "12:40 PM",
+        "numero": "73",
+        "animal": "HIPOPOTAMO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "1:40 PM",
+        "numero": "7",
+        "animal": "PERICO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "3:40 PM",
+        "numero": "42",
+        "animal": "TUCAN"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "4:40 PM",
+        "numero": "15",
+        "animal": "ZORRO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "5:40 PM",
+        "numero": "74",
+        "animal": "TURPIAL"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "6:40 PM",
+        "numero": "30",
+        "animal": "CAIMAN"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "7:40 PM",
+        "numero": "50",
+        "animal": "CANARIO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "9:40 AM",
+        "numero": "4",
+        "animal": "ALACRAN"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "10:40 AM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "11:40 AM",
+        "numero": "71",
+        "animal": "GUACAMAYA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "12:40 PM",
+        "numero": "29",
+        "animal": "ELEFANTE"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "1:40 PM",
+        "numero": "51",
+        "animal": "PELICANO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "3:40 PM",
+        "numero": "20",
+        "animal": "COCHINO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "4:40 PM",
+        "numero": "72",
+        "animal": "GORILA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "5:40 PM",
+        "numero": "74",
+        "animal": "TURPIAL"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "6:40 PM",
+        "numero": "1",
+        "animal": "CARNERO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "7:40 PM",
+        "numero": "30",
+        "animal": "CAIMAN"
+      }
+    ]
+  },
+  "Monje Millonario": {
+    "card_title": "Monje Millonario",
+    "lags": [
+      24,
+      42,
+      48
+    ],
+    "target_streaks": [
+      0,
+      1
+    ],
+    "payout": 60.0,
+    "history": [
+      {
+        "fecha": "2026-10-26",
+        "hora": "4:05 PM",
+        "numero": "75",
+        "animal": "PATRONUS"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "5:05 PM",
+        "numero": "74",
+        "animal": "TURPIAL"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "6:05 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "7:05 PM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "8:05 AM",
+        "numero": "68",
+        "animal": "JAGUAR"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "9:05 AM",
+        "numero": "38",
+        "animal": "BÚFALO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "10:05 AM",
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "11:05 AM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "12:05 PM",
+        "numero": "44",
+        "animal": "CHIGUIRE"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "1:05 PM",
+        "numero": "30",
+        "animal": "CAIMÁN"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "2:05 PM",
+        "numero": "50",
+        "animal": "CANARIO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "3:05 PM",
+        "numero": "42",
+        "animal": "TUCÁN"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "4:05 PM",
+        "numero": "58",
+        "animal": "HORMIGA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "5:05 PM",
+        "numero": "37",
+        "animal": "TORTUGA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "6:05 PM",
+        "numero": "53",
+        "animal": "CARACOL"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "7:05 PM",
+        "numero": "55",
+        "animal": "OSO HORMIGUERO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "8:05 AM",
+        "numero": "46",
+        "animal": "PUMA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "9:05 AM",
+        "numero": "63",
+        "animal": "CANGREJO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "10:05 AM",
+        "numero": "48",
+        "animal": "PUERCOESPÍN"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "11:05 AM",
+        "numero": "71",
+        "animal": "GUACAMAYA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "12:05 PM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "1:05 PM",
+        "numero": "62",
+        "animal": "CACHICAMO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "2:05 PM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "3:05 PM",
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "4:05 PM",
+        "numero": "14",
+        "animal": "PALOMA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "5:05 PM",
+        "numero": "12",
+        "animal": "CABALLO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "6:05 PM",
+        "numero": "49",
+        "animal": "PEREZA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "7:05 PM",
+        "numero": "10",
+        "animal": "TIGRE"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "8:05 AM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "9:05 AM",
+        "numero": "36",
+        "animal": "CULEBRA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "10:05 AM",
+        "numero": "00",
+        "animal": "BALLENA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "11:05 AM",
+        "numero": "13",
+        "animal": "MONO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "12:05 PM",
+        "numero": "45",
+        "animal": "GARZA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "1:05 PM",
+        "numero": "67",
+        "animal": "AVESTRUZ"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "2:05 PM",
+        "numero": "69",
+        "animal": "CONEJO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "3:05 PM",
+        "numero": "57",
+        "animal": "PATO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "4:05 PM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "5:05 PM",
+        "numero": "58",
+        "animal": "HORMIGA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "6:05 PM",
+        "numero": "4",
+        "animal": "ALACRÁN"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "7:05 PM",
+        "numero": "59",
+        "animal": "PANTERA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "8:05 AM",
+        "numero": "54",
+        "animal": "GRILLO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "9:05 AM",
+        "numero": "12",
+        "animal": "CABALLO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "10:05 AM",
+        "numero": "73",
+        "animal": "HIPOPÓTAMO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "11:05 AM",
+        "numero": "52",
+        "animal": "PULPO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "12:05 PM",
+        "numero": "28",
+        "animal": "ZAMURO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "1:05 PM",
+        "numero": "16",
+        "animal": "OSO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "2:05 PM",
+        "numero": "56",
+        "animal": "TIBURÓN"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "3:05 PM",
+        "numero": "30",
+        "animal": "CAIMÁN"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "4:05 PM",
+        "numero": "31",
+        "animal": "LAPA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "5:05 PM",
+        "numero": "39",
+        "animal": "LECHUZA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "6:05 PM",
+        "numero": "46",
+        "animal": "PUMA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "7:05 PM",
+        "numero": "4",
+        "animal": "ALACRÁN"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "8:05 AM",
+        "numero": "62",
+        "animal": "CACHICAMO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "9:05 AM",
+        "numero": "15",
+        "animal": "ZORRO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "10:05 AM",
+        "numero": "43",
+        "animal": "MARIPOSA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "11:05 AM",
+        "numero": "54",
+        "animal": "GRILLO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "12:05 PM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "1:05 PM",
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "2:05 PM",
+        "numero": "69",
+        "animal": "CONEJO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "3:05 PM",
+        "numero": "20",
+        "animal": "COCHINO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "4:05 PM",
+        "numero": "49",
+        "animal": "PEREZA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "5:05 PM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "6:05 PM",
+        "numero": "3",
+        "animal": "CIEMPIÉS"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "7:05 PM",
+        "numero": "44",
+        "animal": "CHIGUIRE"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "8:05 AM",
+        "numero": "17",
+        "animal": "PAVO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "9:05 AM",
+        "numero": "38",
+        "animal": "BÚFALO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "10:05 AM",
+        "numero": "58",
+        "animal": "HORMIGA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "11:05 AM",
+        "numero": "12",
+        "animal": "CABALLO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "12:05 PM",
+        "numero": "00",
+        "animal": "BALLENA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "1:05 PM",
+        "numero": "61",
+        "animal": "PANDA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "2:05 PM",
+        "numero": "71",
+        "animal": "GUACAMAYA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "3:05 PM",
+        "numero": "57",
+        "animal": "PATO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "4:05 PM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "5:05 PM",
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "6:05 PM",
+        "numero": "34",
+        "animal": "VENADO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "7:05 PM",
+        "numero": "16",
+        "animal": "OSO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "8:05 AM",
+        "numero": "14",
+        "animal": "PALOMA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "9:05 AM",
+        "numero": "49",
+        "animal": "PEREZA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "10:05 AM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "11:05 AM",
+        "numero": "43",
+        "animal": "MARIPOSA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "12:05 PM",
+        "numero": "52",
+        "animal": "PULPO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "1:05 PM",
+        "numero": "30",
+        "animal": "CAIMAN"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "2:05 PM",
+        "numero": "46",
+        "animal": "PUMA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "3:05 PM",
+        "numero": "5",
+        "animal": "LEON"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "4:05 PM",
+        "numero": "39",
+        "animal": "LECHUZA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "5:05 PM",
+        "numero": "34",
+        "animal": "VENADO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "6:05 PM",
+        "numero": "44",
+        "animal": "CHIGUIRE"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "7:05 PM",
+        "numero": "10",
+        "animal": "TIGRE"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "8:05 AM",
+        "numero": "28",
+        "animal": "ZAMURO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "9:05 AM",
+        "numero": "21",
+        "animal": "GALLO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "10:05 AM",
+        "numero": "71",
+        "animal": "GUACAMAYA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "11:05 AM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "12:05 PM",
+        "numero": "72",
+        "animal": "GORILA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "1:05 PM",
+        "numero": "63",
+        "animal": "CANGREJO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "2:05 PM",
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "3:05 PM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "4:05 PM",
+        "numero": "2",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "5:05 PM",
+        "numero": "54",
+        "animal": "GRILLO"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "6:05 PM",
+        "numero": "59",
+        "animal": "PANTERA"
+      },
+      {
+        "fecha": "2026-11-03",
+        "hora": "7:05 PM",
+        "numero": "19",
+        "animal": "CHIVO"
+      }
+    ]
+  },
+  "Granja Millonaria - Granjazo": {
+    "card_title": "Granjazo",
+    "lags": [
+      45,
+      26,
+      15
+    ],
+    "target_streaks": [
+      1,
+      3
+    ],
+    "payout": 60.0,
+    "history": [
+      {
+        "fecha": "2026-10-13",
+        "hora": "5:30 PM",
+        "numero": "12",
+        "animal": "CABALLO"
+      },
+      {
+        "fecha": "2026-10-13",
+        "hora": "6:30 PM",
+        "numero": "58",
+        "animal": "CASTOR"
+      },
+      {
+        "fecha": "2026-10-13",
+        "hora": "7:30 PM",
+        "numero": "38",
+        "animal": "CONEJO"
+      },
+      {
+        "fecha": "2026-10-13",
+        "hora": "8:30 PM",
+        "numero": "57",
+        "animal": "JABALI"
+      },
+      {
+        "fecha": "2026-10-14",
+        "hora": "9:30 AM",
+        "numero": "34",
+        "animal": "VENADO"
+      },
+      {
+        "fecha": "2026-10-14",
+        "hora": "10:30 AM",
+        "numero": "58",
+        "animal": "CASTOR"
+      },
+      {
+        "fecha": "2026-10-14",
+        "hora": "11:30 AM",
+        "numero": "56",
+        "animal": "ARMIÑO"
+      },
+      {
+        "fecha": "2026-10-14",
+        "hora": "12:30 PM",
+        "numero": "52",
+        "animal": "CHACAL"
+      },
+      {
+        "fecha": "2026-10-14",
+        "hora": "1:30 PM",
+        "numero": "76",
+        "animal": "MANTIS"
+      },
+      {
+        "fecha": "2026-10-14",
+        "hora": "4:30 PM",
+        "numero": "61",
+        "animal": "TURPIAL"
+      },
+      {
+        "fecha": "2026-10-14",
+        "hora": "5:30 PM",
+        "numero": "8",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-10-14",
+        "hora": "6:30 PM",
+        "numero": "12",
+        "animal": "CABALLO"
+      },
+      {
+        "fecha": "2026-10-14",
+        "hora": "7:30 PM",
+        "numero": "19",
+        "animal": "CHIVO"
+      },
+      {
+        "fecha": "2026-10-14",
+        "hora": "8:30 PM",
+        "numero": "72",
+        "animal": "PELICANO"
+      },
+      {
+        "fecha": "2026-10-15",
+        "hora": "9:30 AM",
+        "numero": "6",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-10-15",
+        "hora": "10:30 AM",
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "fecha": "2026-10-15",
+        "hora": "11:30 AM",
+        "numero": "59",
+        "animal": "GUACAMAYO"
+      },
+      {
+        "fecha": "2026-10-15",
+        "hora": "12:30 PM",
+        "numero": "11",
+        "animal": "GATO"
+      },
+      {
+        "fecha": "2026-10-15",
+        "hora": "1:30 PM",
+        "numero": "68",
+        "animal": "ARAÑA"
+      },
+      {
+        "fecha": "2026-10-15",
+        "hora": "4:30 PM",
+        "numero": "38",
+        "animal": "CONEJO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "9:30 AM",
+        "numero": "03",
+        "animal": "CIEMPIÉS"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "10:30 AM",
+        "numero": "69",
+        "animal": "PAVOREAL"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "11:30 AM",
+        "numero": "44",
+        "animal": "PUMA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "12:30 PM",
+        "numero": "42",
+        "animal": "MURCIELAGO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "1:30 PM",
+        "numero": "64",
+        "animal": "HORMIGA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "4:30 PM",
+        "numero": "35",
+        "animal": "JIRAFA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "5:30 PM",
+        "numero": "48",
+        "animal": "MORSA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "6:30 PM",
+        "numero": "01",
+        "animal": "CARNERO"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "7:30 PM",
+        "numero": "49",
+        "animal": "HIENA"
+      },
+      {
+        "fecha": "2026-10-26",
+        "hora": "8:30 PM",
+        "numero": "65",
+        "animal": "GORILA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "9:30 AM",
+        "numero": "08",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "10:30 AM",
+        "numero": "37",
+        "animal": "MARIPOSA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "11:30 AM",
+        "numero": "39",
+        "animal": "RINOCERONTE"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "12:30 PM",
+        "numero": "45",
+        "animal": "CANGURO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "1:30 PM",
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "4:30 PM",
+        "numero": "19",
+        "animal": "CHIVO"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "5:30 PM",
+        "numero": "09",
+        "animal": "ÁGUILA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "6:30 PM",
+        "numero": "75",
+        "animal": "CODORNIZ"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "7:30 PM",
+        "numero": "68",
+        "animal": "ARAÑA"
+      },
+      {
+        "fecha": "2026-10-27",
+        "hora": "8:30 PM",
+        "numero": "02",
+        "animal": "TORO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "9:30 AM",
+        "numero": "08",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "10:30 AM",
+        "numero": "44",
+        "animal": "PUMA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "11:30 AM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "12:30 PM",
+        "numero": "34",
+        "animal": "VENADO"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "1:30 PM",
+        "numero": "47",
+        "animal": "TORTUGA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "4:30 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "5:30 PM",
+        "numero": "66",
+        "animal": "BISONTE"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "6:30 PM",
+        "numero": "62",
+        "animal": "TUCÁN"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "7:30 PM",
+        "numero": "61",
+        "animal": "TURPIAL"
+      },
+      {
+        "fecha": "2026-10-28",
+        "hora": "8:30 PM",
+        "numero": "65",
+        "animal": "GORILA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "9:30 AM",
+        "numero": "74",
+        "animal": "ESCARABAJO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "10:30 AM",
+        "numero": "13",
+        "animal": "MONO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "11:30 AM",
+        "numero": "16",
+        "animal": "OSO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "12:30 PM",
+        "numero": "76",
+        "animal": "MANTIS"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "1:30 PM",
+        "numero": "38",
+        "animal": "CONEJO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "4:30 PM",
+        "numero": "51",
+        "animal": "DRAGÓN"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "5:30 PM",
+        "numero": "44",
+        "animal": "PUMA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "6:30 PM",
+        "numero": "41",
+        "animal": "BÚFALO"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "7:30 PM",
+        "numero": "06",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-10-29",
+        "hora": "8:30 PM",
+        "numero": "48",
+        "animal": "MORSA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "9:30 AM",
+        "numero": "19",
+        "animal": "CHIVO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "10:30 AM",
+        "numero": "71",
+        "animal": "RABIPELAO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "11:30 AM",
+        "numero": "62",
+        "animal": "TUCÁN"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "12:30 PM",
+        "numero": "06",
+        "animal": "RANA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "1:30 PM",
+        "numero": "03",
+        "animal": "CIEMPIÉS"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "4:30 PM",
+        "numero": "48",
+        "animal": "MORSA"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "5:30 PM",
+        "numero": "21",
+        "animal": "GALLO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "6:30 PM",
+        "numero": "08",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "7:30 PM",
+        "numero": "38",
+        "animal": "CONEJO"
+      },
+      {
+        "fecha": "2026-10-30",
+        "hora": "8:30 PM",
+        "numero": "60",
+        "animal": "TIBURÓN"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "9:30 AM",
+        "numero": "03",
+        "animal": "CIEMPIÉS"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "10:30 AM",
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "11:30 AM",
+        "numero": "16",
+        "animal": "OSO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "12:30 PM",
+        "numero": "35",
+        "animal": "JIRAFA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "1:30 PM",
+        "numero": "40",
+        "animal": "HIPOPÓTAMO"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "4:30 PM",
+        "numero": "66",
+        "animal": "BISONTE"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "5:30 PM",
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "6:30 PM",
+        "numero": "62",
+        "animal": "TUCÁN"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "7:30 PM",
+        "numero": "49",
+        "animal": "HIENA"
+      },
+      {
+        "fecha": "2026-10-31",
+        "hora": "8:30 PM",
+        "numero": "43",
+        "animal": "KOALA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "9:30 AM",
+        "numero": "48",
+        "animal": "MORSA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "10:30 AM",
+        "numero": "45",
+        "animal": "CANGURO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "11:30 AM",
+        "numero": "75",
+        "animal": "CODORNIZ"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "12:30 PM",
+        "numero": "36",
+        "animal": "CULEBRA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "1:30 PM",
+        "numero": "34",
+        "animal": "VENADO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "4:30 PM",
+        "numero": "03",
+        "animal": "CIEMPIÉS"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "5:30 PM",
+        "numero": "35",
+        "animal": "JIRAFA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "6:30 PM",
+        "numero": "15",
+        "animal": "ZORRO"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "7:30 PM",
+        "numero": "26",
+        "animal": "VACA"
+      },
+      {
+        "fecha": "2026-11-01",
+        "hora": "8:30 PM",
+        "numero": "13",
+        "animal": "MONO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "9:30 AM",
+        "numero": "39",
+        "animal": "RINOCERONTE"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "10:30 AM",
+        "numero": "64",
+        "animal": "HORMIGA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "11:30 AM",
+        "numero": "73",
+        "animal": "COLIBRI"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "12:30 PM",
+        "numero": "08",
+        "animal": "RATÓN"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "1:30 PM",
+        "numero": "70",
+        "animal": "CANGREJO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "4:30 PM",
+        "numero": "53",
+        "animal": "JAGUAR"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "5:30 PM",
+        "numero": "01",
+        "animal": "CARNERO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "6:30 PM",
+        "numero": "13",
+        "animal": "MONO"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "7:30 PM",
+        "numero": "44",
+        "animal": "PUMA"
+      },
+      {
+        "fecha": "2026-11-02",
+        "hora": "8:30 PM",
+        "numero": "69",
+        "animal": "PAVOREAL"
+      }
+    ]
+  }
+}
