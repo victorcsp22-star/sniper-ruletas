@@ -1,14 +1,14 @@
 {
-  "Mega Animal 40": {
-    "title": "Mega Animal 40",
-    "emoji": "🦏",
-    "payout": 30.0,
+  "Lotto Gato": {
+    "title": "Lotto Gato",
+    "emoji": "🐱",
+    "payout": 60.0,
     "target_streaks": [
-      0,
-      1
+      1,
+      2
     ],
-    "racha": 2,
-    "misses": 2,
+    "racha": 10,
+    "misses": 6,
     "is_active": false,
     "candidatos": [
       {
@@ -20,30 +20,115 @@
         "animal": "BALLENA"
       },
       {
-        "numero": "18",
-        "animal": "BURRO"
+        "numero": "15",
+        "animal": "ZORRO"
       },
       {
-        "numero": "25",
-        "animal": "GALLINA"
+        "numero": "29",
+        "animal": "ELEFANTE"
       },
       {
-        "numero": "8",
-        "animal": "RATÓN"
+        "numero": "7",
+        "animal": "PERICO"
       }
     ],
-    "ultimo_str": "#16 OSO (8:00 PM)"
+    "ultimo_str": "#34 VENADO (7:10 PM)"
+  },
+  "Loto Chaima": {
+    "title": "Loto Chaima",
+    "emoji": "🏹",
+    "payout": 60.0,
+    "target_streaks": [
+      0,
+      1
+    ],
+    "racha": 1,
+    "misses": 1,
+    "is_active": true,
+    "candidatos": [
+      {
+        "numero": "10",
+        "animal": "TIGRE"
+      },
+      {
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "numero": "27",
+        "animal": "PERRO"
+      },
+      {
+        "numero": "32",
+        "animal": "ARDILLA"
+      },
+      {
+        "numero": "37",
+        "animal": "TORTUGA"
+      },
+      {
+        "numero": "39",
+        "animal": "LECHUZA"
+      },
+      {
+        "numero": "43",
+        "animal": "MARIPOSA"
+      },
+      {
+        "numero": "46",
+        "animal": "PUMA"
+      }
+    ],
+    "ultimo_str": "#41 CANGURO (8:00 AM)"
+  },
+  "Guacharo Activo": {
+    "title": "Guacharo",
+    "emoji": "🦇",
+    "payout": 60.0,
+    "target_streaks": [
+      1,
+      3
+    ],
+    "racha": 2,
+    "misses": 13,
+    "is_active": false,
+    "candidatos": [
+      {
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "numero": "24",
+        "animal": "IGUANA"
+      },
+      {
+        "numero": "33",
+        "animal": "PESCADO"
+      },
+      {
+        "numero": "40",
+        "animal": "AVISPA"
+      },
+      {
+        "numero": "69",
+        "animal": "CONEJO"
+      },
+      {
+        "numero": "70",
+        "animal": "BISONTE"
+      }
+    ],
+    "ultimo_str": "#3 CIEMPIÉS (8:00 AM)"
   },
   "Gatazo": {
     "title": "Gatazo",
     "emoji": "🐯",
     "payout": 60.0,
     "target_streaks": [
-      1,
-      2
+      1
     ],
     "racha": 4,
-    "misses": 6,
+    "misses": 3,
     "is_active": false,
     "candidatos": [
       {
@@ -55,148 +140,54 @@
   },
   "Monje Millonario": {
     "title": "Monje Millonario",
-    "emoji": "🧘",
+    "emoji": "🧘‍♂️",
     "payout": 60.0,
     "target_streaks": [
       0,
       1
     ],
-    "racha": 7,
-    "misses": 6,
+    "racha": 4,
+    "misses": 12,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "27",
-        "animal": "PERRO"
+        "numero": "12",
+        "animal": "CABALLO"
       },
       {
-        "numero": "28",
-        "animal": "ZAMURO"
+        "numero": "2",
+        "animal": "TORO"
       },
       {
-        "numero": "34",
-        "animal": "VENADO"
+        "numero": "21",
+        "animal": "GALLO"
       },
       {
-        "numero": "39",
-        "animal": "LECHUZA"
-      },
-      {
-        "numero": "40",
-        "animal": "AVISPA"
-      }
-    ],
-    "ultimo_str": "#13 MONO (7:05 PM)"
-  },
-  "Lotto Activo": {
-    "title": "Lotto Activo",
-    "emoji": "🦁",
-    "payout": 30.0,
-    "target_streaks": [
-      1,
-      2
-    ],
-    "racha": 9,
-    "misses": 6,
-    "is_active": false,
-    "candidatos": [
-      {
-        "numero": "00",
-        "animal": "BALLENA"
-      },
-      {
-        "numero": "10",
-        "animal": "TIGRE"
-      },
-      {
-        "numero": "24",
-        "animal": "IGUANA"
+        "numero": "22",
+        "animal": "CAMELLO"
       },
       {
         "numero": "26",
         "animal": "VACA"
       },
       {
-        "numero": "29",
-        "animal": "ELEFANTE"
+        "numero": "4",
+        "animal": "ALACRÁN"
+      },
+      {
+        "numero": "44",
+        "animal": "CHIGÜIRE"
       }
     ],
-    "ultimo_str": "#35 JIRAFA (7:00 PM)"
-  },
-  "Ruleta Royal": {
-    "title": "Ruleta Royal",
-    "emoji": "👑",
-    "payout": 30.0,
-    "target_streaks": [
-      1,
-      2
-    ],
-    "racha": 1,
-    "misses": 24,
-    "is_active": true,
-    "candidatos": [
-      {
-        "numero": "15",
-        "animal": "ZORRO"
-      },
-      {
-        "numero": "18",
-        "animal": "BURRO"
-      },
-      {
-        "numero": "25",
-        "animal": "GALLINA"
-      }
-    ],
-    "ultimo_str": "#0 TIBURÓN (8:30 PM)"
-  },
-  "Guacharo Activo": {
-    "title": "Guacharo",
-    "emoji": "🦇",
-    "payout": 60.0,
-    "target_streaks": [
-      1,
-      3
-    ],
-    "racha": 1,
-    "misses": 8,
-    "is_active": true,
-    "candidatos": [
-      {
-        "numero": "18",
-        "animal": "BURRO"
-      },
-      {
-        "numero": "39",
-        "animal": "LECHUZA"
-      },
-      {
-        "numero": "40",
-        "animal": "AVISPA"
-      }
-    ],
-    "ultimo_str": "#32 ARDILLA (7:00 PM)"
-  },
-  "Lotto Gato": {
-    "title": "Lotto Gato",
-    "emoji": "🐱",
-    "payout": 30.0,
-    "target_streaks": [
-      1,
-      2
-    ],
-    "racha": 19,
-    "misses": 4,
-    "is_active": false,
-    "candidatos": [],
-    "ultimo_str": "#34 VENADO (7:10 PM)"
+    "ultimo_str": "#50 CANARIO (8:05 AM)"
   },
   "Granja Millonaria - Granjazo": {
     "title": "Granjazo",
     "emoji": "🚜",
     "payout": 60.0,
     "target_streaks": [
-      1
+      1,
+      3
     ],
     "racha": 20,
     "misses": 9,
@@ -213,10 +204,6 @@
       {
         "numero": "53",
         "animal": "CARACOL"
-      },
-      {
-        "numero": "73",
-        "animal": "HIPOPÓTAMO"
       }
     ],
     "ultimo_str": "#3 CIEMPIÉS (8:30 PM)"
