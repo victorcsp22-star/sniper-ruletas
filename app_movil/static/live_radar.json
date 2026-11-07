@@ -7,32 +7,36 @@
       1,
       2
     ],
-    "racha": 10,
+    "racha": 11,
     "misses": 6,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "0",
-        "animal": "DELFÍN"
-      },
-      {
-        "numero": "00",
-        "animal": "BALLENA"
+        "numero": "13",
+        "animal": "MONO"
       },
       {
         "numero": "15",
         "animal": "ZORRO"
       },
       {
-        "numero": "29",
-        "animal": "ELEFANTE"
+        "numero": "17",
+        "animal": "PAVO"
       },
       {
-        "numero": "7",
-        "animal": "PERICO"
+        "numero": "20",
+        "animal": "COCHINO"
+      },
+      {
+        "numero": "25",
+        "animal": "GALLINA"
+      },
+      {
+        "numero": "27",
+        "animal": "PERRO"
       }
     ],
-    "ultimo_str": "#34 VENADO (7:10 PM)"
+    "ultimo_str": "#11 GATO (9:10 AM)"
   },
   "Loto Chaima": {
     "title": "Loto Chaima",
@@ -146,40 +150,40 @@
       0,
       1
     ],
-    "racha": 4,
+    "racha": 5,
     "misses": 12,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "12",
-        "animal": "CABALLO"
+        "numero": "10",
+        "animal": "TIGRE"
       },
       {
         "numero": "2",
         "animal": "TORO"
       },
       {
-        "numero": "21",
-        "animal": "GALLO"
+        "numero": "48",
+        "animal": "PUERCOESPÍN"
       },
       {
-        "numero": "22",
-        "animal": "CAMELLO"
+        "numero": "54",
+        "animal": "GRILLO"
       },
       {
-        "numero": "26",
-        "animal": "VACA"
+        "numero": "62",
+        "animal": "CACHICAMO"
       },
       {
-        "numero": "4",
-        "animal": "ALACRÁN"
+        "numero": "71",
+        "animal": "GUACAMAYA"
       },
       {
-        "numero": "44",
-        "animal": "CHIGÜIRE"
+        "numero": "72",
+        "animal": "GORILA"
       }
     ],
-    "ultimo_str": "#50 CANARIO (8:05 AM)"
+    "ultimo_str": "#34 VENADO (9:05 AM)"
   },
   "Granja Millonaria - Granjazo": {
     "title": "Granjazo",
