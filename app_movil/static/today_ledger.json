@@ -1,11 +1,51 @@
 {
-  "items": [],
+  "items": [
+    {
+      "fecha": "2026-11-08",
+      "hora": "11:10 AM",
+      "ruleta": "Lotto Gato",
+      "candidatos": "#1 CARNERO [P:7/10], #31 LAPA [P:7/10], #34 VENADO [P:7/10], #7 PERICO [P:7/10], #9 ÁGUILA [P:7/10]",
+      "cands_count": 5,
+      "total_bet": 500.0,
+      "resultado": "[27] PERRO",
+      "cobrado": 0.0,
+      "pnl": -500.0,
+      "saldo": -1875.0,
+      "emoji": "🐱"
+    },
+    {
+      "fecha": "2026-11-08",
+      "hora": "12:00 PM",
+      "ruleta": "Loto Chaima",
+      "candidatos": "#1 CARNERO [P:8/10], #22 CAMELLO [P:8/10], #27 PERRO [P:8/10], #40 AVISPA [P:8/10], #41 CANGURO [P:8/10]",
+      "cands_count": 5,
+      "total_bet": 500.0,
+      "resultado": "[33] PESCADO",
+      "cobrado": 0.0,
+      "pnl": -500.0,
+      "saldo": -2375.0,
+      "emoji": "🏹"
+    },
+    {
+      "fecha": "2026-11-08",
+      "hora": "11:40 AM",
+      "ruleta": "Gatazo",
+      "candidatos": "#20 COCHINO [P:8/10], #23 CEBRA [P:8/10], #4 ALACRÁN [P:8/10], #42 TUCÁN [P:8/10], #47 PAVO REAL [P:8/10], #48 PUERCOESPÍN [P:8/10], #7 PERICO [P:8/10], #72 GORILA [P:8/10]",
+      "cands_count": 8,
+      "total_bet": 800.0,
+      "resultado": "[38] BUFALO",
+      "cobrado": 0.0,
+      "pnl": -800.0,
+      "saldo": -3175.0,
+      "emoji": "🐯"
+    }
+  ],
   "summary": {
-    "ops_today": 0,
+    "ops_today": 3,
     "wins_today": 0,
-    "inv_today": 0.0,
+    "inv_today": 1800.0,
     "cob_today": 0.0,
-    "pnl_today": 0.0,
+    "pnl_today": -1800.0,
     "win_rate_today": 0.0
   }
 }
