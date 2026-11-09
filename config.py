@@ -38,10 +38,10 @@ RULETAS_CONFIG = {
     "Lotto Gato": {
         "file": os.path.join(BASE_DIR, "lotto_gato.csv"),
         "card_title": "Lotto Gato",
-        "lags": [18, 38, 14, 25, 30, 35, 40, 45],
+        "lags": [18, 38, 14],
         "target_streaks": [1, 2],
         "wr_optimos": [1, 2],
-        "rec_w": 6,
+        "rec_w": 5,
         "anti_clustering": False,
         "blacklist": [],
         "markov_snipers": {
@@ -52,7 +52,7 @@ RULETAS_CONFIG = {
         "mirror_pairs": {
             "0": "00", "1": "10", "2": "20", "3": "30", "4": "40"
         },
-        "payout": 60.0,
+        "payout": 30.0,
         "emoji": "🐱",
         "active": True,
         "f_unit": 0.00900,
