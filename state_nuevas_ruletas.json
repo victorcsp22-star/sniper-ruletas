@@ -1,5 +1,5 @@
 {
-  "bankroll": 194.0,
+  "bankroll": 184.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 200.0,
@@ -60,51 +60,48 @@
     "Granja Millonaria - Granjazo": "2026-11-09 9:30 AM"
   },
   "pending_bets": {
-    "Loto Chaima": {
-      "ruleta": "Loto Chaima",
+    "Lotto Gato": {
+      "ruleta": "Lotto Gato",
       "candidatos": [
-        "20",
-        "22",
-        "23",
-        "34",
-        "37",
-        "38",
-        "40",
-        "7"
+        "13",
+        "6",
+        "8"
       ],
-      "candidatos_str": "#20 COCHINO [P:9/10], #22 CAMELLO [P:9/10], #23 CEBRA [P:9/10], #34 VENADO [P:9/10], #37 TORTUGA [P:9/10], #38 BÚFALO [P:9/10], #40 AVISPA [P:9/10], #7 PERICO [P:9/10]",
-      "total_cands": 8,
-      "stake_unit": 1.0,
-      "total_stake": 8.0,
-      "posible_premio": 60.0,
-      "payout": 60.0,
-      "smart_label": "⚖️ Neutral (1.00x Kelly) | ⚖️ ESTABLE (1.00x)",
-      "audit_verdict": "ESTABLE / EN PARIDAD",
-      "audit_multiplier": 1.0,
-      "last_fecha": "2026-11-09",
-      "last_hora": "9:00 AM",
-      "last_salido_str": "#51 PELICANO (9:00 AM)",
-      "created_at": "2026-11-09 09:07:14 AM"
+      "candidatos_str": "#13 MONO [P:5/10], #6 RANA [P:5/10], #8 RATÓN [P:5/10]",
+      "total_cands": 3,
+      "stake_unit": 100.0,
+      "total_stake": 300.0,
+      "posible_premio": 3000.0,
+      "payout": 30.0,
+      "peso_agente": 5,
+      "peso_label": "P:5/10",
+      "smart_label": "🎯 Canasta Rezagados [P:5/10]",
+      "last_salido_str": "#17 PAVO (9:10 AM)",
+      "created_at": "2026-11-09 01:46:20 PM"
     },
-    "Granja Millonaria - Granjazo": {
-      "ruleta": "Granja Millonaria - Granjazo",
+    "Guacharo Activo": {
+      "ruleta": "Guacharo Activo",
       "candidatos": [
-        "35",
-        "66"
+        "0",
+        "00",
+        "20",
+        "21",
+        "39",
+        "60",
+        "66",
+        "73"
       ],
-      "candidatos_str": "#35 JIRAFA [P:7/10], #66 BISONTE [P:7/10]",
-      "total_cands": 2,
-      "stake_unit": 1.0,
-      "total_stake": 2.0,
-      "posible_premio": 60.0,
+      "candidatos_str": "#0 DELFÍN [P:10/10], #00 BALLENA [P:10/10], #20 COCHINO [P:10/10], #21 GALLO [P:10/10], #39 LECHUZA [P:10/10], #60 CAMALEÓN [P:10/10], #66 LOBO [P:10/10], #73 HIPOPÓTAMO [P:10/10]",
+      "total_cands": 8,
+      "stake_unit": 100.0,
+      "total_stake": 800.0,
+      "posible_premio": 6000.0,
       "payout": 60.0,
-      "smart_label": "⚖️ Neutral (1.00x Kelly) | ⚖️ ESTABLE (1.00x)",
-      "audit_verdict": "ESTABLE / EN PARIDAD",
-      "audit_multiplier": 1.0,
-      "last_fecha": "2026-11-09",
-      "last_hora": "9:30 AM",
-      "last_salido_str": "#24 IGUANA (9:30 AM)",
-      "created_at": "2026-11-09 09:36:17 AM"
+      "peso_agente": 10,
+      "peso_label": "P:10/10",
+      "smart_label": "🎯 Canasta Rezagados [P:10/10]",
+      "last_salido_str": "#36 CULEBRA (9:00 AM)",
+      "created_at": "2026-11-09 01:46:21 PM"
     }
   },
   "effective_kelly": 0.75,
