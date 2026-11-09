@@ -25,14 +25,40 @@
       "pnl": -2.0,
       "saldo": 184.0,
       "emoji": "🚜"
+    },
+    {
+      "fecha": "2026-11-09",
+      "hora": "10:10 AM",
+      "ruleta": "Lotto Gato",
+      "candidatos": "#13 MONO [P:5/10], #6 RANA [P:5/10], #8 RATÓN [P:5/10]",
+      "cands_count": 3,
+      "total_bet": 300.0,
+      "resultado": "[21] GALLO",
+      "cobrado": 0.0,
+      "pnl": -300.0,
+      "saldo": -116.0,
+      "emoji": "🐱"
+    },
+    {
+      "fecha": "2026-11-09",
+      "hora": "10:00 AM",
+      "ruleta": "Guacharo Activo",
+      "candidatos": "#0 DELFÍN [P:10/10], #00 BALLENA [P:10/10], #20 COCHINO [P:10/10], #21 GALLO [P:10/10], #39 LECHUZA [P:10/10], #60 CAMALEÓN [P:10/10], #66 LOBO [P:10/10], #73 HIPOPÓTAMO [P:10/10]",
+      "cands_count": 8,
+      "total_bet": 800.0,
+      "resultado": "[28] ZAMURO",
+      "cobrado": 0.0,
+      "pnl": -800.0,
+      "saldo": -916.0,
+      "emoji": "🦇"
     }
   ],
   "summary": {
-    "ops_today": 2,
+    "ops_today": 4,
     "wins_today": 0,
-    "inv_today": 10.0,
+    "inv_today": 1110.0,
     "cob_today": 0.0,
-    "pnl_today": -10.0,
+    "pnl_today": -1110.0,
     "win_rate_today": 0.0
   }
 }
