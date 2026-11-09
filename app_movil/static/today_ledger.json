@@ -1,25 +1,11 @@
 {
-  "items": [
-    {
-      "fecha": "2026-11-07",
-      "hora": "9:00 AM",
-      "ruleta": "Loto Chaima",
-      "candidatos": "#10 TIGRE [P:9/10], #22 CAMELLO [P:9/10], #27 PERRO [P:9/10], #32 ARDILLA [P:9/10], #37 TORTUGA [P:9/10], #39 LECHUZA [P:9/10], #43 MARIPOSA [P:9/10], #46 PUMA [P:9/10]",
-      "cands_count": 8,
-      "total_bet": 800.0,
-      "resultado": "[11] GATO",
-      "cobrado": 0.0,
-      "pnl": -800.0,
-      "saldo": -675.0,
-      "emoji": "🏹"
-    }
-  ],
+  "items": [],
   "summary": {
-    "ops_today": 1,
+    "ops_today": 0,
     "wins_today": 0,
-    "inv_today": 800.0,
+    "inv_today": 0.0,
     "cob_today": 0.0,
-    "pnl_today": -800.0,
+    "pnl_today": 0.0,
     "win_rate_today": 0.0
   }
 }
