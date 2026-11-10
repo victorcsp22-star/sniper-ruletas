@@ -1,64 +1,11 @@
 {
-  "items": [
-    {
-      "fecha": "2026-11-09",
-      "hora": "8:00 AM",
-      "ruleta": "Loto Chaima",
-      "candidatos": "#20 COCHINO [P:9/10], #22 CAMELLO [P:9/10], #23 CEBRA [P:9/10], #34 VENADO [P:9/10], #37 TORTUGA [P:9/10], #38 BÚFALO [P:9/10], #40 AVISPA [P:9/10], #7 PERICO [P:9/10]",
-      "cands_count": 8,
-      "total_bet": 8.0,
-      "resultado": "[17] PAVO",
-      "cobrado": 0.0,
-      "pnl": -8.0,
-      "saldo": 186.0,
-      "emoji": "🏹"
-    },
-    {
-      "fecha": "2026-11-09",
-      "hora": "9:30 AM",
-      "ruleta": "Granja Millonaria - Granjazo",
-      "candidatos": "#35 JIRAFA [P:7/10], #66 BISONTE [P:7/10]",
-      "cands_count": 2,
-      "total_bet": 2.0,
-      "resultado": "[24] IGUANA",
-      "cobrado": 0.0,
-      "pnl": -2.0,
-      "saldo": 184.0,
-      "emoji": "🚜"
-    },
-    {
-      "fecha": "2026-11-09",
-      "hora": "10:10 AM",
-      "ruleta": "Lotto Gato",
-      "candidatos": "#13 MONO [P:5/10], #6 RANA [P:5/10], #8 RATÓN [P:5/10]",
-      "cands_count": 3,
-      "total_bet": 300.0,
-      "resultado": "[21] GALLO",
-      "cobrado": 0.0,
-      "pnl": -300.0,
-      "saldo": -116.0,
-      "emoji": "🐱"
-    },
-    {
-      "fecha": "2026-11-09",
-      "hora": "10:00 AM",
-      "ruleta": "Guacharo Activo",
-      "candidatos": "#0 DELFÍN [P:10/10], #00 BALLENA [P:10/10], #20 COCHINO [P:10/10], #21 GALLO [P:10/10], #39 LECHUZA [P:10/10], #60 CAMALEÓN [P:10/10], #66 LOBO [P:10/10], #73 HIPOPÓTAMO [P:10/10]",
-      "cands_count": 8,
-      "total_bet": 800.0,
-      "resultado": "[28] ZAMURO",
-      "cobrado": 0.0,
-      "pnl": -800.0,
-      "saldo": -916.0,
-      "emoji": "🦇"
-    }
-  ],
+  "items": [],
   "summary": {
-    "ops_today": 4,
+    "ops_today": 0,
     "wins_today": 0,
-    "inv_today": 1110.0,
+    "inv_today": 0.0,
     "cob_today": 0.0,
-    "pnl_today": -1110.0,
+    "pnl_today": 0.0,
     "win_rate_today": 0.0
   }
 }
