@@ -168,14 +168,40 @@
       "pnl": -7.0,
       "saldo": -1175.0,
       "emoji": "🧘‍♂️"
+    },
+    {
+      "fecha": "2026-11-10",
+      "hora": "6:40 PM",
+      "ruleta": "Gatazo",
+      "candidatos": "#14 PALOMA [P:9/10], #27 PERRO [P:9/10], #32 Ardilla [P:9/10], #38 BUFALO [P:9/10], #46 PUMA [P:9/10], #47 PAVO REAL [P:9/10], #7 PERICO [P:9/10]",
+      "cands_count": 7,
+      "total_bet": 7.0,
+      "resultado": "[1] Carnero",
+      "cobrado": 0.0,
+      "pnl": -7.0,
+      "saldo": -1182.0,
+      "emoji": "🐯"
+    },
+    {
+      "fecha": "2026-11-10",
+      "hora": "7:05 PM",
+      "ruleta": "Monje Millonario",
+      "candidatos": "#00 BALLENA [P:10/10], #13 MONO [P:10/10], #26 VACA [P:10/10], #36 CULEBRA [P:10/10], #69 CONEJO [P:10/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[70] Bisonte",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -1187.0,
+      "emoji": "🧘‍♂️"
     }
   ],
   "summary": {
-    "ops_today": 13,
+    "ops_today": 15,
     "wins_today": 1,
-    "inv_today": 787.0,
+    "inv_today": 799.0,
     "cob_today": 60.0,
-    "pnl_today": -727.0,
-    "win_rate_today": 7.7
+    "pnl_today": -739.0,
+    "win_rate_today": 6.7
   }
 }
