@@ -465,20 +465,38 @@ def fetch_tuazar_week_results() -> Dict[str, List[Dict]]:
 
 
 def fetch_live_results() -> Dict[str, List[Dict]]:
-    """Combina los resultados históricos de la semana y los sorteos en tiempo real del día."""
-    data_week = fetch_tuazar_week_results()
-    data_today = fetch_tuazar_today_results()
+    """Combina resultados en vivo de las fuentes oficiales primarias (TripleGato API + ResultadosVenezuela)."""
+    combined = {k: [] for k in RULETAS_CONFIG.keys()}
+    
+    # 1. Fuentes primarias oficiales blindadas (TripleGato API + ResultadosVenezuela)
+    try:
+        from multi_source_scraper import fetch_all_live_sources
+        multi_data = fetch_all_live_sources()
+        for k, v in multi_data.items():
+            if k in combined:
+                combined[k].extend(v)
+    except Exception as e:
+        print(f"⚠️ Error consultando fuentes primarias: {e}")
+
+    # 2. Respaldo secundario de TuAzar (si estuviera accesible)
+    try:
+        data_week = fetch_tuazar_week_results()
+        data_today = fetch_tuazar_today_results()
+        for k in combined.keys():
+            if not combined[k]:
+                combined[k].extend(data_week.get(k, []))
+                combined[k].extend(data_today.get(k, []))
+    except Exception:
+        pass
+
     # Guardar en static para sincronización directa de la PWA móvil
     try:
         static_json = os.path.join(BASE_DIR, "app_movil", "static", "tuazar_today.json")
         with open(static_json, "w", encoding="utf-8") as _f_json:
-            json.dump(data_today, _f_json, ensure_ascii=False, indent=2)
+            json.dump(combined, _f_json, ensure_ascii=False, indent=2)
     except Exception as _e_json:
         pass
-    combined = {k: [] for k in RULETAS_CONFIG.keys()}
-    for k in combined.keys():
-        combined[k].extend(data_week.get(k, []))
-        combined[k].extend(data_today.get(k, []))
+
     return combined
 
 

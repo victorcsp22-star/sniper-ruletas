@@ -378,146 +378,169 @@ def get_current_streaks(r_name):
     }
 
 
-def fetch_tuazar_html():
-    """Descarga el HTML de TuAzar de forma 100% autonoma y blindada (Cero dependencia de PC)."""
-    import subprocess
-    import os
-    import sys
-    import time
+def normalize_hora_scraper(h_str):
+    if not h_str:
+        return ""
+    h_str = h_str.strip().upper()
+    m = re.match(r'^0?(\d{1,2}):(\d{2})\s*(AM|PM)?$', h_str)
+    if m:
+        hh, mm, ampm = m.groups()
+        if ampm:
+            return f"{int(hh)}:{mm} {ampm}"
+        return f"{int(hh)}:{mm}"
+    return h_str
 
-    url = "https://www.tuazar.com/loteria/animalitos/resultados/"
-    ua = "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
 
-    # Lista de rutas absolutas infalibles para curl_static
-    c_paths = [
-        os.path.join(this_dir, "curl_static"),
-        os.path.join(ROOT_DIR, "curl_static"),
-        os.path.join(STATIC_DIR, "curl_static"),
-        "/data/data/com.termux/files/usr/bin/curl",
-        "/data/data/com.termux/files/home/sniper/curl_static",
-        "/data/data/com.termux/files/home/curl_static",
-        "./curl_static"
-    ]
+def normalize_num_scraper(raw_n):
+    if raw_n is None:
+        return None
+    s = str(raw_n).strip()
+    if s.lower() in ["none", "null", "", "-", "--"]:
+        return None
+    if s in ["00", "0"]:
+        return s
+    return s.lstrip("0") or "0"
 
-    valid_curl = None
-    for cp in c_paths:
-        if os.path.exists(cp) and (os.path.getsize(cp) > 1000000 or "usr/bin/curl" in cp):
-            valid_curl = cp
-            try:
-                os.chmod(cp, 0o777)
-            except Exception:
-                pass
-            break
 
-    # Reintentos con retroceso: 3 intentos para evitar microcortes de datos móviles (4G)
-    for intento in range(3):
-        # 1. Prioridad: Binario Estático Autónomo
-        if valid_curl:
-            try:
-                res = subprocess.run(
-                    [valid_curl, "-k", "-s", "-L", "--connect-timeout", "6", "-m", "10", "-A", ua, url],
-                    capture_output=True,
-                    timeout=12
-                )
-                if res.returncode == 0 and len(res.stdout) > 2000:
-                    return res.stdout.decode("utf-8", errors="ignore")
-            except Exception:
-                pass
+def fetch_scraper_url(url, timeout=10):
+    try:
+        import urllib.request
+        import ssl
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,application/json,*/*;q=0.8',
+            'Accept-Language': 'es-ES,es;q=0.9,en;q=0.8'
+        }
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=timeout, context=ctx) as r:
+            return r.read().decode('utf-8', errors='ignore')
+    except Exception:
+        return ""
 
-        # 2. curl en PATH del sistema (Windows o Termux/Linux)
-        curl_cmd = "curl.exe" if sys.platform == "win32" else "curl"
-        try:
-            res = subprocess.run(
-                [curl_cmd, "-k", "-s", "-L", "--connect-timeout", "6", "-m", "10", "-A", ua, url],
-                capture_output=True,
-                timeout=12
-            )
-            if res.returncode == 0 and len(res.stdout) > 2000:
-                return res.stdout.decode("utf-8", errors="ignore")
-        except Exception:
-            pass
-
-        # 3. urllib estándar si la librería SSL no está dañada
-        try:
-            import ssl
-            import urllib.request
-            ctx = ssl.create_default_context()
-            ctx.check_hostname = False
-            ctx.verify_mode = ssl.CERT_NONE
-            req = urllib.request.Request(url, headers={"User-Agent": ua})
-            with urllib.request.urlopen(req, context=ctx, timeout=8) as response:
-                html = response.read().decode("utf-8", errors="ignore")
-                if len(html) > 2000:
-                    return html
-        except Exception:
-            pass
-
-        time.sleep(1.5)
-
-    return ""
 
 def parse_tuazar_results_pure():
-    """Descarga los resultados en vivo de TuAzar y los parsea usando expresiones regulares nativas."""
+    """Descarga los resultados en vivo desde fuentes primarias blindadas (TripleGato API + ResultadosVenezuela).
+    Mantiene el nombre para compatibilidad absoluta con todos los módulos y llamadas existentes."""
     extracted = {k: [] for k in RULETAS}
-    html = fetch_tuazar_html()
-    if not html:
-        print("⚠️ No se pudo obtener el HTML de TuAzar.")
-        return extracted
+    today_iso = datetime.date.today().strftime("%Y-%m-%d")
+    yest_iso = (datetime.date.today() - datetime.timedelta(days=1)).strftime("%Y-%m-%d")
+    dates = [yest_iso, today_iso]
 
-    # Extraer fecha
-    m_date = re.search(r'(\d{1,2})/(\d{1,2})/(\d{4})', html)
-    if m_date:
-        d, m, y = m_date.groups()
-        date_str = f"{y}-{int(m):02d}-{int(d):02d}"
-    else:
-        date_str = datetime.date.today().strftime("%Y-%m-%d")
-
-    # Separar tarjetas por ruleta
-    card_blocks = re.findall(r'<div class="[^"]*lc-card[^"]*">(.*?)</div>\s*<!--\s*/\.lc-card\s*-->', html, re.DOTALL)
-    if not card_blocks:
-        card_blocks = html.split('<div class="lc-card')
-
-    for block in card_blocks:
-        m_title = re.search(r'<h3 class="lc-title"[^>]*>(.*?)</h3>', block, re.DOTALL)
-        if not m_title:
-            continue
-        title = re.sub(r'<[^>]+>', '', m_title.group(1)).strip().lower()
-
-        matched_name = None
-        for r_name, cfg in RULETAS.items():
-            if cfg["title"].lower() in title or (r_name == "Granja Millonaria - Granjazo" and "granjazo" in title):
-                if "lotto activo" in title and "rd" in title and "rd" not in cfg["title"].lower():
-                    continue
-                matched_name = r_name
-                break
-
-        if not matched_name:
-            continue
-
-        # Extraer sorteos con regex puro
-        tiles = re.split(r'class="lc-tile(?=[\s"])', block)
-
-        for t in tiles[1:]:
-            if "lc-tile--empty" in t:
+    # 1. TripleGato API (Lotto Gato y Gatazo)
+    tg_map = [
+        ("res-gato", "Lotto Gato"),
+        ("res-gatazo", "Gatazo")
+    ]
+    for endpoint, ruleta_name in tg_map:
+        for d_str in dates:
+            url = f"https://triplegato.com/api/{endpoint}?fecha={d_str}"
+            body = fetch_scraper_url(url, timeout=8)
+            if not body:
                 continue
-            m_time = re.search(r'class="lc-tile-time"[^>]*>(.*?)</div>', t, re.DOTALL)
-            m_num = re.search(r'class="lc-tile-num"[^>]*>(.*?)</span>', t, re.DOTALL)
-            m_anim = re.search(r'class="lc-tile-animal"[^>]*>(.*?)</span>', t, re.DOTALL)
+            try:
+                data = json.loads(body)
+                if isinstance(data, list):
+                    for item in data:
+                        num = normalize_num_scraper(item.get("numero"))
+                        if num is None:
+                            continue
+                        hora = normalize_hora_scraper(item.get("hora", ""))
+                        anim = str(item.get("animal", "")).strip()
+                        f_raw = str(item.get("fecha", "")).strip()
+                        f_iso = d_str
+                        if "/" in f_raw:
+                            pts = f_raw.split("/")
+                            if len(pts) == 3:
+                                d, m, y = pts
+                                f_iso = f"{y}-{int(m):02d}-{int(d):02d}"
+                        extracted[ruleta_name].append({
+                            "fecha": f_iso,
+                            "hora": hora,
+                            "numero": num,
+                            "animal": anim,
+                            "loteria": ruleta_name
+                        })
+            except Exception:
+                pass
 
-            if m_time and m_num:
-                hora = re.sub(r'<[^>]+>', '', m_time.group(1)).strip()
-                num = re.sub(r'<[^>]+>', '', m_num.group(1)).strip()
-                anim = re.sub(r'<[^>]+>', '', m_anim.group(1)).strip() if m_anim else ""
-                if anim.startswith(num):
-                    anim = anim[len(num):].strip()
+    # 2. ResultadosVenezuela (Loto Chaima, Monje Millonario, Guacharo Activo, Granjazo)
+    rv_map = [
+        ("loto-chaima", "Loto Chaima"),
+        ("monje-millonario", "Monje Millonario"),
+        ("guacharo-activo", "Guacharo Activo"),
+        ("granjazo", "Granja Millonaria - Granjazo")
+    ]
+    meses_es = {
+        'enero': 1, 'febrero': 2, 'marzo': 3, 'abril': 4, 'mayo': 5, 'junio': 6,
+        'julio': 7, 'agosto': 8, 'septiembre': 9, 'octubre': 10, 'noviembre': 11, 'diciembre': 12
+    }
+    card_pat = re.compile(
+        r'card-time">\s*(\d{1,2}:\d{2}\s*(?:AM|PM|am|pm))\s*</div>.*?<div[^>]*>\s*(\d{1,2}|00)\s*</div>.*?<div[^>]*>\s*([A-Za-zÁÉÍÓÚáéíóúñÑ\s]+?)\s*</div>',
+        re.DOTALL | re.IGNORECASE
+    )
 
-                if num.isdigit() or num in ["0", "00"]:
-                    extracted[matched_name].append({
-                        "fecha": date_str,
-                        "hora": hora,
-                        "numero": str(num),
-                        "animal": anim
-                    })
+    for slug, ruleta_name in rv_map:
+        url = f"https://resultadosvenezuela.com/lottery/{slug}"
+        html = fetch_scraper_url(url, timeout=10)
+        if not html:
+            continue
+
+        date_iso = today_iso
+        m_d = re.search(r"(\d{1,2})\s+de\s+([A-Za-z]+)\s+de\s+(\d{4})", html, re.IGNORECASE)
+        if m_d:
+            d_num = int(m_d.group(1))
+            m_name = m_d.group(2).lower()
+            y_num = int(m_d.group(3))
+            m_idx = meses_es.get(m_name, datetime.date.today().month)
+            date_iso = f"{y_num}-{m_idx:02d}-{d_num:02d}"
+
+        matches = card_pat.findall(html)
+        for h_str, num_str, anim_str in matches:
+            num = normalize_num_scraper(num_str)
+            if num is None:
+                continue
+            hora = normalize_hora_scraper(h_str)
+            anim = anim_str.strip()
+            extracted[ruleta_name].append({
+                "fecha": date_iso,
+                "hora": hora,
+                "numero": num,
+                "animal": anim,
+                "loteria": ruleta_name
+            })
+
+    # 3. Fallback a lottoresultados si Guacharo o Granjazo vienen vacíos
+    if not extracted["Guacharo Activo"] or not extracted["Granja Millonaria - Granjazo"]:
+        lr_map = [
+            ("guacharo-activo", "Guacharo Activo"),
+            ("el-granjazo-granja-millonaria", "Granja Millonaria - Granjazo")
+        ]
+        lr_pat = re.compile(
+            r'result-item-time[^>]*>\s*(\d{1,2}:\d{2}\s*(?:AM|PM|am|pm))\s*</div>.*?<div[^>]*font-bold[^>]*>\s*(\d{1,2}|00)\s*</div>.*?<div[^>]*uppercase[^>]*>\s*([A-Za-zÁÉÍÓÚáéíóúñÑ\s]+?)\s*</div>',
+            re.DOTALL | re.IGNORECASE
+        )
+        for slug, ruleta_name in lr_map:
+            if extracted[ruleta_name]:
+                continue
+            url = f"https://www.lottoresultados.com/resultados/animalitos/{slug}"
+            html = fetch_scraper_url(url, timeout=10)
+            if not html:
+                continue
+            matches = lr_pat.findall(html)
+            for h_str, num_str, anim_str in matches:
+                num = normalize_num_scraper(num_str)
+                if num is None:
+                    continue
+                extracted[ruleta_name].append({
+                    "fecha": today_iso,
+                    "hora": normalize_hora_scraper(h_str),
+                    "numero": num,
+                    "animal": anim_str.strip(),
+                    "loteria": ruleta_name
+                })
 
     return extracted
 

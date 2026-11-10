@@ -12,6 +12,7 @@ server_file = os.path.join(app_movil_dir, "server_zero_dep.py")
 files_to_pack = [
     (server_file, "server_zero_dep.py"),
     (server_file, "app_movil/server_zero_dep.py"),
+    (os.path.join(root_dir, "multi_source_scraper.py"), "multi_source_scraper.py"),
     (os.path.join(static_dir, "curl_static"), "curl_static"),
     (os.path.join(root_dir, "data_vz", "lotto_activo_2anios.csv"), "data_vz/lotto_activo_2anios.csv"),
     (os.path.join(root_dir, "data_vz", "guacharo_activo_2anios.csv"), "data_vz/guacharo_activo_2anios.csv"),
