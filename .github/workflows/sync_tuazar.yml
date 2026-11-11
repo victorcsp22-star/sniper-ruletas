@@ -40,5 +40,6 @@ jobs:
             echo "Sin sorteos nuevos, no se requiere commit."
           else
             git commit -m "Auto-sync sorteos TuAzar [skip ci]"
-            git push
+            git pull --rebase origin main || true
+            git push origin main || true
           fi

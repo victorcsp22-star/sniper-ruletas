@@ -191,6 +191,10 @@ def read_csv_series(fpath):
                         "numero": num,
                         "animal": anim
                     })
+        try:
+            rows.sort(key=lambda x: (x.get("fecha", ""), parse_hora_to_minutes(x.get("hora", ""))))
+        except Exception:
+            pass
     except Exception as e:
         print(f"Error leyendo {fpath}: {e}")
     return rows
