@@ -119,40 +119,44 @@
     "target_streaks": [
       1
     ],
-    "racha": 7,
+    "racha": 8,
     "misses": 8,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "10",
-        "animal": "TIGRE"
+        "numero": "1",
+        "animal": "CARNERO"
+      },
+      {
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "numero": "25",
+        "animal": "GALLINA"
       },
       {
         "numero": "3",
         "animal": "CIEMPIÉS"
       },
       {
-        "numero": "39",
-        "animal": "LECHUZA"
+        "numero": "30",
+        "animal": "CAIMÁN"
       },
       {
-        "numero": "4",
-        "animal": "ALACRÁN"
+        "numero": "65",
+        "animal": "ARAÑA"
       },
       {
-        "numero": "48",
-        "animal": "PUERCOESPÍN"
+        "numero": "7",
+        "animal": "PERICO"
       },
       {
-        "numero": "51",
-        "animal": "PELICANO"
-      },
-      {
-        "numero": "56",
-        "animal": "TIBURÓN"
+        "numero": "71",
+        "animal": "GUACAMAYA"
       }
     ],
-    "ultimo_str": "#24 Iguana (12:40 PM)"
+    "ultimo_str": "#68 Jaguar (1:40 PM)"
   },
   "Monje Millonario": {
     "title": "Monje Millonario",
