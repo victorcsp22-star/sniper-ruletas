@@ -59,7 +59,31 @@
     "Loto Chaima": "2026-11-10 6:00 PM",
     "Granja Millonaria - Granjazo": "2026-11-10 6:30 PM"
   },
-  "pending_bets": {},
+  "pending_bets": {
+    "Monje Millonario": {
+      "ruleta": "Monje Millonario",
+      "candidatos": [
+        "32",
+        "36",
+        "37",
+        "46",
+        "50",
+        "53",
+        "69"
+      ],
+      "candidatos_str": "#32 ARDILLA [P:8/10], #36 CULEBRA [P:8/10], #37 TORTUGA [P:8/10], #46 PUMA [P:8/10], #50 CANARIO [P:8/10], #53 CARACOL [P:8/10], #69 CONEJO [P:8/10]",
+      "total_cands": 7,
+      "stake_unit": 1.0,
+      "total_stake": 7.0,
+      "posible_premio": 60.0,
+      "payout": 60.0,
+      "peso_agente": 8,
+      "peso_label": "P:8/10",
+      "smart_label": "🎯 Canasta Rezagados [P:8/10]",
+      "last_salido_str": "#29 Elefante (4:05 PM)",
+      "created_at": "2026-11-11 04:39:38 PM"
+    }
+  },
   "effective_kelly": 0.1125,
   "damping": 0.15,
   "cycle_elapsed_days": 1.4634480404513888,
