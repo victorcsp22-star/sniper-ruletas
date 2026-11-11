@@ -391,6 +391,22 @@ def normalize_hora_scraper(h_str):
     return h_str
 
 
+def parse_hora_to_minutes(hora_str):
+    try:
+        parts = str(hora_str).strip().split()
+        hm = parts[0].split(':')
+        h = int(hm[0])
+        m = int(hm[1])
+        ampm = parts[1].upper() if len(parts) > 1 else ''
+        if ampm == 'PM' and h < 12:
+            h += 12
+        elif ampm == 'AM' and h == 12:
+            h = 0
+        return h * 60 + m
+    except Exception:
+        return 0
+
+
 def normalize_num_scraper(raw_n):
     if raw_n is None:
         return None
@@ -571,6 +587,10 @@ def parse_tuazar_results_pure():
                     "loteria": ruleta_name
                 })
 
+    # Ordenar cronológicamente ascendente de forma estricta
+    for r_name in extracted:
+        extracted[r_name].sort(key=lambda x: (x.get("fecha", ""), parse_hora_to_minutes(x.get("hora", ""))))
+
     return extracted
 
 
@@ -702,6 +722,7 @@ def evaluate_and_update_all_pure(live_data):
                 added += 1
 
         if new_to_append:
+            new_to_append.sort(key=lambda x: (x.get("fecha", ""), parse_hora_to_minutes(x.get("hora", ""))))
             os.makedirs(os.path.dirname(os.path.abspath(fpath)), exist_ok=True)
             file_exists = os.path.exists(fpath) and os.path.getsize(fpath) > 0
             with open(fpath, "a", newline="", encoding="utf-8") as f:

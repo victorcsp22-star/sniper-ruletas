@@ -212,6 +212,21 @@ def fetch_lottoresultados_fallback():
             })
     return fallback_results
 
+def parse_hora_to_minutes(hora_str):
+    try:
+        parts = hora_str.strip().split()
+        hm = parts[0].split(':')
+        h = int(hm[0])
+        m = int(hm[1])
+        ampm = parts[1].upper() if len(parts) > 1 else ''
+        if ampm == 'PM' and h < 12:
+            h += 12
+        elif ampm == 'AM' and h == 12:
+            h = 0
+        return h * 60 + m
+    except Exception:
+        return 0
+
 def fetch_all_live_sources():
     all_draws = {
         "Lotto Gato": [],
@@ -239,5 +254,9 @@ def fetch_all_live_sources():
             all_draws["Guacharo Activo"].extend(lr_data["Guacharo Activo"])
         if not all_draws["Granja Millonaria - Granjazo"] and lr_data.get("Granja Millonaria - Granjazo"):
             all_draws["Granja Millonaria - Granjazo"].extend(lr_data["Granja Millonaria - Granjazo"])
+            
+    # Asegurar orden estrictamente cronológico en todas las ruletas
+    for r_name in all_draws:
+        all_draws[r_name].sort(key=lambda x: (x.get("fecha", ""), parse_hora_to_minutes(x.get("hora", ""))))
             
     return all_draws
