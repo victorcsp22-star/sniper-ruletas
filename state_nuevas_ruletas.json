@@ -1,5 +1,5 @@
 {
-  "bankroll": -1187.0,
+  "bankroll": -1188.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -59,25 +59,7 @@
     "Loto Chaima": "2026-11-10 6:00 PM",
     "Granja Millonaria - Granjazo": "2026-11-10 6:30 PM"
   },
-  "pending_bets": {
-    "Lotto Gato": {
-      "ruleta": "Lotto Gato",
-      "candidatos": [
-        "7"
-      ],
-      "candidatos_str": "#7 PERICO [P:1/10]",
-      "total_cands": 1,
-      "stake_unit": 1.0,
-      "total_stake": 1.0,
-      "posible_premio": 30.0,
-      "payout": 30.0,
-      "peso_agente": 1,
-      "peso_label": "P:1/10",
-      "smart_label": "⚡ Markov Sniper [P:1/10]",
-      "last_salido_str": "#3 Cienpies (9:10 AM)",
-      "created_at": "2026-11-11 01:44:11 PM"
-    }
-  },
+  "pending_bets": {},
   "effective_kelly": 0.1125,
   "damping": 0.15,
   "cycle_elapsed_days": 1.4634480404513888,
