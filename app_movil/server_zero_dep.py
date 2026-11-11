@@ -417,6 +417,11 @@ def fetch_scraper_url(url, timeout=10):
         ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
         for c_cmd in curl_candidates:
             try:
+                if os.path.exists(c_cmd) and sys.platform != "win32":
+                    try:
+                        os.chmod(c_cmd, 0o755)
+                    except Exception:
+                        pass
                 cmd = [c_cmd, "-k", "-s", "-L", "--max-time", str(timeout), "-A", ua, url]
                 p = subprocess.run(cmd, capture_output=True, timeout=timeout + 2)
                 if p.stdout and len(p.stdout) > 20:
@@ -883,9 +888,43 @@ def read_today_ledger(date_str=None):
     return ops, stats
 
 
+def sync_from_github_repo():
+    """Descarga de forma atómica y continua los últimos sorteos y estados procesados por GitHub Actions."""
+    try:
+        if not os.path.exists(os.path.join(ROOT_DIR, ".git")):
+            return False
+        import subprocess
+        # 1. Guardar cualquier cambio local para no bloquear el pull
+        subprocess.run(["git", "stash"], cwd=ROOT_DIR, capture_output=True, timeout=5)
+        # 2. Pull silencioso con resolución automática a favor de la nube oficial
+        cmd = ["git", "pull", "--no-rebase", "-X", "theirs", "origin", "main"]
+        res = subprocess.run(cmd, cwd=ROOT_DIR, capture_output=True, timeout=15)
+        if res.returncode == 0 and b"Already up to date" not in res.stdout:
+            print(f"[{datetime.datetime.now().strftime('%I:%M:%S %p')}] ☁️ Git pull automático completado con éxito.")
+            return True
+    except Exception:
+        pass
+    return False
+
+
 def sync_from_pc():
-    """Modo 100% Autonomo: no bloquea esperando por ninguna PC."""
-    pass
+    """Consulta la estación base local (PC) si está disponible en la LAN vía HTTP plano en 0.05s."""
+    try:
+        import urllib.request
+        for pc_ip in ["192.168.1.12", "192.168.1.3", "192.168.1.2"]:
+            url = f"http://{pc_ip}:8000/live_draws.json"
+            try:
+                req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+                with urllib.request.urlopen(req, timeout=1.0) as r:
+                    data = json.loads(r.read().decode('utf-8'))
+                    if isinstance(data, dict) and any(data.values()):
+                        evaluate_and_update_all_pure(data)
+                        return True
+            except Exception:
+                continue
+    except Exception:
+        pass
+    return False
 
 
 def get_30d_color_bubbles(days_window=30):
@@ -1281,6 +1320,7 @@ class SniperHandler(SimpleHTTPRequestHandler):
 
     def handle_api_sync(self):
         try:
+            sync_from_github_repo()
             sync_from_pc()
             live_data = parse_tuazar_results_pure()
             new_counts = evaluate_and_update_all_pure(live_data)
@@ -1339,11 +1379,12 @@ class SniperHandler(SimpleHTTPRequestHandler):
 
 
 def start_background_auto_sync():
-    """Hilo daemon que sincroniza con la PC (si está encendida) y con TuAzar automáticamente cada 60 segundos."""
+    """Hilo daemon que sincroniza con GitHub Actions, PC y raspado directo automáticamente cada 60 segundos."""
     def _worker():
         time.sleep(3)
         while True:
             try:
+                sync_from_github_repo()
                 sync_from_pc()
                 live_data = parse_tuazar_results_pure()
                 if live_data:
@@ -1357,7 +1398,7 @@ def start_background_auto_sync():
 
     t = threading.Thread(target=_worker, daemon=True)
     t.start()
-    print("[*] 🤖 Auto-Pilot activado: verificando sorteos y registrando jugadas cada 60 segundos.")
+    print("[*] 🤖 Auto-Pilot activado: sincronizando con GitHub y sorteos en vivo cada 60 segundos.")
 
 
 if __name__ == "__main__":
