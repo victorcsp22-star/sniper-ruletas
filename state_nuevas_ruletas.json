@@ -1,5 +1,5 @@
 {
-  "bankroll": -1187.0,
+  "bankroll": -1188.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -60,22 +60,29 @@
     "Granja Millonaria - Granjazo": "2026-11-10 6:30 PM"
   },
   "pending_bets": {
-    "Lotto Gato": {
-      "ruleta": "Lotto Gato",
+    "Loto Chaima": {
+      "ruleta": "Loto Chaima",
       "candidatos": [
-        "7"
+        "00",
+        "11",
+        "17",
+        "24",
+        "27",
+        "35",
+        "37",
+        "40"
       ],
-      "candidatos_str": "#7 PERICO [P:1/10]",
-      "total_cands": 1,
+      "candidatos_str": "#00 BALLENA [P:7/10], #11 GATO [P:7/10], #17 PAVO [P:7/10], #24 IGUANA [P:7/10], #27 PERRO [P:7/10], #35 JIRAFA [P:7/10], #37 TORTUGA [P:7/10], #40 AVISPA [P:7/10]",
+      "total_cands": 8,
       "stake_unit": 1.0,
-      "total_stake": 1.0,
-      "posible_premio": 30.0,
-      "payout": 30.0,
-      "peso_agente": 1,
-      "peso_label": "P:1/10",
-      "smart_label": "⚡ Markov Sniper [P:1/10]",
-      "last_salido_str": "#3 Cienpies (9:10 AM)",
-      "created_at": "2026-11-11 01:44:11 PM"
+      "total_stake": 8.0,
+      "posible_premio": 60.0,
+      "payout": 60.0,
+      "peso_agente": 7,
+      "peso_label": "P:7/10",
+      "smart_label": "🎯 Canasta Rezagados [P:7/10]",
+      "last_salido_str": "#42 Tucán (10:00 AM)",
+      "created_at": "2026-11-11 02:35:02 PM"
     }
   },
   "effective_kelly": 0.1125,
