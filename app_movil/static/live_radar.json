@@ -7,24 +7,20 @@
       1,
       2
     ],
-    "racha": 27,
+    "racha": 28,
     "misses": 12,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "19",
-        "animal": "CHIVO"
+        "numero": "00",
+        "animal": "BALLENA"
       },
       {
-        "numero": "2",
-        "animal": "TORO"
-      },
-      {
-        "numero": "24",
-        "animal": "IGUANA"
+        "numero": "30",
+        "animal": "CAIMÁN"
       }
     ],
-    "ultimo_str": "#25 Gallina (4:10 PM)"
+    "ultimo_str": "#33 Pescado (5:10 PM)"
   },
   "Loto Chaima": {
     "title": "Loto Chaima",
@@ -34,40 +30,44 @@
       0,
       1
     ],
-    "racha": 6,
+    "racha": 7,
     "misses": 12,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "17",
-        "animal": "PAVO"
+        "numero": "10",
+        "animal": "TIGRE"
+      },
+      {
+        "numero": "19",
+        "animal": "CHIVO"
       },
       {
         "numero": "2",
         "animal": "TORO"
       },
       {
-        "numero": "21",
-        "animal": "GALLO"
+        "numero": "34",
+        "animal": "VENADO"
       },
       {
-        "numero": "38",
-        "animal": "BÚFALO"
+        "numero": "45",
+        "animal": "GARZA"
       },
       {
-        "numero": "41",
-        "animal": "CANGURO"
+        "numero": "54",
+        "animal": "GRILLO"
       },
       {
-        "numero": "42",
-        "animal": "TUCÁN"
+        "numero": "6",
+        "animal": "RANA"
       },
       {
-        "numero": "7",
-        "animal": "PERICO"
+        "numero": "8",
+        "animal": "RATÓN"
       }
     ],
-    "ultimo_str": "#44 Chiguire (4:00 PM)"
+    "ultimo_str": "#28 Zamuro (5:00 PM)"
   },
   "Guacharo Activo": {
     "title": "Guacharo",
@@ -77,40 +77,44 @@
       1,
       3
     ],
-    "racha": 16,
+    "racha": 17,
     "misses": 4,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "26",
-        "animal": "VACA"
+        "numero": "10",
+        "animal": "TIGRE"
+      },
+      {
+        "numero": "21",
+        "animal": "GALLO"
+      },
+      {
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "numero": "3",
+        "animal": "CIEMPIÉS"
       },
       {
         "numero": "32",
         "animal": "ARDILLA"
       },
       {
-        "numero": "4",
-        "animal": "ALACRÁN"
+        "numero": "39",
+        "animal": "LECHUZA"
       },
       {
-        "numero": "41",
-        "animal": "CANGURO"
+        "numero": "42",
+        "animal": "TUCÁN"
       },
       {
-        "numero": "51",
-        "animal": "PELICANO"
-      },
-      {
-        "numero": "52",
-        "animal": "PULPO"
-      },
-      {
-        "numero": "69",
-        "animal": "CONEJO"
+        "numero": "73",
+        "animal": "HIPOPÓTAMO"
       }
     ],
-    "ultimo_str": "#50 Canario (4:00 PM)"
+    "ultimo_str": "#33 Pescado (5:00 PM)"
   },
   "Gatazo": {
     "title": "Gatazo",
@@ -119,36 +123,36 @@
     "target_streaks": [
       1
     ],
-    "racha": 9,
+    "racha": 10,
     "misses": 8,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "27",
-        "animal": "PERRO"
+        "numero": "1",
+        "animal": "CARNERO"
       },
       {
-        "numero": "30",
-        "animal": "CAIMÁN"
+        "numero": "13",
+        "animal": "MONO"
       },
       {
-        "numero": "44",
-        "animal": "CHIGÜIRE"
+        "numero": "14",
+        "animal": "PALOMA"
       },
       {
-        "numero": "60",
-        "animal": "CAMALEÓN"
+        "numero": "29",
+        "animal": "ELEFANTE"
       },
       {
-        "numero": "64",
-        "animal": "GAVILÁN"
+        "numero": "38",
+        "animal": "BÚFALO"
       },
       {
-        "numero": "9",
-        "animal": "ÁGUILA"
+        "numero": "42",
+        "animal": "TUCÁN"
       }
     ],
-    "ultimo_str": "#50 Canario (3:40 PM)"
+    "ultimo_str": "#45 Garza (4:40 PM)"
   },
   "Monje Millonario": {
     "title": "Monje Millonario",
@@ -158,40 +162,40 @@
       0,
       1
     ],
-    "racha": 0,
-    "misses": 4,
+    "racha": 1,
+    "misses": 5,
     "is_active": true,
     "candidatos": [
       {
-        "numero": "32",
-        "animal": "ARDILLA"
+        "numero": "0",
+        "animal": "DELFÍN"
+      },
+      {
+        "numero": "11",
+        "animal": "GATO"
+      },
+      {
+        "numero": "14",
+        "animal": "PALOMA"
+      },
+      {
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "numero": "34",
+        "animal": "VENADO"
       },
       {
         "numero": "36",
         "animal": "CULEBRA"
       },
       {
-        "numero": "37",
-        "animal": "TORTUGA"
-      },
-      {
-        "numero": "46",
-        "animal": "PUMA"
-      },
-      {
-        "numero": "50",
-        "animal": "CANARIO"
-      },
-      {
-        "numero": "53",
-        "animal": "CARACOL"
-      },
-      {
-        "numero": "69",
-        "animal": "CONEJO"
+        "numero": "49",
+        "animal": "PEREZA"
       }
     ],
-    "ultimo_str": "#29 Elefante (4:05 PM)"
+    "ultimo_str": "#28 Zamuro (5:05 PM)"
   },
   "Granja Millonaria - Granjazo": {
     "title": "Granjazo",

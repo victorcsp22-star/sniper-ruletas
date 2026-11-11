@@ -919,14 +919,16 @@ def sync_from_github_repo():
         if not os.path.exists(os.path.join(ROOT_DIR, ".git")):
             return False
         import subprocess
-        # 1. Guardar cualquier cambio local para no bloquear el pull
-        subprocess.run(["git", "stash"], cwd=ROOT_DIR, capture_output=True, timeout=5)
-        # 2. Pull silencioso con resolución automática a favor de la nube oficial
-        cmd = ["git", "pull", "--no-rebase", "-X", "theirs", "origin", "main"]
-        res = subprocess.run(cmd, cwd=ROOT_DIR, capture_output=True, timeout=15)
-        if res.returncode == 0 and b"Already up to date" not in res.stdout:
-            print(f"[{datetime.datetime.now().strftime('%I:%M:%S %p')}] ☁️ Git pull automático completado con éxito.")
-            return True
+        # 1. Fetch silencioso de la nube oficial sin tocar árbol de trabajo
+        f_cmd = ["git", "fetch", "origin", "main"]
+        res_f = subprocess.run(f_cmd, cwd=ROOT_DIR, capture_output=True, timeout=15)
+        if res_f.returncode == 0:
+            # 2. Reset hard forzado que descarta modificaciones locales y previene conflictos
+            r_cmd = ["git", "reset", "--hard", "origin/main"]
+            res_r = subprocess.run(r_cmd, cwd=ROOT_DIR, capture_output=True, timeout=5)
+            if res_r.returncode == 0:
+                print(f"[{datetime.datetime.now().strftime('%I:%M:%S %p')}] ☁️ Git reset/sync automático completado con éxito.")
+                return True
     except Exception:
         pass
     return False
