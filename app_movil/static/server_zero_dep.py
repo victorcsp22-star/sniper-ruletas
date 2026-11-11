@@ -403,6 +403,30 @@ def normalize_num_scraper(raw_n):
 
 
 def fetch_scraper_url(url, timeout=10):
+    """Descarga URLs blindadas compatible con Android Termux (sin _ssl), Linux y Windows."""
+    # 1. Intentar curl del sistema o curl_static (Requerido en Termux para evitar error <urlopen error unknown url type: https>)
+    try:
+        import subprocess
+        curl_candidates = [
+            "curl.exe" if sys.platform == "win32" else "curl",
+            os.path.join(ROOT_DIR, "curl_static"),
+            os.path.join(STATIC_DIR, "curl_static"),
+            "curl_static",
+            "./curl_static"
+        ]
+        ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        for c_cmd in curl_candidates:
+            try:
+                cmd = [c_cmd, "-k", "-s", "-L", "--max-time", str(timeout), "-A", ua, url]
+                p = subprocess.run(cmd, capture_output=True, timeout=timeout + 2)
+                if p.stdout and len(p.stdout) > 20:
+                    return p.stdout.decode('utf-8', errors='ignore')
+            except Exception:
+                continue
+    except Exception:
+        pass
+
+    # 2. Fallback urllib nativo (para PC o entornos con módulo _ssl funcional)
     try:
         import urllib.request
         import ssl

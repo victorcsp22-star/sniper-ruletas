@@ -55,11 +55,35 @@ def normalize_num(raw_n):
     return clean
 
 def fetch_url(url, timeout=10):
+    """Descarga URLs blindadas compatible con Android Termux (sin _ssl), Linux y Windows."""
+    # 1. Intentar curl del sistema o curl_static
+    try:
+        import subprocess, sys, os
+        curl_candidates = [
+            "curl.exe" if sys.platform == "win32" else "curl",
+            os.path.join(os.path.dirname(__file__), "curl_static"),
+            os.path.join(os.path.dirname(__file__), "app_movil", "static", "curl_static"),
+            "curl_static",
+            "./curl_static"
+        ]
+        ua = HEADERS.get('User-Agent', 'Mozilla/5.0')
+        for c_cmd in curl_candidates:
+            try:
+                cmd = [c_cmd, "-k", "-s", "-L", "--max-time", str(timeout), "-A", ua, url]
+                p = subprocess.run(cmd, capture_output=True, timeout=timeout + 2)
+                if p.stdout and len(p.stdout) > 20:
+                    return p.stdout.decode('utf-8', errors='ignore')
+            except Exception:
+                continue
+    except Exception:
+        pass
+
+    # 2. Fallback urllib nativo
     try:
         req = urllib.request.Request(url, headers=HEADERS)
         with urllib.request.urlopen(req, timeout=timeout, context=ctx) as r:
             return r.read().decode('utf-8', errors='ignore')
-    except Exception as e:
+    except Exception:
         return ""
 
 def fetch_triplegato_api(dates=None):
