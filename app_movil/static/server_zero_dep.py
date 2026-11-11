@@ -52,8 +52,8 @@ STATE_PATH = os.path.join(ROOT_DIR, "state_nuevas_ruletas.json")
 LEDGER_PATH = os.path.join(ROOT_DIR, "ledger_nuevas_ruletas.csv")
 
 # Parámetros del sistema
-FIXED_STAKE_UNIT = 100.00
-DEFAULT_BANKROLL = 20000.0
+FIXED_STAKE_UNIT = 1.00
+DEFAULT_BANKROLL = 200.0
 QUARANTINE_MISSES = 20
 
 RULETAS = {
@@ -939,6 +939,29 @@ def get_30d_color_bubbles(days_window=30):
     return tiers
 
 
+LAST_AUTO_SCRAPE_TIME = 0
+SCRAPE_LOCK = threading.Lock()
+
+def run_background_scrape_if_needed(min_interval=60):
+    """Ejecuta una verificación en segundo plano si han pasado más de min_interval segundos."""
+    global LAST_AUTO_SCRAPE_TIME
+    now = time.time()
+    if now - LAST_AUTO_SCRAPE_TIME >= min_interval:
+        if SCRAPE_LOCK.acquire(blocking=False):
+            def _do():
+                global LAST_AUTO_SCRAPE_TIME
+                try:
+                    live_data = parse_tuazar_results_pure()
+                    if live_data:
+                        evaluate_and_update_all_pure(live_data)
+                    LAST_AUTO_SCRAPE_TIME = time.time()
+                except Exception:
+                    pass
+                finally:
+                    SCRAPE_LOCK.release()
+            threading.Thread(target=_do, daemon=True).start()
+
+
 class SniperHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=STATIC_DIR, **kwargs)
@@ -1073,6 +1096,7 @@ class SniperHandler(SimpleHTTPRequestHandler):
 
     def handle_api_status(self):
         try:
+            run_background_scrape_if_needed(min_interval=60)
             sync_from_pc()
             state = {}
             if os.path.exists(STATE_PATH):
@@ -1325,7 +1349,7 @@ if __name__ == "__main__":
         print("[*] 🔒 Termux Wake-Lock activado (operación continua en segundo plano).")
     except Exception:
         pass
-    # Sincronización bajo demanda (Ahorro de batería y sin saturar red)
-    print("[*] 🛡️ Modo Bajo Demanda Activado: Las actualizaciones se realizan al tocar 'TuAzar' en la app.")
+    # Activar Auto-Sync en segundo plano continuo (cada 60 segundos)
+    start_background_auto_sync()
     server = ThreadingHTTPServer(("0.0.0.0", port), SniperHandler)
     server.serve_forever()

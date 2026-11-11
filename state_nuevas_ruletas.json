@@ -1,5 +1,5 @@
 {
-  "bankroll": -1175.0,
+  "bankroll": -1187.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -59,56 +59,7 @@
     "Loto Chaima": "2026-11-10 6:00 PM",
     "Granja Millonaria - Granjazo": "2026-11-10 6:30 PM"
   },
-  "pending_bets": {
-    "Gatazo": {
-      "ruleta": "Gatazo",
-      "candidatos": [
-        "14",
-        "27",
-        "32",
-        "38",
-        "46",
-        "47",
-        "7"
-      ],
-      "candidatos_str": "#14 PALOMA [P:9/10], #27 PERRO [P:9/10], #32 Ardilla [P:9/10], #38 BUFALO [P:9/10], #46 PUMA [P:9/10], #47 PAVO REAL [P:9/10], #7 PERICO [P:9/10]",
-      "total_cands": 7,
-      "stake_unit": 1.0,
-      "total_stake": 7.0,
-      "posible_premio": 60.0,
-      "payout": 60.0,
-      "smart_label": "⚖️ Neutral (1.00x Kelly) | ⚖️ ESTABLE (1.00x)",
-      "audit_verdict": "ESTABLE / EN PARIDAD",
-      "audit_multiplier": 1.0,
-      "last_fecha": "2026-11-10",
-      "last_hora": "5:40 PM",
-      "last_salido_str": "#44 Chiguire (5:40 PM)",
-      "created_at": "2026-11-10 06:37:01 PM"
-    },
-    "Monje Millonario": {
-      "ruleta": "Monje Millonario",
-      "candidatos": [
-        "00",
-        "13",
-        "26",
-        "36",
-        "69"
-      ],
-      "candidatos_str": "#00 BALLENA [P:10/10], #13 MONO [P:10/10], #26 VACA [P:10/10], #36 CULEBRA [P:10/10], #69 CONEJO [P:10/10]",
-      "total_cands": 5,
-      "stake_unit": 1.0,
-      "total_stake": 5.0,
-      "posible_premio": 60.0,
-      "payout": 60.0,
-      "smart_label": "🔥 Zona Dulce Rebote (1.25x Kelly) | ⚖️ ESTABLE (1.00x)",
-      "audit_verdict": "ESTABLE / EN PARIDAD",
-      "audit_multiplier": 1.0,
-      "last_fecha": "2026-11-10",
-      "last_hora": "6:05 PM",
-      "last_salido_str": "#50 Canario (6:05 PM)",
-      "created_at": "2026-11-10 06:37:01 PM"
-    }
-  },
+  "pending_bets": {},
   "effective_kelly": 0.1125,
   "damping": 0.15,
   "cycle_elapsed_days": 1.4634480404513888,
