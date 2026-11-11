@@ -193,17 +193,21 @@
       1,
       3
     ],
-    "racha": 21,
+    "racha": 22,
     "misses": 11,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "42",
-        "animal": "TUCÁN"
+        "numero": "24",
+        "animal": "IGUANA"
       },
       {
-        "numero": "49",
-        "animal": "PEREZA"
+        "numero": "35",
+        "animal": "JIRAFA"
+      },
+      {
+        "numero": "66",
+        "animal": "LOBO"
       }
     ],
     "ultimo_str": "#7 Perico (7:30 PM)"
