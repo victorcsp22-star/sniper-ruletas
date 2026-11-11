@@ -1,11 +1,25 @@
 {
-  "items": [],
+  "items": [
+    {
+      "fecha": "2026-11-11",
+      "hora": "10:10 AM",
+      "ruleta": "Lotto Gato",
+      "candidatos": "#7 PERICO [P:1/10]",
+      "cands_count": 1,
+      "total_bet": 1.0,
+      "resultado": "[29] Elefante",
+      "cobrado": 0.0,
+      "pnl": -1.0,
+      "saldo": -1188.0,
+      "emoji": "🐱"
+    }
+  ],
   "summary": {
-    "ops_today": 0,
+    "ops_today": 1,
     "wins_today": 0,
-    "inv_today": 0.0,
+    "inv_today": 1.0,
     "cob_today": 0.0,
-    "pnl_today": 0.0,
+    "pnl_today": -1.0,
     "win_rate_today": 0.0
   }
 }
