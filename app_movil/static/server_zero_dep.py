@@ -1449,5 +1449,6 @@ if __name__ == "__main__":
         pass
     # Activar Auto-Sync en segundo plano continuo (cada 60 segundos)
     start_background_auto_sync()
+    ThreadingHTTPServer.allow_reuse_address = True
     server = ThreadingHTTPServer(("0.0.0.0", port), SniperHandler)
     server.serve_forever()
