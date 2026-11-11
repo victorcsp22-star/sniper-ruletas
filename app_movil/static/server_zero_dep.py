@@ -967,11 +967,12 @@ class SniperHandler(SimpleHTTPRequestHandler):
         super().__init__(*args, directory=STATIC_DIR, **kwargs)
 
     def do_GET(self):
-        if self.path == "/api/status":
+        clean_path = self.path.split("?")[0]
+        if clean_path == "/api/status":
             self.handle_api_status()
-        elif self.path == "/api/reporte":
+        elif clean_path == "/api/reporte":
             self.handle_api_reporte()
-        elif self.path == "/api/tuazar_bridge":
+        elif clean_path == "/api/tuazar_bridge":
             # Sirve el HTML fresco de TuAzar al celular por HTTP puro
             url = "https://www.tuazar.com/loteria/animalitos/resultados/"
             try:
@@ -985,11 +986,12 @@ class SniperHandler(SimpleHTTPRequestHandler):
                 self.send_response(200)
                 self.send_header("Content-Type", "text/html; charset=utf-8")
                 self.send_header("Content-Length", str(len(html_bytes)))
+                self.send_header("Cache-Control", "no-cache, no-store, must-revalidate, max-age=0")
                 self.end_headers()
                 self.wfile.write(html_bytes)
             except Exception as e:
                 self.send_error(500, str(e))
-        elif self.path == "/" or self.path.startswith("/index.html") or "?" in self.path:
+        elif clean_path in ("/", "/index.html"):
             html_path = os.path.join(STATIC_DIR, "index.html")
             if not os.path.exists(html_path):
                 html_path = os.path.join(ROOT_DIR, "index.html")
@@ -999,7 +1001,7 @@ class SniperHandler(SimpleHTTPRequestHandler):
                 self.send_response(200)
                 self.send_header("Content-Type", "text/html; charset=utf-8")
                 self.send_header("Content-Length", str(len(c)))
-                self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
+                self.send_header("Cache-Control", "no-cache, no-store, must-revalidate, max-age=0")
                 self.send_header("Pragma", "no-cache")
                 self.send_header("Expires", "0")
                 self.end_headers()
@@ -1010,11 +1012,12 @@ class SniperHandler(SimpleHTTPRequestHandler):
             super().do_GET()
 
     def do_POST(self):
-        if self.path == "/api/sync":
+        clean_path = self.path.split("?")[0]
+        if clean_path == "/api/sync":
             self.handle_api_sync()
-        elif self.path == "/api/ingresar_sorteo":
+        elif clean_path == "/api/ingresar_sorteo":
             self.handle_api_ingresar_sorteo()
-        elif self.path == "/api/clear_today_ledger":
+        elif clean_path == "/api/clear_today_ledger":
             self.handle_api_clear_today_ledger()
         else:
             self.send_error(404, "Endpoint no encontrado")
@@ -1300,6 +1303,9 @@ class SniperHandler(SimpleHTTPRequestHandler):
             self.send_header("Content-Type", "application/json; charset=utf-8")
             self.send_header("Content-Length", str(len(body)))
             self.send_header("Access-Control-Allow-Origin", "*")
+            self.send_header("Cache-Control", "no-cache, no-store, must-revalidate, max-age=0")
+            self.send_header("Pragma", "no-cache")
+            self.send_header("Expires", "0")
             self.end_headers()
             self.wfile.write(body)
         except (BrokenPipeError, ConnectionResetError):

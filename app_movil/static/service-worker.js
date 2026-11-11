@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sniper-pwa-v11';
+const CACHE_NAME = 'sniper-pwa-v12';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
@@ -30,7 +30,11 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  // Network first, falling back to cache
+  const url = new URL(event.request.url);
+  if (url.pathname.startsWith('/api/')) {
+    event.respondWith(fetch(event.request));
+    return;
+  }
   event.respondWith(
     fetch(event.request).catch(() => {
       return caches.match(event.request);
