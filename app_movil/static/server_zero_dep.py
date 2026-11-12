@@ -1457,7 +1457,11 @@ if __name__ == "__main__":
         print("[*] 🔒 Termux Wake-Lock activado (operación continua en segundo plano).")
     except Exception:
         pass
-    # Activar Auto-Sync en segundo plano continuo (cada 60 segundos)
+    # Pre-calcular en RAM el rendimiento para respuesta inmediata de la API (< 10ms)
+    try:
+        get_30d_color_bubbles(30)
+    except Exception:
+        pass
     start_background_auto_sync()
     ThreadingHTTPServer.allow_reuse_address = True
     server = ThreadingHTTPServer(("0.0.0.0", port), SniperHandler)

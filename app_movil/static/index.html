@@ -296,13 +296,18 @@ if ('serviceWorker' in navigator) {
       }).join(' ');
     }
 
-    // Registro del Service Worker para funcionamiento como App PWA
+    // Eliminar cualquier Service Worker para evitar pantallas congeladas por caché viejo
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js').catch(err => {
-          console.log('SW registration failed:', err);
-        });
+      navigator.serviceWorker.getRegistrations().then(registrations => {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
       });
+      if (window.caches) {
+        caches.keys().then(names => {
+          for (let name of names) caches.delete(name);
+        });
+      }
     }
 
     // Captura del evento de instalación PWA en Android
@@ -327,11 +332,8 @@ if ('serviceWorker' in navigator) {
 
     // Cargar estado táctico en vivo
     async function loadTacticalStatus() {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 3500);
       try {
-        const res = await fetch('/api/status?_t=' + Date.now(), { cache: 'no-store', signal: controller.signal });
-        clearTimeout(timeoutId);
+        const res = await fetch('/api/status?_t=' + Date.now(), { cache: 'no-store' });
         const data = await res.json();
         if (data.status !== 'ok') return;
 
