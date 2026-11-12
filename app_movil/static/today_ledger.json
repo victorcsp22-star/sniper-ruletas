@@ -1,11 +1,25 @@
 {
-  "items": [],
+  "items": [
+    {
+      "fecha": "2026-11-12",
+      "hora": "8:05 AM",
+      "ruleta": "Monje Millonario",
+      "candidatos": "#0 DELFÍN [P:8/10], #11 GATO [P:8/10], #14 PALOMA [P:8/10], #23 CEBRA [P:8/10], #34 VENADO [P:8/10], #36 CULEBRA [P:8/10], #49 PEREZA [P:8/10]",
+      "cands_count": 7,
+      "total_bet": 7.0,
+      "resultado": "[39] Lechuza",
+      "cobrado": 0.0,
+      "pnl": -7.0,
+      "saldo": -1202.0,
+      "emoji": "🧘‍♂️"
+    }
+  ],
   "summary": {
-    "ops_today": 0,
+    "ops_today": 1,
     "wins_today": 0,
-    "inv_today": 0.0,
+    "inv_today": 7.0,
     "cob_today": 0.0,
-    "pnl_today": 0.0,
+    "pnl_today": -7.0,
     "win_rate_today": 0.0
   }
 }
