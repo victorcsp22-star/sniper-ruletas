@@ -633,6 +633,7 @@ def load_state_pure():
 def save_state_pure(state):
     spath = get_state_write_path()
     try:
+        os.makedirs(os.path.dirname(os.path.abspath(spath)), exist_ok=True)
         tmp = spath + ".tmp"
         with open(tmp, "w", encoding="utf-8") as f:
             json.dump(state, f, indent=2, ensure_ascii=False)
@@ -916,6 +917,9 @@ def read_today_ledger(date_str=None):
 def sync_from_github_repo():
     """Descarga de forma atómica y continua los últimos sorteos y estados procesados por GitHub Actions."""
     try:
+        import shutil
+        if not shutil.which("git"):
+            return False
         if not os.path.exists(os.path.join(ROOT_DIR, ".git")):
             return False
         import subprocess
@@ -954,9 +958,17 @@ def sync_from_pc():
     return False
 
 
+_BUBBLES_CACHE = {}
+_BUBBLES_CACHE_TIME = 0
+
 def get_30d_color_bubbles(days_window=30):
-    """Calcula dinámicamente el rendimiento a 30 días de cada ruleta y asigna burbujas de color y stake."""
-    cutoff = datetime.datetime.now() - datetime.timedelta(days=days_window)
+    """Calcula dinámicamente el rendimiento a 30 días con caché en memoria y comparación ISO ultra-rápida."""
+    global _BUBBLES_CACHE, _BUBBLES_CACHE_TIME
+    now = time.time()
+    if _BUBBLES_CACHE and (now - _BUBBLES_CACHE_TIME < 600):
+        return _BUBBLES_CACHE
+
+    cutoff_str = (datetime.datetime.now() - datetime.timedelta(days=days_window)).strftime("%Y-%m-%d")
     perf = {}
     for r_name, cfg in RULETAS.items():
         fpath = cfg.get("file", "")
@@ -982,12 +994,9 @@ def get_30d_color_bubbles(days_window=30):
             min_i = max(lags) + rec_w
             for i in range(min_i, len(records)):
                 rec = records[i]
-                dt_str = rec.get("fecha", "") + " " + rec.get("hora", "")
-                try:
-                    dt = datetime.datetime.strptime(dt_str, "%Y-%m-%d %I:%M %p")
-                except Exception:
-                    continue
                 f = rec.get("fecha", "")
+                if f < cutoff_str:
+                    continue
                 act = rec.get("numero", "")
                 if f != last_f:
                     seen_today = set()
@@ -1003,7 +1012,7 @@ def get_30d_color_bubbles(days_window=30):
                 skip = (anti_clust and prev_rep)
                 hit = (act in cands) if cnt > 0 else False
                 
-                if dt >= cutoff and cnt > 0 and not skip:
+                if cnt > 0 and not skip:
                     if streak in streaks:
                         cost += cnt
                         if hit:
@@ -1026,6 +1035,9 @@ def get_30d_color_bubbles(days_window=30):
             tiers[r] = {"rank": rank, "color": "AMARILLO", "emoji": "🟡", "stake": 1.00, "pnl_30d": round(pnl_val, 2), "color_hex": "#f59e0b", "badge": "🟡 $1.00"}
         else:
             tiers[r] = {"rank": rank, "color": "ROJO", "emoji": "🔴", "stake": 0.50, "pnl_30d": round(pnl_val, 2), "color_hex": "#ef4444", "badge": "🔴 $0.50"}
+    
+    _BUBBLES_CACHE = tiers
+    _BUBBLES_CACHE_TIME = now
     return tiers
 
 
@@ -1055,6 +1067,12 @@ def run_background_scrape_if_needed(min_interval=60):
 class SniperHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=STATIC_DIR, **kwargs)
+
+    def address_string(self):
+        return self.client_address[0]
+
+    def log_message(self, format, *args):
+        pass
 
     def do_GET(self):
         clean_path = self.path.split("?")[0]
@@ -1189,8 +1207,6 @@ class SniperHandler(SimpleHTTPRequestHandler):
 
     def handle_api_status(self):
         try:
-            run_background_scrape_if_needed(min_interval=60)
-            sync_from_pc()
             state = {}
             if os.path.exists(STATE_PATH):
                 with open(STATE_PATH, "r", encoding="utf-8") as f:
@@ -1348,7 +1364,6 @@ class SniperHandler(SimpleHTTPRequestHandler):
     def handle_api_sync(self):
         try:
             sync_from_github_repo()
-            sync_from_pc()
             live_data = parse_tuazar_results_pure()
             new_counts = evaluate_and_update_all_pure(live_data)
             self.send_json_response({

@@ -327,8 +327,11 @@ if ('serviceWorker' in navigator) {
 
     // Cargar estado táctico en vivo
     async function loadTacticalStatus() {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 3500);
       try {
-        const res = await fetch('/api/status?_t=' + Date.now(), { cache: 'no-store' });
+        const res = await fetch('/api/status?_t=' + Date.now(), { cache: 'no-store', signal: controller.signal });
+        clearTimeout(timeoutId);
         const data = await res.json();
         if (data.status !== 'ok') return;
 
@@ -624,23 +627,20 @@ if ('serviceWorker' in navigator) {
     // Carga inicial y auto-refresco
     document.addEventListener('DOMContentLoaded', () => {
       loadTacticalStatus();
-      autoSyncBackground();
       lucide.createIcons();
       // Auto-refrescar táctico cada 10 segundos
       setInterval(loadTacticalStatus, 10000);
-      // Auto-sincronizar raspado en vivo cada 45 segundos sin intervención del usuario
-      setInterval(autoSyncBackground, 45000);
     });
 
-    // Refrescar y sincronizar de inmediato al volver a la app o encender pantalla
+    // Refrescar de inmediato al volver a la app o encender pantalla
     document.addEventListener('visibilitychange', () => {
       if (document.visibilityState === 'visible') {
-        autoSyncBackground();
+        loadTacticalStatus();
       }
     });
 
     window.addEventListener('focus', () => {
-      autoSyncBackground();
+      loadTacticalStatus();
     });
   </script>
 
