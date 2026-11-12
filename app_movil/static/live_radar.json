@@ -114,44 +114,36 @@
     "target_streaks": [
       1
     ],
-    "racha": 2,
+    "racha": 3,
     "misses": 9,
     "is_active": false,
     "candidatos": [
+      {
+        "numero": "13",
+        "animal": "MONO"
+      },
+      {
+        "numero": "21",
+        "animal": "GALLO"
+      },
       {
         "numero": "24",
         "animal": "IGUANA"
       },
       {
-        "numero": "27",
-        "animal": "PERRO"
+        "numero": "29",
+        "animal": "ELEFANTE"
       },
       {
-        "numero": "3",
-        "animal": "CIEMPIÉS"
+        "numero": "42",
+        "animal": "TUCÁN"
       },
       {
-        "numero": "30",
-        "animal": "CAIMÁN"
-      },
-      {
-        "numero": "43",
-        "animal": "MARIPOSA"
-      },
-      {
-        "numero": "51",
-        "animal": "PELICANO"
-      },
-      {
-        "numero": "55",
-        "animal": "OSO HORMIGUERO"
-      },
-      {
-        "numero": "64",
-        "animal": "GAVILÁN"
+        "numero": "71",
+        "animal": "GUACAMAYA"
       }
     ],
-    "ultimo_str": "#1 Carnero (9:40 AM)"
+    "ultimo_str": "#4 Alacran (10:40 AM)"
   },
   "Monje Millonario": {
     "title": "Monje Millonario",
@@ -196,19 +188,19 @@
       1,
       3
     ],
-    "racha": 33,
+    "racha": 34,
     "misses": 11,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "24",
-        "animal": "IGUANA"
+        "numero": "20",
+        "animal": "COCHINO"
       },
       {
-        "numero": "56",
-        "animal": "TIBURÓN"
+        "numero": "66",
+        "animal": "LOBO"
       }
     ],
-    "ultimo_str": "#40 Hipopótamo (9:30 AM)"
+    "ultimo_str": "#6 Rana (10:30 AM)"
   }
 }
