@@ -1406,26 +1406,19 @@ class SniperHandler(SimpleHTTPRequestHandler):
 
 
 def start_background_auto_sync():
-    """Hilo daemon que sincroniza con GitHub Actions, PC y raspado directo automáticamente cada 60 segundos."""
+    """Hilo daemon que sincroniza con GitHub Actions automáticamente cada 60 segundos."""
     def _worker():
         time.sleep(3)
         while True:
             try:
                 sync_from_github_repo()
-                sync_from_pc()
-                live_data = parse_tuazar_results_pure()
-                if live_data:
-                    new_counts = evaluate_and_update_all_pure(live_data)
-                    tot = sum(new_counts.values())
-                    if tot > 0:
-                        print(f"[{datetime.datetime.now().strftime('%I:%M:%S %p')}] 🔄 Sincronización automática: {tot} sorteos procesados.")
-            except Exception as e:
+            except Exception:
                 pass
             time.sleep(60)
 
     t = threading.Thread(target=_worker, daemon=True)
     t.start()
-    print("[*] 🤖 Auto-Pilot activado: sincronizando con GitHub y sorteos en vivo cada 60 segundos.")
+    print("[*] 🤖 Auto-Pilot activado: sincronizando con GitHub cada 60 segundos.")
 
 
 if __name__ == "__main__":
