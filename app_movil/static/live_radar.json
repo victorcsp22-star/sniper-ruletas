@@ -21,44 +21,40 @@
       0,
       1
     ],
-    "racha": 10,
+    "racha": 11,
     "misses": 12,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "0",
-        "animal": "DELFÍN"
+        "numero": "11",
+        "animal": "GATO"
       },
       {
-        "numero": "13",
-        "animal": "MONO"
+        "numero": "15",
+        "animal": "ZORRO"
       },
       {
-        "numero": "20",
-        "animal": "COCHINO"
+        "numero": "33",
+        "animal": "PESCADO"
       },
       {
-        "numero": "24",
-        "animal": "IGUANA"
-      },
-      {
-        "numero": "25",
-        "animal": "GALLINA"
-      },
-      {
-        "numero": "26",
-        "animal": "VACA"
-      },
-      {
-        "numero": "29",
-        "animal": "ELEFANTE"
+        "numero": "38",
+        "animal": "BÚFALO"
       },
       {
         "numero": "41",
         "animal": "CANGURO"
+      },
+      {
+        "numero": "42",
+        "animal": "TUCÁN"
+      },
+      {
+        "numero": "7",
+        "animal": "PERICO"
       }
     ],
-    "ultimo_str": "#54 Grillo (10:00 AM)"
+    "ultimo_str": "#28 Zamuro (11:00 AM)"
   },
   "Guacharo Activo": {
     "title": "Guacharo",
@@ -68,44 +64,40 @@
       1,
       3
     ],
-    "racha": 20,
+    "racha": 21,
     "misses": 4,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "36",
-        "animal": "CULEBRA"
+        "numero": "26",
+        "animal": "VACA"
       },
       {
-        "numero": "39",
-        "animal": "LECHUZA"
+        "numero": "32",
+        "animal": "ARDILLA"
       },
       {
-        "numero": "45",
-        "animal": "GARZA"
+        "numero": "4",
+        "animal": "ALACRÁN"
       },
       {
-        "numero": "51",
-        "animal": "PELICANO"
+        "numero": "41",
+        "animal": "CANGURO"
       },
       {
-        "numero": "59",
-        "animal": "PANTERA"
+        "numero": "43",
+        "animal": "MARIPOSA"
       },
       {
-        "numero": "62",
-        "animal": "CACHICAMO"
+        "numero": "61",
+        "animal": "COLIBRÍ"
       },
       {
         "numero": "67",
         "animal": "AVESTRUZ"
-      },
-      {
-        "numero": "9",
-        "animal": "ÁGUILA"
       }
     ],
-    "ultimo_str": "#49 Pereza (10:00 AM)"
+    "ultimo_str": "#40 Avispa (11:00 AM)"
   },
   "Gatazo": {
     "title": "Gatazo",
