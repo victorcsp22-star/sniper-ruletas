@@ -1,38 +1,11 @@
 {
-  "items": [
-    {
-      "fecha": "2026-11-11",
-      "hora": "10:10 AM",
-      "ruleta": "Lotto Gato",
-      "candidatos": "#7 PERICO [P:1/10]",
-      "cands_count": 1,
-      "total_bet": 1.0,
-      "resultado": "[29] Elefante",
-      "cobrado": 0.0,
-      "pnl": -1.0,
-      "saldo": -1188.0,
-      "emoji": "🐱"
-    },
-    {
-      "fecha": "2026-11-11",
-      "hora": "5:05 PM",
-      "ruleta": "Monje Millonario",
-      "candidatos": "#32 ARDILLA [P:8/10], #36 CULEBRA [P:8/10], #37 TORTUGA [P:8/10], #46 PUMA [P:8/10], #50 CANARIO [P:8/10], #53 CARACOL [P:8/10], #69 CONEJO [P:8/10]",
-      "cands_count": 7,
-      "total_bet": 7.0,
-      "resultado": "[28] Zamuro",
-      "cobrado": 0.0,
-      "pnl": -7.0,
-      "saldo": -1195.0,
-      "emoji": "🧘‍♂️"
-    }
-  ],
+  "items": [],
   "summary": {
-    "ops_today": 2,
+    "ops_today": 0,
     "wins_today": 0,
-    "inv_today": 8.0,
+    "inv_today": 0.0,
     "cob_today": 0.0,
-    "pnl_today": -8.0,
+    "pnl_today": 0.0,
     "win_rate_today": 0.0
   }
 }
