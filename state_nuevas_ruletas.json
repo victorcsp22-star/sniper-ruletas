@@ -1,5 +1,5 @@
 {
-  "bankroll": -1202.0,
+  "bankroll": -1203.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -59,25 +59,7 @@
     "Loto Chaima": "2026-11-10 6:00 PM",
     "Granja Millonaria - Granjazo": "2026-11-10 6:30 PM"
   },
-  "pending_bets": {
-    "Gatazo": {
-      "ruleta": "Gatazo",
-      "candidatos": [
-        "42"
-      ],
-      "candidatos_str": "#42 TUCÁN [P:7/10]",
-      "total_cands": 1,
-      "stake_unit": 1.0,
-      "total_stake": 1.0,
-      "posible_premio": 60.0,
-      "payout": 60.0,
-      "peso_agente": 7,
-      "peso_label": "P:7/10",
-      "smart_label": "⚡ Markov Sniper [P:7/10]",
-      "last_salido_str": "#23 Cebra (7:40 PM)",
-      "created_at": "2026-11-12 08:35:23 AM"
-    }
-  },
+  "pending_bets": {},
   "effective_kelly": 0.1125,
   "damping": 0.15,
   "cycle_elapsed_days": 1.4634480404513888,

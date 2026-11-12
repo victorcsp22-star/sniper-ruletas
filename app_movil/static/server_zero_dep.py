@@ -915,7 +915,7 @@ def read_today_ledger(date_str=None):
 
 
 def sync_from_github_repo():
-    """Descarga de forma atómica y continua los últimos sorteos y estados procesados por GitHub Actions."""
+    """Descarga de forma atómica y segura los últimos sorteos procesados por GitHub Actions sin borrar cambios locales."""
     try:
         import shutil
         if not shutil.which("git"):
@@ -923,15 +923,17 @@ def sync_from_github_repo():
         if not os.path.exists(os.path.join(ROOT_DIR, ".git")):
             return False
         import subprocess
-        # 1. Fetch silencioso de la nube oficial sin tocar árbol de trabajo
+        # Si hay cambios locales en curso, no sobreescribir para no perder sorteos recién guardados
+        status = subprocess.run(["git", "status", "--porcelain"], cwd=ROOT_DIR, capture_output=True, text=True, timeout=5)
+        if status.returncode == 0 and status.stdout.strip():
+            return False
         f_cmd = ["git", "fetch", "origin", "main"]
-        res_f = subprocess.run(f_cmd, cwd=ROOT_DIR, capture_output=True, timeout=15)
+        res_f = subprocess.run(f_cmd, cwd=ROOT_DIR, capture_output=True, timeout=10)
         if res_f.returncode == 0:
-            # 2. Reset hard forzado que descarta modificaciones locales y previene conflictos
             r_cmd = ["git", "reset", "--hard", "origin/main"]
             res_r = subprocess.run(r_cmd, cwd=ROOT_DIR, capture_output=True, timeout=5)
             if res_r.returncode == 0:
-                print(f"[{datetime.datetime.now().strftime('%I:%M:%S %p')}] ☁️ Git reset/sync automático completado con éxito.")
+                print(f"[{datetime.datetime.now().strftime('%I:%M:%S %p')}] ☁️ Git sync automático completado con éxito.")
                 return True
     except Exception:
         pass
