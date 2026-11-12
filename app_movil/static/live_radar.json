@@ -36,7 +36,7 @@
     ],
     "racha": 8,
     "misses": 12,
-    "is_active": true,
+    "is_active": false,
     "candidatos": [
       {
         "numero": "12",
@@ -90,8 +90,8 @@
         "animal": "BALLENA"
       },
       {
-        "numero": "35",
-        "animal": "JIRAFA"
+        "numero": "3",
+        "animal": "CIEMPIÉS"
       },
       {
         "numero": "30",
