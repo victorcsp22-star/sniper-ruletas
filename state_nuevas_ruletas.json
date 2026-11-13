@@ -1,5 +1,5 @@
 {
-  "bankroll": -1203.0,
+  "bankroll": -1206.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -59,27 +59,7 @@
     "Loto Chaima": "2026-11-10 6:00 PM",
     "Granja Millonaria - Granjazo": "2026-11-10 6:30 PM"
   },
-  "pending_bets": {
-    "Lotto Gato": {
-      "ruleta": "Lotto Gato",
-      "candidatos": [
-        "25",
-        "7",
-        "8"
-      ],
-      "candidatos_str": "#25 GALLINA [P:5/10], #7 PERICO [P:5/10], #8 RATÓN [P:5/10]",
-      "total_cands": 3,
-      "stake_unit": 1.0,
-      "total_stake": 3.0,
-      "posible_premio": 30.0,
-      "payout": 30.0,
-      "peso_agente": 5,
-      "peso_label": "P:5/10",
-      "smart_label": "🎯 Canasta Rezagados [P:5/10]",
-      "last_salido_str": "#28 Zamuro (7:10 PM)",
-      "created_at": "2026-11-13 02:48:24 AM"
-    }
-  },
+  "pending_bets": {},
   "effective_kelly": 0.1125,
   "damping": 0.15,
   "cycle_elapsed_days": 1.4634480404513888,

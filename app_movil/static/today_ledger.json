@@ -1,11 +1,25 @@
 {
-  "items": [],
+  "items": [
+    {
+      "fecha": "2026-11-13",
+      "hora": "9:10 AM",
+      "ruleta": "Lotto Gato",
+      "candidatos": "#25 GALLINA [P:5/10], #7 PERICO [P:5/10], #8 RATÓN [P:5/10]",
+      "cands_count": 3,
+      "total_bet": 3.0,
+      "resultado": "[24] Iguana",
+      "cobrado": 0.0,
+      "pnl": -3.0,
+      "saldo": -1206.0,
+      "emoji": "🐱"
+    }
+  ],
   "summary": {
-    "ops_today": 0,
+    "ops_today": 1,
     "wins_today": 0,
-    "inv_today": 0.0,
+    "inv_today": 3.0,
     "cob_today": 0.0,
-    "pnl_today": 0.0,
+    "pnl_today": -3.0,
     "win_rate_today": 0.0
   }
 }
