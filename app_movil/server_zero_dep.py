@@ -697,72 +697,62 @@ def update_csv_files_pure(live_data):
 
 def evaluate_and_update_all_pure(live_data):
     """
-    1. Comprueba nuevos sorteos de TuAzar y los añade a los CSV locales.
-    2. Si había una apuesta pendiente en una ruleta con nuevo sorteo:
-       - Evalúa si el número salido acertó.
-       - Calcula cobrado, PnL y saldo.
-       - Registra la fila en ledger_nuevas_ruletas.csv.
-       - Elimina la apuesta pendiente.
-    3. Reevalúa todas las ruletas para registrar nuevas apuestas pendientes inminentes.
-    4. Guarda el estado actualizado.
+    1. Para cada ruleta, identifica los sorteos nuevos y los ordena cronológicamente.
+    2. Procesa cada sorteo nuevo secuencialmente:
+       a. Si había una apuesta pendiente para esa ruleta, la evalúa contra el sorteo.
+          - Calcula PnL, actualiza bankroll/peak, y anota en ledger_nuevas_ruletas.csv.
+          - Remueve la apuesta pendiente evaluada.
+       b. Incorpora inmediatamente el sorteo a su CSV histórico en disco.
+       c. Recalcula la racha e indicadores en vivo de esa ruleta.
+       d. Si califica para disparar en el siguiente sorteo, registra una nueva pending_bet.
+          (Permitiendo que si el lote trae más sorteos posteriores, el siguiente sorteo la evalúe).
+       e. Si no califica, limpia cualquier pending_bet.
+    3. Persiste el estado actualizado (bankroll, peak, pending_bets finales).
     """
-    new_counts = {}
-    new_draws_dict = {}
-
-    for r_name, items in live_data.items():
-        if not items:
-            new_counts[r_name] = 0
-            continue
-        fpath = get_ruleta_filepath(r_name)
-        existing_rows = read_csv_series(fpath)
-        existing_keys = {f"{r['fecha']}_{r['hora']}" for r in existing_rows}
-
-        added = 0
-        new_to_append = []
-        for it in items:
-            k = f"{it['fecha']}_{it['hora']}"
-            if k not in existing_keys:
-                new_to_append.append(it)
-                existing_keys.add(k)
-                added += 1
-
-        if new_to_append:
-            new_to_append.sort(key=lambda x: (x.get("fecha", ""), parse_hora_to_minutes(x.get("hora", ""))))
-            os.makedirs(os.path.dirname(os.path.abspath(fpath)), exist_ok=True)
-            file_exists = os.path.exists(fpath) and os.path.getsize(fpath) > 0
-            with open(fpath, "a", newline="", encoding="utf-8") as f:
-                writer = csv.writer(f)
-                if not file_exists:
-                    writer.writerow(["fecha", "dia", "hora", "numero", "animal", "loteria"])
-                for it in new_to_append:
-                    writer.writerow([it["fecha"], "", it["hora"], it["numero"], it["animal"], r_name])
-
-        new_counts[r_name] = added
-        new_draws_dict[r_name] = new_to_append
-
-    # Cargar estado actual
     state = load_state_pure()
     if "pending_bets" not in state:
         state["pending_bets"] = {}
     bankroll = float(state.get("bankroll", 232.0))
     peak = float(state.get("peak_bankroll", max(240.0, bankroll)))
+    color_bubbles = get_30d_color_bubbles(30)
 
-    # Evaluar sorteos nuevos contra apuestas pendientes
-    for r_name, new_items in new_draws_dict.items():
-        if not new_items:
+    new_counts = {}
+
+    for r_name, items in live_data.items():
+        if r_name not in RULETAS:
             continue
-        for it in new_items:
+        cfg = RULETAS[r_name]
+        fpath = get_ruleta_filepath(r_name)
+        existing_rows = read_csv_series(fpath)
+        existing_keys = {f"{r['fecha']}_{r['hora']}" for r in existing_rows}
+
+        new_to_append = []
+        for it in (items or []):
+            k = f"{it['fecha']}_{it['hora']}"
+            if k not in existing_keys:
+                new_to_append.append(it)
+                existing_keys.add(k)
+
+        new_counts[r_name] = len(new_to_append)
+        if not new_to_append:
+            continue
+
+        # Orden cronológico estricto del lote
+        new_to_append.sort(key=lambda x: (x.get("fecha", ""), parse_hora_to_minutes(x.get("hora", ""))))
+
+        for it in new_to_append:
             salido_num = str(it.get("numero", "")).strip()
             salido_anim = str(it.get("animal", "")).strip()
             fecha_res = str(it.get("fecha", "")).strip()
             hora_res = str(it.get("hora", "")).strip()
 
+            # A. Evaluar apuesta pendiente si existía para esta ruleta
             if r_name in state["pending_bets"]:
                 bet = state["pending_bets"].pop(r_name)
                 cands = [str(c) for c in bet.get("candidatos", [])]
                 hit = (salido_num in cands)
                 stake_unit = float(bet.get("stake_unit", FIXED_STAKE_UNIT))
-                payout = float(bet.get("payout", RULETAS.get(r_name, {}).get("payout", 30.0)))
+                payout = float(bet.get("payout", cfg.get("payout", 30.0)))
                 total_bet = float(bet.get("total_stake", len(cands) * stake_unit))
 
                 cobrado = round(stake_unit * payout, 2) if hit else 0.0
@@ -792,49 +782,96 @@ def evaluate_and_update_all_pure(live_data):
                 append_to_ledger_pure(row_dict)
                 print(f"[+] 🎯 JUGADA REGISTRADA AUTOMÁTICAMENTE: {r_name} {hora_res} -> {row_dict['condicion']} (PnL: {pnl})")
 
-    # Reevaluar señales inminentes para la siguiente ronda
-    color_bubbles = get_30d_color_bubbles(30)
-    for r_name, cfg in RULETAS.items():
-        stk, miss, info = get_current_streaks(r_name)
-        is_markov = info.get("is_markov", False)
-        is_anti = info.get("is_anti_blocked", False)
-        cands = info.get("cands", [])
-        target_streaks = cfg.get("target_streaks", [1])
-        burbuja = color_bubbles.get(r_name, {"stake": 1.00})
+            # B. Escribir inmediatamente el sorteo a su CSV histórico
+            os.makedirs(os.path.dirname(os.path.abspath(fpath)), exist_ok=True)
+            file_exists = os.path.exists(fpath) and os.path.getsize(fpath) > 0
+            with open(fpath, "a", newline="", encoding="utf-8") as f:
+                writer = csv.writer(f)
+                if not file_exists:
+                    writer.writerow(["fecha", "dia", "hora", "numero", "animal", "loteria"])
+                writer.writerow([it["fecha"], "", it["hora"], it["numero"], it["animal"], r_name])
+                f.flush()
 
-        is_quar = bool(QUARANTINE_MISSES > 0 and miss >= QUARANTINE_MISSES)
-        is_mirror = info.get("is_mirror", False)
-        if ((stk in target_streaks or is_markov or is_mirror) and not is_anti and not is_quar):
-            if cands and r_name not in state["pending_bets"]:
-                cands_nums = [str(c["numero"]) for c in cands]
-                p_ag, p_lbl = calcular_peso_agente_pure(r_name, stk, miss)
-                cands_str = ", ".join([f"#{c['numero']} {c['animal']} [{p_lbl}]" for c in cands])
-                cost = round(len(cands) * FIXED_STAKE_UNIT, 2)
-                premio = round(FIXED_STAKE_UNIT * cfg["payout"], 2)
-                state["pending_bets"][r_name] = {
-                    "ruleta": r_name,
-                    "candidatos": cands_nums,
-                    "candidatos_str": cands_str,
-                    "total_cands": len(cands),
-                    "stake_unit": FIXED_STAKE_UNIT,
-                    "total_stake": cost,
-                    "posible_premio": premio,
-                    "payout": cfg["payout"],
-                    "peso_agente": p_ag,
-                    "peso_label": p_lbl,
-                    "smart_label": f"⚡ Markov Sniper [{p_lbl}]" if is_markov else f"🎯 Canasta Rezagados [{p_lbl}]",
-                    "last_salido_str": info.get("last_str", "---"),
-                    "created_at": datetime.datetime.now().strftime("%Y-%m-%d %I:%M:%S %p")
-                }
-                print(f"[*] 🚨 NUEVA SEÑAL REGISTRADA PARA COMPRA: {r_name} -> {cands_str} (${cost} USD)")
-        else:
-            if r_name in state["pending_bets"]:
-                del state["pending_bets"][r_name]
+            # C. Recalcular estado y racha tras haber incorporado este sorteo
+            stk, miss, info = get_current_streaks(r_name)
+            is_markov = info.get("is_markov", False)
+            is_mirror = info.get("is_mirror", False)
+            is_anti = info.get("is_anti_blocked", False)
+            cands = info.get("cands", [])
+            target_streaks = cfg.get("target_streaks", [1])
+
+            is_quar = bool(QUARANTINE_MISSES > 0 and miss >= QUARANTINE_MISSES)
+
+            # D. Si califica para disparar en el siguiente sorteo, registrar señal pendiente
+            if ((stk in target_streaks or is_markov or is_mirror) and not is_anti and not is_quar):
+                if cands:
+                    cands_nums = [str(c["numero"]) for c in cands]
+                    p_ag, p_lbl = calcular_peso_agente_pure(r_name, stk, miss)
+                    cands_str = ", ".join([f"#{c['numero']} {c['animal']} [{p_lbl}]" for c in cands])
+                    cost = round(len(cands) * FIXED_STAKE_UNIT, 2)
+                    premio = round(FIXED_STAKE_UNIT * cfg["payout"], 2)
+                    state["pending_bets"][r_name] = {
+                        "ruleta": r_name,
+                        "candidatos": cands_nums,
+                        "candidatos_str": cands_str,
+                        "total_cands": len(cands),
+                        "stake_unit": FIXED_STAKE_UNIT,
+                        "total_stake": cost,
+                        "posible_premio": premio,
+                        "payout": cfg["payout"],
+                        "peso_agente": p_ag,
+                        "peso_label": p_lbl,
+                        "smart_label": f"⚡ Markov Sniper [{p_lbl}]" if is_markov else (f"🪞 Espejo Directo [{p_lbl}]" if is_mirror else f"🎯 Canasta Rezagados [{p_lbl}]"),
+                        "last_salido_str": info.get("last_str", "---"),
+                        "created_at": datetime.datetime.now().strftime("%Y-%m-%d %I:%M:%S %p")
+                    }
+                    print(f"[*] 🚨 NUEVA SEÑAL REGISTRADA PARA COMPRA: {r_name} -> {cands_str} (${cost} USD)")
+            else:
+                if r_name in state["pending_bets"]:
+                    del state["pending_bets"][r_name]
+
+    # Reevaluación final para ruletas que no recibieron sorteos nuevos en este ciclo
+    for r_name, cfg in RULETAS.items():
+        if new_counts.get(r_name, 0) == 0:
+            stk, miss, info = get_current_streaks(r_name)
+            is_markov = info.get("is_markov", False)
+            is_mirror = info.get("is_mirror", False)
+            is_anti = info.get("is_anti_blocked", False)
+            cands = info.get("cands", [])
+            target_streaks = cfg.get("target_streaks", [1])
+            is_quar = bool(QUARANTINE_MISSES > 0 and miss >= QUARANTINE_MISSES)
+
+            if ((stk in target_streaks or is_markov or is_mirror) and not is_anti and not is_quar):
+                if cands and r_name not in state["pending_bets"]:
+                    cands_nums = [str(c["numero"]) for c in cands]
+                    p_ag, p_lbl = calcular_peso_agente_pure(r_name, stk, miss)
+                    cands_str = ", ".join([f"#{c['numero']} {c['animal']} [{p_lbl}]" for c in cands])
+                    cost = round(len(cands) * FIXED_STAKE_UNIT, 2)
+                    premio = round(FIXED_STAKE_UNIT * cfg["payout"], 2)
+                    state["pending_bets"][r_name] = {
+                        "ruleta": r_name,
+                        "candidatos": cands_nums,
+                        "candidatos_str": cands_str,
+                        "total_cands": len(cands),
+                        "stake_unit": FIXED_STAKE_UNIT,
+                        "total_stake": cost,
+                        "posible_premio": premio,
+                        "payout": cfg["payout"],
+                        "peso_agente": p_ag,
+                        "peso_label": p_lbl,
+                        "smart_label": f"⚡ Markov Sniper [{p_lbl}]" if is_markov else (f"🪞 Espejo Directo [{p_lbl}]" if is_mirror else f"🎯 Canasta Rezagados [{p_lbl}]"),
+                        "last_salido_str": info.get("last_str", "---"),
+                        "created_at": datetime.datetime.now().strftime("%Y-%m-%d %I:%M:%S %p")
+                    }
+            else:
+                if r_name in state["pending_bets"]:
+                    del state["pending_bets"][r_name]
 
     state["bankroll"] = bankroll
     state["peak_bankroll"] = peak
     save_state_pure(state)
     return new_counts
+
 
 
 def read_today_ledger(date_str=None):
