@@ -1,5 +1,5 @@
 {
-  "bankroll": -1212.0,
+  "bankroll": -1219.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -59,31 +59,7 @@
     "Loto Chaima": "2026-11-10 6:00 PM",
     "Granja Millonaria - Granjazo": "2026-11-10 6:30 PM"
   },
-  "pending_bets": {
-    "Monje Millonario": {
-      "ruleta": "Monje Millonario",
-      "candidatos": [
-        "0",
-        "1",
-        "17",
-        "32",
-        "47",
-        "5",
-        "52"
-      ],
-      "candidatos_str": "#0 DELFÍN [P:7/10], #1 CARNERO [P:7/10], #17 PAVO [P:7/10], #32 ARDILLA [P:7/10], #47 PAVO REAL [P:7/10], #5 LEÓN [P:7/10], #52 PULPO [P:7/10]",
-      "total_cands": 7,
-      "stake_unit": 1.0,
-      "total_stake": 7.0,
-      "posible_premio": 60.0,
-      "payout": 60.0,
-      "peso_agente": 7,
-      "peso_label": "P:7/10",
-      "smart_label": "🎯 Canasta Rezagados [P:7/10]",
-      "last_salido_str": "#23 Cebra (6:05 PM)",
-      "created_at": "2026-11-13 10:55:01 PM"
-    }
-  },
+  "pending_bets": {},
   "effective_kelly": 0.1125,
   "damping": 0.15,
   "cycle_elapsed_days": 1.4634480404513888,
