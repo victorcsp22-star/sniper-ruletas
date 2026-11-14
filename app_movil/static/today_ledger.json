@@ -1,11 +1,25 @@
 {
-  "items": [],
+  "items": [
+    {
+      "fecha": "2026-11-14",
+      "hora": "9:00 AM",
+      "ruleta": "Guacharo Activo",
+      "candidatos": "#17 PAVO [P:8/10], #35 JIRAFA [P:8/10], #36 CULEBRA [P:8/10], #52 PULPO [P:8/10], #68 JAGUAR [P:8/10], #73 HIPOPÓTAMO [P:8/10]",
+      "cands_count": 6,
+      "total_bet": 6.0,
+      "resultado": "[10] Tigre",
+      "cobrado": 0.0,
+      "pnl": -6.0,
+      "saldo": -1225.0,
+      "emoji": "🦇"
+    }
+  ],
   "summary": {
-    "ops_today": 0,
+    "ops_today": 1,
     "wins_today": 0,
-    "inv_today": 0.0,
+    "inv_today": 6.0,
     "cob_today": 0.0,
-    "pnl_today": 0.0,
+    "pnl_today": -6.0,
     "win_rate_today": 0.0
   }
 }

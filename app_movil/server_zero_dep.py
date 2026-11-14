@@ -61,13 +61,14 @@ RULETAS = {
         "file": os.path.join(ROOT_DIR, "lotto_gato.csv"),
         "title": "Lotto Gato",
         "lags": [18, 38, 14],
-        "target_streaks": [1, 2],
-        "wr_optimos": [1, 2],
+        "target_streaks": [1, 2, 5, 6],
+        "wr_optimos": [1, 2, 5, 6],
         "rec_w": 5,
+        "k_cap": 3,
         "anti_clustering": False,
         "blacklist": [],
         "markov_snipers": {"14": "0", "27": "15", "3": "7"},
-        "mirror_pairs": {"0": "00", "1": "10", "2": "20", "3": "30", "4": "40"},
+        "mirror_pairs": {},
         "payout": 30.0,
         "emoji": "🐱"
     },
@@ -75,13 +76,14 @@ RULETAS = {
         "file": os.path.join(ROOT_DIR, "loto_chaima.csv"),
         "title": "Loto Chaima",
         "lags": [49, 41, 35, 56, 61, 66, 71, 76],
-        "target_streaks": [0, 1],
-        "wr_optimos": [0, 1],
+        "target_streaks": [0, 1, 2, 3],
+        "wr_optimos": [0, 1, 2, 3],
         "rec_w": 6,
+        "k_cap": 5,
         "anti_clustering": False,
         "blacklist": [],
         "markov_snipers": {"48": "0", "55": "0", "12": "0"},
-        "mirror_pairs": {"0": "00", "5": "50", "6": "60", "7": "70"},
+        "mirror_pairs": {},
         "payout": 60.0,
         "emoji": "🏹"
     },
@@ -89,13 +91,14 @@ RULETAS = {
         "file": os.path.join(ROOT_DIR, "data_vz", "guacharo_activo_2anios.csv"),
         "title": "Guacharo",
         "lags": [31, 54, 41, 38, 43, 48, 53, 58],
-        "target_streaks": [1, 3],
-        "wr_optimos": [1, 3, 6],
+        "target_streaks": [1, 3, 4, 6, 8, 9],
+        "wr_optimos": [1, 3, 4, 6, 8, 9],
         "rec_w": 8,
+        "k_cap": 5,
         "anti_clustering": False,
         "blacklist": ["75"],
         "markov_snipers": {"21": "0", "8": "67", "29": "2"},
-        "mirror_pairs": {"12": "21", "13": "31", "14": "41", "23": "32"},
+        "mirror_pairs": {},
         "payout": 60.0,
         "emoji": "🦇"
     },
@@ -103,13 +106,14 @@ RULETAS = {
         "file": os.path.join(ROOT_DIR, "gatazo.csv"),
         "title": "Gatazo",
         "lags": [35, 9, 20, 42, 47, 52, 57, 62],
-        "target_streaks": [1],
-        "wr_optimos": [1, 11, 12],
+        "target_streaks": [1, 2, 4, 7, 9, 10],
+        "wr_optimos": [1, 2, 4, 7, 9, 10],
         "rec_w": 6,
+        "k_cap": 5,
         "anti_clustering": False,
         "blacklist": ["11"],
         "markov_snipers": {"30": "63", "48": "21", "23": "42"},
-        "mirror_pairs": {"12": "21", "13": "31", "24": "42", "34": "43"},
+        "mirror_pairs": {},
         "payout": 60.0,
         "emoji": "🐯"
     },
@@ -117,13 +121,14 @@ RULETAS = {
         "file": os.path.join(ROOT_DIR, "monje_millonario.csv"),
         "title": "Monje Millonario",
         "lags": [24, 42, 48, 31, 36, 41, 46, 51],
-        "target_streaks": [0, 1],
-        "wr_optimos": [0, 1],
+        "target_streaks": [1, 2, 4, 6, 7, 10],
+        "wr_optimos": [1, 2, 4, 6, 7, 10],
         "rec_w": 6,
+        "k_cap": 5,
         "anti_clustering": False,
         "blacklist": ["75"],
         "markov_snipers": {},
-        "mirror_pairs": {"24": "42"},
+        "mirror_pairs": {},
         "payout": 60.0,
         "emoji": "🧘‍♂️"
     },
@@ -134,10 +139,11 @@ RULETAS = {
         "target_streaks": [1, 3],
         "wr_optimos": [1, 3],
         "rec_w": 6,
+        "k_cap": 5,
         "anti_clustering": False,
         "blacklist": [],
         "markov_snipers": {},
-        "mirror_pairs": {"15": "51", "26": "62"},
+        "mirror_pairs": {},
         "payout": 60.0,
         "emoji": "🚜"
     }
@@ -746,9 +752,14 @@ def evaluate_and_update_all_pure(live_data):
             fecha_res = str(it.get("fecha", "")).strip()
             hora_res = str(it.get("hora", "")).strip()
 
-            # A. Evaluar apuesta pendiente si existía para esta ruleta
+                        # A. Evaluar apuesta pendiente si existía para esta ruleta
             if r_name in state["pending_bets"]:
                 bet = state["pending_bets"].pop(r_name)
+                # Si la apuesta fue generada en un día anterior, se descarta (caducada por cierre de jornada)
+                bet_date = bet.get("created_at", "").split(" ")[0]
+                if bet_date and bet_date < fecha_res:
+                    print(f"[*] ⚠️ Apuesta pendiente caducada descartada para {r_name} (creada {bet_date}, sorteo {fecha_res})")
+                    continue
                 cands = [str(c) for c in bet.get("candidatos", [])]
                 hit = (salido_num in cands)
                 stake_unit = float(bet.get("stake_unit", FIXED_STAKE_UNIT))
