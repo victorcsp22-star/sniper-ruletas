@@ -9,20 +9,24 @@
       5,
       6
     ],
-    "racha": 12,
+    "racha": 0,
     "misses": 18,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "2",
-        "animal": "TORO"
+        "numero": "28",
+        "animal": "ZAMURO"
       },
       {
-        "numero": "35",
-        "animal": "JIRAFA"
+        "numero": "34",
+        "animal": "VENADO"
+      },
+      {
+        "numero": "6",
+        "animal": "RANA"
       }
     ],
-    "ultimo_str": "#3 Cienpies (9:10 AM)"
+    "ultimo_str": "#7 Perico (11:10 AM)"
   },
   "Loto Chaima": {
     "title": "Loto Chaima",
@@ -34,16 +38,32 @@
       2,
       3
     ],
-    "racha": 34,
+    "racha": 0,
     "misses": 16,
-    "is_active": false,
+    "is_active": true,
     "candidatos": [
       {
-        "numero": "0",
-        "animal": "DELFÍN"
+        "numero": "23",
+        "animal": "CEBRA"
+      },
+      {
+        "numero": "34",
+        "animal": "VENADO"
+      },
+      {
+        "numero": "20",
+        "animal": "COCHINO"
+      },
+      {
+        "numero": "22",
+        "animal": "CAMELLO"
+      },
+      {
+        "numero": "13",
+        "animal": "MONO"
       }
     ],
-    "ultimo_str": "#12 Caballo (10:00 AM)"
+    "ultimo_str": "#50 Canario (12:00 PM)"
   },
   "Guacharo Activo": {
     "title": "Guacharo",
@@ -57,32 +77,32 @@
       8,
       9
     ],
-    "racha": 44,
+    "racha": 46,
     "misses": 18,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "15",
-        "animal": "ZORRO"
+        "numero": "50",
+        "animal": "CANARIO"
       },
       {
-        "numero": "28",
-        "animal": "ZAMURO"
+        "numero": "18",
+        "animal": "BURRO"
+      },
+      {
+        "numero": "9",
+        "animal": "ÁGUILA"
       },
       {
         "numero": "55",
         "animal": "OSO HORMIGUERO"
       },
       {
-        "numero": "39",
-        "animal": "LECHUZA"
-      },
-      {
-        "numero": "73",
-        "animal": "HIPOPÓTAMO"
+        "numero": "29",
+        "animal": "ELEFANTE"
       }
     ],
-    "ultimo_str": "#37 Tortuga (10:00 AM)"
+    "ultimo_str": "#0 Delfín (12:00 PM)"
   },
   "Gatazo": {
     "title": "Gatazo",
@@ -96,32 +116,16 @@
       9,
       10
     ],
-    "racha": 10,
-    "misses": 5,
-    "is_active": true,
+    "racha": 0,
+    "misses": 6,
+    "is_active": false,
     "candidatos": [
       {
-        "numero": "25",
-        "animal": "GALLINA"
-      },
-      {
-        "numero": "14",
-        "animal": "PALOMA"
-      },
-      {
-        "numero": "4",
-        "animal": "ALACRÁN"
-      },
-      {
-        "numero": "32",
-        "animal": "ARDILLA"
-      },
-      {
-        "numero": "3",
-        "animal": "CIEMPIÉS"
+        "numero": "42",
+        "animal": "TUCÁN"
       }
     ],
-    "ultimo_str": "#17 Pavo (9:40 AM)"
+    "ultimo_str": "#23 Cebra (11:40 AM)"
   },
   "Monje Millonario": {
     "title": "Monje Millonario",
@@ -135,32 +139,32 @@
       7,
       10
     ],
-    "racha": 27,
+    "racha": 30,
     "misses": 12,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "70",
-        "animal": "BISONTE"
+        "numero": "66",
+        "animal": "LOBO"
       },
       {
-        "numero": "41",
-        "animal": "CANGURO"
+        "numero": "1",
+        "animal": "CARNERO"
       },
       {
-        "numero": "21",
-        "animal": "GALLO"
+        "numero": "0",
+        "animal": "DELFÍN"
       },
       {
-        "numero": "31",
-        "animal": "LAPA"
+        "numero": "29",
+        "animal": "ELEFANTE"
       },
       {
-        "numero": "7",
-        "animal": "PERICO"
+        "numero": "4",
+        "animal": "ALACRÁN"
       }
     ],
-    "ultimo_str": "#6 Rana (9:05 AM)"
+    "ultimo_str": "#24 Iguana (12:05 PM)"
   },
   "Granja Millonaria - Granjazo": {
     "title": "Granjazo",
@@ -170,23 +174,23 @@
       1,
       3
     ],
-    "racha": 53,
+    "racha": 55,
     "misses": 11,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "57",
-        "animal": "PATO"
+        "numero": "48",
+        "animal": "PUERCOESPÍN"
       },
       {
-        "numero": "66",
-        "animal": "LOBO"
+        "numero": "52",
+        "animal": "PULPO"
       },
       {
-        "numero": "69",
-        "animal": "CONEJO"
+        "numero": "64",
+        "animal": "GAVILÁN"
       }
     ],
-    "ultimo_str": "#55 Foca (9:30 AM)"
+    "ultimo_str": "#38 Conejo (11:30 AM)"
   }
 }

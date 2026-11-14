@@ -12,14 +12,40 @@
       "pnl": -6.0,
       "saldo": -1225.0,
       "emoji": "🦇"
+    },
+    {
+      "fecha": "2026-11-14",
+      "hora": "11:00 AM",
+      "ruleta": "Loto Chaima",
+      "candidatos": "#0 DELFÍN [P:3/10]",
+      "cands_count": 1,
+      "total_bet": 1.0,
+      "resultado": "[16] Oso",
+      "cobrado": 0.0,
+      "pnl": -1.0,
+      "saldo": -1226.0,
+      "emoji": "🏹"
+    },
+    {
+      "fecha": "2026-11-14",
+      "hora": "10:40 AM",
+      "ruleta": "Gatazo",
+      "candidatos": "#25 GALLINA [P:8/10], #14 PALOMA [P:8/10], #4 ALACRÁN [P:8/10], #32 ARDILLA [P:8/10], #3 CIEMPIÉS [P:8/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[18] Burro",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -1231.0,
+      "emoji": "🐯"
     }
   ],
   "summary": {
-    "ops_today": 1,
+    "ops_today": 3,
     "wins_today": 0,
-    "inv_today": 6.0,
+    "inv_today": 12.0,
     "cob_today": 0.0,
-    "pnl_today": -6.0,
+    "pnl_today": -12.0,
     "win_rate_today": 0.0
   }
 }
