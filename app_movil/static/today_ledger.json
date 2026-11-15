@@ -90,14 +90,66 @@
       "pnl": -3.0,
       "saldo": -1184.0,
       "emoji": "🚜"
+    },
+    {
+      "fecha": "2026-11-15",
+      "hora": "4:40 PM",
+      "ruleta": "Gatazo",
+      "candidatos": "#4 ALACRÁN [P:9/10], #8 RATÓN [P:9/10], #57 PATO [P:9/10], #68 JAGUAR [P:9/10], #40 AVISPA [P:9/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[17] Pavo",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -1189.0,
+      "emoji": "🐯"
+    },
+    {
+      "fecha": "2026-11-15",
+      "hora": "6:40 PM",
+      "ruleta": "Gatazo",
+      "candidatos": "#26 VACA [P:9/10], #72 GORILA [P:9/10], #35 JIRAFA [P:9/10], #45 GARZA [P:9/10], #25 GALLINA [P:9/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[37] Tortuga",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -1194.0,
+      "emoji": "🐯"
+    },
+    {
+      "fecha": "2026-11-15",
+      "hora": "5:30 PM",
+      "ruleta": "Granja Millonaria - Granjazo",
+      "candidatos": "#44 CHIGÜIRE [P:7/10], #59 PANTERA [P:7/10], #70 BISONTE [P:7/10]",
+      "cands_count": 3,
+      "total_bet": 3.0,
+      "resultado": "[59] Guacamayo",
+      "cobrado": 60.0,
+      "pnl": 57.0,
+      "saldo": -1137.0,
+      "emoji": "🚜"
+    },
+    {
+      "fecha": "2026-11-15",
+      "hora": "7:30 PM",
+      "ruleta": "Granja Millonaria - Granjazo",
+      "candidatos": "#20 COCHINO [P:10/10], #21 GALLO [P:10/10], #64 GAVILÁN [P:10/10]",
+      "cands_count": 3,
+      "total_bet": 3.0,
+      "resultado": "[50] Comadreja",
+      "cobrado": 0.0,
+      "pnl": -3.0,
+      "saldo": -1140.0,
+      "emoji": "🚜"
     }
   ],
   "summary": {
-    "ops_today": 7,
-    "wins_today": 1,
-    "inv_today": 25.0,
-    "cob_today": 60.0,
-    "pnl_today": 35.0,
-    "win_rate_today": 14.3
+    "ops_today": 11,
+    "wins_today": 2,
+    "inv_today": 41.0,
+    "cob_today": 120.0,
+    "pnl_today": 79.0,
+    "win_rate_today": 18.2
   }
 }
