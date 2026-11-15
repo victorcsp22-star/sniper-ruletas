@@ -1,11 +1,38 @@
 {
-  "items": [],
+  "items": [
+    {
+      "fecha": "2026-11-15",
+      "hora": "10:00 AM",
+      "ruleta": "Loto Chaima",
+      "candidatos": "#0 DELFÍN [P:5/10]",
+      "cands_count": 1,
+      "total_bet": 1.0,
+      "resultado": "[27] Perro",
+      "cobrado": 0.0,
+      "pnl": -1.0,
+      "saldo": -1220.0,
+      "emoji": "🏹"
+    },
+    {
+      "fecha": "2026-11-15",
+      "hora": "9:40 AM",
+      "ruleta": "Gatazo",
+      "candidatos": "#50 CANARIO [P:7/10], #18 BURRO [P:7/10], #17 PAVO [P:7/10], #1 CARNERO [P:7/10], #29 ELEFANTE [P:7/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[54] Grillo",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -1225.0,
+      "emoji": "🐯"
+    }
+  ],
   "summary": {
-    "ops_today": 0,
+    "ops_today": 2,
     "wins_today": 0,
-    "inv_today": 0.0,
+    "inv_today": 6.0,
     "cob_today": 0.0,
-    "pnl_today": 0.0,
+    "pnl_today": -6.0,
     "win_rate_today": 0.0
   }
 }

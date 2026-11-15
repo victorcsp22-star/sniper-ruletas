@@ -1,5 +1,5 @@
 {
-  "bankroll": -1219.0,
+  "bankroll": -1225.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -63,13 +63,13 @@
     "Gatazo": {
       "ruleta": "Gatazo",
       "candidatos": [
-        "50",
-        "18",
-        "17",
-        "1",
-        "29"
+        "45",
+        "23",
+        "71",
+        "40",
+        "4"
       ],
-      "candidatos_str": "#50 CANARIO [P:7/10], #18 BURRO [P:7/10], #17 PAVO [P:7/10], #1 CARNERO [P:7/10], #29 ELEFANTE [P:7/10]",
+      "candidatos_str": "#45 GARZA [P:7/10], #23 CEBRA [P:7/10], #71 GUACAMAYA [P:7/10], #40 AVISPA [P:7/10], #4 ALACRÁN [P:7/10]",
       "total_cands": 5,
       "stake_unit": 1.0,
       "total_stake": 5.0,
@@ -78,8 +78,8 @@
       "peso_agente": 7,
       "peso_label": "P:7/10",
       "smart_label": "🎯 Canasta Rezagados [P:7/10]",
-      "last_salido_str": "#72 Gorila (7:40 PM)",
-      "created_at": "2026-11-15 12:25:38 AM"
+      "last_salido_str": "#54 Grillo (9:40 AM)",
+      "created_at": "2026-11-15 02:39:43 PM"
     }
   },
   "effective_kelly": 0.1125,
