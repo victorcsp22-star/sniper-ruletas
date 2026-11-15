@@ -1,5 +1,5 @@
 {
-  "bankroll": -1206.0,
+  "bankroll": -1219.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -60,37 +60,16 @@
     "Granja Millonaria - Granjazo": "2026-11-10 6:30 PM"
   },
   "pending_bets": {
-    "Loto Chaima": {
-      "ruleta": "Loto Chaima",
-      "candidatos": [
-        "7",
-        "42",
-        "44",
-        "51",
-        "9"
-      ],
-      "candidatos_str": "#7 PERICO [P:8/10], #42 TUCÁN [P:8/10], #44 CHIGÜIRE [P:8/10], #51 PELICANO [P:8/10], #9 ÁGUILA [P:8/10]",
-      "total_cands": 5,
-      "stake_unit": 1.0,
-      "total_stake": 5.0,
-      "posible_premio": 60.0,
-      "payout": 60.0,
-      "peso_agente": 8,
-      "peso_label": "P:8/10",
-      "smart_label": "🎯 Canasta Rezagados [P:8/10]",
-      "last_salido_str": "#20 Cochino (4:00 PM)",
-      "created_at": "2026-11-14 08:46:47 PM"
-    },
     "Gatazo": {
       "ruleta": "Gatazo",
       "candidatos": [
-        "55",
-        "35",
-        "24",
-        "39",
-        "42"
+        "50",
+        "18",
+        "17",
+        "1",
+        "29"
       ],
-      "candidatos_str": "#55 OSO HORMIGUERO [P:7/10], #35 JIRAFA [P:7/10], #24 IGUANA [P:7/10], #39 LECHUZA [P:7/10], #42 TUCÁN [P:7/10]",
+      "candidatos_str": "#50 CANARIO [P:7/10], #18 BURRO [P:7/10], #17 PAVO [P:7/10], #1 CARNERO [P:7/10], #29 ELEFANTE [P:7/10]",
       "total_cands": 5,
       "stake_unit": 1.0,
       "total_stake": 5.0,
@@ -99,8 +78,8 @@
       "peso_agente": 7,
       "peso_label": "P:7/10",
       "smart_label": "🎯 Canasta Rezagados [P:7/10]",
-      "last_salido_str": "#26 Vaca (4:40 PM)",
-      "created_at": "2026-11-14 08:46:47 PM"
+      "last_salido_str": "#72 Gorila (7:40 PM)",
+      "created_at": "2026-11-15 12:25:38 AM"
     }
   },
   "effective_kelly": 0.1125,
