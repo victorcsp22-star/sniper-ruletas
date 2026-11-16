@@ -38,32 +38,32 @@
       2,
       3
     ],
-    "racha": 18,
+    "racha": 19,
     "misses": 4,
     "is_active": false,
     "candidatos": [
       {
-        "numero": "28",
-        "animal": "ZAMURO"
+        "numero": "43",
+        "animal": "MARIPOSA"
       },
       {
-        "numero": "45",
-        "animal": "GARZA"
+        "numero": "24",
+        "animal": "IGUANA"
       },
       {
-        "numero": "55",
-        "animal": "OSO HORMIGUERO"
+        "numero": "51",
+        "animal": "PELICANO"
       },
       {
-        "numero": "42",
-        "animal": "TUCÁN"
+        "numero": "31",
+        "animal": "LAPA"
       },
       {
-        "numero": "50",
-        "animal": "CANARIO"
+        "numero": "4",
+        "animal": "ALACRÁN"
       }
     ],
-    "ultimo_str": "#18 Burro (7:00 PM)"
+    "ultimo_str": "#0 Delfín (8:00 AM)"
   },
   "Guacharo Activo": {
     "title": "Guacharo",
@@ -77,32 +77,32 @@
       8,
       9
     ],
-    "racha": 65,
+    "racha": 66,
     "misses": 18,
     "is_active": false,
     "candidatos": [
-      {
-        "numero": "24",
-        "animal": "IGUANA"
-      },
-      {
-        "numero": "17",
-        "animal": "PAVO"
-      },
-      {
-        "numero": "67",
-        "animal": "AVESTRUZ"
-      },
       {
         "numero": "63",
         "animal": "CANGREJO"
       },
       {
-        "numero": "73",
-        "animal": "HIPOPÓTAMO"
+        "numero": "5",
+        "animal": "LEÓN"
+      },
+      {
+        "numero": "9",
+        "animal": "ÁGUILA"
+      },
+      {
+        "numero": "39",
+        "animal": "LECHUZA"
+      },
+      {
+        "numero": "53",
+        "animal": "CARACOL"
       }
     ],
-    "ultimo_str": "#42 Tucán (7:00 PM)"
+    "ultimo_str": "#41 Canguro (8:00 AM)"
   },
   "Gatazo": {
     "title": "Gatazo",
@@ -155,32 +155,32 @@
       7,
       10
     ],
-    "racha": 0,
+    "racha": 1,
     "misses": 12,
-    "is_active": false,
+    "is_active": true,
     "candidatos": [
       {
-        "numero": "56",
-        "animal": "TIBURÓN"
-      },
-      {
-        "numero": "48",
-        "animal": "PUERCOESPÍN"
-      },
-      {
-        "numero": "39",
-        "animal": "LECHUZA"
-      },
-      {
-        "numero": "43",
-        "animal": "MARIPOSA"
+        "numero": "6",
+        "animal": "RANA"
       },
       {
         "numero": "16",
         "animal": "OSO"
+      },
+      {
+        "numero": "54",
+        "animal": "GRILLO"
+      },
+      {
+        "numero": "59",
+        "animal": "PANTERA"
+      },
+      {
+        "numero": "34",
+        "animal": "VENADO"
       }
     ],
-    "ultimo_str": "#28 Zamuro (7:05 PM)"
+    "ultimo_str": "#55 Oso Hormiguero (8:05 AM)"
   },
   "Granja Millonaria - Granjazo": {
     "title": "Granjazo",
