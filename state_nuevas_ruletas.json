@@ -78,6 +78,25 @@
       "smart_label": "🎯 Canasta Rezagados [P:8/10]",
       "last_salido_str": "#23 Cebra (7:10 PM)",
       "created_at": "2026-11-15 11:52:57 PM"
+    },
+    "Granja Millonaria - Granjazo": {
+      "ruleta": "Granja Millonaria - Granjazo",
+      "candidatos": [
+        "41",
+        "46",
+        "69"
+      ],
+      "candidatos_str": "#41 CANGURO [P:9/10], #46 PUMA [P:9/10], #69 CONEJO [P:9/10]",
+      "total_cands": 3,
+      "stake_unit": 1.0,
+      "total_stake": 3.0,
+      "posible_premio": 60.0,
+      "payout": 60.0,
+      "peso_agente": 9,
+      "peso_label": "P:9/10",
+      "smart_label": "🎯 Canasta Rezagados [P:9/10]",
+      "last_salido_str": "#53 Jaguar (8:30 PM)",
+      "created_at": "2026-11-16 04:17:48 AM"
     }
   },
   "effective_kelly": 0.1125,
