@@ -1,5 +1,5 @@
 {
-  "bankroll": -1156.0,
+  "bankroll": -1161.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -59,7 +59,29 @@
     "Loto Chaima": "2026-11-10 6:00 PM",
     "Granja Millonaria - Granjazo": "2026-11-10 6:30 PM"
   },
-  "pending_bets": {},
+  "pending_bets": {
+    "Gatazo": {
+      "ruleta": "Gatazo",
+      "candidatos": [
+        "30",
+        "53",
+        "37",
+        "57",
+        "71"
+      ],
+      "candidatos_str": "#30 CAIMÁN [P:7/10], #53 CARACOL [P:7/10], #37 TORTUGA [P:7/10], #57 PATO [P:7/10], #71 GUACAMAYA [P:7/10]",
+      "total_cands": 5,
+      "stake_unit": 1.0,
+      "total_stake": 5.0,
+      "posible_premio": 60.0,
+      "payout": 60.0,
+      "peso_agente": 7,
+      "peso_label": "P:7/10",
+      "smart_label": "🎯 Canasta Rezagados [P:7/10]",
+      "last_salido_str": "#10 Tigre (5:40 PM)",
+      "created_at": "2026-11-17 10:04:22 PM"
+    }
+  },
   "effective_kelly": 0.1125,
   "damping": 0.15,
   "cycle_elapsed_days": 1.4634480404513888,

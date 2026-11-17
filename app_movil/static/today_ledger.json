@@ -129,14 +129,27 @@
       "pnl": -5.0,
       "saldo": -1156.0,
       "emoji": "🧘‍♂️"
+    },
+    {
+      "fecha": "2026-11-17",
+      "hora": "5:40 PM",
+      "ruleta": "Gatazo",
+      "candidatos": "#23 CEBRA [P:7/10], #72 GORILA [P:7/10], #00 BALLENA [P:7/10], #17 PAVO [P:7/10], #13 MONO [P:7/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[10] Tigre",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -1161.0,
+      "emoji": "🐯"
     }
   ],
   "summary": {
-    "ops_today": 10,
+    "ops_today": 11,
     "wins_today": 0,
-    "inv_today": 38.0,
+    "inv_today": 43.0,
     "cob_today": 0.0,
-    "pnl_today": -38.0,
+    "pnl_today": -43.0,
     "win_rate_today": 0.0
   }
 }
