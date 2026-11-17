@@ -51,14 +51,92 @@
       "pnl": -5.0,
       "saldo": -1138.0,
       "emoji": "🧘‍♂️"
+    },
+    {
+      "fecha": "2026-11-17",
+      "hora": "10:00 AM",
+      "ruleta": "Loto Chaima",
+      "candidatos": "#55 OSO HORMIGUERO [P:7/10], #19 CHIVO [P:7/10], #16 OSO [P:7/10], #1 CARNERO [P:7/10], #00 BALLENA [P:7/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[35] Jirafa",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -1143.0,
+      "emoji": "🏹"
+    },
+    {
+      "fecha": "2026-11-17",
+      "hora": "3:00 PM",
+      "ruleta": "Loto Chaima",
+      "candidatos": "#0 DELFÍN [P:4/10]",
+      "cands_count": 1,
+      "total_bet": 1.0,
+      "resultado": "[41] Canguro",
+      "cobrado": 0.0,
+      "pnl": -1.0,
+      "saldo": -1144.0,
+      "emoji": "🏹"
+    },
+    {
+      "fecha": "2026-11-17",
+      "hora": "1:00 PM",
+      "ruleta": "Guacharo Activo",
+      "candidatos": "#67 AVESTRUZ [P:3/10]",
+      "cands_count": 1,
+      "total_bet": 1.0,
+      "resultado": "[52] Pulpo",
+      "cobrado": 0.0,
+      "pnl": -1.0,
+      "saldo": -1145.0,
+      "emoji": "🦇"
+    },
+    {
+      "fecha": "2026-11-17",
+      "hora": "11:40 AM",
+      "ruleta": "Gatazo",
+      "candidatos": "#38 BÚFALO [P:7/10], #2 TORO [P:7/10], #27 PERRO [P:7/10], #17 PAVO [P:7/10], #13 MONO [P:7/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[42] Tucan",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -1150.0,
+      "emoji": "🐯"
+    },
+    {
+      "fecha": "2026-11-17",
+      "hora": "3:40 PM",
+      "ruleta": "Gatazo",
+      "candidatos": "#21 GALLO [P:7/10]",
+      "cands_count": 1,
+      "total_bet": 1.0,
+      "resultado": "[24] Iguana",
+      "cobrado": 0.0,
+      "pnl": -1.0,
+      "saldo": -1151.0,
+      "emoji": "🐯"
+    },
+    {
+      "fecha": "2026-11-17",
+      "hora": "11:05 AM",
+      "ruleta": "Monje Millonario",
+      "candidatos": "#61 COLIBRÍ [P:8/10], #55 OSO HORMIGUERO [P:8/10], #36 CULEBRA [P:8/10], #42 TUCÁN [P:8/10], #39 LECHUZA [P:8/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[12] Caballo",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -1156.0,
+      "emoji": "🧘‍♂️"
     }
   ],
   "summary": {
-    "ops_today": 4,
+    "ops_today": 10,
     "wins_today": 0,
-    "inv_today": 20.0,
+    "inv_today": 38.0,
     "cob_today": 0.0,
-    "pnl_today": -20.0,
+    "pnl_today": -38.0,
     "win_rate_today": 0.0
   }
 }
