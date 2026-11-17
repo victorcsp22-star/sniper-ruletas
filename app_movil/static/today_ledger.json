@@ -1,11 +1,64 @@
 {
-  "items": [],
+  "items": [
+    {
+      "fecha": "2026-11-17",
+      "hora": "8:00 AM",
+      "ruleta": "Loto Chaima",
+      "candidatos": "#38 BÚFALO [P:7/10], #51 PELICANO [P:7/10], #40 AVISPA [P:7/10], #28 ZAMURO [P:7/10], #10 TIGRE [P:7/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[20] Cochino",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -1123.0,
+      "emoji": "🏹"
+    },
+    {
+      "fecha": "2026-11-17",
+      "hora": "9:00 AM",
+      "ruleta": "Loto Chaima",
+      "candidatos": "#00 BALLENA [P:7/10], #12 CABALLO [P:7/10], #16 OSO [P:7/10], #43 MARIPOSA [P:7/10], #55 OSO HORMIGUERO [P:7/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[47] Pavo Real",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -1128.0,
+      "emoji": "🏹"
+    },
+    {
+      "fecha": "2026-11-17",
+      "hora": "9:40 AM",
+      "ruleta": "Gatazo",
+      "candidatos": "#23 CEBRA [P:7/10], #13 MONO [P:7/10], #54 GRILLO [P:7/10], #16 OSO [P:7/10], #26 VACA [P:7/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[5] Leon",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -1133.0,
+      "emoji": "🐯"
+    },
+    {
+      "fecha": "2026-11-17",
+      "hora": "8:05 AM",
+      "ruleta": "Monje Millonario",
+      "candidatos": "#74 TURPIAL [P:8/10], #59 PANTERA [P:8/10], #53 CARACOL [P:8/10], #33 PESCADO [P:8/10], #28 ZAMURO [P:8/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[23] Cebra",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -1138.0,
+      "emoji": "🧘‍♂️"
+    }
+  ],
   "summary": {
-    "ops_today": 0,
+    "ops_today": 4,
     "wins_today": 0,
-    "inv_today": 0.0,
+    "inv_today": 20.0,
     "cob_today": 0.0,
-    "pnl_today": 0.0,
+    "pnl_today": -20.0,
     "win_rate_today": 0.0
   }
 }

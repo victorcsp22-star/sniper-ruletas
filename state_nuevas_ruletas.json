@@ -1,5 +1,5 @@
 {
-  "bankroll": -1118.0,
+  "bankroll": -1138.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -63,34 +63,13 @@
     "Loto Chaima": {
       "ruleta": "Loto Chaima",
       "candidatos": [
-        "38",
-        "51",
-        "40",
-        "28",
-        "10"
-      ],
-      "candidatos_str": "#38 BÚFALO [P:7/10], #51 PELICANO [P:7/10], #40 AVISPA [P:7/10], #28 ZAMURO [P:7/10], #10 TIGRE [P:7/10]",
-      "total_cands": 5,
-      "stake_unit": 1.0,
-      "total_stake": 5.0,
-      "posible_premio": 60.0,
-      "payout": 60.0,
-      "peso_agente": 7,
-      "peso_label": "P:7/10",
-      "smart_label": "🎯 Canasta Rezagados [P:7/10]",
-      "last_salido_str": "#5 León (7:00 PM)",
-      "created_at": "2026-11-17 04:49:40 AM"
-    },
-    "Gatazo": {
-      "ruleta": "Gatazo",
-      "candidatos": [
-        "23",
-        "13",
-        "54",
+        "55",
+        "19",
         "16",
-        "26"
+        "1",
+        "00"
       ],
-      "candidatos_str": "#23 CEBRA [P:7/10], #13 MONO [P:7/10], #54 GRILLO [P:7/10], #16 OSO [P:7/10], #26 VACA [P:7/10]",
+      "candidatos_str": "#55 OSO HORMIGUERO [P:7/10], #19 CHIVO [P:7/10], #16 OSO [P:7/10], #1 CARNERO [P:7/10], #00 BALLENA [P:7/10]",
       "total_cands": 5,
       "stake_unit": 1.0,
       "total_stake": 5.0,
@@ -99,29 +78,8 @@
       "peso_agente": 7,
       "peso_label": "P:7/10",
       "smart_label": "🎯 Canasta Rezagados [P:7/10]",
-      "last_salido_str": "#53 Caracol (7:40 PM)",
-      "created_at": "2026-11-17 04:49:40 AM"
-    },
-    "Monje Millonario": {
-      "ruleta": "Monje Millonario",
-      "candidatos": [
-        "74",
-        "59",
-        "53",
-        "33",
-        "28"
-      ],
-      "candidatos_str": "#74 TURPIAL [P:8/10], #59 PANTERA [P:8/10], #53 CARACOL [P:8/10], #33 PESCADO [P:8/10], #28 ZAMURO [P:8/10]",
-      "total_cands": 5,
-      "stake_unit": 1.0,
-      "total_stake": 5.0,
-      "posible_premio": 60.0,
-      "payout": 60.0,
-      "peso_agente": 8,
-      "peso_label": "P:8/10",
-      "smart_label": "🎯 Canasta Rezagados [P:8/10]",
-      "last_salido_str": "#56 Tiburón (7:05 PM)",
-      "created_at": "2026-11-17 04:49:40 AM"
+      "last_salido_str": "#47 Pavo Real (9:00 AM)",
+      "created_at": "2026-11-17 01:55:50 PM"
     }
   },
   "effective_kelly": 0.1125,
