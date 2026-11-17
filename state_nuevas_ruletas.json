@@ -1,5 +1,5 @@
 {
-  "bankroll": -1101.0,
+  "bankroll": -1118.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -60,34 +60,16 @@
     "Granja Millonaria - Granjazo": "2026-11-10 6:30 PM"
   },
   "pending_bets": {
-    "Lotto Gato": {
-      "ruleta": "Lotto Gato",
-      "candidatos": [
-        "26",
-        "3"
-      ],
-      "candidatos_str": "#26 VACA [P:6/10], #3 CIEMPIÉS [P:6/10]",
-      "total_cands": 2,
-      "stake_unit": 1.0,
-      "total_stake": 2.0,
-      "posible_premio": 30.0,
-      "payout": 30.0,
-      "peso_agente": 6,
-      "peso_label": "P:6/10",
-      "smart_label": "🎯 Canasta Rezagados [P:6/10]",
-      "last_salido_str": "#7 Perico (6:10 PM)",
-      "created_at": "2026-11-16 10:46:25 PM"
-    },
     "Loto Chaima": {
       "ruleta": "Loto Chaima",
       "candidatos": [
-        "9",
-        "21",
-        "47",
+        "38",
+        "51",
+        "40",
         "28",
-        "31"
+        "10"
       ],
-      "candidatos_str": "#9 ÁGUILA [P:7/10], #21 GALLO [P:7/10], #47 PAVO REAL [P:7/10], #28 ZAMURO [P:7/10], #31 LAPA [P:7/10]",
+      "candidatos_str": "#38 BÚFALO [P:7/10], #51 PELICANO [P:7/10], #40 AVISPA [P:7/10], #28 ZAMURO [P:7/10], #10 TIGRE [P:7/10]",
       "total_cands": 5,
       "stake_unit": 1.0,
       "total_stake": 5.0,
@@ -96,19 +78,19 @@
       "peso_agente": 7,
       "peso_label": "P:7/10",
       "smart_label": "🎯 Canasta Rezagados [P:7/10]",
-      "last_salido_str": "#54 Grillo (6:00 PM)",
-      "created_at": "2026-11-16 10:46:26 PM"
+      "last_salido_str": "#5 León (7:00 PM)",
+      "created_at": "2026-11-17 04:49:40 AM"
     },
     "Gatazo": {
       "ruleta": "Gatazo",
       "candidatos": [
-        "9",
-        "0",
-        "24",
-        "50",
-        "55"
+        "23",
+        "13",
+        "54",
+        "16",
+        "26"
       ],
-      "candidatos_str": "#9 ÁGUILA [P:7/10], #0 DELFÍN [P:7/10], #24 IGUANA [P:7/10], #50 CANARIO [P:7/10], #55 OSO HORMIGUERO [P:7/10]",
+      "candidatos_str": "#23 CEBRA [P:7/10], #13 MONO [P:7/10], #54 GRILLO [P:7/10], #16 OSO [P:7/10], #26 VACA [P:7/10]",
       "total_cands": 5,
       "stake_unit": 1.0,
       "total_stake": 5.0,
@@ -117,19 +99,19 @@
       "peso_agente": 7,
       "peso_label": "P:7/10",
       "smart_label": "🎯 Canasta Rezagados [P:7/10]",
-      "last_salido_str": "#72 Gorila (6:40 PM)",
-      "created_at": "2026-11-16 10:46:26 PM"
+      "last_salido_str": "#53 Caracol (7:40 PM)",
+      "created_at": "2026-11-17 04:49:40 AM"
     },
     "Monje Millonario": {
       "ruleta": "Monje Millonario",
       "candidatos": [
-        "40",
-        "43",
-        "24",
-        "30",
-        "59"
+        "74",
+        "59",
+        "53",
+        "33",
+        "28"
       ],
-      "candidatos_str": "#40 AVISPA [P:8/10], #43 MARIPOSA [P:8/10], #24 IGUANA [P:8/10], #30 CAIMÁN [P:8/10], #59 PANTERA [P:8/10]",
+      "candidatos_str": "#74 TURPIAL [P:8/10], #59 PANTERA [P:8/10], #53 CARACOL [P:8/10], #33 PESCADO [P:8/10], #28 ZAMURO [P:8/10]",
       "total_cands": 5,
       "stake_unit": 1.0,
       "total_stake": 5.0,
@@ -138,8 +120,8 @@
       "peso_agente": 8,
       "peso_label": "P:8/10",
       "smart_label": "🎯 Canasta Rezagados [P:8/10]",
-      "last_salido_str": "#31 Lapa (6:05 PM)",
-      "created_at": "2026-11-16 10:46:26 PM"
+      "last_salido_str": "#56 Tiburón (7:05 PM)",
+      "created_at": "2026-11-17 04:49:40 AM"
     }
   },
   "effective_kelly": 0.1125,
