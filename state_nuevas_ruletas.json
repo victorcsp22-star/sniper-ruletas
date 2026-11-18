@@ -1,5 +1,5 @@
 {
-  "bankroll": -1161.0,
+  "bankroll": -1166.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -60,16 +60,16 @@
     "Granja Millonaria - Granjazo": "2026-11-10 6:30 PM"
   },
   "pending_bets": {
-    "Gatazo": {
-      "ruleta": "Gatazo",
+    "Loto Chaima": {
+      "ruleta": "Loto Chaima",
       "candidatos": [
-        "30",
-        "53",
-        "37",
-        "57",
-        "71"
+        "52",
+        "22",
+        "55",
+        "23",
+        "1"
       ],
-      "candidatos_str": "#30 CAIMÁN [P:7/10], #53 CARACOL [P:7/10], #37 TORTUGA [P:7/10], #57 PATO [P:7/10], #71 GUACAMAYA [P:7/10]",
+      "candidatos_str": "#52 PULPO [P:7/10], #22 CAMELLO [P:7/10], #55 OSO HORMIGUERO [P:7/10], #23 CEBRA [P:7/10], #1 CARNERO [P:7/10]",
       "total_cands": 5,
       "stake_unit": 1.0,
       "total_stake": 5.0,
@@ -78,8 +78,29 @@
       "peso_agente": 7,
       "peso_label": "P:7/10",
       "smart_label": "🎯 Canasta Rezagados [P:7/10]",
-      "last_salido_str": "#10 Tigre (5:40 PM)",
-      "created_at": "2026-11-17 10:04:22 PM"
+      "last_salido_str": "#26 Vaca (7:00 PM)",
+      "created_at": "2026-11-18 03:40:54 AM"
+    },
+    "Monje Millonario": {
+      "ruleta": "Monje Millonario",
+      "candidatos": [
+        "55",
+        "7",
+        "56",
+        "00",
+        "74"
+      ],
+      "candidatos_str": "#55 OSO HORMIGUERO [P:7/10], #7 PERICO [P:7/10], #56 TIBURÓN [P:7/10], #00 BALLENA [P:7/10], #74 TURPIAL [P:7/10]",
+      "total_cands": 5,
+      "stake_unit": 1.0,
+      "total_stake": 5.0,
+      "posible_premio": 60.0,
+      "payout": 60.0,
+      "peso_agente": 7,
+      "peso_label": "P:7/10",
+      "smart_label": "🎯 Canasta Rezagados [P:7/10]",
+      "last_salido_str": "#2 Toro (7:05 PM)",
+      "created_at": "2026-11-18 03:40:54 AM"
     }
   },
   "effective_kelly": 0.1125,
