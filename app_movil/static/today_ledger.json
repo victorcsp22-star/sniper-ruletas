@@ -1,11 +1,38 @@
 {
-  "items": [],
+  "items": [
+    {
+      "fecha": "2026-11-18",
+      "hora": "8:00 AM",
+      "ruleta": "Loto Chaima",
+      "candidatos": "#52 PULPO [P:7/10], #22 CAMELLO [P:7/10], #55 OSO HORMIGUERO [P:7/10], #23 CEBRA [P:7/10], #1 CARNERO [P:7/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[49] Pereza",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -1171.0,
+      "emoji": "🏹"
+    },
+    {
+      "fecha": "2026-11-18",
+      "hora": "8:05 AM",
+      "ruleta": "Monje Millonario",
+      "candidatos": "#55 OSO HORMIGUERO [P:7/10], #7 PERICO [P:7/10], #56 TIBURÓN [P:7/10], #00 BALLENA [P:7/10], #74 TURPIAL [P:7/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[00] Ballena",
+      "cobrado": 60.0,
+      "pnl": 55.0,
+      "saldo": -1116.0,
+      "emoji": "🧘‍♂️"
+    }
+  ],
   "summary": {
-    "ops_today": 0,
-    "wins_today": 0,
-    "inv_today": 0.0,
-    "cob_today": 0.0,
-    "pnl_today": 0.0,
-    "win_rate_today": 0.0
+    "ops_today": 2,
+    "wins_today": 1,
+    "inv_today": 10.0,
+    "cob_today": 60.0,
+    "pnl_today": 50.0,
+    "win_rate_today": 50.0
   }
 }
