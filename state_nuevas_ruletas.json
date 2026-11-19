@@ -1,5 +1,5 @@
 {
-  "bankroll": -944.0,
+  "bankroll": -964.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -63,23 +63,40 @@
     "Loto Chaima": {
       "ruleta": "Loto Chaima",
       "candidatos": [
-        "20",
-        "35",
-        "51",
-        "5",
-        "17"
+        "24",
+        "34",
+        "6",
+        "50",
+        "21"
       ],
-      "candidatos_str": "#20 COCHINO [P:10/10], #35 JIRAFA [P:10/10], #51 PELICANO [P:10/10], #5 LEÓN [P:10/10], #17 PAVO [P:10/10]",
+      "candidatos_str": "#24 IGUANA [P:8/10], #34 VENADO [P:8/10], #6 RANA [P:8/10], #50 CANARIO [P:8/10], #21 GALLO [P:8/10]",
       "total_cands": 5,
       "stake_unit": 1.0,
       "total_stake": 5.0,
       "posible_premio": 60.0,
       "payout": 60.0,
-      "peso_agente": 10,
-      "peso_label": "P:10/10",
-      "smart_label": "🎯 Canasta Rezagados [P:10/10]",
-      "last_salido_str": "#11 Gato (4:00 PM)",
-      "created_at": "2026-11-18 04:18:00 PM"
+      "peso_agente": 8,
+      "peso_label": "P:8/10",
+      "smart_label": "🎯 Canasta Rezagados [P:8/10]",
+      "last_salido_str": "#41 Canguro (7:00 PM)",
+      "created_at": "2026-11-19 02:01:56 AM"
+    },
+    "Gatazo": {
+      "ruleta": "Gatazo",
+      "candidatos": [
+        "42"
+      ],
+      "candidatos_str": "#42 TUCÁN [P:6/10]",
+      "total_cands": 1,
+      "stake_unit": 1.0,
+      "total_stake": 1.0,
+      "posible_premio": 60.0,
+      "payout": 60.0,
+      "peso_agente": 6,
+      "peso_label": "P:6/10",
+      "smart_label": "⚡ Markov Sniper [P:6/10]",
+      "last_salido_str": "#23 Cebra (7:40 PM)",
+      "created_at": "2026-11-19 02:01:56 AM"
     }
   },
   "effective_kelly": 0.1125,
