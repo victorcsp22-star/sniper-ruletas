@@ -1,11 +1,25 @@
 {
-  "items": [],
+  "items": [
+    {
+      "fecha": "2026-11-19",
+      "hora": "8:00 AM",
+      "ruleta": "Loto Chaima",
+      "candidatos": "#24 IGUANA [P:8/10], #34 VENADO [P:8/10], #6 RANA [P:8/10], #50 CANARIO [P:8/10], #21 GALLO [P:8/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[9] Águila",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -969.0,
+      "emoji": "🏹"
+    }
+  ],
   "summary": {
-    "ops_today": 0,
+    "ops_today": 1,
     "wins_today": 0,
-    "inv_today": 0.0,
+    "inv_today": 5.0,
     "cob_today": 0.0,
-    "pnl_today": 0.0,
+    "pnl_today": -5.0,
     "win_rate_today": 0.0
   }
 }
