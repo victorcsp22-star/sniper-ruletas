@@ -12,14 +12,105 @@
       "pnl": -5.0,
       "saldo": -969.0,
       "emoji": "🏹"
+    },
+    {
+      "fecha": "2026-11-19",
+      "hora": "12:10 PM",
+      "ruleta": "Lotto Gato",
+      "candidatos": "#15 ZORRO [P:2/10]",
+      "cands_count": 1,
+      "total_bet": 1.0,
+      "resultado": "[33] Pescado",
+      "cobrado": 0.0,
+      "pnl": -1.0,
+      "saldo": -970.0,
+      "emoji": "🐱"
+    },
+    {
+      "fecha": "2026-11-19",
+      "hora": "12:00 PM",
+      "ruleta": "Guacharo Activo",
+      "candidatos": "#1 CARNERO [P:7/10], #5 LEÓN [P:7/10], #42 TUCÁN [P:7/10], #39 LECHUZA [P:7/10], #27 PERRO [P:7/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[59] Pantera",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -975.0,
+      "emoji": "🦇"
+    },
+    {
+      "fecha": "2026-11-19",
+      "hora": "2:00 PM",
+      "ruleta": "Guacharo Activo",
+      "candidatos": "#64 GAVILÁN [P:7/10], #67 AVESTRUZ [P:7/10], #30 CAIMÁN [P:7/10], #2 TORO [P:7/10], #42 TUCÁN [P:7/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[48] Puercoespín",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -980.0,
+      "emoji": "🦇"
+    },
+    {
+      "fecha": "2026-11-19",
+      "hora": "9:40 AM",
+      "ruleta": "Gatazo",
+      "candidatos": "#42 TUCÁN [P:6/10]",
+      "cands_count": 1,
+      "total_bet": 1.0,
+      "resultado": "[38] Bufalo",
+      "cobrado": 0.0,
+      "pnl": -1.0,
+      "saldo": -981.0,
+      "emoji": "🐯"
+    },
+    {
+      "fecha": "2026-11-19",
+      "hora": "10:40 AM",
+      "ruleta": "Gatazo",
+      "candidatos": "#17 PAVO [P:7/10], #14 PALOMA [P:7/10], #9 ÁGUILA [P:7/10], #72 GORILA [P:7/10], #56 TIBURÓN [P:7/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[51] Pelicano",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -986.0,
+      "emoji": "🐯"
+    },
+    {
+      "fecha": "2026-11-19",
+      "hora": "11:40 AM",
+      "ruleta": "Gatazo",
+      "candidatos": "#00 BALLENA [P:7/10], #17 PAVO [P:7/10], #42 TUCÁN [P:7/10], #52 PULPO [P:7/10], #54 GRILLO [P:7/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[2] Toro",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -991.0,
+      "emoji": "🐯"
+    },
+    {
+      "fecha": "2026-11-19",
+      "hora": "1:40 PM",
+      "ruleta": "Gatazo",
+      "candidatos": "#34 VENADO [P:7/10], #5 LEÓN [P:7/10], #48 PUERCOESPÍN [P:7/10], #27 PERRO [P:7/10], #8 RATÓN [P:7/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[63] Cangrejo",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -996.0,
+      "emoji": "🐯"
     }
   ],
   "summary": {
-    "ops_today": 1,
+    "ops_today": 8,
     "wins_today": 0,
-    "inv_today": 5.0,
+    "inv_today": 32.0,
     "cob_today": 0.0,
-    "pnl_today": -5.0,
+    "pnl_today": -32.0,
     "win_rate_today": 0.0
   }
 }
