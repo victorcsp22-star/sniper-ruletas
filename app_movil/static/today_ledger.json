@@ -129,14 +129,105 @@
       "pnl": -5.0,
       "saldo": -879.0,
       "emoji": "🧘‍♂️"
+    },
+    {
+      "fecha": "2026-11-20",
+      "hora": "6:00 PM",
+      "ruleta": "Loto Chaima",
+      "candidatos": "#13 MONO [P:8/10], #23 CEBRA [P:8/10], #26 VACA [P:8/10], #41 CANGURO [P:8/10], #11 GATO [P:8/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[1] Carnero",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -884.0,
+      "emoji": "🏹"
+    },
+    {
+      "fecha": "2026-11-20",
+      "hora": "7:00 PM",
+      "ruleta": "Loto Chaima",
+      "candidatos": "#54 GRILLO [P:8/10], #48 PUERCOESPÍN [P:8/10], #49 PEREZA [P:8/10], #26 VACA [P:8/10], #20 COCHINO [P:8/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[49] Pereza",
+      "cobrado": 60.0,
+      "pnl": 55.0,
+      "saldo": -829.0,
+      "emoji": "🏹"
+    },
+    {
+      "fecha": "2026-11-20",
+      "hora": "1:40 PM",
+      "ruleta": "Gatazo",
+      "candidatos": "#53 CARACOL [P:10/10], #50 CANARIO [P:10/10], #0 DELFÍN [P:10/10], #10 TIGRE [P:10/10], #00 BALLENA [P:10/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[27] Perro",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -834.0,
+      "emoji": "🐯"
+    },
+    {
+      "fecha": "2026-11-20",
+      "hora": "3:40 PM",
+      "ruleta": "Gatazo",
+      "candidatos": "#5 LEÓN [P:9/10], #40 AVISPA [P:9/10], #2 TORO [P:9/10], #37 TORTUGA [P:9/10], #21 GALLO [P:9/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[20] Cochino",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -839.0,
+      "emoji": "🐯"
+    },
+    {
+      "fecha": "2026-11-20",
+      "hora": "5:40 PM",
+      "ruleta": "Gatazo",
+      "candidatos": "#42 TUCÁN [P:9/10], #31 LAPA [P:9/10], #25 GALLINA [P:9/10], #0 DELFÍN [P:9/10], #10 TIGRE [P:9/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[71] Guacamaya",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -844.0,
+      "emoji": "🐯"
+    },
+    {
+      "fecha": "2026-11-20",
+      "hora": "2:05 PM",
+      "ruleta": "Monje Millonario",
+      "candidatos": "#5 LEÓN [P:8/10], #23 CEBRA [P:8/10], #57 PATO [P:8/10], #2 TORO [P:8/10], #28 ZAMURO [P:8/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[68] Jaguar",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -849.0,
+      "emoji": "🧘‍♂️"
+    },
+    {
+      "fecha": "2026-11-20",
+      "hora": "5:05 PM",
+      "ruleta": "Monje Millonario",
+      "candidatos": "#8 RATÓN [P:8/10], #12 CABALLO [P:8/10], #67 AVESTRUZ [P:8/10], #15 ZORRO [P:8/10], #51 PELICANO [P:8/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[44] Chiguire",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -854.0,
+      "emoji": "🧘‍♂️"
     }
   ],
   "summary": {
-    "ops_today": 10,
-    "wins_today": 2,
-    "inv_today": 34.0,
-    "cob_today": 120.0,
-    "pnl_today": 86.0,
-    "win_rate_today": 20.0
+    "ops_today": 17,
+    "wins_today": 3,
+    "inv_today": 69.0,
+    "cob_today": 180.0,
+    "pnl_today": 111.0,
+    "win_rate_today": 17.6
   }
 }
