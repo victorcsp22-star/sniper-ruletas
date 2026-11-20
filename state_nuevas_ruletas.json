@@ -1,5 +1,5 @@
 {
-  "bankroll": -965.0,
+  "bankroll": -879.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -63,34 +63,13 @@
     "Gatazo": {
       "ruleta": "Gatazo",
       "candidatos": [
-        "51",
-        "72",
-        "37",
-        "21",
-        "16"
+        "53",
+        "50",
+        "0",
+        "10",
+        "00"
       ],
-      "candidatos_str": "#51 PELICANO [P:7/10], #72 GORILA [P:7/10], #37 TORTUGA [P:7/10], #21 GALLO [P:7/10], #16 OSO [P:7/10]",
-      "total_cands": 5,
-      "stake_unit": 1.0,
-      "total_stake": 5.0,
-      "posible_premio": 60.0,
-      "payout": 60.0,
-      "peso_agente": 7,
-      "peso_label": "P:7/10",
-      "smart_label": "🎯 Canasta Rezagados [P:7/10]",
-      "last_salido_str": "#57 Pato (7:40 PM)",
-      "created_at": "2026-11-20 01:10:56 AM"
-    },
-    "Monje Millonario": {
-      "ruleta": "Monje Millonario",
-      "candidatos": [
-        "00",
-        "57",
-        "55",
-        "1",
-        "23"
-      ],
-      "candidatos_str": "#00 BALLENA [P:10/10], #57 PATO [P:10/10], #55 OSO HORMIGUERO [P:10/10], #1 CARNERO [P:10/10], #23 CEBRA [P:10/10]",
+      "candidatos_str": "#53 CARACOL [P:10/10], #50 CANARIO [P:10/10], #0 DELFÍN [P:10/10], #10 TIGRE [P:10/10], #00 BALLENA [P:10/10]",
       "total_cands": 5,
       "stake_unit": 1.0,
       "total_stake": 5.0,
@@ -99,8 +78,29 @@
       "peso_agente": 10,
       "peso_label": "P:10/10",
       "smart_label": "🎯 Canasta Rezagados [P:10/10]",
-      "last_salido_str": "#73 Hipopótamo (7:05 PM)",
-      "created_at": "2026-11-20 01:10:56 AM"
+      "last_salido_str": "#26 Vaca (12:40 PM)",
+      "created_at": "2026-11-20 05:14:28 PM"
+    },
+    "Monje Millonario": {
+      "ruleta": "Monje Millonario",
+      "candidatos": [
+        "5",
+        "23",
+        "57",
+        "2",
+        "28"
+      ],
+      "candidatos_str": "#5 LEÓN [P:8/10], #23 CEBRA [P:8/10], #57 PATO [P:8/10], #2 TORO [P:8/10], #28 ZAMURO [P:8/10]",
+      "total_cands": 5,
+      "stake_unit": 1.0,
+      "total_stake": 5.0,
+      "posible_premio": 60.0,
+      "payout": 60.0,
+      "peso_agente": 8,
+      "peso_label": "P:8/10",
+      "smart_label": "🎯 Canasta Rezagados [P:8/10]",
+      "last_salido_str": "#55 Oso Hormiguero (1:05 PM)",
+      "created_at": "2026-11-20 05:14:28 PM"
     }
   },
   "effective_kelly": 0.1125,
