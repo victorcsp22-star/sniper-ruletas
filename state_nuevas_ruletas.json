@@ -1,5 +1,5 @@
 {
-  "bankroll": -996.0,
+  "bankroll": -965.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -60,16 +60,16 @@
     "Granja Millonaria - Granjazo": "2026-11-10 6:30 PM"
   },
   "pending_bets": {
-    "Monje Millonario": {
-      "ruleta": "Monje Millonario",
+    "Gatazo": {
+      "ruleta": "Gatazo",
       "candidatos": [
-        "27",
-        "10",
-        "11",
-        "23",
-        "39"
+        "51",
+        "72",
+        "37",
+        "21",
+        "16"
       ],
-      "candidatos_str": "#27 PERRO [P:7/10], #10 TIGRE [P:7/10], #11 GATO [P:7/10], #23 CEBRA [P:7/10], #39 LECHUZA [P:7/10]",
+      "candidatos_str": "#51 PELICANO [P:7/10], #72 GORILA [P:7/10], #37 TORTUGA [P:7/10], #21 GALLO [P:7/10], #16 OSO [P:7/10]",
       "total_cands": 5,
       "stake_unit": 1.0,
       "total_stake": 5.0,
@@ -78,8 +78,29 @@
       "peso_agente": 7,
       "peso_label": "P:7/10",
       "smart_label": "🎯 Canasta Rezagados [P:7/10]",
-      "last_salido_str": "#21 Gallo (2:05 PM)",
-      "created_at": "2026-11-19 06:59:21 PM"
+      "last_salido_str": "#57 Pato (7:40 PM)",
+      "created_at": "2026-11-20 01:10:56 AM"
+    },
+    "Monje Millonario": {
+      "ruleta": "Monje Millonario",
+      "candidatos": [
+        "00",
+        "57",
+        "55",
+        "1",
+        "23"
+      ],
+      "candidatos_str": "#00 BALLENA [P:10/10], #57 PATO [P:10/10], #55 OSO HORMIGUERO [P:10/10], #1 CARNERO [P:10/10], #23 CEBRA [P:10/10]",
+      "total_cands": 5,
+      "stake_unit": 1.0,
+      "total_stake": 5.0,
+      "posible_premio": 60.0,
+      "payout": 60.0,
+      "peso_agente": 10,
+      "peso_label": "P:10/10",
+      "smart_label": "🎯 Canasta Rezagados [P:10/10]",
+      "last_salido_str": "#73 Hipopótamo (7:05 PM)",
+      "created_at": "2026-11-20 01:10:56 AM"
     }
   },
   "effective_kelly": 0.1125,
