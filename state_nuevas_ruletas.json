@@ -1,5 +1,5 @@
 {
-  "bankroll": -854.0,
+  "bankroll": -857.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -60,25 +60,6 @@
     "Granja Millonaria - Granjazo": "2026-11-10 6:30 PM"
   },
   "pending_bets": {
-    "Lotto Gato": {
-      "ruleta": "Lotto Gato",
-      "candidatos": [
-        "10",
-        "14",
-        "23"
-      ],
-      "candidatos_str": "#10 TIGRE [P:6/10], #14 PALOMA [P:6/10], #23 CEBRA [P:6/10]",
-      "total_cands": 3,
-      "stake_unit": 1.0,
-      "total_stake": 3.0,
-      "posible_premio": 30.0,
-      "payout": 30.0,
-      "peso_agente": 6,
-      "peso_label": "P:6/10",
-      "smart_label": "🎯 Canasta Rezagados [P:6/10]",
-      "last_salido_str": "#15 Zorro (6:10 PM)",
-      "created_at": "2026-11-20 11:09:09 PM"
-    },
     "Loto Chaima": {
       "ruleta": "Loto Chaima",
       "candidatos": [
@@ -99,6 +80,46 @@
       "smart_label": "🎯 Canasta Rezagados [P:10/10]",
       "last_salido_str": "#49 Pereza (7:00 PM)",
       "created_at": "2026-11-20 11:09:09 PM"
+    },
+    "Lotto Gato": {
+      "ruleta": "Lotto Gato",
+      "candidatos": [
+        "20",
+        "24",
+        "27"
+      ],
+      "candidatos_str": "#20 COCHINO [P:6/10], #24 IGUANA [P:6/10], #27 PERRO [P:6/10]",
+      "total_cands": 3,
+      "stake_unit": 1.0,
+      "total_stake": 3.0,
+      "posible_premio": 30.0,
+      "payout": 30.0,
+      "peso_agente": 6,
+      "peso_label": "P:6/10",
+      "smart_label": "🎯 Canasta Rezagados [P:6/10]",
+      "last_salido_str": "#22 Camello (7:10 PM)",
+      "created_at": "2026-11-21 03:57:51 AM"
+    },
+    "Gatazo": {
+      "ruleta": "Gatazo",
+      "candidatos": [
+        "24",
+        "1",
+        "38",
+        "72",
+        "2"
+      ],
+      "candidatos_str": "#24 IGUANA [P:8/10], #1 CARNERO [P:8/10], #38 BÚFALO [P:8/10], #72 GORILA [P:8/10], #2 TORO [P:8/10]",
+      "total_cands": 5,
+      "stake_unit": 1.0,
+      "total_stake": 5.0,
+      "posible_premio": 60.0,
+      "payout": 60.0,
+      "peso_agente": 8,
+      "peso_label": "P:8/10",
+      "smart_label": "🎯 Canasta Rezagados [P:8/10]",
+      "last_salido_str": "#49 Pereza (7:40 PM)",
+      "created_at": "2026-11-21 03:57:51 AM"
     }
   },
   "effective_kelly": 0.1125,
