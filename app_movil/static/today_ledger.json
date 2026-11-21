@@ -116,14 +116,105 @@
       "pnl": -5.0,
       "saldo": -896.0,
       "emoji": "🐯"
+    },
+    {
+      "fecha": "2026-11-21",
+      "hora": "6:10 PM",
+      "ruleta": "Lotto Gato",
+      "candidatos": "#14 PALOMA [P:5/10], #17 PAVO [P:5/10]",
+      "cands_count": 2,
+      "total_bet": 2.0,
+      "resultado": "[34] Venado",
+      "cobrado": 0.0,
+      "pnl": -2.0,
+      "saldo": -898.0,
+      "emoji": "🐱"
+    },
+    {
+      "fecha": "2026-11-21",
+      "hora": "7:10 PM",
+      "ruleta": "Lotto Gato",
+      "candidatos": "#13 MONO [P:5/10], #24 IGUANA [P:5/10], #28 ZAMURO [P:5/10]",
+      "cands_count": 3,
+      "total_bet": 3.0,
+      "resultado": "[26] Vaca",
+      "cobrado": 0.0,
+      "pnl": -3.0,
+      "saldo": -901.0,
+      "emoji": "🐱"
+    },
+    {
+      "fecha": "2026-11-21",
+      "hora": "5:00 PM",
+      "ruleta": "Guacharo Activo",
+      "candidatos": "#2 TORO [P:9/10]",
+      "cands_count": 1,
+      "total_bet": 1.0,
+      "resultado": "[62] Cachicamo",
+      "cobrado": 0.0,
+      "pnl": -1.0,
+      "saldo": -902.0,
+      "emoji": "🦇"
+    },
+    {
+      "fecha": "2026-11-21",
+      "hora": "7:00 PM",
+      "ruleta": "Guacharo Activo",
+      "candidatos": "#59 PANTERA [P:10/10], #52 PULPO [P:10/10], #5 LEÓN [P:10/10], #70 BISONTE [P:10/10], #35 JIRAFA [P:10/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[72] Gorila",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -907.0,
+      "emoji": "🦇"
+    },
+    {
+      "fecha": "2026-11-21",
+      "hora": "4:40 PM",
+      "ruleta": "Gatazo",
+      "candidatos": "#71 GUACAMAYA [P:7/10], #40 AVISPA [P:7/10], #48 PUERCOESPÍN [P:7/10], #53 CARACOL [P:7/10], #1 CARNERO [P:7/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[26] Vaca",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -912.0,
+      "emoji": "🐯"
+    },
+    {
+      "fecha": "2026-11-21",
+      "hora": "7:40 PM",
+      "ruleta": "Gatazo",
+      "candidatos": "#0 DELFÍN [P:7/10], #52 PULPO [P:7/10], #57 PATO [P:7/10], #10 TIGRE [P:7/10], #42 TUCÁN [P:7/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[65] Araña",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -917.0,
+      "emoji": "🐯"
+    },
+    {
+      "fecha": "2026-11-21",
+      "hora": "7:05 PM",
+      "ruleta": "Monje Millonario",
+      "candidatos": "#73 HIPOPÓTAMO [P:7/10], #13 MONO [P:7/10], #26 VACA [P:7/10], #52 PULPO [P:7/10], #5 LEÓN [P:7/10]",
+      "cands_count": 5,
+      "total_bet": 5.0,
+      "resultado": "[4] Alacrán",
+      "cobrado": 0.0,
+      "pnl": -5.0,
+      "saldo": -922.0,
+      "emoji": "🧘‍♂️"
     }
   ],
   "summary": {
-    "ops_today": 9,
+    "ops_today": 16,
     "wins_today": 0,
-    "inv_today": 39.0,
+    "inv_today": 65.0,
     "cob_today": 0.0,
-    "pnl_today": -39.0,
+    "pnl_today": -65.0,
     "win_rate_today": 0.0
   }
 }
