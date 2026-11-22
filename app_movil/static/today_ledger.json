@@ -1,11 +1,25 @@
 {
-  "items": [],
+  "items": [
+    {
+      "fecha": "2026-11-22",
+      "hora": "9:00 AM",
+      "ruleta": "Guacharo Activo",
+      "candidatos": "#48 PUERCOESPÍN [P:9/10], #5 LEÓN [P:9/10], #58 HORMIGA [P:9/10], #73 HIPOPÓTAMO [P:9/10]",
+      "cands_count": 4,
+      "total_bet": 4.0,
+      "resultado": "[63] Cangrejo",
+      "cobrado": 0.0,
+      "pnl": -4.0,
+      "saldo": -926.0,
+      "emoji": "🦇"
+    }
+  ],
   "summary": {
-    "ops_today": 0,
+    "ops_today": 1,
     "wins_today": 0,
-    "inv_today": 0.0,
+    "inv_today": 4.0,
     "cob_today": 0.0,
-    "pnl_today": 0.0,
+    "pnl_today": -4.0,
     "win_rate_today": 0.0
   }
 }
