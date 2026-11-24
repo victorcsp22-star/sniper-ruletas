@@ -1,5 +1,5 @@
 {
-  "bankroll": -953.0,
+  "bankroll": -918.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -59,7 +59,29 @@
     "Loto Chaima": "2026-11-10 6:00 PM",
     "Granja Millonaria - Granjazo": "2026-11-10 6:30 PM"
   },
-  "pending_bets": {},
+  "pending_bets": {
+    "Gatazo": {
+      "ruleta": "Gatazo",
+      "candidatos": [
+        "20",
+        "73",
+        "38",
+        "31",
+        "24"
+      ],
+      "candidatos_str": "#20 COCHINO [P:7/10], #73 HIPOPÓTAMO [P:7/10], #38 BÚFALO [P:7/10], #31 LAPA [P:7/10], #24 IGUANA [P:7/10]",
+      "total_cands": 5,
+      "stake_unit": 1.0,
+      "total_stake": 5.0,
+      "posible_premio": 60.0,
+      "payout": 60.0,
+      "peso_agente": 7,
+      "peso_label": "P:7/10",
+      "smart_label": "🎯 Canasta Rezagados [P:7/10]",
+      "last_salido_str": "#51 Pelicano (7:40 PM)",
+      "created_at": "2026-11-24 05:15:54 AM"
+    }
+  },
   "effective_kelly": 0.1125,
   "damping": 0.15,
   "cycle_elapsed_days": 1.4634480404513888,
