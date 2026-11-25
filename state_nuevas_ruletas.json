@@ -1,5 +1,5 @@
 {
-  "bankroll": -988.0,
+  "bankroll": -1012.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -63,21 +63,19 @@
     "Lotto Gato": {
       "ruleta": "Lotto Gato",
       "candidatos": [
-        "15",
-        "29",
-        "36"
+        "5"
       ],
-      "candidatos_str": "#15 ZORRO [P:5/10], #29 ELEFANTE [P:5/10], #36 CULEBRA [P:5/10]",
-      "total_cands": 3,
+      "candidatos_str": "#5 LEÓN [P:5/10]",
+      "total_cands": 1,
       "stake_unit": 1.0,
-      "total_stake": 3.0,
+      "total_stake": 1.0,
       "posible_premio": 30.0,
       "payout": 30.0,
       "peso_agente": 5,
       "peso_label": "P:5/10",
       "smart_label": "🎯 Canasta Rezagados [P:5/10]",
-      "last_salido_str": "#10 Tigre (9:10 AM)",
-      "created_at": "2026-11-25 09:19:13 AM"
+      "last_salido_str": "#29 Elefante (1:10 PM)",
+      "created_at": "2026-11-25 07:10:24 PM"
     }
   },
   "effective_kelly": 0.1125,
