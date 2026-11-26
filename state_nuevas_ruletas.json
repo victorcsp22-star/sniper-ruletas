@@ -1,5 +1,5 @@
 {
-  "bankroll": -1012.0,
+  "bankroll": -1023.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -60,22 +60,47 @@
     "Granja Millonaria - Granjazo": "2026-11-10 6:30 PM"
   },
   "pending_bets": {
-    "Lotto Gato": {
-      "ruleta": "Lotto Gato",
+    "Loto Chaima": {
+      "ruleta": "Loto Chaima",
       "candidatos": [
-        "5"
+        "3",
+        "27",
+        "37",
+        "19",
+        "2"
       ],
-      "candidatos_str": "#5 LEÓN [P:5/10]",
-      "total_cands": 1,
+      "candidatos_str": "#3 CIEMPIÉS [P:7/10], #27 PERRO [P:7/10], #37 TORTUGA [P:7/10], #19 CHIVO [P:7/10], #2 TORO [P:7/10]",
+      "total_cands": 5,
       "stake_unit": 1.0,
-      "total_stake": 1.0,
-      "posible_premio": 30.0,
-      "payout": 30.0,
-      "peso_agente": 5,
-      "peso_label": "P:5/10",
-      "smart_label": "🎯 Canasta Rezagados [P:5/10]",
-      "last_salido_str": "#29 Elefante (1:10 PM)",
-      "created_at": "2026-11-25 07:10:24 PM"
+      "total_stake": 5.0,
+      "posible_premio": 60.0,
+      "payout": 60.0,
+      "peso_agente": 7,
+      "peso_label": "P:7/10",
+      "smart_label": "🎯 Canasta Rezagados [P:7/10]",
+      "last_salido_str": "#10 Tigre (7:00 PM)",
+      "created_at": "2026-11-26 02:12:41 AM"
+    },
+    "Monje Millonario": {
+      "ruleta": "Monje Millonario",
+      "candidatos": [
+        "19",
+        "27",
+        "41",
+        "13",
+        "33"
+      ],
+      "candidatos_str": "#19 CHIVO [P:7/10], #27 PERRO [P:7/10], #41 CANGURO [P:7/10], #13 MONO [P:7/10], #33 PESCADO [P:7/10]",
+      "total_cands": 5,
+      "stake_unit": 1.0,
+      "total_stake": 5.0,
+      "posible_premio": 60.0,
+      "payout": 60.0,
+      "peso_agente": 7,
+      "peso_label": "P:7/10",
+      "smart_label": "🎯 Canasta Rezagados [P:7/10]",
+      "last_salido_str": "#60 Camaleón (7:05 PM)",
+      "created_at": "2026-11-26 02:12:42 AM"
     }
   },
   "effective_kelly": 0.1125,
