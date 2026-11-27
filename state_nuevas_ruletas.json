@@ -1,5 +1,5 @@
 {
-  "bankroll": -988.0,
+  "bankroll": -1038.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -63,23 +63,23 @@
     "Monje Millonario": {
       "ruleta": "Monje Millonario",
       "candidatos": [
-        "71",
-        "73",
-        "33",
-        "59",
-        "19"
+        "74",
+        "49",
+        "6",
+        "34",
+        "37"
       ],
-      "candidatos_str": "#71 GUACAMAYA [P:10/10], #73 HIPOPÓTAMO [P:10/10], #33 PESCADO [P:10/10], #59 PANTERA [P:10/10], #19 CHIVO [P:10/10]",
+      "candidatos_str": "#74 TURPIAL [P:8/10], #49 PEREZA [P:8/10], #6 RANA [P:8/10], #34 VENADO [P:8/10], #37 TORTUGA [P:8/10]",
       "total_cands": 5,
       "stake_unit": 1.0,
       "total_stake": 5.0,
       "posible_premio": 60.0,
       "payout": 60.0,
-      "peso_agente": 10,
-      "peso_label": "P:10/10",
-      "smart_label": "🎯 Canasta Rezagados [P:10/10]",
-      "last_salido_str": "#17 Pavo (7:05 PM)",
-      "created_at": "2026-11-27 02:47:59 AM"
+      "peso_agente": 8,
+      "peso_label": "P:8/10",
+      "smart_label": "🎯 Canasta Rezagados [P:8/10]",
+      "last_salido_str": "#10 Tigre (4:05 PM)",
+      "created_at": "2026-11-27 08:13:48 PM"
     }
   },
   "effective_kelly": 0.1125,
