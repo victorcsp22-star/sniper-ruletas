@@ -1,5 +1,5 @@
 {
-  "bankroll": -1023.0,
+  "bankroll": -988.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -60,26 +60,26 @@
     "Granja Millonaria - Granjazo": "2026-11-10 6:30 PM"
   },
   "pending_bets": {
-    "Guacharo Activo": {
-      "ruleta": "Guacharo Activo",
+    "Monje Millonario": {
+      "ruleta": "Monje Millonario",
       "candidatos": [
-        "19",
-        "47",
-        "48",
+        "71",
+        "73",
         "33",
-        "5"
+        "59",
+        "19"
       ],
-      "candidatos_str": "#19 CHIVO [P:9/10], #47 PAVO REAL [P:9/10], #48 PUERCOESPÍN [P:9/10], #33 PESCADO [P:9/10], #5 LEÓN [P:9/10]",
+      "candidatos_str": "#71 GUACAMAYA [P:10/10], #73 HIPOPÓTAMO [P:10/10], #33 PESCADO [P:10/10], #59 PANTERA [P:10/10], #19 CHIVO [P:10/10]",
       "total_cands": 5,
       "stake_unit": 1.0,
       "total_stake": 5.0,
       "posible_premio": 60.0,
       "payout": 60.0,
-      "peso_agente": 9,
-      "peso_label": "P:9/10",
-      "smart_label": "🎯 Canasta Rezagados [P:9/10]",
-      "last_salido_str": "#55 Oso Hormiguero (3:00 PM)",
-      "created_at": "2026-11-26 08:04:22 PM"
+      "peso_agente": 10,
+      "peso_label": "P:10/10",
+      "smart_label": "🎯 Canasta Rezagados [P:10/10]",
+      "last_salido_str": "#17 Pavo (7:05 PM)",
+      "created_at": "2026-11-27 02:47:59 AM"
     }
   },
   "effective_kelly": 0.1125,
