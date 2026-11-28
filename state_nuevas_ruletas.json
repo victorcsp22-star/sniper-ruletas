@@ -1,5 +1,5 @@
 {
-  "bankroll": -1053.0,
+  "bankroll": -1100.0,
   "initial_bankroll": 200.0,
   "total_withdrawn": 773.0,
   "peak_bankroll": 289.0,
@@ -60,68 +60,23 @@
     "Granja Millonaria - Granjazo": "2026-11-10 6:30 PM"
   },
   "pending_bets": {
-    "Loto Chaima": {
-      "ruleta": "Loto Chaima",
+    "Lotto Gato": {
+      "ruleta": "Lotto Gato",
       "candidatos": [
-        "28",
-        "34",
-        "54",
-        "7",
-        "9"
+        "20",
+        "30"
       ],
-      "candidatos_str": "#28 ZAMURO [P:9/10], #34 VENADO [P:9/10], #54 GRILLO [P:9/10], #7 PERICO [P:9/10], #9 ÁGUILA [P:9/10]",
-      "total_cands": 5,
+      "candidatos_str": "#20 COCHINO [P:7/10], #30 CAIMÁN [P:7/10]",
+      "total_cands": 2,
       "stake_unit": 1.0,
-      "total_stake": 5.0,
-      "posible_premio": 60.0,
-      "payout": 60.0,
-      "peso_agente": 9,
-      "peso_label": "P:9/10",
-      "smart_label": "🎯 Canasta Rezagados [P:9/10]",
-      "last_salido_str": "#49 Pereza (7:00 PM)",
-      "created_at": "2026-11-28 02:44:46 AM"
-    },
-    "Guacharo Activo": {
-      "ruleta": "Guacharo Activo",
-      "candidatos": [
-        "56",
-        "48",
-        "73",
-        "28",
-        "43"
-      ],
-      "candidatos_str": "#56 TIBURÓN [P:7/10], #48 PUERCOESPÍN [P:7/10], #73 HIPOPÓTAMO [P:7/10], #28 ZAMURO [P:7/10], #43 MARIPOSA [P:7/10]",
-      "total_cands": 5,
-      "stake_unit": 1.0,
-      "total_stake": 5.0,
-      "posible_premio": 60.0,
-      "payout": 60.0,
+      "total_stake": 2.0,
+      "posible_premio": 30.0,
+      "payout": 30.0,
       "peso_agente": 7,
       "peso_label": "P:7/10",
       "smart_label": "🎯 Canasta Rezagados [P:7/10]",
-      "last_salido_str": "#19 Chivo (7:00 PM)",
-      "created_at": "2026-11-28 02:44:47 AM"
-    },
-    "Monje Millonario": {
-      "ruleta": "Monje Millonario",
-      "candidatos": [
-        "46",
-        "3",
-        "19",
-        "71",
-        "45"
-      ],
-      "candidatos_str": "#46 PUMA [P:7/10], #3 CIEMPIÉS [P:7/10], #19 CHIVO [P:7/10], #71 GUACAMAYA [P:7/10], #45 GARZA [P:7/10]",
-      "total_cands": 5,
-      "stake_unit": 1.0,
-      "total_stake": 5.0,
-      "posible_premio": 60.0,
-      "payout": 60.0,
-      "peso_agente": 7,
-      "peso_label": "P:7/10",
-      "smart_label": "🎯 Canasta Rezagados [P:7/10]",
-      "last_salido_str": "#52 Pulpo (7:05 PM)",
-      "created_at": "2026-11-28 02:44:47 AM"
+      "last_salido_str": "#2 Toro (1:10 PM)",
+      "created_at": "2026-11-28 06:43:15 PM"
     }
   },
   "effective_kelly": 0.1125,
